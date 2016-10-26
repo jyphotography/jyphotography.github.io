@@ -6,7 +6,24 @@
     <entry>
       <title><![CDATA[Data Mining I]]></title>
       <url>https://jyphotography.github.io/2016/10/25/Data-Mining-I/</url>
-      <content type="html"><![CDATA[<p>#Test<br><img src="/media/14774538113114.jpg" alt=""></p>
+      <content type="html"><![CDATA[<h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><h3 id="I-什么是数据挖掘"><a href="#I-什么是数据挖掘" class="headerlink" title="I. 什么是数据挖掘"></a>I. 什么是数据挖掘</h3><ol>
+<li>数据中寻找规律</li>
+<li>数据中寻找关系</li>
+<li>数据中提取信息  </li>
+</ol>
+<hr>
+<h3 id="II-主要因数"><a href="#II-主要因数" class="headerlink" title="II. 主要因数"></a>II. 主要因数</h3><ol>
+<li>数据的</li>
+<li>运算能力</li>
+<li>统计学</li>
+<li>人工智能／机器学习</li>
+<li><strong>对信息的需求 （主要动机）</strong></li>
+<li>公司仪器</li>
+</ol>
+<hr>
+<h3 id="III-数据挖掘周期"><a href="#III-数据挖掘周期" class="headerlink" title="III. 数据挖掘周期"></a>III. 数据挖掘周期</h3><p><img src="/media/14774550278762.jpg" alt=""></p>
+<hr>
+<h3 id="IV-分析周期"><a href="#IV-分析周期" class="headerlink" title="IV. 分析周期"></a>IV. 分析周期</h3><p><img src="/media/14774550921846.jpg" alt=""></p>
 ]]></content>
     </entry>
     
