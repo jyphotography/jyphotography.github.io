@@ -13,22 +13,40 @@
 </ol>
 <hr>
 <h3 id="II-基本模型"><a href="#II-基本模型" class="headerlink" title="II. 基本模型"></a>II. 基本模型</h3><ol>
-<li><p>预测分析模型</p>
-<ol>
-<li>回归模型<ol>
+<li>预测分析模型<ol>
+<li>回归模型(Regression)<ol>
 <li>输入-数字型， 输出-数字型</li>
 <li>方法： 线性， 非线性， 多重， 无变量， 神经网络<br><img src="/media/14774559742028.jpg" alt=""></li>
 </ol>
 </li>
 </ol>
+</li>
+</ol>
 <ol>
-<li>分类模型<ol>
+<li>分类模型(Classification)<ol>
 <li>输入-标记，数字，综合， 输出-标记<br><img src="/media/14774561356759.jpg" alt=""></li>
 </ol>
 </li>
 </ol>
+<ol>
+<li>描述分析模型<ol>
+<li>聚类模型(Clustering)<ol>
+<li>输入-标记，数字，综合， 输出-无<br><img src="/media/14774565022310.jpg" alt=""><br><img src="/media/14774565177615.jpg" alt=""></li>
+</ol>
 </li>
 </ol>
+</li>
+</ol>
+<pre><code>1. 核密度估计(Density Estimation)
+    2. 输入-标记，数字，综合， 输出-无
+    ![](/media/14774568964748.jpg)
+
+1. 构造学习(Structural Learning)
+</code></pre><p><img src="/media/14774570120650.jpg" alt=""></p>
+<ol>
+<li>总结<br><img src="/media/14774570628957.jpg" alt=""></li>
+</ol>
+<hr>
 ]]></content>
     </entry>
     
