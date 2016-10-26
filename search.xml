@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title><![CDATA[Data Mining II]]></title>
+      <url>https://jyphotography.github.io/2016/10/26/Data-Mining-II/</url>
+      <content type="html"><![CDATA[<h1 id="第二章-如何找寻可靠的模型"><a href="#第二章-如何找寻可靠的模型" class="headerlink" title="第二章 如何找寻可靠的模型"></a>第二章 如何找寻可靠的模型</h1><h3 id="I-数据类型"><a href="#I-数据类型" class="headerlink" title="I. 数据类型"></a>I. 数据类型</h3><ol>
+<li>数字型</li>
+<li>类型</li>
+<li>顺序型</li>
+</ol>
+<hr>
+<h3 id="II-基本模型"><a href="#II-基本模型" class="headerlink" title="II. 基本模型"></a>II. 基本模型</h3><ol>
+<li><p>预测分析模型</p>
+<ol>
+<li>回归模型<ol>
+<li>输入-数字型， 输出-数字型</li>
+<li>方法： 线性， 非线性， 多重， 无变量， 神经网络<br><img src="/media/14774559742028.jpg" alt=""></li>
+</ol>
+</li>
+</ol>
+<ol>
+<li>分类模型<ol>
+<li>输入-标记，数字，综合， 输出-标记<br><img src="/media/14774561356759.jpg" alt=""></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Data Mining I]]></title>
       <url>https://jyphotography.github.io/2016/10/25/Data-Mining-I/</url>
       <content type="html"><![CDATA[<h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><h3 id="I-什么是数据挖掘"><a href="#I-什么是数据挖掘" class="headerlink" title="I. 什么是数据挖掘"></a>I. 什么是数据挖掘</h3><ol>
