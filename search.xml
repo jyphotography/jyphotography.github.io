@@ -4,42 +4,9 @@
   
     
     <entry>
-      <title><![CDATA[Data Mining II]]></title>
-      <url>https://jyphotography.github.io/2016/10/26/Data-Mining-II/</url>
-      <content type="html"><![CDATA[<h1 id="第二章-如何找寻可靠的模型"><a href="#第二章-如何找寻可靠的模型" class="headerlink" title="第二章 如何找寻可靠的模型"></a>第二章 如何找寻可靠的模型</h1><h3 id="I-数据类型"><a href="#I-数据类型" class="headerlink" title="I. 数据类型"></a>I. 数据类型</h3><ol>
-<li>数字型</li>
-<li>类型</li>
-<li>顺序型</li>
-</ol>
-<hr>
-<h3 id="II-基本模型"><a href="#II-基本模型" class="headerlink" title="II. 基本模型"></a>II. 基本模型</h3><h4 id="预测分析模型"><a href="#预测分析模型" class="headerlink" title="预测分析模型"></a>预测分析模型</h4><h5 id="回归模型-Regression"><a href="#回归模型-Regression" class="headerlink" title="回归模型(Regression)"></a>回归模型(Regression)</h5><ol>
-<li>输入-数字型， 输出-数字型</li>
-<li>方法： 线性， 非线性， 多重， 无变量， 神经网络<br><img src="/media/14774559742028.jpg" alt="-w301"></li>
-</ol>
-<h5 id="分类模型-Classification"><a href="#分类模型-Classification" class="headerlink" title="分类模型(Classification)"></a>分类模型(Classification)</h5><ol>
-<li>输入-标记，数字，综合， 输出-标记<br><img src="/media/14774561356759.jpg" alt="-w281"></li>
-</ol>
-<h4 id="2-描述分析模型"><a href="#2-描述分析模型" class="headerlink" title="2. 描述分析模型"></a>2. 描述分析模型</h4><h5 id="聚类模型-Clustering"><a href="#聚类模型-Clustering" class="headerlink" title="聚类模型(Clustering)"></a>聚类模型(Clustering)</h5><ol>
-<li>输入-标记，数字，综合， 输出-无<pre><code>![-w311](/media/14774565022310.jpg)
-</code></pre><img src="/media/14774565177615.jpg" alt="-w300"></li>
-</ol>
-<h5 id="核密度估计-Density-Estimation"><a href="#核密度估计-Density-Estimation" class="headerlink" title="核密度估计(Density Estimation)"></a>核密度估计(Density Estimation)</h5><ol>
-<li>输入-标记，数字，综合， 输出-无<br><img src="/media/14774578391136.jpg" alt="-w262"></li>
-</ol>
-<h5 id="构造学习-Structural-Learning"><a href="#构造学习-Structural-Learning" class="headerlink" title="构造学习(Structural Learning)"></a>构造学习(Structural Learning)</h5><p><img src="/media/14774570120650.jpg" alt="-w343"></p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><img src="/media/14774570628957.jpg" alt="-w311"></p>
-<hr>
-<h3 id="III-学习的类型"><a href="#III-学习的类型" class="headerlink" title="III.学习的类型"></a>III.学习的类型</h3><h4 id="监督学习-Supervised-Learning"><a href="#监督学习-Supervised-Learning" class="headerlink" title="监督学习(Supervised Learning)"></a>监督学习(Supervised Learning)</h4><p>适用于回归， 分类<br><img src="/media/14774583074116.jpg" alt="-w298"></p>
-<h4 id="非监督学习-Unsupervised-Learning"><a href="#非监督学习-Unsupervised-Learning" class="headerlink" title="非监督学习(Unsupervised Learning)"></a>非监督学习(Unsupervised Learning)</h4><p>适用于聚类， 核密度估计<br><img src="/media/14774583249554.jpg" alt="-w297"></p>
-<h4 id="半监督学习-Semi-supervised-Learning"><a href="#半监督学习-Semi-supervised-Learning" class="headerlink" title="半监督学习(Semi-supervised Learning)"></a>半监督学习(Semi-supervised Learning)</h4><p>数据有些有输出值</p>
-<h4 id="增强学习-Reinforcement-Learning"><a href="#增强学习-Reinforcement-Learning" class="headerlink" title="增强学习(Reinforcement Learning)"></a>增强学习(Reinforcement Learning)</h4><p>适用于优化和控制问题<br><img src="/media/14774583410906.jpg" alt="-w294"></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Data Mining I]]></title>
+      <title><![CDATA[第一章 数据挖掘]]></title>
       <url>https://jyphotography.github.io/2016/10/25/Data-Mining-I/</url>
-      <content type="html"><![CDATA[<h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><h3 id="I-什么是数据挖掘"><a href="#I-什么是数据挖掘" class="headerlink" title="I. 什么是数据挖掘"></a>I. 什么是数据挖掘</h3><ol>
+      <content type="html"><![CDATA[<h1 id="第一章-数据挖掘"><a href="#第一章-数据挖掘" class="headerlink" title="第一章 数据挖掘"></a>第一章 数据挖掘</h1><h3 id="I-什么是数据挖掘"><a href="#I-什么是数据挖掘" class="headerlink" title="I. 什么是数据挖掘"></a>I. 什么是数据挖掘</h3><ol>
 <li>数据中寻找规律</li>
 <li>数据中寻找关系</li>
 <li>数据中提取信息  </li>
