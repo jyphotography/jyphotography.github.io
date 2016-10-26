@@ -4,6 +4,45 @@
   
     
     <entry>
+      <title><![CDATA[课后阅读1： Mastering Data Mining]]></title>
+      <url>https://jyphotography.github.io/2016/10/26/Data-Mining-Reading-1/</url>
+      <content type="html"><![CDATA[<h1 id="Chapter-1-Data-Mining-in-Context"><a href="#Chapter-1-Data-Mining-in-Context" class="headerlink" title="Chapter 1 Data Mining in Context"></a>Chapter 1 Data Mining in Context</h1><h2 id="What-is-Data-Mining"><a href="#What-is-Data-Mining" class="headerlink" title="What is Data Mining"></a>What is Data Mining</h2><p>Data mining is the process of exploration and analysis, by automatic or semiautomatic means, of large quantities of data in order to discover meaningful pattern and rules.–John Wiley</p>
+<h2 id="What-Can-Data-Mining-DO"><a href="#What-Can-Data-Mining-DO" class="headerlink" title="What Can Data Mining DO?"></a>What Can Data Mining DO?</h2><h3 id="Classification"><a href="#Classification" class="headerlink" title="Classification"></a>Classification</h3><p>examine the features of a newly presented object and assign to it a predefined class</p>
+<h3 id="Estimation"><a href="#Estimation" class="headerlink" title="Estimation"></a>Estimation</h3><p>deal with continuously valued outcome</p>
+<h3 id="Prediction"><a href="#Prediction" class="headerlink" title="Prediction"></a>Prediction</h3><p>Prediction cannot be checked about accuracy. We can only wait and see</p>
+<h3 id="Affinity-Grouping"><a href="#Affinity-Grouping" class="headerlink" title="Affinity Grouping"></a>Affinity Grouping</h3><p>things go together (cross-selling opportunities)</p>
+<h3 id="Clustering"><a href="#Clustering" class="headerlink" title="Clustering"></a>Clustering</h3><p>diverse group into similar subgroups</p>
+<h3 id="Description-and-Visualization"><a href="#Description-and-Visualization" class="headerlink" title="Description and Visualization"></a>Description and Visualization</h3><p>data visualization</p>
+<h2 id="The-Business-Context-for-Data-Mining"><a href="#The-Business-Context-for-Data-Mining" class="headerlink" title="The Business Context for Data Mining"></a>The Business Context for Data Mining</h2><ol>
+<li>large quantities of data</li>
+<li>worth learning</li>
+</ol>
+<h3 id="Research-Tool"><a href="#Research-Tool" class="headerlink" title="Research Tool"></a>Research Tool</h3><h3 id="Process-Improvement"><a href="#Process-Improvement" class="headerlink" title="Process Improvement"></a>Process Improvement</h3><h3 id="Marketing"><a href="#Marketing" class="headerlink" title="Marketing"></a>Marketing</h3><h3 id="Customer-Relationship-Management"><a href="#Customer-Relationship-Management" class="headerlink" title="Customer Relationship Management"></a>Customer Relationship Management</h3><h2 id="The-Technical-Context-for-Data-Mining"><a href="#The-Technical-Context-for-Data-Mining" class="headerlink" title="The Technical Context for Data Mining"></a>The Technical Context for Data Mining</h2><ol>
+<li>Algorithms</li>
+<li>Data</li>
+<li>Modeling practices</li>
+</ol>
+<h3 id="Machine-Learning"><a href="#Machine-Learning" class="headerlink" title="Machine Learning"></a>Machine Learning</h3><p>Neural network<br>Decision Trees</p>
+<h3 id="Statistics"><a href="#Statistics" class="headerlink" title="Statistics"></a>Statistics</h3><h3 id="Decision-Support"><a href="#Decision-Support" class="headerlink" title="Decision Support"></a>Decision Support</h3><h4 id="Data-Warehouse"><a href="#Data-Warehouse" class="headerlink" title="Data Warehouse"></a>Data Warehouse</h4><h4 id="OLAP"><a href="#OLAP" class="headerlink" title="OLAP"></a>OLAP</h4><p>Decision Support Fusion</p>
+<h3 id="Computer-Technology"><a href="#Computer-Technology" class="headerlink" title="Computer Technology"></a>Computer Technology</h3><h2 id="The-Societal-Context-for-Data-Mining"><a href="#The-Societal-Context-for-Data-Mining" class="headerlink" title="The Societal Context for Data Mining"></a>The Societal Context for Data Mining</h2><h1 id="Chapter-2-Why-Master-the-Art"><a href="#Chapter-2-Why-Master-the-Art" class="headerlink" title="Chapter 2 Why Master the Art?"></a>Chapter 2 Why Master the Art?</h1><h2 id="Four-Approaches-to-Data-Mining"><a href="#Four-Approaches-to-Data-Mining" class="headerlink" title="Four Approaches to Data Mining"></a>Four Approaches to Data Mining</h2><h3 id="Purchasing-Scores"><a href="#Purchasing-Scores" class="headerlink" title="Purchasing Scores"></a>Purchasing Scores</h3><h3 id="Purchasing-Software"><a href="#Purchasing-Software" class="headerlink" title="Purchasing Software"></a>Purchasing Software</h3><h3 id="Purchasing-Models"><a href="#Purchasing-Models" class="headerlink" title="Purchasing Models"></a>Purchasing Models</h3><p>neural net models for predicting fraud in credit, product Falcon. Concern-false positive-innocent people<br>vertical application</p>
+<h3 id="Purchasing-Model-Building-Software"><a href="#Purchasing-Model-Building-Software" class="headerlink" title="Purchasing Model-Building Software"></a>Purchasing Model-Building Software</h3><p>Quadstone Decision house</p>
+<h4 id="what-tools-can-and-cannot-automate"><a href="#what-tools-can-and-cannot-automate" class="headerlink" title="what tools can and cannot automate"></a>what tools can and cannot automate</h4><p>assumption is important</p>
+<h2 id="Hiring-Outside-Experts"><a href="#Hiring-Outside-Experts" class="headerlink" title="Hiring Outside Experts"></a>Hiring Outside Experts</h2><ol>
+<li>one time vs on-going</li>
+<li>source of data</li>
+<li>how be employed</li>
+<li>availability and skill level</li>
+</ol>
+<h2 id="Lessons-Learned"><a href="#Lessons-Learned" class="headerlink" title="Lessons Learned"></a>Lessons Learned</h2><ol>
+<li>understand business problem</li>
+<li>select relevant data</li>
+<li>transform data</li>
+<li>interpret result</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[第二章 如何找寻可靠的模型]]></title>
       <url>https://jyphotography.github.io/2016/10/26/Data-Mining-II/</url>
       <content type="html"><![CDATA[<h1 id="第二章-如何找寻可靠的模型"><a href="#第二章-如何找寻可靠的模型" class="headerlink" title="第二章 如何找寻可靠的模型"></a>第二章 如何找寻可靠的模型</h1><h3 id="I-数据类型"><a href="#I-数据类型" class="headerlink" title="I. 数据类型"></a>I. 数据类型</h3><ol>
