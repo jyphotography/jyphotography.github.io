@@ -3,7 +3,17 @@
 
     <sitemap>
         <loc>https://jyphotography.github.io/post-sitemap.xml</loc>
-        <lastmod>2016-10-26T14:37:00.000Z</lastmod>
+        <lastmod>2016-10-26T14:47:03.000Z</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>https://jyphotography.github.io/page-sitemap.xml</loc>
+        <lastmod>2016-10-26T14:46:28.000Z</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>https://jyphotography.github.io/category-sitemap.xml</loc>
+        <lastmod>2016-10-26T14:47:03.000Z</lastmod>
     </sitemap>
 
 </sitemapindex>
