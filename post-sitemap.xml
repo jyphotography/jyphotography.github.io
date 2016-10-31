@@ -7,8 +7,8 @@
     </url>
 
     <url>
-        <loc>https://jyphotography.github.io/2016/10/27/sas1/</loc>
-        <lastmod>2016-10-27T23:19:13.000Z</lastmod>
+        <loc>https://jyphotography.github.io/2016/10/28/postDM-HW/</loc>
+        <lastmod>2016-10-31T00:08:51.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -16,7 +16,15 @@
 
     <url>
         <loc>https://jyphotography.github.io/2016/10/27/nosql1/</loc>
-        <lastmod>2016-10-27T23:15:47.000Z</lastmod>
+        <lastmod>2016-10-31T00:08:33.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jyphotography.github.io/2016/10/27/sas1/</loc>
+        <lastmod>2016-10-27T23:19:13.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

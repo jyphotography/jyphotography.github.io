@@ -4,9 +4,18 @@
   
     
     <entry>
+      <title><![CDATA[R使用教程]]></title>
+      <url>https://jyphotography.github.io/2016/10/28/postDM-HW/</url>
+      <content type="html"><![CDATA[<h2 id="RC1"><a href="#RC1" class="headerlink" title="RC1"></a>RC1</h2><p>改变Rstudio格局 Tools-&gt;Global Options-&gt;Pane Layout</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">#定义变量</div><div class="line">x &lt;- 1 #old school</div><div class="line">x = 1  #new school</div><div class="line"></div><div class="line">#定义Vector(连续相同格式的数据）</div><div class="line">x = 1:5</div><div class="line">y = rep(x, times) #重复x,times次</div><div class="line">x = c(3,4.2,0,4,8.7) #连接</div><div class="line">z = seq(start,end,by=step size)</div><div class="line"></div><div class="line">#判断变量</div><div class="line">is.na(z); </div><div class="line">is.finite(z); </div><div class="line">is.nan(z-z)</div><div class="line"></div><div class="line">#indices</div><div class="line">x[1]</div><div class="line">x[2:4]</div><div class="line">which(x &gt; 4) #返回所有x大于4的位置</div><div class="line">x[which(x &gt; 4)] ; x[x &gt; 4] #效果相同</div><div class="line"></div><div class="line">#随机</div><div class="line">x = runif(5,0,10) # 0到10随机5个数</div><div class="line"></div><div class="line">#排序</div><div class="line">order(x) # 返回每个变量的顺序</div><div class="line">x = x[order(x)] #生序</div><div class="line"></div><div class="line">#多维数组</div><div class="line">ma = array(c(1:30),dim=c(6,5)); ma # 2维</div><div class="line">ma[1:2,4]</div><div class="line"></div><div class="line">ma = array(c(1:30),dim=c(2,3,5)); ma # 3维</div><div class="line">ma[1,2,3]; ma[,1:2,4]</div><div class="line"></div><div class="line">#格式转换</div><div class="line">x = as.character(c(1,2,3));</div><div class="line">y = as.numeric(x)</div><div class="line"></div><div class="line">#factor内部是数字，外部是String，方便处理数据</div><div class="line">mynames &lt;- factor(c(&quot;Ted&quot;,&quot;Amy&quot;,&quot;Bill&quot;,&quot;Jill&quot;,&quot;Amy&quot;,&quot;Bill&quot;));</div><div class="line"></div><div class="line">#data frame 不同格式的数据</div><div class="line">people = data.frame(Name = mynames,</div><div class="line">                    Age = c(22,23,26,23,28,20),</div><div class="line">                    Student = c(TRUE,TRUE,FALSE,TRUE,FALSE,TRUE)); people</div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[NoSQL数据库I]]></title>
       <url>https://jyphotography.github.io/2016/10/27/nosql1/</url>
-      <content type="html"></content>
+      <content type="html"><![CDATA[<p>未完待续</p>
+]]></content>
     </entry>
     
     <entry>
