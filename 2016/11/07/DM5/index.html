@@ -1,0 +1,858 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="JY" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="第五章 预处理数据及减少范围内容
+完美数据-让我们现实生活中的数据趋于完美（消化missing数据）
+基本特征选择算法
+用PCA减少特征（Principal Components Analysis)
+用MDS映射数据（Multi-Dimensional Scaling)
+简单看一下处理文字数据
+
+从数据工程师角度看数据太少
+
+难找到合理复杂度模型
+难获得可靠数据以及统计显著性
+
+数据太多
+
+成本增">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DM5">
+<meta property="og:url" content="https://jyphotography.github.io/2016/11/07/DM5/index.html">
+<meta property="og:site_name" content="JY">
+<meta property="og:description" content="第五章 预处理数据及减少范围内容
+完美数据-让我们现实生活中的数据趋于完美（消化missing数据）
+基本特征选择算法
+用PCA减少特征（Principal Components Analysis)
+用MDS映射数据（Multi-Dimensional Scaling)
+简单看一下处理文字数据
+
+从数据工程师角度看数据太少
+
+难找到合理复杂度模型
+难获得可靠数据以及统计显著性
+
+数据太多
+
+成本增">
+<meta property="og:image" content="https://jyphotography.github.io/media/14791653518556.jpg">
+<meta property="og:image" content="https://jyphotography.github.io/media/14791304174472.jpg">
+<meta property="og:image" content="https://jyphotography.github.io/media/14791304390299.jpg">
+<meta property="og:image" content="https://jyphotography.github.io/media/14791304705936.jpg">
+<meta property="og:image" content="https://jyphotography.github.io/media/14791305000103.jpg">
+<meta property="og:image" content="https://jyphotography.github.io/media/14791671019265.jpg">
+<meta property="og:image" content="https://jyphotography.github.io/media/14791672451717.jpg">
+<meta property="og:image" content="https://jyphotography.github.io/media/14791674765068.jpg">
+<meta property="og:image" content="https://jyphotography.github.io/media/14791676326195.jpg">
+<meta property="og:updated_time" content="2016-11-16T22:55:11.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DM5">
+<meta name="twitter:description" content="第五章 预处理数据及减少范围内容
+完美数据-让我们现实生活中的数据趋于完美（消化missing数据）
+基本特征选择算法
+用PCA减少特征（Principal Components Analysis)
+用MDS映射数据（Multi-Dimensional Scaling)
+简单看一下处理文字数据
+
+从数据工程师角度看数据太少
+
+难找到合理复杂度模型
+难获得可靠数据以及统计显著性
+
+数据太多
+
+成本增">
+<meta name="twitter:image" content="https://jyphotography.github.io/media/14791653518556.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="https://jyphotography.github.io/2016/11/07/DM5/"/>
+
+
+  <title> DM5 | JY </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">JY</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                DM5
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-11-07T19:30:04-05:00" content="2016-11-07">
+              2016-11-07
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Data-Mining/" itemprop="url" rel="index">
+                    <span itemprop="name">Data Mining</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="第五章-预处理数据及减少范围"><a href="#第五章-预处理数据及减少范围" class="headerlink" title="第五章 预处理数据及减少范围"></a>第五章 预处理数据及减少范围</h1><h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><ol>
+<li>完美数据-让我们现实生活中的数据趋于完美（消化missing数据）</li>
+<li>基本特征选择算法</li>
+<li>用PCA减少特征（Principal Components Analysis)</li>
+<li>用MDS映射数据（Multi-Dimensional Scaling)</li>
+<li>简单看一下处理文字数据</li>
+</ol>
+<h2 id="从数据工程师角度看"><a href="#从数据工程师角度看" class="headerlink" title="从数据工程师角度看"></a>从数据工程师角度看</h2><p><strong>数据太少</strong></p>
+<ul>
+<li>难找到合理复杂度模型</li>
+<li>难获得可靠数据以及统计显著性</li>
+</ul>
+<p><strong>数据太多</strong></p>
+<ul>
+<li>成本增加（时间与资源）</li>
+<li>重复数据可能导致偏见</li>
+<li>冗余数据可能导致偏见</li>
+<li>多维度问题难解释和图像化</li>
+</ul>
+<h2 id="完美数据"><a href="#完美数据" class="headerlink" title="完美数据"></a>完美数据</h2><ul>
+<li>可以代表</li>
+<li>复杂性</li>
+<li>数量和dimension</li>
+<li>没有太多噪音</li>
+<li>没有太多missing value </li>
+</ul>
+<p>解决missing value的方法：</p>
+<ul>
+<li>用平均数</li>
+<li>用其他数据做模型</li>
+<li>直接删除</li>
+</ul>
+<h2 id="基本特征选择算法"><a href="#基本特征选择算法" class="headerlink" title="基本特征选择算法"></a>基本特征选择算法</h2><p>目的： 改善模型学习结果并减少学习成本<br>feature selection:找到最好的subset<br>feature reduction：找到最有效的数据组合<br>两者的目的都是减少原数据并保存游泳的信息</p>
+<h3 id="特征选择一"><a href="#特征选择一" class="headerlink" title="特征选择一"></a>特征选择一</h3><p>预测能力：</p>
+<ul>
+<li>模型准确度</li>
+<li>相关性数据</li>
+<li>entropy信息获得能力<h3 id="特征选择二"><a href="#特征选择二" class="headerlink" title="特征选择二"></a>特征选择二</h3><h4 id="贪心-（可能比较快，但不一定最好）"><a href="#贪心-（可能比较快，但不一定最好）" class="headerlink" title="贪心 （可能比较快，但不一定最好）"></a>贪心 （可能比较快，但不一定最好）</h4><strong>向前选择算法</strong></li>
+</ul>
+<ol>
+<li>计算每个输入并选择最好的</li>
+<li>是这把其他的输入和最好的配对，选择最好的配对</li>
+<li>继续上面步骤直到获得好的结果</li>
+</ol>
+<p>注意点： 要使用另外的数据做验证<br><img src="/media/14791653518556.jpg" alt="-w504"></p>
+<p><strong>穷尽法（最优，耗时）</strong></p>
+<h2 id="PCA"><a href="#PCA" class="headerlink" title="PCA"></a>PCA</h2><p>目的： 用不相关的数字变量替换相关的数字变量<br>其他目的：减少维度同时获得最大的variance<br>在仅仅使用有限的维度进行数据精确的翻译</p>
+<p>PCA的原理就是将原来的样本数据投影到一个新的空间中，相当于我们在矩阵分析里面学习的将一组矩阵映射到另外的坐标系下。通过一个转换坐标，也可以理解成把一组坐标转换到另外一组坐标系下，但是在新的坐标系下，表示原来的原本不需要那么多的变量，只需要原来样本的最大的一个线性无关组的特征值对应的空间的坐标即可。</p>
+<p>比如，原来的样本是30<em>1000000的维数，就是说我们有30个样本，每个样本有1000000个特征点，这个特征点太多了，我们需要对这些样本的特征点进行降维。那么在降维的时候会计算一个原来样本矩阵的协方差矩阵，这里就是1000000</em>1000000，当然，这个矩阵太大了，计算的时候有其他的方式进行处理，这里只是讲解基本的原理，然后通过这个1000000<em>1000000的协方差矩阵计算它的特征值和特征向量，最后获得具有最大特征值的特征向量构成转换矩阵。比如我们的前29个特征值已经能够占到所有特征值的99%以上，那么我们只需要提取前29个特征值对应的特征向量即可。这样就构成了一个1000000</em>29的转换矩阵，然后用原来的样本乘以这个转换矩阵，就可以得到原来的样本数据在新的特征空间的对应的坐标。30<em>1000000 </em> 1000000<em>29 = 30 </em>29， 这样原来的训练样本每个样本的特征值的个数就降到了29个。</p>
+<p><strong>迷惑</strong><br>另外一个迷惑，在最初刚开始做的时候，就是为什么这么大的数据，比如30<em>1000000直接就降到了30</em>29，这不是减少的数据有点太多了么，会不会对性能造成影响。之所以有这个迷惑，是因为最初并不了解pca的工作方式。 pca并不是直接对原来的数据进行删减，而是把原来的数据映射到新的一个特征空间中继续表示，所有新的特征空间如果有29维，那么这29维足以能够表示非常非常多的数据，并没有对原来的数据进行删减，只是把原来的数据映射到新的空间中进行表示，所以你的测试样本也要同样的映射到这个空间中进行表示，这样就要求你保存住这个空间坐标转换矩阵，把测试样本同样的转换到相同的坐标空间中。</p>
+<pre><code>有些同学在网上发帖子问对训练样本降维以后，怎么对测试样本降维，是不是还是使用princomp这个函数进行降维，这个是错误的。如果你要保证程序运行正常，就要保证训练样本和测试样本被映射到同一个特征空间，这样才能保证数据的一致性。
+</code></pre><p>variance = difference between data<br><img src="/media/14791304174472.jpg" alt="-w388"></p>
+<p>、<img src="/media/14791304390299.jpg" alt="-w381"></p>
+<p><img src="/media/14791304705936.jpg" alt="-w398"><br>失去了一些Z2的信息</p>
+<p><img src="/media/14791305000103.jpg" alt="-w393"><br><img src="/media/14791671019265.jpg" alt="-w483"><br><img src="/media/14791672451717.jpg" alt=""><br>total variance = 1 + 5 + 2 = 8<br>1-2 are correlated<br>3 are not correlated<br>combine 1 and 2<br><img src="/media/14791674765068.jpg" alt=""><br>we lose no variance</p>
+<p>we will lose 0.17</p>
+<p>we will lose 2.17 </p>
+<p><img src="/media/14791676326195.jpg" alt="-w535"></p>
+<h3 id="PCA总结"><a href="#PCA总结" class="headerlink" title="PCA总结"></a>PCA总结</h3><p>因为简单非常流行<br>通常作为数据预处理的方法<br>对多维度数据可视化有帮助<br>在图像处理和理解方面流行<br>本质：降低维度<br>不能处理qutratic value</p>
+<h2 id="MDS"><a href="#MDS" class="headerlink" title="MDS"></a>MDS</h2><p>PCA是把观察的数据用较少的维数来表达，这点上两种方法的相似的；两种方法的不太之处在于，MDS利用的是成对样本间相似性，目的是利用这个信息去构建合适的低维空间，是的样本在此空间的距离和在高维空间中的样本间的相似性尽可能的保持一致。PCA 主要是找到最能体现数据特点的特征，而 MDS 更看重的是原始数据之间的相对关系，通过可视化的方式将他们之间的相对关系尽可能准确的展现出来。</p>
+<p>MDS 的目的是将一组个体间的相异数据经过 MDS 转换成空间构图，且 保留原始数据的相对关系 。也就是说我们通过 MDS 可以直观的可视化的展现原始数据间的相对关系。</p>
+<p>输入： distance matrix<br>返回： k维度散点图保留各个对象见的距离<br>数学： 最小化“stress”</p>
+<h3 id="MDS应用范围"><a href="#MDS应用范围" class="headerlink" title="MDS应用范围"></a>MDS应用范围</h3><p>市场部<br>政治</p>
+<h2 id="Text-Mining"><a href="#Text-Mining" class="headerlink" title="Text Mining"></a>Text Mining</h2><p>动机：超多文字data<br>应用：文档分类， 信心获取，情感分析</p>
+<p>最简单的想法：文字包<br>存储文字和出现的次数</p>
+<h3 id="结构化与非结构化"><a href="#结构化与非结构化" class="headerlink" title="结构化与非结构化"></a>结构化与非结构化</h3><p>文档化矩阵， 每一列代表不同的：单词，一对词，词的顺序</p>
+<p>变量：<br>binary<br>counts<br>weighted frequencies</p>
+<p>TF-IDF<br>tf-idf模型的主要思想是：如果词w在一篇文档d中出现的频率高，并且在其他文档中很少出现，则认为词w具有很好的区分能力，适合用来把文章d和其他文章区分开来。该模型主要包含了两个因素：</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/01/SAS2/" rel="next" title="Overview - SAS EM">
+                <i class="fa fa-chevron-left"></i> Overview - SAS EM
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/14/DM6/" rel="prev" title="DM6">
+                DM6 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Jason Yang" />
+          <p class="site-author-name" itemprop="name">Jason Yang</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/">
+              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第五章-预处理数据及减少范围"><span class="nav-number">1.</span> <span class="nav-text">第五章 预处理数据及减少范围</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#内容"><span class="nav-number">1.1.</span> <span class="nav-text">内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从数据工程师角度看"><span class="nav-number">1.2.</span> <span class="nav-text">从数据工程师角度看</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完美数据"><span class="nav-number">1.3.</span> <span class="nav-text">完美数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本特征选择算法"><span class="nav-number">1.4.</span> <span class="nav-text">基本特征选择算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特征选择一"><span class="nav-number">1.4.1.</span> <span class="nav-text">特征选择一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特征选择二"><span class="nav-number">1.4.2.</span> <span class="nav-text">特征选择二</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#贪心-（可能比较快，但不一定最好）"><span class="nav-number">1.4.2.1.</span> <span class="nav-text">贪心 （可能比较快，但不一定最好）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PCA"><span class="nav-number">1.5.</span> <span class="nav-text">PCA</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PCA总结"><span class="nav-number">1.5.1.</span> <span class="nav-text">PCA总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MDS"><span class="nav-number">1.6.</span> <span class="nav-text">MDS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MDS应用范围"><span class="nav-number">1.6.1.</span> <span class="nav-text">MDS应用范围</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Text-Mining"><span class="nav-number">1.7.</span> <span class="nav-text">Text Mining</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#结构化与非结构化"><span class="nav-number">1.7.1.</span> <span class="nav-text">结构化与非结构化</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jason Yang</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<br>
+本站总访问量 <span id="busuanzi_value_site_pv"></span> &nbsp&nbsp&nbsp
+您是第<span id="busuanzi_value_site_uv"></span>个来到的小伙伴
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = false;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title >= 0 || index_content >= 0 ){
+                                isMatch = true;
+								if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            } 
+							
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

@@ -7,22 +7,8 @@
     </url>
 
     <url>
-        <loc>https://jyphotography.github.io/categories/Data-Mining/</loc>
-        <lastmod>2016-10-26T16:17:21.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://jyphotography.github.io/categories/Capstone/</loc>
         <lastmod>2016-10-26T20:16:47.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jyphotography.github.io/categories/SAS-BI/</loc>
-        <lastmod>2016-10-27T23:19:13.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -44,6 +30,20 @@
     <url>
         <loc>https://jyphotography.github.io/categories/Data-Minings/</loc>
         <lastmod>2016-11-01T17:10:53.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jyphotography.github.io/categories/SAS-BI/</loc>
+        <lastmod>2016-11-01T19:25:15.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jyphotography.github.io/categories/Data-Mining/</loc>
+        <lastmod>2016-11-16T22:55:11.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
