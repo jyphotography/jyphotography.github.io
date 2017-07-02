@@ -86,18 +86,33 @@
 
 
 
-<meta name="description" content="介绍什么是机器学习？“A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with expe">
+<meta name="description" content="MathJax.Hub.Config({tex2jax: {inlineMath: [[&apos;$&apos;,&apos;$&apos;], [&apos;\\(&apos;,&apos;\\)&apos;]]}});
+
+
+
+
+介绍什么是机器学习？“A computer program is said to learn from experience E with respect to some class of tasks T and performance m">
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器学习 Week1 - Coursera Machine Learning">
 <meta property="og:url" content="https://jyphotography.github.io/2017/07/01/ml-1/index.html">
 <meta property="og:site_name" content="JY">
-<meta property="og:description" content="介绍什么是机器学习？“A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with expe">
+<meta property="og:description" content="MathJax.Hub.Config({tex2jax: {inlineMath: [[&apos;$&apos;,&apos;$&apos;], [&apos;\\(&apos;,&apos;\\)&apos;]]}});
+
+
+
+
+介绍什么是机器学习？“A computer program is said to learn from experience E with respect to some class of tasks T and performance m">
 <meta property="og:image" content="https://jyphotography.github.io/media/14989691452519.jpg">
 <meta property="og:image" content="https://jyphotography.github.io/media/14990106615775.jpg">
-<meta property="og:updated_time" content="2017-07-02T16:35:57.000Z">
+<meta property="og:updated_time" content="2017-07-02T16:52:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习 Week1 - Coursera Machine Learning">
-<meta name="twitter:description" content="介绍什么是机器学习？“A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with expe">
+<meta name="twitter:description" content="MathJax.Hub.Config({tex2jax: {inlineMath: [[&apos;$&apos;,&apos;$&apos;], [&apos;\\(&apos;,&apos;\\)&apos;]]}});
+
+
+
+
+介绍什么是机器学习？“A computer program is said to learn from experience E with respect to some class of tasks T and performance m">
 <meta name="twitter:image" content="https://jyphotography.github.io/media/14989691452519.jpg">
 
 
@@ -305,7 +320,13 @@
       
 
       
-        <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><h2 id="什么是机器学习？"><a href="#什么是机器学习？" class="headerlink" title="什么是机器学习？"></a>什么是机器学习？</h2><p>“A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E.” – Tom Mitchell</p>
+        <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><h2 id="什么是机器学习？"><a href="#什么是机器学习？" class="headerlink" title="什么是机器学习？"></a>什么是机器学习？</h2><p>“A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E.” – Tom Mitchell</p>
 <p>一个计算机程序从一些目标（T）和结果（P）学到的经历（E）。 如果这个程序能随着经历（E）的改进而改进目标（T）的结果（P），那这就是机器学习。</p>
 <p>举例来说： 玩跳棋<br>E = 多次游戏的经历<br>T = 玩象棋<br>P = 下局获胜的概率</p>
 <p>一般来说， 任何机器学习都可以分成两类： 监督学习（Supervised Learning）和非监督学习 （Unsupervised Learning)</p>
@@ -314,10 +335,7 @@
 <h2 id="非监督学习"><a href="#非监督学习" class="headerlink" title="非监督学习"></a>非监督学习</h2><p>在不知道结果的情况下解决问题。<br>通过变量之间的关系进行费雷<br>在非监督学习，我们不能得到预测结果的反馈</p>
 <p>例子: <strong>Clustering (归类)</strong><br>在一百万个基因中根据它们之间的关系或相似程度找到自动分组。</p>
 <p>例子: <strong>Non-clustering (非归类)</strong><br><a href="https://en.wikipedia.org/wiki/Cocktail_party_effect" target="_blank" rel="external">鸡尾酒派对算法</a> - 在吵杂的环境中找到个人的声音</p>
-<h1 id="模型解释"><a href="#模型解释" class="headerlink" title="模型解释"></a>模型解释</h1><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-
-
-<p>我们用\(x^i\)表示输入变量， 也叫Feature。 用\(y^i\)表示输出，也就是预测结果</p>
+<h1 id="模型解释"><a href="#模型解释" class="headerlink" title="模型解释"></a>模型解释</h1><p>我们用\(x^i\)表示输入变量， 也叫Feature。 用\(y^i\)表示输出，也就是预测结果</p>
 <p>\((x^i,y^i)\) - 训练样本<br>\((x^i,y^i); i=1,…,m\)； - 训练集</p>
 <p>假设h(x)-<br><img src="/media/14989691452519.jpg" alt=""></p>
 <h2 id="成本函数-（Cost-Function）"><a href="#成本函数-（Cost-Function）" class="headerlink" title="成本函数 （Cost Function）"></a>成本函数 （Cost Function）</h2><p>也称作MSE(Mean Squared Error)<br>用来测量我们函数的正确性-最常用在回归问题上</p>
