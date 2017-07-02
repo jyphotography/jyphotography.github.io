@@ -7,7 +7,7 @@
 
 <html class="theme-next mist use-motion">
 <head>
-  <meta charset="UTF-8"/>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -105,7 +105,8 @@
 <meta property="og:image" content="https://jyphotography.github.io/media/14989691452519.jpg">
 <meta property="og:image" content="http://latex.codecogs.com/gif.latex?J%28%5Ctheta_0%2C%20%5Ctheta_1%29%20%3D%20%5Cdfrac%20%7B1%7D%7B2m%7D%20%5Cdisplaystyle%20%5Csum%20_%7Bi%3D1%7D%5Em%20%5Cleft%20%28%20%5Chat%7By%7D_%7Bi%7D-%20y_%7Bi%7D%20%5Cright%29%5E2%20%3D%20%5Cdfrac%20%7B1%7D%7B2m%7D%20%5Cdisplaystyle%20%5Csum%20_%7Bi%3D1%7D%5Em%20%5Cleft%20%28h_%5Ctheta%20%28x_%7Bi%7D%29%20-%20y_%7Bi%7D%20%5Cright%29%5E2">
 <meta property="og:image" content="https://jyphotography.github.io/media/14990106615775.jpg">
-<meta property="og:updated_time" content="2017-07-02T17:04:58.000Z">
+<meta property="og:image" content="https://jyphotography.github.io/media/14990154186760.jpg">
+<meta property="og:updated_time" content="2017-07-02T17:40:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习 Week1 - Coursera Machine Learning">
 <meta name="twitter:description" content="MathJax.Hub.Config({tex2jax: {inlineMath: [[&apos;$&apos;,&apos;$&apos;], [&apos;\\(&apos;,&apos;\\)&apos;]]}});
@@ -138,7 +139,7 @@
   <link rel="canonical" href="https://jyphotography.github.io/2017/07/01/ml-1/"/>
 
 
-  <title> 机器学习 Week1 - Coursera Machine Learning | JY </title>
+  <title> 机器学习 Week1 - Coursera Machine Learning | JY </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="en">
@@ -159,7 +160,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -342,6 +343,10 @@
 <h2 id="成本函数-（Cost-Function）"><a href="#成本函数-（Cost-Function）" class="headerlink" title="成本函数 （Cost Function）"></a>成本函数 （Cost Function）</h2><p>也称作MSE(Mean Squared Error)<br>用来测量我们函数的正确性-最常用在回归问题上</p>
 <p><img src="http://latex.codecogs.com/gif.latex?J%28%5Ctheta_0%2C%20%5Ctheta_1%29%20%3D%20%5Cdfrac%20%7B1%7D%7B2m%7D%20%5Cdisplaystyle%20%5Csum%20_%7Bi%3D1%7D%5Em%20%5Cleft%20%28%20%5Chat%7By%7D_%7Bi%7D-%20y_%7Bi%7D%20%5Cright%29%5E2%20%3D%20%5Cdfrac%20%7B1%7D%7B2m%7D%20%5Cdisplaystyle%20%5Csum%20_%7Bi%3D1%7D%5Em%20%5Cleft%20%28h_%5Ctheta%20%28x_%7Bi%7D%29%20-%20y_%7Bi%7D%20%5Cright%29%5E2" alt=""><br>（预测值-真实值）的平方和／（样本个数*2）<br><img src="/media/14990106615775.jpg" alt=""></p>
 <p>PS: 公式中除2的原因只是保证这个函数不受样本个数的影响</p>
+<h1 id="参数学习"><a href="#参数学习" class="headerlink" title="参数学习"></a>参数学习</h1><h2 id="梯度下降法-（Gradient-Descent）"><a href="#梯度下降法-（Gradient-Descent）" class="headerlink" title="梯度下降法 （Gradient Descent）"></a>梯度下降法 （Gradient Descent）</h2><p>通过调整成本函数的参数来达到MSE最小</p>
+<p><img src="/media/14990154186760.jpg" alt=""></p>
+<p>假设我们把$\theta_0$和$\theta_1$分别放在x,y轴， 然后用z轴表示我们的成本函数。<br>我们要做的事找到图中最低的点（红箭头）。方法是在成本函数求导数,切线的斜率提供方向，找到最陡的方向进行下降。<br>步子的大小叫做learning rate $\alpha$</p>
+<p><strong>梯度下降公式：</strong><br>$$\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1)$$</p>
 <h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ol>
 <li><a href="http://www.forkosh.com/mathtextutorial.html" target="_blank" rel="external">Mathjax</a></li>
 <li><a href="http://latex.codecogs.com/eqneditor/editor.php" target="_blank" rel="external">在线数学公式生成器</a></li>
@@ -504,7 +509,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是机器学习？"><span class="nav-number">1.1.</span> <span class="nav-text">什么是机器学习？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#监督学习"><span class="nav-number">1.2.</span> <span class="nav-text">监督学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非监督学习"><span class="nav-number">1.3.</span> <span class="nav-text">非监督学习</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模型解释"><span class="nav-number">2.</span> <span class="nav-text">模型解释</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#成本函数-（Cost-Function）"><span class="nav-number">2.1.</span> <span class="nav-text">成本函数 （Cost Function）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#References"><span class="nav-number">3.</span> <span class="nav-text">References</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是机器学习？"><span class="nav-number">1.1.</span> <span class="nav-text">什么是机器学习？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#监督学习"><span class="nav-number">1.2.</span> <span class="nav-text">监督学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非监督学习"><span class="nav-number">1.3.</span> <span class="nav-text">非监督学习</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模型解释"><span class="nav-number">2.</span> <span class="nav-text">模型解释</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#成本函数-（Cost-Function）"><span class="nav-number">2.1.</span> <span class="nav-text">成本函数 （Cost Function）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参数学习"><span class="nav-number">3.</span> <span class="nav-text">参数学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#梯度下降法-（Gradient-Descent）"><span class="nav-number">3.1.</span> <span class="nav-text">梯度下降法 （Gradient Descent）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#References"><span class="nav-number">4.</span> <span class="nav-text">References</span></a></li></ol></div>
             
           </div>
         </section>
@@ -756,7 +761,7 @@
     $('.popup').click(function(e){
       e.stopPropagation();
     });
-  </script>
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
   
