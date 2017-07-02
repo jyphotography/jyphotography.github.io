@@ -25,11 +25,11 @@
 <p>\((x^i,y^i)\) - 训练样本<br>\((x^i,y^i); i=1,…,m\)； - 训练集</p>
 <p>假设h(x)-<br><img src="/media/14989691452519.jpg" alt=""></p>
 <h2 id="成本函数-（Cost-Function）"><a href="#成本函数-（Cost-Function）" class="headerlink" title="成本函数 （Cost Function）"></a>成本函数 （Cost Function）</h2><p>也称作MSE(Mean Squared Error)<br>用来测量我们函数的正确性-最常用在回归问题上</p>
-<p>\(<br>J(\theta_0, \theta<em>1) = \dfrac {1}{2m} \displaystyle \sum </em>{i=1}^m \left ( \hat{y}<em>{i}- y</em>{i} \right)^2 = \dfrac {1}{2m} \displaystyle \sum <em>{i=1}^m \left (h</em>\theta (x<em>{i}) - y</em>{i} \right)^2<br>\)</p>
-<p>（预测值-真实值）的平方和／（样本个数*2）<br><img src="/media/14990106615775.jpg" alt=""></p>
+<p><img src="http://latex.codecogs.com/gif.latex?J%28%5Ctheta_0%2C%20%5Ctheta_1%29%20%3D%20%5Cdfrac%20%7B1%7D%7B2m%7D%20%5Cdisplaystyle%20%5Csum%20_%7Bi%3D1%7D%5Em%20%5Cleft%20%28%20%5Chat%7By%7D_%7Bi%7D-%20y_%7Bi%7D%20%5Cright%29%5E2%20%3D%20%5Cdfrac%20%7B1%7D%7B2m%7D%20%5Cdisplaystyle%20%5Csum%20_%7Bi%3D1%7D%5Em%20%5Cleft%20%28h_%5Ctheta%20%28x_%7Bi%7D%29%20-%20y_%7Bi%7D%20%5Cright%29%5E2" alt=""><br>（预测值-真实值）的平方和／（样本个数*2）<br><img src="/media/14990106615775.jpg" alt=""></p>
 <p>PS: 公式中除2的原因只是保证这个函数不受样本个数的影响</p>
 <h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ol>
-<li>数学符合 <a href="http://www.forkosh.com/mathtextutorial.html" target="_blank" rel="external">Mathjax</a></li>
+<li><a href="http://www.forkosh.com/mathtextutorial.html" target="_blank" rel="external">Mathjax</a></li>
+<li><a href="http://latex.codecogs.com/eqneditor/editor.php" target="_blank" rel="external">在线数学公式生成器</a></li>
 </ol>
 ]]></content>
     </entry>
