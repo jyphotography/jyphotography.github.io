@@ -86,26 +86,20 @@
 
 
 
-<meta name="description" content="数据仓库(Data Warehouse)基础
-DW 历史
-Inmon: Top-down: 公司只建一个数据仓库。数据集市从数据仓库取数据
+<meta name="description" content="数据仓库(Data Warehouse)基础DW 历史Inmon: Top-down: 公司只建一个数据仓库。数据集市从数据仓库取数据
 Kimball：Bottom-up: 先从数据集市开始，然后聚集成数据仓库。
 Enterprise Warehouse-收集所有信息，然后在整个组织循环
 Data Mart-数据仓库的一个子集，代表一个商业流程的数据
-DW 定义
-数据仓库是 subject-o">
+DW 定义数据仓库是 subject-orie">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第一章 数据仓库">
 <meta property="og:url" content="https://jyphotography.github.io/2016/10/27/DW-1/index.html">
 <meta property="og:site_name" content="JY">
-<meta property="og:description" content="数据仓库(Data Warehouse)基础
-DW 历史
-Inmon: Top-down: 公司只建一个数据仓库。数据集市从数据仓库取数据
+<meta property="og:description" content="数据仓库(Data Warehouse)基础DW 历史Inmon: Top-down: 公司只建一个数据仓库。数据集市从数据仓库取数据
 Kimball：Bottom-up: 先从数据集市开始，然后聚集成数据仓库。
 Enterprise Warehouse-收集所有信息，然后在整个组织循环
 Data Mart-数据仓库的一个子集，代表一个商业流程的数据
-DW 定义
-数据仓库是 subject-o">
+DW 定义数据仓库是 subject-orie">
 <meta property="og:image" content="https://jyphotography.github.io/media/14776071330775.jpg">
 <meta property="og:image" content="https://jyphotography.github.io/media/14776071607052.jpg">
 <meta property="og:image" content="https://jyphotography.github.io/media/14776082294975.jpg">
@@ -113,14 +107,11 @@ DW 定义
 <meta property="og:updated_time" content="2016-10-27T22:43:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一章 数据仓库">
-<meta name="twitter:description" content="数据仓库(Data Warehouse)基础
-DW 历史
-Inmon: Top-down: 公司只建一个数据仓库。数据集市从数据仓库取数据
+<meta name="twitter:description" content="数据仓库(Data Warehouse)基础DW 历史Inmon: Top-down: 公司只建一个数据仓库。数据集市从数据仓库取数据
 Kimball：Bottom-up: 先从数据集市开始，然后聚集成数据仓库。
 Enterprise Warehouse-收集所有信息，然后在整个组织循环
 Data Mart-数据仓库的一个子集，代表一个商业流程的数据
-DW 定义
-数据仓库是 subject-o">
+DW 定义数据仓库是 subject-orie">
 <meta name="twitter:image" content="https://jyphotography.github.io/media/14776071330775.jpg">
 
 
@@ -347,47 +338,24 @@ DW 定义
       
 
       
-        <h2>数据仓库(Data Warehouse)基础</h2>
-<h3>DW 历史</h3>
-<p>Inmon: Top-down: 公司只建一个数据仓库。数据集市从数据仓库取数据</p>
+        <h2 id="数据仓库-Data-Warehouse-基础"><a href="#数据仓库-Data-Warehouse-基础" class="headerlink" title="数据仓库(Data Warehouse)基础"></a>数据仓库(Data Warehouse)基础</h2><h3 id="DW-历史"><a href="#DW-历史" class="headerlink" title="DW 历史"></a>DW 历史</h3><p>Inmon: Top-down: 公司只建一个数据仓库。数据集市从数据仓库取数据</p>
 <p>Kimball：Bottom-up: 先从数据集市开始，然后聚集成数据仓库。</p>
 <p>Enterprise Warehouse-收集所有信息，然后在整个组织循环</p>
 <p>Data Mart-数据仓库的一个子集，代表一个商业流程的数据</p>
-<h3>DW 定义</h3>
-<p>数据仓库是 subject-oriented, integrated, time-varying, non-volatile  的数据集合用于帮助决策（Inmon）</p>
+<h3 id="DW-定义"><a href="#DW-定义" class="headerlink" title="DW 定义"></a>DW 定义</h3><p>数据仓库是 subject-oriented, integrated, time-varying, non-volatile  的数据集合用于帮助决策（Inmon）</p>
 <p>交易数据的特殊结构拷贝，有利于查询（Kimball）</p>
 <pre><code>1. subject-oriented: 只记录与决策系统相关的信息
 2. Integrated: 一致性
 3. Time Varying：时间记录的准确性
 4. Non Volatile：不太会改变原始数据，更多的是增加数据
-</code></pre>
-<p>Data Warehouse现实商业中的定义： 支持决策系统， 分析环境，与存储数据形式无关</p>
-<h3>为什么要把DW与数据库分开？</h3>
-<p>1.性能
-2.功能
-3.目的-更容易分析数据</p>
-<h3>为什么要数据库？</h3>
-<p>只有一部分信息需要改变
-添加
-删除
-更新
-Normalization</p>
-<h3>DW与数据库比较</h3>
-<p><img src="/media/14776071330775.jpg" alt="-w749"></p>
-<h3>DW的构架</h3>
-<p><img src="/media/14776071607052.jpg" alt="-w806"></p>
-<h2>纬度模型(Dimensional Model or Star Schema)</h2>
-<h3>组成-两部分</h3>
-<h4>Fact Table</h4>
-<p>存储衡量变量
-多对多
-<img src="/media/14776082294975.jpg" alt="-w221"></p>
-<h4>Dimension Table</h4>
-<p>存储解释信息
-通常非常长
-<img src="/media/14776082139821.jpg" alt="-w212"></p>
-<h3>好处</h3>
-<ol>
+</code></pre><p>Data Warehouse现实商业中的定义： 支持决策系统， 分析环境，与存储数据形式无关</p>
+<h3 id="为什么要把DW与数据库分开？"><a href="#为什么要把DW与数据库分开？" class="headerlink" title="为什么要把DW与数据库分开？"></a>为什么要把DW与数据库分开？</h3><p>1.性能<br>2.功能<br>3.目的-更容易分析数据</p>
+<h3 id="为什么要数据库？"><a href="#为什么要数据库？" class="headerlink" title="为什么要数据库？"></a>为什么要数据库？</h3><p>只有一部分信息需要改变<br>添加<br>删除<br>更新<br>Normalization</p>
+<h3 id="DW与数据库比较"><a href="#DW与数据库比较" class="headerlink" title="DW与数据库比较"></a>DW与数据库比较</h3><p><img src="/media/14776071330775.jpg" alt="-w749"></p>
+<h3 id="DW的构架"><a href="#DW的构架" class="headerlink" title="DW的构架"></a>DW的构架</h3><p><img src="/media/14776071607052.jpg" alt="-w806"></p>
+<h2 id="纬度模型-Dimensional-Model-or-Star-Schema"><a href="#纬度模型-Dimensional-Model-or-Star-Schema" class="headerlink" title="纬度模型(Dimensional Model or Star Schema)"></a>纬度模型(Dimensional Model or Star Schema)</h2><h3 id="组成-两部分"><a href="#组成-两部分" class="headerlink" title="组成-两部分"></a>组成-两部分</h3><h4 id="Fact-Table"><a href="#Fact-Table" class="headerlink" title="Fact Table"></a>Fact Table</h4><p>存储衡量变量<br>多对多<br><img src="/media/14776082294975.jpg" alt="-w221"></p>
+<h4 id="Dimension-Table"><a href="#Dimension-Table" class="headerlink" title="Dimension Table"></a>Dimension Table</h4><p>存储解释信息<br>通常非常长<br><img src="/media/14776082139821.jpg" alt="-w212"></p>
+<h3 id="好处"><a href="#好处" class="headerlink" title="好处"></a>好处</h3><ol>
 <li>简单</li>
 <li>性能</li>
 </ol>
@@ -547,7 +515,7 @@ Normalization</p>
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">数据仓库(Data Warehouse)基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">DW 历史</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">DW 定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.3.</span> <span class="nav-text">为什么要把DW与数据库分开？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.4.</span> <span class="nav-text">为什么要数据库？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.5.</span> <span class="nav-text">DW与数据库比较</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.6.</span> <span class="nav-text">DW的构架</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">纬度模型(Dimensional Model or Star Schema)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.1.</span> <span class="nav-text">组成-两部分</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">2.1.1.</span> <span class="nav-text">Fact Table</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">2.1.2.</span> <span class="nav-text">Dimension Table</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.2.</span> <span class="nav-text">好处</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据仓库-Data-Warehouse-基础"><span class="nav-number">1.</span> <span class="nav-text">数据仓库(Data Warehouse)基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DW-历史"><span class="nav-number">1.1.</span> <span class="nav-text">DW 历史</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DW-定义"><span class="nav-number">1.2.</span> <span class="nav-text">DW 定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要把DW与数据库分开？"><span class="nav-number">1.3.</span> <span class="nav-text">为什么要把DW与数据库分开？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要数据库？"><span class="nav-number">1.4.</span> <span class="nav-text">为什么要数据库？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DW与数据库比较"><span class="nav-number">1.5.</span> <span class="nav-text">DW与数据库比较</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DW的构架"><span class="nav-number">1.6.</span> <span class="nav-text">DW的构架</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#纬度模型-Dimensional-Model-or-Star-Schema"><span class="nav-number">2.</span> <span class="nav-text">纬度模型(Dimensional Model or Star Schema)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#组成-两部分"><span class="nav-number">2.1.</span> <span class="nav-text">组成-两部分</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Fact-Table"><span class="nav-number">2.1.1.</span> <span class="nav-text">Fact Table</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dimension-Table"><span class="nav-number">2.1.2.</span> <span class="nav-text">Dimension Table</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#好处"><span class="nav-number">2.2.</span> <span class="nav-text">好处</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

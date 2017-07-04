@@ -6,49 +6,27 @@
     <entry>
       <title><![CDATA[机器学习 Week2 - Coursera Machine Learning]]></title>
       <url>https://jyphotography.github.io/2017/07/04/ml-2/</url>
-      <content type="html"><![CDATA[<h1>多元线性回归</h1>
-<h2>多元特征</h2>
-<p>公式： $$h_\theta (x) = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + \theta_3 x_3 + \cdots + \theta_n x_n $$</p>
-<p>向量化： 我们可以看成矩阵相乘：
-$$\begin{align*}h_\theta(x) =\begin{bmatrix}\theta_0 \hspace{2em} \theta_1 \hspace{2em} ... \hspace{2em} \theta_n\end{bmatrix}\begin{bmatrix}x_0 \newline x_1 \newline \vdots \newline x_n\end{bmatrix}= \theta^T x\end{align*}$$</p>
-<h2>多元特征的梯度下降</h2>
-<p>和week1二元类似，也是需要同时更新所有$\theta$知道收敛
-$$\begin{align*}&amp; \text{repeat until convergence:} ; \lbrace \newline ; &amp; \theta_j := \theta_j - \alpha \frac{1}{m} \sum\limits_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_j^{(i)} ; &amp; \text{for j := 0...n}\newline \rbrace\end{align*}$$</p>
-<h2>梯度下降-特征缩放 （Feature Scaling）</h2>
-<p>确保所有特征在一个相近的范围内， 这样收敛的速度大大增加</p>
+      <content type="html"><![CDATA[<h1 id="多元线性回归"><a href="#多元线性回归" class="headerlink" title="多元线性回归"></a>多元线性回归</h1><h2 id="多元特征"><a href="#多元特征" class="headerlink" title="多元特征"></a>多元特征</h2><p>公式： $$h_\theta (x) = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + \theta_3 x_3 + \cdots + \theta_n x_n $$</p>
+<p>向量化： 我们可以看成矩阵相乘：<br>$$\begin{align<em>}h_\theta(x) =\begin{bmatrix}\theta_0 \hspace{2em} \theta_1 \hspace{2em} … \hspace{2em} \theta_n\end{bmatrix}\begin{bmatrix}x_0 \newline x_1 \newline \vdots \newline x_n\end{bmatrix}= \theta^T x\end{align</em>}$$</p>
+<h2 id="多元特征的梯度下降"><a href="#多元特征的梯度下降" class="headerlink" title="多元特征的梯度下降"></a>多元特征的梯度下降</h2><p>和week1二元类似，也是需要同时更新所有$\theta$知道收敛<br>$$\begin{align<em>}&amp; \text{repeat until convergence:} \; \lbrace \newline \; &amp; \theta_j := \theta<em>j - \alpha \frac{1}{m} \sum\limits</em>{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_j^{(i)} \; &amp; \text{for j := 0…n}\newline \rbrace\end{align</em>}$$</p>
+<h2 id="梯度下降-特征缩放-（Feature-Scaling）"><a href="#梯度下降-特征缩放-（Feature-Scaling）" class="headerlink" title="梯度下降-特征缩放 （Feature Scaling）"></a>梯度下降-特征缩放 （Feature Scaling）</h2><p>确保所有特征在一个相近的范围内， 这样收敛的速度大大增加</p>
 <p><img src="/media/14991969758509.jpg" alt=""></p>
-<h3>均值归一化 （Mean Normalization）</h3>
-<p>$$x_i := \dfrac{x_i - \mu_i}{s_i}$$
-$\mu_i$是这个特征的平均数
-$s_i$是这个特征的范围（最大-最小）</p>
-<p>例子： $x_i$表示房价范围¥100-¥2000， 平均房价¥1000
-$$x_i := \dfrac{price-1000}{1900}$$</p>
-<h2>梯度下降-学习速率（Learning Rate）</h2>
-<h3>确保梯度下降正确</h3>
-<p>如果正确J(θ)应该一直减小</p>
+<h3 id="均值归一化-（Mean-Normalization）"><a href="#均值归一化-（Mean-Normalization）" class="headerlink" title="均值归一化 （Mean Normalization）"></a>均值归一化 （Mean Normalization）</h3><p>$$x_i := \dfrac{x_i - \mu_i}{s_i}$$<br>$\mu_i$是这个特征的平均数<br>$s_i$是这个特征的范围（最大-最小）</p>
+<p>例子： $x_i$表示房价范围¥100-¥2000， 平均房价¥1000<br>$$x_i := \dfrac{price-1000}{1900}$$</p>
+<h2 id="梯度下降-学习速率（Learning-Rate）"><a href="#梯度下降-学习速率（Learning-Rate）" class="headerlink" title="梯度下降-学习速率（Learning Rate）"></a>梯度下降-学习速率（Learning Rate）</h2><h3 id="确保梯度下降正确"><a href="#确保梯度下降正确" class="headerlink" title="确保梯度下降正确"></a>确保梯度下降正确</h3><p>如果正确J(θ)应该一直减小</p>
 <p><img src="/media/14991986136032.jpg" alt=""></p>
 <p>总的来说：</p>
 <ol>
 <li>$\alpha$太小-&gt;收敛慢</li>
 <li>$\alpha$太大-&gt;可能无法收敛</li>
 </ol>
-<h2>特征和多项式回归</h2>
-<p>我们可以把不同的特征组合起来
-<strong>组合</strong>： 例如把$x_1$和$x_2$乘起来组合成新特征$x_3$</p>
-<h3>多项式回归</h3>
-<p>成本函数不一定要线性，有时候二元活着三元函数更符合。
-注意：多项式回归时特征缩放很关键</p>
+<h2 id="特征和多项式回归"><a href="#特征和多项式回归" class="headerlink" title="特征和多项式回归"></a>特征和多项式回归</h2><p>我们可以把不同的特征组合起来<br><strong>组合</strong>： 例如把$x_1$和$x_2$乘起来组合成新特征$x_3$</p>
+<h3 id="多项式回归"><a href="#多项式回归" class="headerlink" title="多项式回归"></a>多项式回归</h3><p>成本函数不一定要线性，有时候二元活着三元函数更符合。<br>注意：多项式回归时特征缩放很关键</p>
 <p>#计算变量</p>
-<h2>正规方程（Normal Equation）</h2>
-<p>一次性求接出最佳的$\theta$</p>
-<p>公式： $$\theta = (X^T X)^{-1}X^T y$$
-不需要做特征缩放</p>
-<p>与梯度下降的区别：
-<img src="/media/14991996330553.jpg" alt="">
-梯度下降适合大数据，
-正规方程适合小数据</p>
-<h2>正规方程不可逆（Normal Equation Noninvertibility）</h2>
-<p>可能的原因：</p>
+<h2 id="正规方程（Normal-Equation）"><a href="#正规方程（Normal-Equation）" class="headerlink" title="正规方程（Normal Equation）"></a>正规方程（Normal Equation）</h2><p>一次性求接出最佳的$\theta$</p>
+<p>公式： $$\theta = (X^T X)^{-1}X^T y$$<br>不需要做特征缩放 </p>
+<p>与梯度下降的区别：<br><img src="/media/14991996330553.jpg" alt=""><br>梯度下降适合大数据，<br>正规方程适合小数据</p>
+<h2 id="正规方程不可逆（Normal-Equation-Noninvertibility）"><a href="#正规方程不可逆（Normal-Equation-Noninvertibility）" class="headerlink" title="正规方程不可逆（Normal Equation Noninvertibility）"></a>正规方程不可逆（Normal Equation Noninvertibility）</h2><p>可能的原因：</p>
 <ol>
 <li>多余的变量</li>
 <li>太多特征</li>
@@ -59,56 +37,27 @@ $$x_i := \dfrac{price-1000}{1900}$$</p>
     <entry>
       <title><![CDATA[机器学习 Week1 - Coursera Machine Learning]]></title>
       <url>https://jyphotography.github.io/2017/07/01/ml-1/</url>
-      <content type="html"><![CDATA[<h1>介绍</h1>
-<h2>什么是机器学习？</h2>
-<p>&quot;A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E.&quot; -- Tom Mitchell</p>
+      <content type="html"><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><h2 id="什么是机器学习？"><a href="#什么是机器学习？" class="headerlink" title="什么是机器学习？"></a>什么是机器学习？</h2><p>“A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E.” – Tom Mitchell</p>
 <p>一个计算机程序从一些目标（T）和结果（P）学到的经历（E）。 如果这个程序能随着经历（E）的改进而改进目标（T）的结果（P），那这就是机器学习。</p>
-<p>举例来说： 玩跳棋
-E = 多次游戏的经历
-T = 玩象棋
-P = 下局获胜的概率</p>
+<p>举例来说： 玩跳棋<br>E = 多次游戏的经历<br>T = 玩象棋<br>P = 下局获胜的概率</p>
 <p>一般来说， 任何机器学习都可以分成两类： 监督学习（Supervised Learning）和非监督学习 （Unsupervised Learning)</p>
-<h2>监督学习</h2>
-<p>我们知道正确的结果，找到输入和输出的关系</p>
-<p>监督学习有两类。
-<strong>Regression（回归问题）</strong> 主要用于预测连续变量
-例子： 预测房价
-<strong>Classification（分类）</strong> 主要用于预测不连续的变量
-例子： 预测房价是否大于报价</p>
-<h2>非监督学习</h2>
-<p>在不知道结果的情况下解决问题。
-通过变量之间的关系进行费雷
-在非监督学习，我们不能得到预测结果的反馈</p>
-<p>例子: <strong>Clustering (归类)</strong>
-在一百万个基因中根据它们之间的关系或相似程度找到自动分组。</p>
-<p>例子: <strong>Non-clustering (非归类)</strong>
-<a href="https://en.wikipedia.org/wiki/Cocktail_party_effect" target="_blank" rel="external">鸡尾酒派对算法</a> - 在吵杂的环境中找到个人的声音</p>
-<h1>模型解释</h1>
-<p>我们用\(x^i\)表示输入变量， 也叫Feature。 用\(y^i\)表示输出，也就是预测结果</p>
-<p>\((x^i,y^i)\) - 训练样本
-\((x^i,y^i); i=1,...,m\)； - 训练集</p>
-<p>假设h(x)-
-<img src="/media/14989691452519.jpg" alt=""></p>
-<h2>成本函数 （Cost Function）</h2>
-<p>也称作MSE(Mean Squared Error)
-用来测量我们函数的正确性-最常用在回归问题上</p>
-<p><img src="http://latex.codecogs.com/gif.latex?J%28%5Ctheta_0%2C%20%5Ctheta_1%29%20%3D%20%5Cdfrac%20%7B1%7D%7B2m%7D%20%5Cdisplaystyle%20%5Csum%20_%7Bi%3D1%7D%5Em%20%5Cleft%20%28%20%5Chat%7By%7D_%7Bi%7D-%20y_%7Bi%7D%20%5Cright%29%5E2%20%3D%20%5Cdfrac%20%7B1%7D%7B2m%7D%20%5Cdisplaystyle%20%5Csum%20_%7Bi%3D1%7D%5Em%20%5Cleft%20%28h_%5Ctheta%20%28x_%7Bi%7D%29%20-%20y_%7Bi%7D%20%5Cright%29%5E2" alt="">
-（预测值-真实值）的平方和／（样本个数*2）
-<img src="/media/14990106615775.jpg" alt=""></p>
+<h2 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h2><p>我们知道正确的结果，找到输入和输出的关系</p>
+<p>监督学习有两类。<br><strong>Regression（回归问题）</strong> 主要用于预测连续变量<br>例子： 预测房价<br><strong>Classification（分类）</strong> 主要用于预测不连续的变量<br>例子： 预测房价是否大于报价</p>
+<h2 id="非监督学习"><a href="#非监督学习" class="headerlink" title="非监督学习"></a>非监督学习</h2><p>在不知道结果的情况下解决问题。<br>通过变量之间的关系进行费雷<br>在非监督学习，我们不能得到预测结果的反馈</p>
+<p>例子: <strong>Clustering (归类)</strong><br>在一百万个基因中根据它们之间的关系或相似程度找到自动分组。</p>
+<p>例子: <strong>Non-clustering (非归类)</strong><br><a href="https://en.wikipedia.org/wiki/Cocktail_party_effect" target="_blank" rel="external">鸡尾酒派对算法</a> - 在吵杂的环境中找到个人的声音</p>
+<h1 id="模型解释"><a href="#模型解释" class="headerlink" title="模型解释"></a>模型解释</h1><p>我们用\(x^i\)表示输入变量， 也叫Feature。 用\(y^i\)表示输出，也就是预测结果</p>
+<p>\((x^i,y^i)\) - 训练样本<br>\((x^i,y^i); i=1,…,m\)； - 训练集</p>
+<p>假设h(x)-<br><img src="/media/14989691452519.jpg" alt=""></p>
+<h2 id="成本函数-（Cost-Function）"><a href="#成本函数-（Cost-Function）" class="headerlink" title="成本函数 （Cost Function）"></a>成本函数 （Cost Function）</h2><p>也称作MSE(Mean Squared Error)<br>用来测量我们函数的正确性-最常用在回归问题上</p>
+<p><img src="http://latex.codecogs.com/gif.latex?J%28%5Ctheta_0%2C%20%5Ctheta_1%29%20%3D%20%5Cdfrac%20%7B1%7D%7B2m%7D%20%5Cdisplaystyle%20%5Csum%20_%7Bi%3D1%7D%5Em%20%5Cleft%20%28%20%5Chat%7By%7D_%7Bi%7D-%20y_%7Bi%7D%20%5Cright%29%5E2%20%3D%20%5Cdfrac%20%7B1%7D%7B2m%7D%20%5Cdisplaystyle%20%5Csum%20_%7Bi%3D1%7D%5Em%20%5Cleft%20%28h_%5Ctheta%20%28x_%7Bi%7D%29%20-%20y_%7Bi%7D%20%5Cright%29%5E2" alt=""><br>（预测值-真实值）的平方和／（样本个数*2）<br><img src="/media/14990106615775.jpg" alt=""></p>
 <p>PS: 公式中除2的原因只是保证这个函数不受样本个数的影响</p>
-<h1>参数学习</h1>
-<h2>梯度下降法 （Gradient Descent）</h2>
-<p>通过调整成本函数的参数来达到MSE最小</p>
+<h1 id="参数学习"><a href="#参数学习" class="headerlink" title="参数学习"></a>参数学习</h1><h2 id="梯度下降法-（Gradient-Descent）"><a href="#梯度下降法-（Gradient-Descent）" class="headerlink" title="梯度下降法 （Gradient Descent）"></a>梯度下降法 （Gradient Descent）</h2><p>通过调整成本函数的参数来达到MSE最小</p>
 <p><img src="/media/14990154186760.jpg" alt=""></p>
-<p>假设我们把$\theta_0$和$\theta_1$分别放在x,y轴， 然后用z轴表示我们的成本函数。
-我们要做的事找到图中最低的点（红箭头）。方法是在成本函数求导数,切线的斜率提供方向，找到最陡的方向进行下降。
-步子的大小叫做learning rate $\alpha$</p>
-<p><strong>梯度下降公式：</strong>
-$$\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1)$$</p>
-<p>有多个$\theta$的时候要同时更新
-<img src="/media/14991952094389.jpg" alt=""></p>
-<h1>References</h1>
-<ol>
+<p>假设我们把$\theta_0$和$\theta_1$分别放在x,y轴， 然后用z轴表示我们的成本函数。<br>我们要做的事找到图中最低的点（红箭头）。方法是在成本函数求导数,切线的斜率提供方向，找到最陡的方向进行下降。<br>步子的大小叫做learning rate $\alpha$</p>
+<p><strong>梯度下降公式：</strong><br>$$\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1)$$</p>
+<p>有多个$\theta$的时候要同时更新<br><img src="/media/14991952094389.jpg" alt=""></p>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ol>
 <li><a href="http://www.forkosh.com/mathtextutorial.html" target="_blank" rel="external">Mathjax</a></li>
 <li><a href="http://latex.codecogs.com/eqneditor/editor.php" target="_blank" rel="external">在线数学公式生成器</a></li>
 </ol>
@@ -118,29 +67,26 @@ $$\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta_0, \
     <entry>
       <title><![CDATA[DM7]]></title>
       <url>https://jyphotography.github.io/2016/11/28/DM7-1/</url>
-      <content type="html"><![CDATA[<p><img src="/media/14803748563558.jpg" alt="">
-underfit</p>
-<p><img src="/media/14803748688502.jpg" alt="">
-overfit</p>
-<p>KDE is non-parametric like KNN
-usually no equation(complexity)</p>
-<p>最性感的方法
-<img src="/media/14803783091836.jpg" alt=""></p>
-<p>if k= n , the system = 0, useless
-higher k, higher complexity</p>
+      <content type="html"><![CDATA[<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+<p><img src="/media/14803748563558.jpg" alt=""><br>underfit</p>
+<p><img src="/media/14803748688502.jpg" alt=""><br>overfit</p>
+<p>KDE is non-parametric like KNN<br>usually no equation(complexity)</p>
+<p>最性感的方法<br><img src="/media/14803783091836.jpg" alt=""></p>
+<p>if k= n , the system = 0, useless<br>higher k, higher complexity</p>
 ]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[DM7]]></title>
       <url>https://jyphotography.github.io/2016/11/18/DM7/</url>
-      <content type="html"><![CDATA[<p>Density estimation
-没有目标估计</p>
+      <content type="html"><![CDATA[<p>Density estimation<br>没有目标估计</p>
 <p>最简单的是： 直方图</p>
-<p>KDE 核密度分析
-来估计未知的密度函数，属於非参数检验方法之一
-<img src="/media/14797707551249.jpg" alt="">
-直方图的最大的一个问题是，组距和组数的选择对最终可视化的结果可能会产生负面的效果。现在我们看一下上图右上角。图中可以看到对于相同的数据，当采用适当的组距和组数时，左右两个图将完全不同，这会导致数据的不同解释。</p>
+<p>KDE 核密度分析<br>来估计未知的密度函数，属於非参数检验方法之一<br><img src="/media/14797707551249.jpg" alt=""><br>直方图的最大的一个问题是，组距和组数的选择对最终可视化的结果可能会产生负面的效果。现在我们看一下上图右上角。图中可以看到对于相同的数据，当采用适当的组距和组数时，左右两个图将完全不同，这会导致数据的不同解释。</p>
 <p>high model complexity -&gt; high variance</p>
 ]]></content>
     </entry>
@@ -148,17 +94,12 @@ higher k, higher complexity</p>
     <entry>
       <title><![CDATA[DM6]]></title>
       <url>https://jyphotography.github.io/2016/11/14/DM6/</url>
-      <content type="html"><![CDATA[<p><img src="/media/14791722133938.jpg" alt="-w476"></p>
-<p>model2 is better, cover more data</p>
-<p><img src="/media/14791723288182.jpg" alt="-w457">
-binomial model p(1-p)
-standard error
-comuputing lower confidence level</p>
-<p>Example
-entropy越低越好， 代表信息的集中性</p>
+      <content type="html"><![CDATA[<p> <img src="/media/14791722133938.jpg" alt="-w476"></p>
+<p> model2 is better, cover more data</p>
+<p><img src="/media/14791723288182.jpg" alt="-w457"><br>binomial model p(1-p)<br>standard error<br>comuputing lower confidence level</p>
+<p>Example<br>entropy越低越好， 代表信息的集中性</p>
 <p>increase information gain, decrease entropy</p>
-<p>what if inputs are numeric?
-variance</p>
+<p>what if inputs are numeric?<br>variance</p>
 <p>gini</p>
 ]]></content>
     </entry>
@@ -166,17 +107,14 @@ variance</p>
     <entry>
       <title><![CDATA[DM5]]></title>
       <url>https://jyphotography.github.io/2016/11/07/DM5/</url>
-      <content type="html"><![CDATA[<h1>第五章 预处理数据及减少范围</h1>
-<h2>内容</h2>
-<ol>
+      <content type="html"><![CDATA[<h1 id="第五章-预处理数据及减少范围"><a href="#第五章-预处理数据及减少范围" class="headerlink" title="第五章 预处理数据及减少范围"></a>第五章 预处理数据及减少范围</h1><h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><ol>
 <li>完美数据-让我们现实生活中的数据趋于完美（消化missing数据）</li>
 <li>基本特征选择算法</li>
 <li>用PCA减少特征（Principal Components Analysis)</li>
 <li>用MDS映射数据（Multi-Dimensional Scaling)</li>
 <li>简单看一下处理文字数据</li>
 </ol>
-<h2>从数据工程师角度看</h2>
-<p><strong>数据太少</strong></p>
+<h2 id="从数据工程师角度看"><a href="#从数据工程师角度看" class="headerlink" title="从数据工程师角度看"></a>从数据工程师角度看</h2><p><strong>数据太少</strong></p>
 <ul>
 <li>难找到合理复杂度模型</li>
 <li>难获得可靠数据以及统计显著性</li>
@@ -188,13 +126,12 @@ variance</p>
 <li>冗余数据可能导致偏见</li>
 <li>多维度问题难解释和图像化</li>
 </ul>
-<h2>完美数据</h2>
-<ul>
+<h2 id="完美数据"><a href="#完美数据" class="headerlink" title="完美数据"></a>完美数据</h2><ul>
 <li>可以代表</li>
 <li>复杂性</li>
 <li>数量和dimension</li>
 <li>没有太多噪音</li>
-<li>没有太多missing value</li>
+<li>没有太多missing value </li>
 </ul>
 <p>解决missing value的方法：</p>
 <ul>
@@ -202,102 +139,56 @@ variance</p>
 <li>用其他数据做模型</li>
 <li>直接删除</li>
 </ul>
-<h2>基本特征选择算法</h2>
-<p>目的： 改善模型学习结果并减少学习成本
-feature selection:找到最好的subset
-feature reduction：找到最有效的数据组合
-两者的目的都是减少原数据并保存游泳的信息</p>
-<h3>特征选择一</h3>
-<p>预测能力：</p>
+<h2 id="基本特征选择算法"><a href="#基本特征选择算法" class="headerlink" title="基本特征选择算法"></a>基本特征选择算法</h2><p>目的： 改善模型学习结果并减少学习成本<br>feature selection:找到最好的subset<br>feature reduction：找到最有效的数据组合<br>两者的目的都是减少原数据并保存游泳的信息</p>
+<h3 id="特征选择一"><a href="#特征选择一" class="headerlink" title="特征选择一"></a>特征选择一</h3><p>预测能力：</p>
 <ul>
 <li>模型准确度</li>
 <li>相关性数据</li>
-<li>entropy信息获得能力</li>
+<li>entropy信息获得能力<h3 id="特征选择二"><a href="#特征选择二" class="headerlink" title="特征选择二"></a>特征选择二</h3><h4 id="贪心-（可能比较快，但不一定最好）"><a href="#贪心-（可能比较快，但不一定最好）" class="headerlink" title="贪心 （可能比较快，但不一定最好）"></a>贪心 （可能比较快，但不一定最好）</h4><strong>向前选择算法</strong></li>
 </ul>
-<h3>特征选择二</h3>
-<h4>贪心 （可能比较快，但不一定最好）</h4>
-<p><strong>向前选择算法</strong></p>
 <ol>
 <li>计算每个输入并选择最好的</li>
 <li>是这把其他的输入和最好的配对，选择最好的配对</li>
 <li>继续上面步骤直到获得好的结果</li>
 </ol>
-<p>注意点： 要使用另外的数据做验证
-<img src="/media/14791653518556.jpg" alt="-w504"></p>
+<p>注意点： 要使用另外的数据做验证<br><img src="/media/14791653518556.jpg" alt="-w504"></p>
 <p><strong>穷尽法（最优，耗时）</strong></p>
-<h2>PCA</h2>
-<p>目的： 用不相关的数字变量替换相关的数字变量
-其他目的：减少维度同时获得最大的variance
-在仅仅使用有限的维度进行数据精确的翻译</p>
+<h2 id="PCA"><a href="#PCA" class="headerlink" title="PCA"></a>PCA</h2><p>目的： 用不相关的数字变量替换相关的数字变量<br>其他目的：减少维度同时获得最大的variance<br>在仅仅使用有限的维度进行数据精确的翻译</p>
 <p>PCA的原理就是将原来的样本数据投影到一个新的空间中，相当于我们在矩阵分析里面学习的将一组矩阵映射到另外的坐标系下。通过一个转换坐标，也可以理解成把一组坐标转换到另外一组坐标系下，但是在新的坐标系下，表示原来的原本不需要那么多的变量，只需要原来样本的最大的一个线性无关组的特征值对应的空间的坐标即可。</p>
-<p>比如，原来的样本是30<em>1000000的维数，就是说我们有30个样本，每个样本有1000000个特征点，这个特征点太多了，我们需要对这些样本的特征点进行降维。那么在降维的时候会计算一个原来样本矩阵的协方差矩阵，这里就是1000000</em>1000000，当然，这个矩阵太大了，计算的时候有其他的方式进行处理，这里只是讲解基本的原理，然后通过这个1000000<em>1000000的协方差矩阵计算它的特征值和特征向量，最后获得具有最大特征值的特征向量构成转换矩阵。比如我们的前29个特征值已经能够占到所有特征值的99%以上，那么我们只需要提取前29个特征值对应的特征向量即可。这样就构成了一个1000000</em>29的转换矩阵，然后用原来的样本乘以这个转换矩阵，就可以得到原来的样本数据在新的特征空间的对应的坐标。30<em>1000000 * 1000000</em>29 = 30 *29， 这样原来的训练样本每个样本的特征值的个数就降到了29个。</p>
-<p><strong>迷惑</strong>
-另外一个迷惑，在最初刚开始做的时候，就是为什么这么大的数据，比如30<em>1000000直接就降到了30</em>29，这不是减少的数据有点太多了么，会不会对性能造成影响。之所以有这个迷惑，是因为最初并不了解pca的工作方式。 pca并不是直接对原来的数据进行删减，而是把原来的数据映射到新的一个特征空间中继续表示，所有新的特征空间如果有29维，那么这29维足以能够表示非常非常多的数据，并没有对原来的数据进行删减，只是把原来的数据映射到新的空间中进行表示，所以你的测试样本也要同样的映射到这个空间中进行表示，这样就要求你保存住这个空间坐标转换矩阵，把测试样本同样的转换到相同的坐标空间中。</p>
+<p>比如，原来的样本是30<em>1000000的维数，就是说我们有30个样本，每个样本有1000000个特征点，这个特征点太多了，我们需要对这些样本的特征点进行降维。那么在降维的时候会计算一个原来样本矩阵的协方差矩阵，这里就是1000000</em>1000000，当然，这个矩阵太大了，计算的时候有其他的方式进行处理，这里只是讲解基本的原理，然后通过这个1000000<em>1000000的协方差矩阵计算它的特征值和特征向量，最后获得具有最大特征值的特征向量构成转换矩阵。比如我们的前29个特征值已经能够占到所有特征值的99%以上，那么我们只需要提取前29个特征值对应的特征向量即可。这样就构成了一个1000000</em>29的转换矩阵，然后用原来的样本乘以这个转换矩阵，就可以得到原来的样本数据在新的特征空间的对应的坐标。30<em>1000000 </em> 1000000<em>29 = 30 </em>29， 这样原来的训练样本每个样本的特征值的个数就降到了29个。</p>
+<p><strong>迷惑</strong><br>另外一个迷惑，在最初刚开始做的时候，就是为什么这么大的数据，比如30<em>1000000直接就降到了30</em>29，这不是减少的数据有点太多了么，会不会对性能造成影响。之所以有这个迷惑，是因为最初并不了解pca的工作方式。 pca并不是直接对原来的数据进行删减，而是把原来的数据映射到新的一个特征空间中继续表示，所有新的特征空间如果有29维，那么这29维足以能够表示非常非常多的数据，并没有对原来的数据进行删减，只是把原来的数据映射到新的空间中进行表示，所以你的测试样本也要同样的映射到这个空间中进行表示，这样就要求你保存住这个空间坐标转换矩阵，把测试样本同样的转换到相同的坐标空间中。</p>
 <pre><code>有些同学在网上发帖子问对训练样本降维以后，怎么对测试样本降维，是不是还是使用princomp这个函数进行降维，这个是错误的。如果你要保证程序运行正常，就要保证训练样本和测试样本被映射到同一个特征空间，这样才能保证数据的一致性。
-</code></pre>
-<p>variance = difference between data
-<img src="/media/14791304174472.jpg" alt="-w388"></p>
+</code></pre><p>variance = difference between data<br><img src="/media/14791304174472.jpg" alt="-w388"></p>
 <p>、<img src="/media/14791304390299.jpg" alt="-w381"></p>
-<p><img src="/media/14791304705936.jpg" alt="-w398">
-失去了一些Z2的信息</p>
-<p><img src="/media/14791305000103.jpg" alt="-w393">
-<img src="/media/14791671019265.jpg" alt="-w483">
-<img src="/media/14791672451717.jpg" alt="">
-total variance = 1 + 5 + 2 = 8
-1-2 are correlated
-3 are not correlated
-combine 1 and 2
-<img src="/media/14791674765068.jpg" alt="">
-we lose no variance</p>
+<p><img src="/media/14791304705936.jpg" alt="-w398"><br>失去了一些Z2的信息</p>
+<p><img src="/media/14791305000103.jpg" alt="-w393"><br><img src="/media/14791671019265.jpg" alt="-w483"><br><img src="/media/14791672451717.jpg" alt=""><br>total variance = 1 + 5 + 2 = 8<br>1-2 are correlated<br>3 are not correlated<br>combine 1 and 2<br><img src="/media/14791674765068.jpg" alt=""><br>we lose no variance</p>
 <p>we will lose 0.17</p>
-<p>we will lose 2.17</p>
+<p>we will lose 2.17 </p>
 <p><img src="/media/14791676326195.jpg" alt="-w535"></p>
-<h3>PCA总结</h3>
-<p>因为简单非常流行
-通常作为数据预处理的方法
-对多维度数据可视化有帮助
-在图像处理和理解方面流行
-本质：降低维度
-不能处理qutratic value</p>
-<h2>MDS</h2>
-<p>PCA是把观察的数据用较少的维数来表达，这点上两种方法的相似的；两种方法的不太之处在于，MDS利用的是成对样本间相似性，目的是利用这个信息去构建合适的低维空间，是的样本在此空间的距离和在高维空间中的样本间的相似性尽可能的保持一致。PCA 主要是找到最能体现数据特点的特征，而 MDS 更看重的是原始数据之间的相对关系，通过可视化的方式将他们之间的相对关系尽可能准确的展现出来。</p>
+<h3 id="PCA总结"><a href="#PCA总结" class="headerlink" title="PCA总结"></a>PCA总结</h3><p>因为简单非常流行<br>通常作为数据预处理的方法<br>对多维度数据可视化有帮助<br>在图像处理和理解方面流行<br>本质：降低维度<br>不能处理qutratic value</p>
+<h2 id="MDS"><a href="#MDS" class="headerlink" title="MDS"></a>MDS</h2><p>PCA是把观察的数据用较少的维数来表达，这点上两种方法的相似的；两种方法的不太之处在于，MDS利用的是成对样本间相似性，目的是利用这个信息去构建合适的低维空间，是的样本在此空间的距离和在高维空间中的样本间的相似性尽可能的保持一致。PCA 主要是找到最能体现数据特点的特征，而 MDS 更看重的是原始数据之间的相对关系，通过可视化的方式将他们之间的相对关系尽可能准确的展现出来。</p>
 <p>MDS 的目的是将一组个体间的相异数据经过 MDS 转换成空间构图，且 保留原始数据的相对关系 。也就是说我们通过 MDS 可以直观的可视化的展现原始数据间的相对关系。</p>
-<p>输入： distance matrix
-返回： k维度散点图保留各个对象见的距离
-数学： 最小化“stress”</p>
-<h3>MDS应用范围</h3>
-<p>市场部
-政治</p>
-<h2>Text Mining</h2>
-<p>动机：超多文字data
-应用：文档分类， 信心获取，情感分析</p>
-<p>最简单的想法：文字包
-存储文字和出现的次数</p>
-<h3>结构化与非结构化</h3>
-<p>文档化矩阵， 每一列代表不同的：单词，一对词，词的顺序</p>
-<p>变量：
-binary
-counts
-weighted frequencies</p>
-<p>TF-IDF<br>
-tf-idf模型的主要思想是：如果词w在一篇文档d中出现的频率高，并且在其他文档中很少出现，则认为词w具有很好的区分能力，适合用来把文章d和其他文章区分开来。该模型主要包含了两个因素：</p>
+<p>输入： distance matrix<br>返回： k维度散点图保留各个对象见的距离<br>数学： 最小化“stress”</p>
+<h3 id="MDS应用范围"><a href="#MDS应用范围" class="headerlink" title="MDS应用范围"></a>MDS应用范围</h3><p>市场部<br>政治</p>
+<h2 id="Text-Mining"><a href="#Text-Mining" class="headerlink" title="Text Mining"></a>Text Mining</h2><p>动机：超多文字data<br>应用：文档分类， 信心获取，情感分析</p>
+<p>最简单的想法：文字包<br>存储文字和出现的次数</p>
+<h3 id="结构化与非结构化"><a href="#结构化与非结构化" class="headerlink" title="结构化与非结构化"></a>结构化与非结构化</h3><p>文档化矩阵， 每一列代表不同的：单词，一对词，词的顺序</p>
+<p>变量：<br>binary<br>counts<br>weighted frequencies</p>
+<p>TF-IDF<br>tf-idf模型的主要思想是：如果词w在一篇文档d中出现的频率高，并且在其他文档中很少出现，则认为词w具有很好的区分能力，适合用来把文章d和其他文章区分开来。该模型主要包含了两个因素：</p>
 ]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[Overview - SAS EM]]></title>
       <url>https://jyphotography.github.io/2016/11/01/SAS2/</url>
-      <content type="html"><![CDATA[<p>Getting a job?
-how to measure the strength of tie（quality of connection)?</p>
+      <content type="html"><![CDATA[<p>Getting a job?<br>how to measure the strength of tie（quality of connection)?</p>
 <ol>
 <li>frequency</li>
 <li>amount of time</li>
 <li>emotional intensity</li>
 <li>intimacy(mutual confiding)</li>
 </ol>
-<p>who is more helpful? close friend vs. acquaintance
-weak tie -&gt; give you new information
-weak ties fill the structural hole</p>
+<p>who is more helpful? close friend vs. acquaintance<br>weak tie -&gt; give you new information<br>weak ties fill the structural hole</p>
 <p>Architecture of Current BI tools</p>
 ]]></content>
     </entry>
@@ -308,9 +199,7 @@ weak ties fill the structural hole</p>
       <content type="html"><![CDATA[<p>Google Trends例子</p>
 <p>Metadata 给之后的人管理使用</p>
 <p>hardest part- how to design a database</p>
-<p>Retail Case Study
-如何设计促销？
-步骤：</p>
+<p>Retail Case Study<br>如何设计促销？<br>步骤：</p>
 <ol>
 <li>Business process商业-》 Sales</li>
 <li>Grain of business process-&gt; an line in receipt</li>
@@ -323,98 +212,54 @@ weak ties fill the structural hole</p>
     <entry>
       <title><![CDATA[第四章 成本导向的分类]]></title>
       <url>https://jyphotography.github.io/2016/10/31/DM4/</url>
-      <content type="html"><![CDATA[<h2>成本导向的分类(Cost Aware Analysis)</h2>
-<h3>模型选择的标准</h3>
-<ol>
+      <content type="html"><![CDATA[<h2 id="成本导向的分类-Cost-Aware-Analysis"><a href="#成本导向的分类-Cost-Aware-Analysis" class="headerlink" title="成本导向的分类(Cost Aware Analysis)"></a>成本导向的分类(Cost Aware Analysis)</h2><h3 id="模型选择的标准"><a href="#模型选择的标准" class="headerlink" title="模型选择的标准"></a>模型选择的标准</h3><ol>
 <li>普遍性 VS 准确性</li>
 <li>效用（这一章的重点）error and cost based method</li>
 <li>显著性</li>
 <li>复杂度 VS 准确性</li>
 </ol>
-<h3>混淆矩阵（Confusion Matrix）</h3>
-<p>适用于监督学习
-<img src="/media/14779594539713.jpg" alt="-w260"></p>
-<p>判断的标准
-<img src="/media/14785570149073.jpg" alt="-w468"></p>
-<h3>模型选择的艺术</h3>
-<p>最大化预测准确性
-vs
-最小化错误预测的成本</p>
+<h3 id="混淆矩阵（Confusion-Matrix）"><a href="#混淆矩阵（Confusion-Matrix）" class="headerlink" title="混淆矩阵（Confusion Matrix）"></a>混淆矩阵（Confusion Matrix）</h3><p>适用于监督学习<br><img src="/media/14779594539713.jpg" alt="-w260"></p>
+<p>判断的标准<br><img src="/media/14785570149073.jpg" alt="-w468"></p>
+<h3 id="模型选择的艺术"><a href="#模型选择的艺术" class="headerlink" title="模型选择的艺术"></a>模型选择的艺术</h3><p>最大化预测准确性<br>vs<br>最小化错误预测的成本</p>
 <p>方法：</p>
 <ol>
 <li>ROC</li>
 <li>Lift Chart</li>
 </ol>
-<h3>二分分类的例子</h3>
-<p>血压与健康的关系： 权威机构给出的分布
-<img src="/media/14785581992432.jpg" alt="-w436">
-问题： 应该把健康与非健康的边界设在那个血压上？
-<img src="/media/14785583837121.jpg" alt="-w451">
-如果按上图这么分， ROC图会如下
-<img src="/media/14785584375463.jpg" alt="-w314">
-如果我们沿整个x轴设置我们的标准
-<img src="/media/14785585202435.jpg" alt="-w355">
-<img src="/media/14785585544450.jpg" alt="-w481">
-增加变量会导致模型变好
-<img src="/media/14785585802057.jpg" alt="-w347"></p>
+<h3 id="二分分类的例子"><a href="#二分分类的例子" class="headerlink" title="二分分类的例子"></a>二分分类的例子</h3><p>血压与健康的关系： 权威机构给出的分布<br><img src="/media/14785581992432.jpg" alt="-w436"><br>问题： 应该把健康与非健康的边界设在那个血压上？<br><img src="/media/14785583837121.jpg" alt="-w451"><br>如果按上图这么分， ROC图会如下<br><img src="/media/14785584375463.jpg" alt="-w314"><br>如果我们沿整个x轴设置我们的标准<br><img src="/media/14785585202435.jpg" alt="-w355"><br><img src="/media/14785585544450.jpg" alt="-w481"><br>增加变量会导致模型变好<br><img src="/media/14785585802057.jpg" alt="-w347"></p>
 <p>Threshold depends on the cost of FP or FN</p>
-<p>ROC
-history radar systems-&gt;sensitivity related to FP &amp;FN</p>
-<p>Blood pressue example
-<img src="/media/14779601255435.jpg" alt="-w434">
-make a point on ROC</p>
+<p>ROC<br>history radar systems-&gt;sensitivity related to FP &amp;FN</p>
+<p>Blood pressue example<br><img src="/media/14779601255435.jpg" alt="-w434"><br>make a point on ROC</p>
 <p><img src="/media/14779601792393.jpg" alt="-w328"></p>
 <p><img src="/media/14779602207917.jpg" alt="-w345"></p>
 <p><img src="/media/14779602874287.jpg" alt="-w325"></p>
 <p>Not -so-trivial case</p>
 <ol>
 <li>算cost</li>
-<li>算slope
-<img src="/media/14779610235174.jpg" alt="-w476"></li>
+<li>算slope<br><img src="/media/14779610235174.jpg" alt="-w476"></li>
 </ol>
-<p>增加input会改善ROC效果
-<img src="/media/14782665087338.jpg" alt="-w323"></p>
-<h3>如何选择一个不明显的模型？</h3>
-<p>我们要计算错误分类的成本
-<img src="/media/14785586860859.jpg" alt="-w460">
-特殊情况：
-<img src="/media/14785590629094.jpg" alt=""></p>
-<p>分开的模型可能比一个模型要好
-b<img src="/media/14782667565639.jpg" alt="-w437">
-那中间断怎么选？ 两个模型都可以</p>
-<h2>Rating Classifiers</h2>
-<p>KNN model 5个中3个positive，我们可以说60%可能positive</p>
-<p>connect the dots 不然roc会高会低是由于你的方法
-interest in 预测的结果是否与原始结果相同</p>
-<p>AUC curve
-the greater the better
-compare different model</p>
+<p>增加input会改善ROC效果<br><img src="/media/14782665087338.jpg" alt="-w323"></p>
+<h3 id="如何选择一个不明显的模型？"><a href="#如何选择一个不明显的模型？" class="headerlink" title="如何选择一个不明显的模型？"></a>如何选择一个不明显的模型？</h3><p>我们要计算错误分类的成本<br><img src="/media/14785586860859.jpg" alt="-w460"><br>特殊情况：<br><img src="/media/14785590629094.jpg" alt=""></p>
+<p>分开的模型可能比一个模型要好<br> b<img src="/media/14782667565639.jpg" alt="-w437"><br>那中间断怎么选？ 两个模型都可以</p>
+<h2 id="Rating-Classifiers"><a href="#Rating-Classifiers" class="headerlink" title="Rating Classifiers"></a>Rating Classifiers</h2><p>KNN model 5个中3个positive，我们可以说60%可能positive</p>
+<p>connect the dots 不然roc会高会低是由于你的方法<br>interest in 预测的结果是否与原始结果相同</p>
+<p>AUC curve<br>the greater the better<br>compare different model</p>
 <p>AUC不是总是有用的</p>
 <p>辐射-例子 alerts是正确的，但是对实际效果不符合 True negative up 而不是整个都好- particular settings</p>
-<p>一些有趣的问题
-如何用ROC做Kfold交叉检验？</p>
+<p>一些有趣的问题<br>如何用ROC做Kfold交叉检验？</p>
 <ol>
 <li>把所有结果加总做一个ROC</li>
 <li>预测TPR</li>
-<li>画2D矩阵
-Manhattan distance-不能直达必须像在曼哈顿穿梭一样，90度才能转弯</li>
+<li>画2D矩阵<br>Manhattan distance-不能直达必须像在曼哈顿穿梭一样，90度才能转弯</li>
 </ol>
-<p>缺点：
-计算量大， 数据量小增加K</p>
+<p>缺点：<br>计算量大， 数据量小增加K</p>
 <p>如果结果不是二分？</p>
 <ol>
 <li>each pair of class</li>
 <li>一个和其他结果</li>
 </ol>
-<p>不同错误分类的结果
-信用卡
-风险： 错误的同意交易
-value transaction cost
-cost： percentage fee
-cost： transaction value
-巴克莱： different level for differnt cutomers： frequent flyer or shopper</p>
-<p>总结
-前提：</p>
+<p>不同错误分类的结果<br>信用卡<br>风险： 错误的同意交易<br>value transaction cost<br>cost： percentage fee<br>cost： transaction value<br>巴克莱： different level for differnt cutomers： frequent flyer or shopper</p>
+<p>总结<br>前提：</p>
 <ol>
 <li>数据输入月输出</li>
 <li>可结实性</li>
@@ -424,23 +269,11 @@ cost： transaction value
 <p><img src="/media/14785632966226.jpg" alt="-w484"></p>
 <p><img src="/media/14785634377492.jpg" alt="-w407"></p>
 <pre><code>记录你做模型的原因
-</code></pre>
-<p>wake up quiz:?
-overfit risk</p>
-<p><img src="/media/14785637229958.jpg" alt="">
-bias: add more levels
-variance: add more data</p>
-<p>甜点：
-<img src="/media/14785638803339.jpg" alt="">
-<img src="/media/14785641597531.jpg" alt="-w485">
-low amount / Dimension</p>
+</code></pre><p>wake up quiz:?<br>overfit risk</p>
+<p><img src="/media/14785637229958.jpg" alt=""><br>bias: add more levels<br>variance: add more data</p>
+<p>甜点：<br><img src="/media/14785638803339.jpg" alt=""><br><img src="/media/14785641597531.jpg" alt="-w485"><br>low amount / Dimension</p>
 <p><img src="/media/14785641227859.jpg" alt="-w473"></p>
-<p><img src="/media/14785642121569.jpg" alt="-w482">
-D
-<img src="/media/14785642455971.jpg" alt="-w462">
-C + D
-<img src="/media/14785643237784.jpg" alt="-w470">
-True</p>
+<p><img src="/media/14785642121569.jpg" alt="-w482"><br>D<br><img src="/media/14785642455971.jpg" alt="-w462"><br>C + D<br><img src="/media/14785643237784.jpg" alt="-w470"><br>True</p>
 <p>9</p>
 ]]></content>
     </entry>
@@ -448,40 +281,19 @@ True</p>
     <entry>
       <title><![CDATA[第三章 预测分析（分类模型）]]></title>
       <url>https://jyphotography.github.io/2016/10/31/DM2/</url>
-      <content type="html"><![CDATA[<h2>分类（Classification）</h2>
-<h4>模型简介</h4>
-<p>输出： symbolic
-输入： numeric, symbolic ,mixed
-适用范围： 医院诊断病情
-我们想知道 “？” 到底是红笑脸还是蓝星星
-<img src="/media/14779521374423.jpg" alt="-w405"></p>
-<h4>方法一 贝叶斯分类（Bayes' classifiers）</h4>
-<p><img src="/media/14779522929014.jpg" alt="-w367">
-从中心出发，多少sigma范围内属于一类</p>
-<h4>方法二 Discriminative approaches</h4>
-<p>Logistic Regression （下图黄线）</p>
-<p>Support Vector Machines
-<img src="/media/14779525413726.jpg" alt="-w358"></p>
-<h4>方法三 Instance-based approaches</h4>
-<p><img src="/media/14779528342663.jpg" alt="-w347"></p>
-<h4>方法四 Symbolic approaches</h4>
-<p>Decision Tree
-Association Rules
-<img src="/media/14779531012120.jpg" alt="-w356"></p>
-<h4>方法五 Other approaches</h4>
-<p>neural network 准确度很高，但是过于复杂取解释，有很多过拟合的情况，除非数据量足够大</p>
-<h2>贝叶斯例子（Bayes'Classifier)</h2>
-<p>目的： 捡土豆
-数据： 有三样东西 土豆， 石头， 粘土
-方法： 有sensor知道直径
-土豆协会给我们数据
-<img src="/media/14779534272849.jpg" alt="-w208"></p>
+      <content type="html"><![CDATA[<h2 id="分类（Classification）"><a href="#分类（Classification）" class="headerlink" title="分类（Classification）"></a>分类（Classification）</h2><h4 id="模型简介"><a href="#模型简介" class="headerlink" title="模型简介"></a>模型简介</h4><p>输出： symbolic<br>输入： numeric, symbolic ,mixed<br>适用范围： 医院诊断病情<br>我们想知道 “？” 到底是红笑脸还是蓝星星<br><img src="/media/14779521374423.jpg" alt="-w405"></p>
+<h4 id="方法一-贝叶斯分类（Bayes’-classifiers）"><a href="#方法一-贝叶斯分类（Bayes’-classifiers）" class="headerlink" title="方法一 贝叶斯分类（Bayes’ classifiers）"></a>方法一 贝叶斯分类（Bayes’ classifiers）</h4><p><img src="/media/14779522929014.jpg" alt="-w367"><br>从中心出发，多少sigma范围内属于一类</p>
+<h4 id="方法二-Discriminative-approaches"><a href="#方法二-Discriminative-approaches" class="headerlink" title="方法二 Discriminative approaches"></a>方法二 Discriminative approaches</h4><p>Logistic Regression （下图黄线）</p>
+<p>Support Vector Machines<br><img src="/media/14779525413726.jpg" alt="-w358"></p>
+<h4 id="方法三-Instance-based-approaches"><a href="#方法三-Instance-based-approaches" class="headerlink" title="方法三 Instance-based approaches"></a>方法三 Instance-based approaches</h4><p><img src="/media/14779528342663.jpg" alt="-w347"></p>
+<h4 id="方法四-Symbolic-approaches"><a href="#方法四-Symbolic-approaches" class="headerlink" title="方法四 Symbolic approaches"></a>方法四 Symbolic approaches</h4><p>Decision Tree<br>Association Rules<br><img src="/media/14779531012120.jpg" alt="-w356"></p>
+<h4 id="方法五-Other-approaches"><a href="#方法五-Other-approaches" class="headerlink" title="方法五 Other approaches"></a>方法五 Other approaches</h4><p>neural network 准确度很高，但是过于复杂取解释，有很多过拟合的情况，除非数据量足够大</p>
+<h2 id="贝叶斯例子（Bayes’Classifier"><a href="#贝叶斯例子（Bayes’Classifier" class="headerlink" title="贝叶斯例子（Bayes’Classifier)"></a>贝叶斯例子（Bayes’Classifier)</h2><p>目的： 捡土豆<br>数据： 有三样东西 土豆， 石头， 粘土<br>方法： 有sensor知道直径<br>      土豆协会给我们数据<br><img src="/media/14779534272849.jpg" alt="-w208"></p>
 <p><img src="/media/14779538226832.jpg" alt="-w492"></p>
 <p><img src="/media/14779538644239.jpg" alt="-w489"></p>
 <p><img src="/media/14779542184633.jpg" alt="-w499"></p>
 <p><img src="/media/14779542423131.jpg" alt="-w492"></p>
-<h4>贝叶斯例子（Bayes'Classifier) 有趣点</h4>
-<ol>
+<h4 id="贝叶斯例子（Bayes’Classifier-有趣点"><a href="#贝叶斯例子（Bayes’Classifier-有趣点" class="headerlink" title="贝叶斯例子（Bayes’Classifier) 有趣点"></a>贝叶斯例子（Bayes’Classifier) 有趣点</h4><ol>
 <li>不同密度的预测可以用</li>
 <li>输入可以是数字或者分类信息</li>
 <li>输入信息相互独立， Naive Bayes忽略了输入信息的相互关系, 好处dimension可以变得相当大（容易建立）</li>
@@ -491,19 +303,13 @@ Association Rules
 <li>只能横向或者纵向分，</li>
 <li>没有很多evidence</li>
 </ol>
-<h2>Logistic Regression</h2>
-<p>用途： binary output
-<img src="/media/14779547890174.jpg" alt="-w359"></p>
+<h2 id="Logistic-Regression"><a href="#Logistic-Regression" class="headerlink" title="Logistic Regression"></a>Logistic Regression</h2><p>用途： binary output<br><img src="/media/14779547890174.jpg" alt="-w359"></p>
 <p><img src="/media/14779548191035.jpg" alt="-w405"></p>
 <p><img src="/media/14779549224818.jpg" alt="-w367"></p>
 <p><img src="/media/14779549460233.jpg" alt="-w377"></p>
-<p>Soft Classification
-<img src="/media/14779552220993.jpg" alt="-w372"></p>
-<p>b1 决定坡度， sharper is better, easy to classify
-b0 shift,左边还是右边</p>
-<p>好消息：
-efficient
-容易增加dimension</p>
+<p>Soft Classification<br><img src="/media/14779552220993.jpg" alt="-w372"></p>
+<p>b1 决定坡度， sharper is better, easy to classify<br>b0 shift,左边还是右边</p>
+<p>好消息：<br>efficient<br>容易增加dimension</p>
 <ol>
 <li>直线（分成两部分）</li>
 <li></li>
@@ -512,80 +318,57 @@ efficient
 <ol>
 <li>用所有的features</li>
 <li>用每个feature做独立的模型</li>
-<li>step -wise</li>
+<li>step -wise </li>
 </ol>
-<p>如果不是线性风格？
-我们可以用kenerl多元风割</p>
-<h2>Support Vector Machines</h2>
-<h2>Nearest Neighbor classifier</h2>
-<p>检查它最近的邻居，分成和它邻居一样的类
-如果数据很大，我们会检查所有的距离</p>
-<h2>K nearest Neighbors(K-NN)</h2>
-<p><img src="/media/14779582574504.jpg" alt="-w332"></p>
+<p>如果不是线性风格？<br>我们可以用kenerl多元风割</p>
+<h2 id="Support-Vector-Machines"><a href="#Support-Vector-Machines" class="headerlink" title="Support Vector Machines"></a>Support Vector Machines</h2><h2 id="Nearest-Neighbor-classifier"><a href="#Nearest-Neighbor-classifier" class="headerlink" title="Nearest Neighbor classifier"></a>Nearest Neighbor classifier</h2><p>检查它最近的邻居，分成和它邻居一样的类<br>如果数据很大，我们会检查所有的距离</p>
+<h2 id="K-nearest-Neighbors-K-NN"><a href="#K-nearest-Neighbors-K-NN" class="headerlink" title="K nearest Neighbors(K-NN)"></a>K nearest Neighbors(K-NN)</h2><p><img src="/media/14779582574504.jpg" alt="-w332"></p>
 <p>k farthest neighbors? find what is unlike us?</p>
-<p>K_NN to non-binary problems? nothing
-NN to perform regression?  YES 1. find neighbor 2.what neighbor represent?(calculate avg of neighbor values)</p>
+<p>K_NN to non-binary problems? nothing<br>NN to perform regression?  YES 1. find neighbor 2.what neighbor represent?(calculate avg of neighbor values)</p>
 ]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[R使用教程]]></title>
       <url>https://jyphotography.github.io/2016/10/28/postDM-HW/</url>
-      <content type="html"><![CDATA[<h1>RC1</h1>
-<p>改变Rstudio格局 Tools-&gt;Global Options-&gt;Pane Layout</p>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">#定义变量</div><div class="line">x &lt;- 1 #old school</div><div class="line">x = 1  #new school</div><div class="line"></div><div class="line">#定义Vector(连续相同格式的数据）</div><div class="line">x = 1:5</div><div class="line">y = rep(x, times) #重复x,times次</div><div class="line">x = c(3,4.2,0,4,8.7) #连接</div><div class="line">z = seq(start,end,by=step size)</div><div class="line"></div><div class="line">#判断变量</div><div class="line">is.na(z); </div><div class="line">is.finite(z); </div><div class="line">is.nan(z-z)</div><div class="line"></div><div class="line">#indices</div><div class="line">x[1]</div><div class="line">x[2:4]</div><div class="line">which(x &gt; 4) #返回所有x大于4的位置</div><div class="line">x[which(x &gt; 4)] ; x[x &gt; 4] #效果相同</div><div class="line"></div><div class="line">#随机</div><div class="line">x = runif(5,0,10) # 0到10随机5个数</div><div class="line"></div><div class="line">#排序</div><div class="line">order(x) # 返回每个变量的顺序</div><div class="line">x = x[order(x)] #生序</div><div class="line"></div><div class="line">#多维数组</div><div class="line">ma = array(c(1:30),dim=c(6,5)); ma # 2维</div><div class="line">ma[1:2,4]</div><div class="line"></div><div class="line">ma = array(c(1:30),dim=c(2,3,5)); ma # 3维</div><div class="line">ma[1,2,3]; ma[,1:2,4]</div><div class="line"></div><div class="line">#格式转换</div><div class="line">x = as.character(c(1,2,3));</div><div class="line">y = as.numeric(x)</div><div class="line"></div><div class="line">#factor内部是数字，外部是String，方便处理数据</div><div class="line">mynames &lt;- factor(c(&quot;Ted&quot;,&quot;Amy&quot;,&quot;Bill&quot;,&quot;Jill&quot;,&quot;Amy&quot;,&quot;Bill&quot;));</div><div class="line"></div><div class="line">#data frame 不同格式的数据</div><div class="line">people = data.frame(Name = mynames,</div><div class="line">                    Age = c(22,23,26,23,28,20),</div><div class="line">                    Student = c(TRUE,TRUE,FALSE,TRUE,FALSE,TRUE)); people</div></pre></td></tr></table></figure></p>
-<h1>HW1</h1>
-<p>这次作业的主要目的是我们为一家房地产中介提供数据挖掘咨询。 我们的产品是自动化房屋估值系统。</p>
-<h3>问题一</h3>
-<h4>要求：</h4>
-<p>用R写一个function能够自动简单分析当前的数据集</p>
+      <content type="html"><![CDATA[<h1 id="RC1"><a href="#RC1" class="headerlink" title="RC1"></a>RC1</h1><p>改变Rstudio格局 Tools-&gt;Global Options-&gt;Pane Layout</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">#定义变量</div><div class="line">x &lt;- 1 #old school</div><div class="line">x = 1  #new school</div><div class="line"></div><div class="line">#定义Vector(连续相同格式的数据）</div><div class="line">x = 1:5</div><div class="line">y = rep(x, times) #重复x,times次</div><div class="line">x = c(3,4.2,0,4,8.7) #连接</div><div class="line">z = seq(start,end,by=step size)</div><div class="line"></div><div class="line">#判断变量</div><div class="line">is.na(z); </div><div class="line">is.finite(z); </div><div class="line">is.nan(z-z)</div><div class="line"></div><div class="line">#indices</div><div class="line">x[1]</div><div class="line">x[2:4]</div><div class="line">which(x &gt; 4) #返回所有x大于4的位置</div><div class="line">x[which(x &gt; 4)] ; x[x &gt; 4] #效果相同</div><div class="line"></div><div class="line">#随机</div><div class="line">x = runif(5,0,10) # 0到10随机5个数</div><div class="line"></div><div class="line">#排序</div><div class="line">order(x) # 返回每个变量的顺序</div><div class="line">x = x[order(x)] #生序</div><div class="line"></div><div class="line">#多维数组</div><div class="line">ma = array(c(1:30),dim=c(6,5)); ma # 2维</div><div class="line">ma[1:2,4]</div><div class="line"></div><div class="line">ma = array(c(1:30),dim=c(2,3,5)); ma # 3维</div><div class="line">ma[1,2,3]; ma[,1:2,4]</div><div class="line"></div><div class="line">#格式转换</div><div class="line">x = as.character(c(1,2,3));</div><div class="line">y = as.numeric(x)</div><div class="line"></div><div class="line">#factor内部是数字，外部是String，方便处理数据</div><div class="line">mynames &lt;- factor(c(&quot;Ted&quot;,&quot;Amy&quot;,&quot;Bill&quot;,&quot;Jill&quot;,&quot;Amy&quot;,&quot;Bill&quot;));</div><div class="line"></div><div class="line">#data frame 不同格式的数据</div><div class="line">people = data.frame(Name = mynames,</div><div class="line">                    Age = c(22,23,26,23,28,20),</div><div class="line">                    Student = c(TRUE,TRUE,FALSE,TRUE,FALSE,TRUE)); people</div></pre></td></tr></table></figure>
+<h1 id="HW1"><a href="#HW1" class="headerlink" title="HW1"></a>HW1</h1><p>这次作业的主要目的是我们为一家房地产中介提供数据挖掘咨询。 我们的产品是自动化房屋估值系统。</p>
+<h3 id="问题一"><a href="#问题一" class="headerlink" title="问题一"></a>问题一</h3><h4 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h4><p>用R写一个function能够自动简单分析当前的数据集</p>
 <ul>
 <li>输入：dataframe</li>
-<li>输出：text （模版如下）
-<img src="/media/14779382675884.jpg" alt="-w992"></li>
+<li>输出：text （模版如下）<br><img src="/media/14779382675884.jpg" alt="-w992"></li>
 </ul>
-<h4>分析：</h4>
-<ol>
-<li>根据模版，我们需要把数据分成real value和 symbolic两者分别分析。
-区分数字还是分类信息：</li>
+<h4 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h4><ol>
+<li>根据模版，我们需要把数据分成real value和 symbolic两者分别分析。<br>区分数字还是分类信息：</li>
 </ol>
-<p><figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 假设我们的数据叫data，i 为我们要分析的列的index</span></div><div class="line">class(data[,i]) == <span class="string">"integer"</span> || class(data[,i]) == <span class="string">"numeric"</span> <span class="comment"># 得到数字列</span></div><div class="line">class(data[,i]) == <span class="string">"factor"</span> <span class="comment">#得到分类列</span></div></pre></td></tr></table></figure></p>
-<ol start="2">
+<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 假设我们的数据叫data，i 为我们要分析的列的index</span></div><div class="line">class(data[,i]) == <span class="string">"integer"</span> || class(data[,i]) == <span class="string">"numeric"</span> <span class="comment"># 得到数字列</span></div><div class="line">class(data[,i]) == <span class="string">"factor"</span> <span class="comment">#得到分类列</span></div></pre></td></tr></table></figure>
+<ol>
 <li>为了使格式整洁，我们可以用一个dataframe来存结果</li>
 </ol>
-<p><figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">data.frame(Attribute_ID = <span class="literal">NA</span>, <span class="keyword">...</span>) <span class="comment"># 最好一开始定义下列的类型，这里偷懒了</span></div><div class="line">na.rm = <span class="literal">TRUE</span> <span class="comment"># 注意要不考虑missing value</span></div></pre></td></tr></table></figure></p>
-<ol start="3">
+<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">data.frame(Attribute_ID = <span class="literal">NA</span>, <span class="keyword">...</span>) <span class="comment"># 最好一开始定义下列的类型，这里偷懒了</span></div><div class="line">na.rm = <span class="literal">TRUE</span> <span class="comment"># 注意要不考虑missing value</span></div></pre></td></tr></table></figure>
+<ol>
 <li>分类信息的归纳； 唯一的难点如何对一个列的频率排序</li>
 </ol>
-<p><figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sorted_value = sort(table(non_miss_val),decreasing = <span class="literal">TRUE</span>) <span class="comment"># 对频率排序</span></div><div class="line">sorted_name = names(sort(table(non_miss_val), decreasing = <span class="literal">TRUE</span>)) <span class="comment"># 对名字排序</span></div></pre></td></tr></table></figure></p>
-<h3>问题一b</h3>
-<h4>要求：</h4>
-<p>给我们客户展示一下数据集的内容：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sorted_value = sort(table(non_miss_val),decreasing = <span class="literal">TRUE</span>) <span class="comment"># 对频率排序</span></div><div class="line">sorted_name = names(sort(table(non_miss_val), decreasing = <span class="literal">TRUE</span>)) <span class="comment"># 对名字排序</span></div></pre></td></tr></table></figure>
+<h3 id="问题一b"><a href="#问题一b" class="headerlink" title="问题一b"></a>问题一b</h3><h4 id="要求：-1"><a href="#要求：-1" class="headerlink" title="要求："></a>要求：</h4><p>给我们客户展示一下数据集的内容：</p>
 <ol>
 <li>一个变量分布</li>
 <li>鉴于一个变量上的一个变量分布</li>
 <li>一对变量的关系</li>
 </ol>
-<h4>分析：</h4>
-<p>考察我们作图能力，这里选用GGPLOT2，因为相比其他作图包，它是object oritended设计的，方便我们添加删除和改变</p>
-<p><figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ggplot(plot_data, aes(house_value)) </div><div class="line">+ geom_histogram(bins = <span class="number">50</span>) </div><div class="line">+ ggtitle(<span class="string">"Distribution of House Value"</span>) </div><div class="line">+ labs(x = <span class="string">"House Value $"</span>, y = <span class="string">"Frequency"</span>)</div></pre></td></tr></table></figure></p>
+<h4 id="分析：-1"><a href="#分析：-1" class="headerlink" title="分析："></a>分析：</h4><p>考察我们作图能力，这里选用GGPLOT2，因为相比其他作图包，它是object oritended设计的，方便我们添加删除和改变</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ggplot(plot_data, aes(house_value)) </div><div class="line">+ geom_histogram(bins = <span class="number">50</span>) </div><div class="line">+ ggtitle(<span class="string">"Distribution of House Value"</span>) </div><div class="line">+ labs(x = <span class="string">"House Value $"</span>, y = <span class="string">"Frequency"</span>)</div></pre></td></tr></table></figure>
 <p><img src="/media/14779403889876.jpg" alt="-w570"></p>
-<h3>问题二</h3>
-<h4>要求：</h4>
-<p>写一个function做k次交叉验证，模型有三种：</p>
+<h3 id="问题二"><a href="#问题二" class="headerlink" title="问题二"></a>问题二</h3><h4 id="要求：-2"><a href="#要求：-2" class="headerlink" title="要求："></a>要求：</h4><p>写一个function做k次交叉验证，模型有三种：</p>
 <ol>
 <li>connect-the-dots</li>
 <li>default predictor</li>
-<li>linear
-输入： dataframe， k, 目标变量
-输出： 一个含k个MSE得分的向量</li>
+<li>linear<br>输入： dataframe， k, 目标变量<br>输出： 一个含k个MSE得分的向量</li>
 </ol>
-<h4>分析</h4>
-<p>我们先要理解模型，</p>
+<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>我们先要理解模型，</p>
 <ol>
-<li>connect the dots:（KNN近邻算法）
-KNN根据某些样本实例与其他实例之间的相似性进行分类。特征相似的实例互相靠近，特征不相似的实例互相远离。因而，可以将两个实例间的距离作为他们的“不相似度”的一种度量标准。
-KNN算法不仅可以用于分类，还可以用于回归。通过找出一个样本的k个最近邻居，将这些邻居的属性的平均值赋给该样本，就可以得到该样本的属性。</li>
+<li>connect the dots:（KNN近邻算法）<br>KNN根据某些样本实例与其他实例之间的相似性进行分类。特征相似的实例互相靠近，特征不相似的实例互相远离。因而，可以将两个实例间的距离作为他们的“不相似度”的一种度量标准。<br>KNN算法不仅可以用于分类，还可以用于回归。通过找出一个样本的k个最近邻居，将这些邻居的属性的平均值赋给该样本，就可以得到该样本的属性。</li>
 <li>default predictor （0次多项式回归）</li>
 <li>linear (线性回归）</li>
 </ol>
@@ -597,14 +380,12 @@ KNN算法不仅可以用于分类，还可以用于回归。通过找出一个�
 <li>分成k段</li>
 <li>每一段用作test，并计算出MSE，保存到结果</li>
 </ol>
-<h3>问题二b</h3>
-<p>要求：</p>
+<h3 id="问题二b"><a href="#问题二b" class="headerlink" title="问题二b"></a>问题二b</h3><p>要求：</p>
 <ol>
 <li>用 log（crime_rate）来预测房屋价格</li>
 <li>计算每一个模型的95%置信区间</li>
 </ol>
-<p>分析：
-没什么太大难度，只需要会使用barplot2即可</p>
+<p>分析：<br>没什么太大难度，只需要会使用barplot2即可</p>
 ]]></content>
     </entry>
     
@@ -618,65 +399,35 @@ KNN算法不仅可以用于分类，还可以用于回归。通过找出一个�
     <entry>
       <title><![CDATA[第一章 什么是BI]]></title>
       <url>https://jyphotography.github.io/2016/10/27/sas1/</url>
-      <content type="html"><![CDATA[<h2>题外话</h2>
-<p>当今不用仍然不使用IT的行业-Dabbawalla印度盒饭行业</p>
-<h2>BI的因素</h2>
-<p><img src="/media/14776099723765.jpg" alt="-w764"></p>
-<h2>BI的问题</h2>
-<p>data requester 不懂怎么取数据
-data provider 不懂商业流程</p>
-<h2>BI做什么？</h2>
-<p><img src="/media/14776092516314.jpg" alt="-w851">
-大部分人还是停留在绿色区域</p>
-<p><img src="/media/14776100600514.jpg" alt="-w763">
-这些是能提高你竞争力的部分</p>
+      <content type="html"><![CDATA[<h2 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h2><p>当今不用仍然不使用IT的行业-Dabbawalla印度盒饭行业</p>
+<h2 id="BI的因素"><a href="#BI的因素" class="headerlink" title="BI的因素"></a>BI的因素</h2><p><img src="/media/14776099723765.jpg" alt="-w764"></p>
+<h2 id="BI的问题"><a href="#BI的问题" class="headerlink" title="BI的问题"></a>BI的问题</h2><p>data requester 不懂怎么取数据<br>data provider 不懂商业流程</p>
+<h2 id="BI做什么？"><a href="#BI做什么？" class="headerlink" title="BI做什么？"></a>BI做什么？</h2><p><img src="/media/14776092516314.jpg" alt="-w851"><br>大部分人还是停留在绿色区域</p>
+<p><img src="/media/14776100600514.jpg" alt="-w763"><br>这些是能提高你竞争力的部分</p>
 ]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[第一章 数据仓库]]></title>
       <url>https://jyphotography.github.io/2016/10/27/DW-1/</url>
-      <content type="html"><![CDATA[<h2>数据仓库(Data Warehouse)基础</h2>
-<h3>DW 历史</h3>
-<p>Inmon: Top-down: 公司只建一个数据仓库。数据集市从数据仓库取数据</p>
+      <content type="html"><![CDATA[<h2 id="数据仓库-Data-Warehouse-基础"><a href="#数据仓库-Data-Warehouse-基础" class="headerlink" title="数据仓库(Data Warehouse)基础"></a>数据仓库(Data Warehouse)基础</h2><h3 id="DW-历史"><a href="#DW-历史" class="headerlink" title="DW 历史"></a>DW 历史</h3><p>Inmon: Top-down: 公司只建一个数据仓库。数据集市从数据仓库取数据</p>
 <p>Kimball：Bottom-up: 先从数据集市开始，然后聚集成数据仓库。</p>
 <p>Enterprise Warehouse-收集所有信息，然后在整个组织循环</p>
 <p>Data Mart-数据仓库的一个子集，代表一个商业流程的数据</p>
-<h3>DW 定义</h3>
-<p>数据仓库是 subject-oriented, integrated, time-varying, non-volatile  的数据集合用于帮助决策（Inmon）</p>
+<h3 id="DW-定义"><a href="#DW-定义" class="headerlink" title="DW 定义"></a>DW 定义</h3><p>数据仓库是 subject-oriented, integrated, time-varying, non-volatile  的数据集合用于帮助决策（Inmon）</p>
 <p>交易数据的特殊结构拷贝，有利于查询（Kimball）</p>
 <pre><code>1. subject-oriented: 只记录与决策系统相关的信息
 2. Integrated: 一致性
 3. Time Varying：时间记录的准确性
 4. Non Volatile：不太会改变原始数据，更多的是增加数据
-</code></pre>
-<p>Data Warehouse现实商业中的定义： 支持决策系统， 分析环境，与存储数据形式无关</p>
-<h3>为什么要把DW与数据库分开？</h3>
-<p>1.性能
-2.功能
-3.目的-更容易分析数据</p>
-<h3>为什么要数据库？</h3>
-<p>只有一部分信息需要改变
-添加
-删除
-更新
-Normalization</p>
-<h3>DW与数据库比较</h3>
-<p><img src="/media/14776071330775.jpg" alt="-w749"></p>
-<h3>DW的构架</h3>
-<p><img src="/media/14776071607052.jpg" alt="-w806"></p>
-<h2>纬度模型(Dimensional Model or Star Schema)</h2>
-<h3>组成-两部分</h3>
-<h4>Fact Table</h4>
-<p>存储衡量变量
-多对多
-<img src="/media/14776082294975.jpg" alt="-w221"></p>
-<h4>Dimension Table</h4>
-<p>存储解释信息
-通常非常长
-<img src="/media/14776082139821.jpg" alt="-w212"></p>
-<h3>好处</h3>
-<ol>
+</code></pre><p>Data Warehouse现实商业中的定义： 支持决策系统， 分析环境，与存储数据形式无关</p>
+<h3 id="为什么要把DW与数据库分开？"><a href="#为什么要把DW与数据库分开？" class="headerlink" title="为什么要把DW与数据库分开？"></a>为什么要把DW与数据库分开？</h3><p>1.性能<br>2.功能<br>3.目的-更容易分析数据</p>
+<h3 id="为什么要数据库？"><a href="#为什么要数据库？" class="headerlink" title="为什么要数据库？"></a>为什么要数据库？</h3><p>只有一部分信息需要改变<br>添加<br>删除<br>更新<br>Normalization</p>
+<h3 id="DW与数据库比较"><a href="#DW与数据库比较" class="headerlink" title="DW与数据库比较"></a>DW与数据库比较</h3><p><img src="/media/14776071330775.jpg" alt="-w749"></p>
+<h3 id="DW的构架"><a href="#DW的构架" class="headerlink" title="DW的构架"></a>DW的构架</h3><p><img src="/media/14776071607052.jpg" alt="-w806"></p>
+<h2 id="纬度模型-Dimensional-Model-or-Star-Schema"><a href="#纬度模型-Dimensional-Model-or-Star-Schema" class="headerlink" title="纬度模型(Dimensional Model or Star Schema)"></a>纬度模型(Dimensional Model or Star Schema)</h2><h3 id="组成-两部分"><a href="#组成-两部分" class="headerlink" title="组成-两部分"></a>组成-两部分</h3><h4 id="Fact-Table"><a href="#Fact-Table" class="headerlink" title="Fact Table"></a>Fact Table</h4><p>存储衡量变量<br>多对多<br><img src="/media/14776082294975.jpg" alt="-w221"></p>
+<h4 id="Dimension-Table"><a href="#Dimension-Table" class="headerlink" title="Dimension Table"></a>Dimension Table</h4><p>存储解释信息<br>通常非常长<br><img src="/media/14776082139821.jpg" alt="-w212"></p>
+<h3 id="好处"><a href="#好处" class="headerlink" title="好处"></a>好处</h3><ol>
 <li>简单</li>
 <li>性能</li>
 </ol>
@@ -686,95 +437,49 @@ Normalization</p>
     <entry>
       <title><![CDATA[如何使用Google Chart做图]]></title>
       <url>https://jyphotography.github.io/2016/10/26/google-chart-1/</url>
-      <content type="html"><![CDATA[<h2>缘由</h2>
-<p>学校的Capstone项目需要我们帮一家银行制作他们信用卡界面，鉴于自己没有太多前端开发经验，做了一些简单调查，打算用Google Chart来完成要求。后端只需要给前端发一个JSON格式的文件即可。</p>
+      <content type="html"><![CDATA[<h2 id="缘由"><a href="#缘由" class="headerlink" title="缘由"></a>缘由</h2><p>学校的Capstone项目需要我们帮一家银行制作他们信用卡界面，鉴于自己没有太多前端开发经验，做了一些简单调查，打算用Google Chart来完成要求。后端只需要给前端发一个JSON格式的文件即可。</p>
 <hr>
-<h2>步骤</h2>
-<h3>第一步 Example</h3>
-<p>可以参考Google Chart文档 https://developers.google.com/chart/interactive/docs/quick_start
-例子是一个饼图
-<img src="/media/14775117942855.jpg" alt="-c269">
-我们只需要把代码复制并保存进一个html文件即可</p>
-<h3>第二步 自定义图</h3>
-<p>我们可以在Guide目录下选择自己想要的图，以下是可以选择的类型
-<img src="/media/14775123843617.jpg" alt="-w145">
-然后选择edit fiddle并修改其中的参数即可
-<img src="/media/14775128346664.jpg" alt="-c872"></p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="第一步-Example"><a href="#第一步-Example" class="headerlink" title="第一步 Example"></a>第一步 Example</h3><p>可以参考Google Chart文档 <a href="https://developers.google.com/chart/interactive/docs/quick_start" target="_blank" rel="external">https://developers.google.com/chart/interactive/docs/quick_start</a><br>例子是一个饼图<br><img src="/media/14775117942855.jpg" alt="-c269"><br>我们只需要把代码复制并保存进一个html文件即可</p>
+<h3 id="第二步-自定义图"><a href="#第二步-自定义图" class="headerlink" title="第二步 自定义图"></a>第二步 自定义图</h3><p>我们可以在Guide目录下选择自己想要的图，以下是可以选择的类型<br><img src="/media/14775123843617.jpg" alt="-w145"><br>然后选择edit fiddle并修改其中的参数即可<br><img src="/media/14775128346664.jpg" alt="-c872"></p>
 <p>具体代码</p>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">  &lt;head&gt;</div><div class="line">    &lt;!--Load the AJAX API--&gt;</div><div class="line">    &lt;script type=&quot;text/javascript&quot; src=&quot;https://www.gstatic.com/charts/loader.js&quot;&gt;&lt;/script&gt;</div><div class="line">    &lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line"></div><div class="line">    google.charts.load(&apos;current&apos;, &#123;packages: [&apos;corechart&apos;, &apos;bar&apos;]&#125;);</div><div class="line">    google.charts.setOnLoadCallback(drawMultSeries);</div><div class="line"></div><div class="line">    function drawMultSeries() &#123;</div><div class="line">      var data = google.visualization.arrayToDataTable([</div><div class="line">        [&apos;Category&apos;, &apos;Industry&apos;, &apos;Client&apos;],</div><div class="line">        [&apos;CLOTHING/SHOES&apos;, 27135.14, 3977.11],</div><div class="line">        [&apos;BUSINESS/PROFESSIONAL&apos;, 24043.57, 1425.87],</div><div class="line">        [&apos;FURNISHINGS/APPLIANCES&apos;, 18682.86, 11808.33],</div><div class="line">        [&apos;ASSOCIATIONS/ORGANIZATIONS&apos;, 13713.88, 1392.22],</div><div class="line">        [&apos;LODGING/HOTELS&apos;, 12201.54, 2997.49]</div><div class="line">      ]);</div><div class="line"></div><div class="line">      var options = &#123;</div><div class="line">        title: &apos;Company9 Quarterly Spending(2016 Q3) vs Industry Benchmark&apos;,</div><div class="line">        chartArea: &#123;width: &apos;50%&apos;&#125;,</div><div class="line">        hAxis: &#123;</div><div class="line">          title: &apos;Total Spending&apos;,</div><div class="line">          minValue: 0</div><div class="line">        &#125;,</div><div class="line">        vAxis: &#123;</div><div class="line">          title: &apos;MCC Categories&apos;</div><div class="line">        &#125;</div><div class="line">      &#125;;</div><div class="line"></div><div class="line">      var chart = new google.visualization.BarChart(document.getElementById(&apos;chart_div&apos;));</div><div class="line">      chart.draw(data, options);</div><div class="line">    &#125;</div><div class="line">    &lt;/script&gt;</div><div class="line">  &lt;/head&gt;</div><div class="line"></div><div class="line">  &lt;body&gt;</div><div class="line">    &lt;div id=&quot;chart_div&quot;&gt;&lt;/div&gt;</div><div class="line">  &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
-<p>第三步 用JSON生成图表
-未完待续。。。</p>
-<h2>参考文献</h2>
-<p><a href="http://www.agcross.com/2015/01/connecting-a-google-chart-to-a-mysql-database-part-2/" target="_blank" rel="external">如何用JSON连接Google Chart</a>
-<a href="https://developers.google.com/chart/interactive/docs/quick_start" target="_blank" rel="external">官方文档</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">  &lt;head&gt;</div><div class="line">    &lt;!--Load the AJAX API--&gt;</div><div class="line">    &lt;script type=&quot;text/javascript&quot; src=&quot;https://www.gstatic.com/charts/loader.js&quot;&gt;&lt;/script&gt;</div><div class="line">    &lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line"></div><div class="line">    google.charts.load(&apos;current&apos;, &#123;packages: [&apos;corechart&apos;, &apos;bar&apos;]&#125;);</div><div class="line">    google.charts.setOnLoadCallback(drawMultSeries);</div><div class="line"></div><div class="line">    function drawMultSeries() &#123;</div><div class="line">      var data = google.visualization.arrayToDataTable([</div><div class="line">        [&apos;Category&apos;, &apos;Industry&apos;, &apos;Client&apos;],</div><div class="line">        [&apos;CLOTHING/SHOES&apos;, 27135.14, 3977.11],</div><div class="line">        [&apos;BUSINESS/PROFESSIONAL&apos;, 24043.57, 1425.87],</div><div class="line">        [&apos;FURNISHINGS/APPLIANCES&apos;, 18682.86, 11808.33],</div><div class="line">        [&apos;ASSOCIATIONS/ORGANIZATIONS&apos;, 13713.88, 1392.22],</div><div class="line">        [&apos;LODGING/HOTELS&apos;, 12201.54, 2997.49]</div><div class="line">      ]);</div><div class="line"></div><div class="line">      var options = &#123;</div><div class="line">        title: &apos;Company9 Quarterly Spending(2016 Q3) vs Industry Benchmark&apos;,</div><div class="line">        chartArea: &#123;width: &apos;50%&apos;&#125;,</div><div class="line">        hAxis: &#123;</div><div class="line">          title: &apos;Total Spending&apos;,</div><div class="line">          minValue: 0</div><div class="line">        &#125;,</div><div class="line">        vAxis: &#123;</div><div class="line">          title: &apos;MCC Categories&apos;</div><div class="line">        &#125;</div><div class="line">      &#125;;</div><div class="line"></div><div class="line">      var chart = new google.visualization.BarChart(document.getElementById(&apos;chart_div&apos;));</div><div class="line">      chart.draw(data, options);</div><div class="line">    &#125;</div><div class="line">    &lt;/script&gt;</div><div class="line">  &lt;/head&gt;</div><div class="line"></div><div class="line">  &lt;body&gt;</div><div class="line">    &lt;div id=&quot;chart_div&quot;&gt;&lt;/div&gt;</div><div class="line">  &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>第三步 用JSON生成图表<br>未完待续。。。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="http://www.agcross.com/2015/01/connecting-a-google-chart-to-a-mysql-database-part-2/" target="_blank" rel="external">如何用JSON连接Google Chart</a><br><a href="https://developers.google.com/chart/interactive/docs/quick_start" target="_blank" rel="external">官方文档</a></p>
 ]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[课后阅读1： Mastering Data Mining]]></title>
       <url>https://jyphotography.github.io/2016/10/26/Data-Mining-Reading-1/</url>
-      <content type="html"><![CDATA[<h1>Chapter 1 Data Mining in Context</h1>
-<h2>What is Data Mining</h2>
-<p>Data mining is the process of exploration and analysis, by automatic or semiautomatic means, of large quantities of data in order to discover meaningful pattern and rules.--John Wiley</p>
-<h2>What Can Data Mining DO?</h2>
-<h3>Classification</h3>
-<p>examine the features of a newly presented object and assign to it a predefined class</p>
-<h3>Estimation</h3>
-<p>deal with continuously valued outcome</p>
-<h3>Prediction</h3>
-<p>Prediction cannot be checked about accuracy. We can only wait and see</p>
-<h3>Affinity Grouping</h3>
-<p>things go together (cross-selling opportunities)</p>
-<h3>Clustering</h3>
-<p>diverse group into similar subgroups</p>
-<h3>Description and Visualization</h3>
-<p>data visualization</p>
-<h2>The Business Context for Data Mining</h2>
-<ol>
+      <content type="html"><![CDATA[<h1 id="Chapter-1-Data-Mining-in-Context"><a href="#Chapter-1-Data-Mining-in-Context" class="headerlink" title="Chapter 1 Data Mining in Context"></a>Chapter 1 Data Mining in Context</h1><h2 id="What-is-Data-Mining"><a href="#What-is-Data-Mining" class="headerlink" title="What is Data Mining"></a>What is Data Mining</h2><p>Data mining is the process of exploration and analysis, by automatic or semiautomatic means, of large quantities of data in order to discover meaningful pattern and rules.–John Wiley</p>
+<h2 id="What-Can-Data-Mining-DO"><a href="#What-Can-Data-Mining-DO" class="headerlink" title="What Can Data Mining DO?"></a>What Can Data Mining DO?</h2><h3 id="Classification"><a href="#Classification" class="headerlink" title="Classification"></a>Classification</h3><p>examine the features of a newly presented object and assign to it a predefined class</p>
+<h3 id="Estimation"><a href="#Estimation" class="headerlink" title="Estimation"></a>Estimation</h3><p>deal with continuously valued outcome</p>
+<h3 id="Prediction"><a href="#Prediction" class="headerlink" title="Prediction"></a>Prediction</h3><p>Prediction cannot be checked about accuracy. We can only wait and see</p>
+<h3 id="Affinity-Grouping"><a href="#Affinity-Grouping" class="headerlink" title="Affinity Grouping"></a>Affinity Grouping</h3><p>things go together (cross-selling opportunities)</p>
+<h3 id="Clustering"><a href="#Clustering" class="headerlink" title="Clustering"></a>Clustering</h3><p>diverse group into similar subgroups</p>
+<h3 id="Description-and-Visualization"><a href="#Description-and-Visualization" class="headerlink" title="Description and Visualization"></a>Description and Visualization</h3><p>data visualization</p>
+<h2 id="The-Business-Context-for-Data-Mining"><a href="#The-Business-Context-for-Data-Mining" class="headerlink" title="The Business Context for Data Mining"></a>The Business Context for Data Mining</h2><ol>
 <li>large quantities of data</li>
 <li>worth learning</li>
 </ol>
-<h3>Research Tool</h3>
-<h3>Process Improvement</h3>
-<h3>Marketing</h3>
-<h3>Customer Relationship Management</h3>
-<h2>The Technical Context for Data Mining</h2>
-<ol>
+<h3 id="Research-Tool"><a href="#Research-Tool" class="headerlink" title="Research Tool"></a>Research Tool</h3><h3 id="Process-Improvement"><a href="#Process-Improvement" class="headerlink" title="Process Improvement"></a>Process Improvement</h3><h3 id="Marketing"><a href="#Marketing" class="headerlink" title="Marketing"></a>Marketing</h3><h3 id="Customer-Relationship-Management"><a href="#Customer-Relationship-Management" class="headerlink" title="Customer Relationship Management"></a>Customer Relationship Management</h3><h2 id="The-Technical-Context-for-Data-Mining"><a href="#The-Technical-Context-for-Data-Mining" class="headerlink" title="The Technical Context for Data Mining"></a>The Technical Context for Data Mining</h2><ol>
 <li>Algorithms</li>
 <li>Data</li>
 <li>Modeling practices</li>
 </ol>
-<h3>Machine Learning</h3>
-<p>Neural network
-Decision Trees</p>
-<h3>Statistics</h3>
-<h3>Decision Support</h3>
-<h4>Data Warehouse</h4>
-<h4>OLAP</h4>
-<p>Decision Support Fusion</p>
-<h3>Computer Technology</h3>
-<h2>The Societal Context for Data Mining</h2>
-<hr>
-<h1>Chapter 2 Why Master the Art?</h1>
-<h2>Four Approaches to Data Mining</h2>
-<h3>Purchasing Scores</h3>
-<h3>Purchasing Software</h3>
-<h3>Purchasing Models</h3>
-<p>neural net models for predicting fraud in credit, product Falcon. Concern-false positive-innocent people
-vertical application</p>
-<h3>Purchasing Model-Building Software</h3>
-<p>Quadstone Decision house</p>
-<h4>what tools can and cannot automate</h4>
-<p>assumption is important</p>
-<h2>Hiring Outside Experts</h2>
-<ol>
+<h3 id="Machine-Learning"><a href="#Machine-Learning" class="headerlink" title="Machine Learning"></a>Machine Learning</h3><p>Neural network<br>Decision Trees</p>
+<h3 id="Statistics"><a href="#Statistics" class="headerlink" title="Statistics"></a>Statistics</h3><h3 id="Decision-Support"><a href="#Decision-Support" class="headerlink" title="Decision Support"></a>Decision Support</h3><h4 id="Data-Warehouse"><a href="#Data-Warehouse" class="headerlink" title="Data Warehouse"></a>Data Warehouse</h4><h4 id="OLAP"><a href="#OLAP" class="headerlink" title="OLAP"></a>OLAP</h4><p>Decision Support Fusion</p>
+<h3 id="Computer-Technology"><a href="#Computer-Technology" class="headerlink" title="Computer Technology"></a>Computer Technology</h3><h2 id="The-Societal-Context-for-Data-Mining"><a href="#The-Societal-Context-for-Data-Mining" class="headerlink" title="The Societal Context for Data Mining"></a>The Societal Context for Data Mining</h2><hr>
+<h1 id="Chapter-2-Why-Master-the-Art"><a href="#Chapter-2-Why-Master-the-Art" class="headerlink" title="Chapter 2 Why Master the Art?"></a>Chapter 2 Why Master the Art?</h1><h2 id="Four-Approaches-to-Data-Mining"><a href="#Four-Approaches-to-Data-Mining" class="headerlink" title="Four Approaches to Data Mining"></a>Four Approaches to Data Mining</h2><h3 id="Purchasing-Scores"><a href="#Purchasing-Scores" class="headerlink" title="Purchasing Scores"></a>Purchasing Scores</h3><h3 id="Purchasing-Software"><a href="#Purchasing-Software" class="headerlink" title="Purchasing Software"></a>Purchasing Software</h3><h3 id="Purchasing-Models"><a href="#Purchasing-Models" class="headerlink" title="Purchasing Models"></a>Purchasing Models</h3><p>neural net models for predicting fraud in credit, product Falcon. Concern-false positive-innocent people<br>vertical application</p>
+<h3 id="Purchasing-Model-Building-Software"><a href="#Purchasing-Model-Building-Software" class="headerlink" title="Purchasing Model-Building Software"></a>Purchasing Model-Building Software</h3><p>Quadstone Decision house</p>
+<h4 id="what-tools-can-and-cannot-automate"><a href="#what-tools-can-and-cannot-automate" class="headerlink" title="what tools can and cannot automate"></a>what tools can and cannot automate</h4><p>assumption is important</p>
+<h2 id="Hiring-Outside-Experts"><a href="#Hiring-Outside-Experts" class="headerlink" title="Hiring Outside Experts"></a>Hiring Outside Experts</h2><ol>
 <li>one time vs on-going</li>
 <li>source of data</li>
 <li>how be employed</li>
 <li>availability and skill level</li>
 </ol>
-<h2>Lessons Learned</h2>
-<ol>
+<h2 id="Lessons-Learned"><a href="#Lessons-Learned" class="headerlink" title="Lessons Learned"></a>Lessons Learned</h2><ol>
 <li>understand business problem</li>
 <li>select relevant data</li>
 <li>transform data</li>
@@ -786,88 +491,45 @@ vertical application</p>
     <entry>
       <title><![CDATA[第二章 如何找寻可靠的模型]]></title>
       <url>https://jyphotography.github.io/2016/10/26/Data-Mining-II/</url>
-      <content type="html"><![CDATA[<h1>第二章 如何找寻可靠的模型</h1>
-<h3>I. 数据类型</h3>
-<ol>
+      <content type="html"><![CDATA[<h1 id="第二章-如何找寻可靠的模型"><a href="#第二章-如何找寻可靠的模型" class="headerlink" title="第二章 如何找寻可靠的模型"></a>第二章 如何找寻可靠的模型</h1><h3 id="I-数据类型"><a href="#I-数据类型" class="headerlink" title="I. 数据类型"></a>I. 数据类型</h3><ol>
 <li>数字型</li>
 <li>类型</li>
 <li>顺序型</li>
 </ol>
 <hr>
-<h3>II. 基本模型</h3>
-<h4>预测分析模型</h4>
-<h5>回归模型(Regression)</h5>
-<ol>
+<h3 id="II-基本模型"><a href="#II-基本模型" class="headerlink" title="II. 基本模型"></a>II. 基本模型</h3><h4 id="预测分析模型"><a href="#预测分析模型" class="headerlink" title="预测分析模型"></a>预测分析模型</h4><h5 id="回归模型-Regression"><a href="#回归模型-Regression" class="headerlink" title="回归模型(Regression)"></a>回归模型(Regression)</h5><ol>
 <li>输入-数字型， 输出-数字型</li>
-<li>方法： 线性， 非线性， 多重， 无变量， 神经网络
-<img src="/media/14774559742028.jpg" alt="-c301"></li>
+<li>方法： 线性， 非线性， 多重， 无变量， 神经网络<br><img src="/media/14774559742028.jpg" alt="-c301"></li>
 </ol>
-<h5>分类模型(Classification)</h5>
-<ol>
-<li>输入-标记，数字，综合， 输出-标记
-<img src="/media/14774561356759.jpg" alt="-c281"></li>
+<h5 id="分类模型-Classification"><a href="#分类模型-Classification" class="headerlink" title="分类模型(Classification)"></a>分类模型(Classification)</h5><ol>
+<li>输入-标记，数字，综合， 输出-标记<br><img src="/media/14774561356759.jpg" alt="-c281"></li>
 </ol>
-<h4>2. 描述分析模型</h4>
-<h5>聚类模型(Clustering)</h5>
-<ol>
-<li>输入-标记，数字，综合， 输出-无
-<img src="/media/14774565022310.jpg" alt="-c311">
-<img src="/media/14774565177615.jpg" alt="-c300"></li>
+<h4 id="2-描述分析模型"><a href="#2-描述分析模型" class="headerlink" title="2. 描述分析模型"></a>2. 描述分析模型</h4><h5 id="聚类模型-Clustering"><a href="#聚类模型-Clustering" class="headerlink" title="聚类模型(Clustering)"></a>聚类模型(Clustering)</h5><ol>
+<li>输入-标记，数字，综合， 输出-无<pre><code>![-c311](/media/14774565022310.jpg)
+</code></pre><img src="/media/14774565177615.jpg" alt="-c300"></li>
 </ol>
-<h5>核密度估计(Density Estimation)</h5>
-<ol>
-<li>输入-标记，数字，综合， 输出-无
-<img src="/media/14774578391136.jpg" alt="-c262"></li>
+<h5 id="核密度估计-Density-Estimation"><a href="#核密度估计-Density-Estimation" class="headerlink" title="核密度估计(Density Estimation)"></a>核密度估计(Density Estimation)</h5><ol>
+<li>输入-标记，数字，综合， 输出-无<br><img src="/media/14774578391136.jpg" alt="-c262"></li>
 </ol>
-<h5>构造学习(Structural Learning)</h5>
-<p><img src="/media/14774570120650.jpg" alt="-c300"></p>
-<h3>总结</h3>
-<p><img src="/media/14774570628957.jpg" alt="-c300"></p>
+<h5 id="构造学习-Structural-Learning"><a href="#构造学习-Structural-Learning" class="headerlink" title="构造学习(Structural Learning)"></a>构造学习(Structural Learning)</h5><p><img src="/media/14774570120650.jpg" alt="-c300"></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><img src="/media/14774570628957.jpg" alt="-c300"></p>
 <hr>
-<h3>III.学习的类型</h3>
-<h4>监督学习(Supervised Learning)</h4>
-<p>适用于回归， 分类
-<img src="/media/14774583074116.jpg" alt="-c300"></p>
-<h4>非监督学习(Unsupervised Learning)</h4>
-<p>适用于聚类， 核密度估计
-<img src="/media/14774583249554.jpg" alt="-c300"></p>
-<h4>半监督学习(Semi-supervised Learning)</h4>
-<p>数据有些有输出值</p>
-<h4>增强学习(Reinforcement Learning)</h4>
-<p>适用于优化和控制问题
-<img src="/media/14774583410906.jpg" alt="-c300"></p>
-<h3>模型架构类型</h3>
-<p>1.变量模型
-假定：模型符合一定的函数形式
-2.非变量模型(memory-based)
-记住所有训练集</p>
-<h2>正规化（Generalization）</h2>
-<h4>如何数量化正规化结果？</h4>
-<p>留一些测试数据
-根据测试数据预测模型拟合度</p>
-<h4>正规化曲线</h4>
-<p><img src="/media/14774882944364.jpg" alt="-c300">
-如果什么都没学到，这张图记住就好。
-古话说：过犹不及。你模型训练的太好，在实际使用中效果会没有什么用</p>
-<h2>衡量模型正确性参数</h2>
-<h4>预测误差（Prediction Error)</h4>
-<p><img src="/media/14774887239335.jpg" alt="-c211">
-<img src="/media/14774887380989.jpg" alt="-c284">
-SSE 最简单粗暴
-MSE 可以或略outlier因为取得是平均
-RMSE 可以了解不同模型的离散程度
-MAE 因为取绝对值，可以衡量平均误差大小</p>
-<h4>如何找到合适的模型复杂度</h4>
-<ol>
+<h3 id="III-学习的类型"><a href="#III-学习的类型" class="headerlink" title="III.学习的类型"></a>III.学习的类型</h3><h4 id="监督学习-Supervised-Learning"><a href="#监督学习-Supervised-Learning" class="headerlink" title="监督学习(Supervised Learning)"></a>监督学习(Supervised Learning)</h4><p>适用于回归， 分类<br><img src="/media/14774583074116.jpg" alt="-c300"></p>
+<h4 id="非监督学习-Unsupervised-Learning"><a href="#非监督学习-Unsupervised-Learning" class="headerlink" title="非监督学习(Unsupervised Learning)"></a>非监督学习(Unsupervised Learning)</h4><p>适用于聚类， 核密度估计<br><img src="/media/14774583249554.jpg" alt="-c300"></p>
+<h4 id="半监督学习-Semi-supervised-Learning"><a href="#半监督学习-Semi-supervised-Learning" class="headerlink" title="半监督学习(Semi-supervised Learning)"></a>半监督学习(Semi-supervised Learning)</h4><p>数据有些有输出值</p>
+<h4 id="增强学习-Reinforcement-Learning"><a href="#增强学习-Reinforcement-Learning" class="headerlink" title="增强学习(Reinforcement Learning)"></a>增强学习(Reinforcement Learning)</h4><p>适用于优化和控制问题<br><img src="/media/14774583410906.jpg" alt="-c300"></p>
+<h3 id="模型架构类型"><a href="#模型架构类型" class="headerlink" title="模型架构类型"></a>模型架构类型</h3><p>1.变量模型<br>    假定：模型符合一定的函数形式<br>2.非变量模型(memory-based)<br>    记住所有训练集</p>
+<h2 id="正规化（Generalization）"><a href="#正规化（Generalization）" class="headerlink" title="正规化（Generalization）"></a>正规化（Generalization）</h2><h4 id="如何数量化正规化结果？"><a href="#如何数量化正规化结果？" class="headerlink" title="如何数量化正规化结果？"></a>如何数量化正规化结果？</h4><p>留一些测试数据<br>根据测试数据预测模型拟合度</p>
+<h4 id="正规化曲线"><a href="#正规化曲线" class="headerlink" title="正规化曲线"></a>正规化曲线</h4><p><img src="/media/14774882944364.jpg" alt="-c300"><br>如果什么都没学到，这张图记住就好。<br>古话说：过犹不及。你模型训练的太好，在实际使用中效果会没有什么用</p>
+<h2 id="衡量模型正确性参数"><a href="#衡量模型正确性参数" class="headerlink" title="衡量模型正确性参数"></a>衡量模型正确性参数</h2><h4 id="预测误差（Prediction-Error"><a href="#预测误差（Prediction-Error" class="headerlink" title="预测误差（Prediction Error)"></a>预测误差（Prediction Error)</h4><p><img src="/media/14774887239335.jpg" alt="-c211"><br><img src="/media/14774887380989.jpg" alt="-c284"><br>SSE 最简单粗暴<br>MSE 可以或略outlier因为取得是平均<br>RMSE 可以了解不同模型的离散程度<br>MAE 因为取绝对值，可以衡量平均误差大小</p>
+<h4 id="如何找到合适的模型复杂度"><a href="#如何找到合适的模型复杂度" class="headerlink" title="如何找到合适的模型复杂度"></a>如何找到合适的模型复杂度</h4><ol>
 <li>最简单：常量 y = b</li>
 <li>线性回归(Linear Regression)</li>
 <li>二次回归(Quadratic Regression)</li>
 <li>多项回归(Polynomial Regression)</li>
 </ol>
 <p>并不是越复杂越好，因为会过拟合(over-fit)</p>
-<h2>如何避免过拟合</h2>
-<h4>检查并设置(Test&amp;Set)</h4>
-<ol>
+<h2 id="如何避免过拟合"><a href="#如何避免过拟合" class="headerlink" title="如何避免过拟合"></a>如何避免过拟合</h2><h4 id="检查并设置-Test-amp-Set"><a href="#检查并设置-Test-amp-Set" class="headerlink" title="检查并设置(Test&amp;Set)"></a>检查并设置(Test&amp;Set)</h4><ol>
 <li>随机数据点</li>
 <li>把数据分成两块：训练， 验证</li>
 </ol>
@@ -876,39 +538,34 @@ MAE 因为取绝对值，可以衡量平均误差大小</p>
 <li>training set中样本数量必须够多，一般至少大于总样本数的50%。</li>
 <li>两组子集必须从完整集合中均匀取样</li>
 </ol>
-<h4>交叉验证（Leave-One-Out Cross Validation)</h4>
-<ol>
+<h4 id="交叉验证（Leave-One-Out-Cross-Validation"><a href="#交叉验证（Leave-One-Out-Cross-Validation" class="headerlink" title="交叉验证（Leave-One-Out Cross Validation)"></a>交叉验证（Leave-One-Out Cross Validation)</h4><ol>
 <li>每个样本单独作为验证集</li>
 <li>其余的N-1个样本作为训练集</li>
 <li>循环之前的过程</li>
-<li>选一个指标然后把所有模型结果放在一起比较</li>
+<li>选一个指标然后把所有模型结果放在一起比较  </li>
 </ol>
 <p><em>好处：</em></p>
 <ol>
 <li>每一回合中几乎所有的样本皆用于训练模型,因此最接近原始样本的分布</li>
 <li>实验过程中没有随机因素会影响实验数据,确保实验过程是可以被复制的</li>
 </ol>
-<h4>K组验证(K-fold Cross Validation)</h4>
-<ol>
+<h4 id="K组验证-K-fold-Cross-Validation"><a href="#K组验证-K-fold-Cross-Validation" class="headerlink" title="K组验证(K-fold Cross Validation)"></a>K组验证(K-fold Cross Validation)</h4><ol>
 <li>将原始数据随机分成K组（一般均分）</li>
 <li>将每个子集数据分别做一次验证集</li>
 <li>其余的K-1组子集数据作为训练集</li>
 <li>加总结果</li>
 </ol>
-<h4>现实使用</h4>
-<ol>
+<h4 id="现实使用"><a href="#现实使用" class="headerlink" title="现实使用"></a>现实使用</h4><ol>
 <li>M中模型和变量</li>
 <li>使用同样的交叉检验</li>
 <li>发现最好的模型</li>
 <li>使用所有数据完成最终模型</li>
 </ol>
-<h4>复习</h4>
-<p><strong>True or False</strong></p>
+<h4 id="复习"><a href="#复习" class="headerlink" title="复习"></a>复习</h4><p><strong>True or False</strong></p>
 <ol>
 <li>In 10-fold Cross-Validation, we are splitting data into 10 disjoint subsets and use each of them for testing exactly once.</li>
 <li>In 10-fold Cross-Validation, we independently build 10 models using training subsets of data, and select for deployment the one that performs best on the testing subset of data.</li>
-<li>We use 10-fold Cross-Validation to empirically quantify the expected performance of different types of models and/or their alternative configurations.
-As soon as we identify the most suitable model type and configuration, we can re-train it using all available data and then transition the result to practice.</li>
+<li>We use 10-fold Cross-Validation to empirically quantify the expected performance of different types of models and/or their alternative configurations.<br>As soon as we identify the most suitable model type and configuration, we can re-train it using all available data and then transition the result to practice.</li>
 </ol>
 <p>答案：</p>
 <ol>
@@ -916,14 +573,12 @@ As soon as we identify the most suitable model type and configuration, we can re
 <li>False</li>
 <li>True</li>
 </ol>
-<h2>总结</h2>
-<ol>
+<h2 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h2><ol>
 <li>用交叉检验发现好的模型</li>
 <li>模型选择（ROC）</li>
 <li>其他模型测试方法</li>
 </ol>
-<h4>你应该知道</h4>
-<ol>
+<h4 id="你应该知道"><a href="#你应该知道" class="headerlink" title="你应该知道"></a>你应该知道</h4><ol>
 <li>数据类型</li>
 <li>模型类型和区别</li>
 <li>基本模型学习</li>
@@ -938,16 +593,13 @@ As soon as we identify the most suitable model type and configuration, we can re
     <entry>
       <title><![CDATA[第一章 数据挖掘]]></title>
       <url>https://jyphotography.github.io/2016/10/25/Data-Mining-I/</url>
-      <content type="html"><![CDATA[<h1>第一章 数据挖掘</h1>
-<h3>I. 什么是数据挖掘</h3>
-<ol>
+      <content type="html"><![CDATA[<h1 id="第一章-数据挖掘"><a href="#第一章-数据挖掘" class="headerlink" title="第一章 数据挖掘"></a>第一章 数据挖掘</h1><h3 id="I-什么是数据挖掘"><a href="#I-什么是数据挖掘" class="headerlink" title="I. 什么是数据挖掘"></a>I. 什么是数据挖掘</h3><ol>
 <li>数据中寻找规律</li>
 <li>数据中寻找关系</li>
-<li>数据中提取信息</li>
+<li>数据中提取信息  </li>
 </ol>
 <hr>
-<h3>II. 主要因数</h3>
-<ol>
+<h3 id="II-主要因数"><a href="#II-主要因数" class="headerlink" title="II. 主要因数"></a>II. 主要因数</h3><ol>
 <li>数据的可得到性</li>
 <li>运算能力</li>
 <li>统计学</li>
@@ -956,11 +608,9 @@ As soon as we identify the most suitable model type and configuration, we can re
 <li>公司仪器</li>
 </ol>
 <hr>
-<h3>III. 数据挖掘周期</h3>
-<p><img src="/media/14774550278762.jpg" alt="-c300"></p>
+<h3 id="III-数据挖掘周期"><a href="#III-数据挖掘周期" class="headerlink" title="III. 数据挖掘周期"></a>III. 数据挖掘周期</h3><p><img src="/media/14774550278762.jpg" alt="-c300"></p>
 <hr>
-<h3>IV. 分析周期</h3>
-<p><img src="/media/14774550921846.jpg" alt="-c300"></p>
+<h3 id="IV-分析周期"><a href="#IV-分析周期" class="headerlink" title="IV. 分析周期"></a>IV. 分析周期</h3><p><img src="/media/14774550921846.jpg" alt="-c300"></p>
 ]]></content>
     </entry>
     

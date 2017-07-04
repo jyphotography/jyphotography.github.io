@@ -86,56 +86,40 @@
 
 
 
-<meta name="description" content="成本导向的分类(Cost Aware Analysis)
-模型选择的标准
-
+<meta name="description" content="成本导向的分类(Cost Aware Analysis)模型选择的标准
 普遍性 VS 准确性
 效用（这一章的重点）error and cost based method
 显著性
 复杂度 VS 准确性
 
-混淆矩阵（Confusion Matrix）
-适用于监督学习
-
+混淆矩阵（Confusion Matrix）适用于监督学习
 判断的标准
-
-模型选择的艺术
-最大化预测准确性
-vs
-最小化错误预测的成本
+模型选择的艺术最大化预测准确性vs最小化错误预测的成本
 方法：
 
 ROC
 Lift Chart
 
-二分分类的例">
+二分分类的例子血压与健康的关">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第四章 成本导向的分类">
 <meta property="og:url" content="https://jyphotography.github.io/2016/10/31/DM4/index.html">
 <meta property="og:site_name" content="JY">
-<meta property="og:description" content="成本导向的分类(Cost Aware Analysis)
-模型选择的标准
-
+<meta property="og:description" content="成本导向的分类(Cost Aware Analysis)模型选择的标准
 普遍性 VS 准确性
 效用（这一章的重点）error and cost based method
 显著性
 复杂度 VS 准确性
 
-混淆矩阵（Confusion Matrix）
-适用于监督学习
-
+混淆矩阵（Confusion Matrix）适用于监督学习
 判断的标准
-
-模型选择的艺术
-最大化预测准确性
-vs
-最小化错误预测的成本
+模型选择的艺术最大化预测准确性vs最小化错误预测的成本
 方法：
 
 ROC
 Lift Chart
 
-二分分类的例">
+二分分类的例子血压与健康的关">
 <meta property="og:image" content="https://jyphotography.github.io/media/14779594539713.jpg">
 <meta property="og:image" content="https://jyphotography.github.io/media/14785570149073.jpg">
 <meta property="og:image" content="https://jyphotography.github.io/media/14785581992432.jpg">
@@ -165,29 +149,21 @@ Lift Chart
 <meta property="og:updated_time" content="2016-11-08T00:20:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第四章 成本导向的分类">
-<meta name="twitter:description" content="成本导向的分类(Cost Aware Analysis)
-模型选择的标准
-
+<meta name="twitter:description" content="成本导向的分类(Cost Aware Analysis)模型选择的标准
 普遍性 VS 准确性
 效用（这一章的重点）error and cost based method
 显著性
 复杂度 VS 准确性
 
-混淆矩阵（Confusion Matrix）
-适用于监督学习
-
+混淆矩阵（Confusion Matrix）适用于监督学习
 判断的标准
-
-模型选择的艺术
-最大化预测准确性
-vs
-最小化错误预测的成本
+模型选择的艺术最大化预测准确性vs最小化错误预测的成本
 方法：
 
 ROC
 Lift Chart
 
-二分分类的例">
+二分分类的例子血压与健康的关">
 <meta name="twitter:image" content="https://jyphotography.github.io/media/14779594539713.jpg">
 
 
@@ -414,98 +390,54 @@ Lift Chart
       
 
       
-        <h2>成本导向的分类(Cost Aware Analysis)</h2>
-<h3>模型选择的标准</h3>
-<ol>
+        <h2 id="成本导向的分类-Cost-Aware-Analysis"><a href="#成本导向的分类-Cost-Aware-Analysis" class="headerlink" title="成本导向的分类(Cost Aware Analysis)"></a>成本导向的分类(Cost Aware Analysis)</h2><h3 id="模型选择的标准"><a href="#模型选择的标准" class="headerlink" title="模型选择的标准"></a>模型选择的标准</h3><ol>
 <li>普遍性 VS 准确性</li>
 <li>效用（这一章的重点）error and cost based method</li>
 <li>显著性</li>
 <li>复杂度 VS 准确性</li>
 </ol>
-<h3>混淆矩阵（Confusion Matrix）</h3>
-<p>适用于监督学习
-<img src="/media/14779594539713.jpg" alt="-w260"></p>
-<p>判断的标准
-<img src="/media/14785570149073.jpg" alt="-w468"></p>
-<h3>模型选择的艺术</h3>
-<p>最大化预测准确性
-vs
-最小化错误预测的成本</p>
+<h3 id="混淆矩阵（Confusion-Matrix）"><a href="#混淆矩阵（Confusion-Matrix）" class="headerlink" title="混淆矩阵（Confusion Matrix）"></a>混淆矩阵（Confusion Matrix）</h3><p>适用于监督学习<br><img src="/media/14779594539713.jpg" alt="-w260"></p>
+<p>判断的标准<br><img src="/media/14785570149073.jpg" alt="-w468"></p>
+<h3 id="模型选择的艺术"><a href="#模型选择的艺术" class="headerlink" title="模型选择的艺术"></a>模型选择的艺术</h3><p>最大化预测准确性<br>vs<br>最小化错误预测的成本</p>
 <p>方法：</p>
 <ol>
 <li>ROC</li>
 <li>Lift Chart</li>
 </ol>
-<h3>二分分类的例子</h3>
-<p>血压与健康的关系： 权威机构给出的分布
-<img src="/media/14785581992432.jpg" alt="-w436">
-问题： 应该把健康与非健康的边界设在那个血压上？
-<img src="/media/14785583837121.jpg" alt="-w451">
-如果按上图这么分， ROC图会如下
-<img src="/media/14785584375463.jpg" alt="-w314">
-如果我们沿整个x轴设置我们的标准
-<img src="/media/14785585202435.jpg" alt="-w355">
-<img src="/media/14785585544450.jpg" alt="-w481">
-增加变量会导致模型变好
-<img src="/media/14785585802057.jpg" alt="-w347"></p>
+<h3 id="二分分类的例子"><a href="#二分分类的例子" class="headerlink" title="二分分类的例子"></a>二分分类的例子</h3><p>血压与健康的关系： 权威机构给出的分布<br><img src="/media/14785581992432.jpg" alt="-w436"><br>问题： 应该把健康与非健康的边界设在那个血压上？<br><img src="/media/14785583837121.jpg" alt="-w451"><br>如果按上图这么分， ROC图会如下<br><img src="/media/14785584375463.jpg" alt="-w314"><br>如果我们沿整个x轴设置我们的标准<br><img src="/media/14785585202435.jpg" alt="-w355"><br><img src="/media/14785585544450.jpg" alt="-w481"><br>增加变量会导致模型变好<br><img src="/media/14785585802057.jpg" alt="-w347"></p>
 <p>Threshold depends on the cost of FP or FN</p>
-<p>ROC
-history radar systems-&gt;sensitivity related to FP &amp;FN</p>
-<p>Blood pressue example
-<img src="/media/14779601255435.jpg" alt="-w434">
-make a point on ROC</p>
+<p>ROC<br>history radar systems-&gt;sensitivity related to FP &amp;FN</p>
+<p>Blood pressue example<br><img src="/media/14779601255435.jpg" alt="-w434"><br>make a point on ROC</p>
 <p><img src="/media/14779601792393.jpg" alt="-w328"></p>
 <p><img src="/media/14779602207917.jpg" alt="-w345"></p>
 <p><img src="/media/14779602874287.jpg" alt="-w325"></p>
 <p>Not -so-trivial case</p>
 <ol>
 <li>算cost</li>
-<li>算slope
-<img src="/media/14779610235174.jpg" alt="-w476"></li>
+<li>算slope<br><img src="/media/14779610235174.jpg" alt="-w476"></li>
 </ol>
-<p>增加input会改善ROC效果
-<img src="/media/14782665087338.jpg" alt="-w323"></p>
-<h3>如何选择一个不明显的模型？</h3>
-<p>我们要计算错误分类的成本
-<img src="/media/14785586860859.jpg" alt="-w460">
-特殊情况：
-<img src="/media/14785590629094.jpg" alt=""></p>
-<p>分开的模型可能比一个模型要好
-b<img src="/media/14782667565639.jpg" alt="-w437">
-那中间断怎么选？ 两个模型都可以</p>
-<h2>Rating Classifiers</h2>
-<p>KNN model 5个中3个positive，我们可以说60%可能positive</p>
-<p>connect the dots 不然roc会高会低是由于你的方法
-interest in 预测的结果是否与原始结果相同</p>
-<p>AUC curve
-the greater the better
-compare different model</p>
+<p>增加input会改善ROC效果<br><img src="/media/14782665087338.jpg" alt="-w323"></p>
+<h3 id="如何选择一个不明显的模型？"><a href="#如何选择一个不明显的模型？" class="headerlink" title="如何选择一个不明显的模型？"></a>如何选择一个不明显的模型？</h3><p>我们要计算错误分类的成本<br><img src="/media/14785586860859.jpg" alt="-w460"><br>特殊情况：<br><img src="/media/14785590629094.jpg" alt=""></p>
+<p>分开的模型可能比一个模型要好<br> b<img src="/media/14782667565639.jpg" alt="-w437"><br>那中间断怎么选？ 两个模型都可以</p>
+<h2 id="Rating-Classifiers"><a href="#Rating-Classifiers" class="headerlink" title="Rating Classifiers"></a>Rating Classifiers</h2><p>KNN model 5个中3个positive，我们可以说60%可能positive</p>
+<p>connect the dots 不然roc会高会低是由于你的方法<br>interest in 预测的结果是否与原始结果相同</p>
+<p>AUC curve<br>the greater the better<br>compare different model</p>
 <p>AUC不是总是有用的</p>
 <p>辐射-例子 alerts是正确的，但是对实际效果不符合 True negative up 而不是整个都好- particular settings</p>
-<p>一些有趣的问题
-如何用ROC做Kfold交叉检验？</p>
+<p>一些有趣的问题<br>如何用ROC做Kfold交叉检验？</p>
 <ol>
 <li>把所有结果加总做一个ROC</li>
 <li>预测TPR</li>
-<li>画2D矩阵
-Manhattan distance-不能直达必须像在曼哈顿穿梭一样，90度才能转弯</li>
+<li>画2D矩阵<br>Manhattan distance-不能直达必须像在曼哈顿穿梭一样，90度才能转弯</li>
 </ol>
-<p>缺点：
-计算量大， 数据量小增加K</p>
+<p>缺点：<br>计算量大， 数据量小增加K</p>
 <p>如果结果不是二分？</p>
 <ol>
 <li>each pair of class</li>
 <li>一个和其他结果</li>
 </ol>
-<p>不同错误分类的结果
-信用卡
-风险： 错误的同意交易
-value transaction cost
-cost： percentage fee
-cost： transaction value
-巴克莱： different level for differnt cutomers： frequent flyer or shopper</p>
-<p>总结
-前提：</p>
+<p>不同错误分类的结果<br>信用卡<br>风险： 错误的同意交易<br>value transaction cost<br>cost： percentage fee<br>cost： transaction value<br>巴克莱： different level for differnt cutomers： frequent flyer or shopper</p>
+<p>总结<br>前提：</p>
 <ol>
 <li>数据输入月输出</li>
 <li>可结实性</li>
@@ -515,23 +447,11 @@ cost： transaction value
 <p><img src="/media/14785632966226.jpg" alt="-w484"></p>
 <p><img src="/media/14785634377492.jpg" alt="-w407"></p>
 <pre><code>记录你做模型的原因
-</code></pre>
-<p>wake up quiz:?
-overfit risk</p>
-<p><img src="/media/14785637229958.jpg" alt="">
-bias: add more levels
-variance: add more data</p>
-<p>甜点：
-<img src="/media/14785638803339.jpg" alt="">
-<img src="/media/14785641597531.jpg" alt="-w485">
-low amount / Dimension</p>
+</code></pre><p>wake up quiz:?<br>overfit risk</p>
+<p><img src="/media/14785637229958.jpg" alt=""><br>bias: add more levels<br>variance: add more data</p>
+<p>甜点：<br><img src="/media/14785638803339.jpg" alt=""><br><img src="/media/14785641597531.jpg" alt="-w485"><br>low amount / Dimension</p>
 <p><img src="/media/14785641227859.jpg" alt="-w473"></p>
-<p><img src="/media/14785642121569.jpg" alt="-w482">
-D
-<img src="/media/14785642455971.jpg" alt="-w462">
-C + D
-<img src="/media/14785643237784.jpg" alt="-w470">
-True</p>
+<p><img src="/media/14785642121569.jpg" alt="-w482"><br>D<br><img src="/media/14785642455971.jpg" alt="-w462"><br>C + D<br><img src="/media/14785643237784.jpg" alt="-w470"><br>True</p>
 <p>9</p>
 
       
@@ -689,7 +609,7 @@ True</p>
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">成本导向的分类(Cost Aware Analysis)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">模型选择的标准</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">混淆矩阵（Confusion Matrix）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.3.</span> <span class="nav-text">模型选择的艺术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.4.</span> <span class="nav-text">二分分类的例子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.5.</span> <span class="nav-text">如何选择一个不明显的模型？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">Rating Classifiers</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#成本导向的分类-Cost-Aware-Analysis"><span class="nav-number">1.</span> <span class="nav-text">成本导向的分类(Cost Aware Analysis)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模型选择的标准"><span class="nav-number">1.1.</span> <span class="nav-text">模型选择的标准</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#混淆矩阵（Confusion-Matrix）"><span class="nav-number">1.2.</span> <span class="nav-text">混淆矩阵（Confusion Matrix）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型选择的艺术"><span class="nav-number">1.3.</span> <span class="nav-text">模型选择的艺术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二分分类的例子"><span class="nav-number">1.4.</span> <span class="nav-text">二分分类的例子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何选择一个不明显的模型？"><span class="nav-number">1.5.</span> <span class="nav-text">如何选择一个不明显的模型？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Rating-Classifiers"><span class="nav-number">2.</span> <span class="nav-text">Rating Classifiers</span></a></li></ol></div>
             
           </div>
         </section>
