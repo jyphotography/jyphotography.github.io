@@ -31,6 +31,12 @@
 <li>多余的变量</li>
 <li>太多特征</li>
 </ol>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
 ]]></content>
     </entry>
     
@@ -61,6 +67,13 @@
 <li><a href="http://www.forkosh.com/mathtextutorial.html" target="_blank" rel="external">Mathjax</a></li>
 <li><a href="http://latex.codecogs.com/eqneditor/editor.php" target="_blank" rel="external">在线数学公式生成器</a></li>
 </ol>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+
 ]]></content>
     </entry>
     

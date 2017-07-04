@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jyphotography.github.io/"/>
-  <updated>2017-07-04T20:26:01.000Z</updated>
+  <updated>2017-07-04T20:29:38.000Z</updated>
   <id>https://jyphotography.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://jyphotography.github.io/2017/07/04/ml-2/"/>
     <id>https://jyphotography.github.io/2017/07/04/ml-2/</id>
     <published>2017-07-04T19:12:12.000Z</published>
-    <updated>2017-07-04T20:26:01.000Z</updated>
+    <updated>2017-07-04T20:29:38.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="多元线性回归"><a href="#多元线性回归" class="headerlink" title="多元线性回归"></a>多元线性回归</h1><h2 id="多元特征"><a href="#多元特征" class="headerlink" title="多元特征"></a>多元特征</h2><p>公式： $$h_\theta (x) = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + \theta_3 x_3 + \cdots + \theta_n x_n $$</p>
 <p>向量化： 我们可以看成矩阵相乘：<br>$$\begin{align<em>}h_\theta(x) =\begin{bmatrix}\theta_0 \hspace{2em} \theta_1 \hspace{2em} … \hspace{2em} \theta_n\end{bmatrix}\begin{bmatrix}x_0 \newline x_1 \newline \vdots \newline x_n\end{bmatrix}= \theta^T x\end{align</em>}$$</p>
@@ -47,6 +47,12 @@
 <li>多余的变量</li>
 <li>太多特征</li>
 </ol>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
 ]]></content>
     
     <summary type="html">
@@ -63,7 +69,7 @@
     <link href="https://jyphotography.github.io/2017/07/01/ml-1/"/>
     <id>https://jyphotography.github.io/2017/07/01/ml-1/</id>
     <published>2017-07-01T22:09:09.000Z</published>
-    <updated>2017-07-04T20:25:11.000Z</updated>
+    <updated>2017-07-04T20:30:36.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><h2 id="什么是机器学习？"><a href="#什么是机器学习？" class="headerlink" title="什么是机器学习？"></a>什么是机器学习？</h2><p>“A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E.” – Tom Mitchell</p>
 <p>一个计算机程序从一些目标（T）和结果（P）学到的经历（E）。 如果这个程序能随着经历（E）的改进而改进目标（T）的结果（P），那这就是机器学习。</p>
@@ -89,6 +95,13 @@
 <li><a href="http://www.forkosh.com/mathtextutorial.html" target="_blank" rel="external">Mathjax</a></li>
 <li><a href="http://latex.codecogs.com/eqneditor/editor.php" target="_blank" rel="external">在线数学公式生成器</a></li>
 </ol>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+
 ]]></content>
     
     <summary type="html">
