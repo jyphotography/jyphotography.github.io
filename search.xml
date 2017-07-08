@@ -4,6 +4,26 @@
   
     
     <entry>
+      <title><![CDATA[机器学习 Week3 - Coursera Machine Learning]]></title>
+      <url>https://jyphotography.github.io/2017/07/08/ml-3/</url>
+      <content type="html"><![CDATA[<h1 id="逻辑回归-0-1-分类问题"><a href="#逻辑回归-0-1-分类问题" class="headerlink" title="逻辑回归 0/1 分类问题"></a>逻辑回归 0/1 分类问题</h1><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p>分类问题并不是一个简单的线性问题。<br><img src="/media/14995354468627.jpg" alt=""></p>
+<h2 id="假设"><a href="#假设" class="headerlink" title="假设"></a>假设</h2><p>人们定义了逻辑回归来完成 0/1 分类问题，逻辑一词也代表了<strong>是（1）</strong>和<strong>非（0）</strong>。</p>
+<h3 id="逻辑回归"><a href="#逻辑回归" class="headerlink" title="逻辑回归"></a>逻辑回归</h3><p><strong>目的</strong>：把预测函数限制在一个范围  $0 \leq h_\theta (x) \leq 1$</p>
+<p>逻辑回归的假设：  $h_\theta (x) = g ( \theta^T x ) $<br>g就是逻辑函数（sigmoid函数）$g(z) = \dfrac{1}{1 + e^{-z}}$ 下图为这个函数的图像：</p>
+<p><img src="/media/14995356822096.png" alt=""></p>
+<p>$h<em>\theta(x)$ 会给我们输出变量=1的<strong>概率</strong><br>$\begin{align*}&amp; h</em>\theta(x) = P(y=1 | x ; \theta) = 1 - P(y=0 | x ; \theta) \newline&amp; P(y = 0 | x;\theta) + P(y = 1 | x ; \theta) = 1\end{align*}$</p>
+<p>例子： 如果$h_\theta(x)$=0.7， 那么表示有70%的概率结果为1， 30%的概率结果为0</p>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[机器学习 Week2 - Coursera Machine Learning]]></title>
       <url>https://jyphotography.github.io/2017/07/04/ml-2/</url>
       <content type="html"><![CDATA[<h1 id="多元线性回归"><a href="#多元线性回归" class="headerlink" title="多元线性回归"></a>多元线性回归</h1><h2 id="多元特征"><a href="#多元特征" class="headerlink" title="多元特征"></a>多元特征</h2><p>公式： $$h_\theta (x) = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + \theta_3 x_3 + \cdots + \theta_n x_n $$</p>
@@ -24,7 +44,7 @@
 <h3 id="多项式回归"><a href="#多项式回归" class="headerlink" title="多项式回归"></a>多项式回归</h3><p>成本函数不一定要线性，有时候二元活着三元函数更符合。<br>注意：多项式回归时特征缩放很关键</p>
 <p>#计算变量</p>
 <h2 id="正规方程（Normal-Equation）"><a href="#正规方程（Normal-Equation）" class="headerlink" title="正规方程（Normal Equation）"></a>正规方程（Normal Equation）</h2><p>一次性求接出最佳的$\theta$</p>
-<p>公式： $$\theta = (X^T X)^{-1}X^T y$$<br>不需要做特征缩放 </p>
+<p>公式： $$\theta = (X^T X)^{-1}X^T y$$<br>不需要做特征缩放<br><img src="/media/14992213910911.jpg" alt=""></p>
 <p>与梯度下降的区别：<br><img src="/media/14991996330553.jpg" alt=""><br>梯度下降适合大数据，<br>正规方程适合小数据</p>
 <h2 id="正规方程不可逆（Normal-Equation-Noninvertibility）"><a href="#正规方程不可逆（Normal-Equation-Noninvertibility）" class="headerlink" title="正规方程不可逆（Normal Equation Noninvertibility）"></a>正规方程不可逆（Normal Equation Noninvertibility）</h2><p>可能的原因：</p>
 <ol>
