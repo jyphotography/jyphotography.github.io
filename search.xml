@@ -6,28 +6,42 @@
     <entry>
       <title><![CDATA[机器学习 Week3 - Coursera Machine Learning]]></title>
       <url>https://jyphotography.github.io/2017/07/08/ml-3/</url>
-      <content type="html"><![CDATA[<h1>逻辑回归 0/1 分类问题</h1>
-<h2>分类</h2>
-<p>分类问题并不是一个简单的线性问题。
-<img src="/media/14995354468627.jpg" alt=""></p>
-<h2>分类问题建模</h2>
-<p>人们定义了逻辑回归来完成 0/1 分类问题，逻辑一词也代表了<strong>是（1）<strong>和</strong>非（0）</strong>。</p>
-<h3>逻辑回归</h3>
-<p><strong>目的</strong>：把预测函数限制在一个范围  $0 \leq h_\theta (x) \leq 1$</p>
-<p>逻辑回归的假设：  $h_\theta (x) = g ( \theta^T x ) $
-g就是逻辑函数（sigmoid函数）$g(z) = \dfrac{1}{1 + e^{-z}}$ 下图为这个函数的图像：</p>
+      <content type="html"><![CDATA[<h1 id="逻辑回归-0-1-分类问题"><a href="#逻辑回归-0-1-分类问题" class="headerlink" title="逻辑回归 0/1 分类问题"></a>逻辑回归 0/1 分类问题</h1><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p>分类问题并不是一个简单的线性问题。<br><img src="/media/14995354468627.jpg" alt=""></p>
+<h2 id="分类问题建模"><a href="#分类问题建模" class="headerlink" title="分类问题建模"></a>分类问题建模</h2><p>人们定义了逻辑回归来完成 0/1 分类问题，逻辑一词也代表了<strong>是（1）</strong>和<strong>非（0）</strong>。</p>
+<h3 id="逻辑回归"><a href="#逻辑回归" class="headerlink" title="逻辑回归"></a>逻辑回归</h3><p><strong>目的</strong>：把预测函数限制在一个范围  $0 \leq h_\theta (x) \leq 1$</p>
+<p>逻辑回归的假设：  $h_\theta (x) = g ( \theta^T x ) $<br>g就是逻辑函数（sigmoid函数）$g(z) = \dfrac{1}{1 + e^{-z}}$ 下图为这个函数的图像：</p>
 <p><img src="/media/14995356822096.png" alt=""></p>
 <p>$h_\theta(x)$ 会给我们输出变量=1的<strong>概率</strong></p>
-<p><img src="http://latex.codecogs.com/gif.latex?%5Cbegin%7Balign*%7D%26%20h_%5Ctheta%28x%29%20%3D%20P%28y%3D1%20%7C%20x%20%3B%20%5Ctheta%29%20%3D%201%20-%20P%28y%3D0%20%7C%20x%20%3B%20%5Ctheta%29%20%5Cnewline%26%20P%28y%20%3D%200%20%7C%20x%3B%5Ctheta%29%20+%20P%28y%20%3D%201%20%7C%20x%20%3B%20%5Ctheta%29%20%3D%201%5Cend%7Balign*%7D" alt=""></p>
+<p><img src="http://latex.codecogs.com/gif.latex?%5Cbegin%7Balign*%7D%26%20h_%5Ctheta%28x%29%20%3D%20P%28y%3D1%20%7C%20x%20%3B%20%5Ctheta%29%20%3D%201%20-%20P%28y%3D0%20%7C%20x%20%3B%20%5Ctheta%29%20%5Cnewline%26%20P%28y%20%3D%200%20%7C%20x%3B%5Ctheta%29%20&plus;%20P%28y%20%3D%201%20%7C%20x%20%3B%20%5Ctheta%29%20%3D%201%5Cend%7Balign*%7D" alt=""></p>
 <p>例子： 如果$h_\theta(x)$=0.7， 那么表示有70%的概率结果为1， 30%的概率结果为0</p>
-<h2>判定边界（DECISION BOUNDARY）</h2>
-<p>为了获得0和1，我们可以设置一个边界来判断，例如边界=0.5
-<img src="http://latex.codecogs.com/gif.latex?%5Cbegin%7Balign*%7D%26%20h_%5Ctheta%28x%29%20%5Cgeq%200.5%20%5Crightarrow%20y%20%3D%201%20%5Cnewline%26%20h_%5Ctheta%28x%29%20%3C%200.5%20%5Crightarrow%20y%20%3D%200%20%5Cnewline%5Cend%7Balign*%7D" alt=""></p>
-<p>&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
-MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\(','\)']]}});
-&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot; async src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML&quot;&gt;
-&lt;/script&gt;</p>
+<h2 id="判定边界（DECISION-BOUNDARY）"><a href="#判定边界（DECISION-BOUNDARY）" class="headerlink" title="判定边界（DECISION BOUNDARY）"></a>判定边界（DECISION BOUNDARY）</h2><p>为了获得0和1，我们可以设置一个边界来判断，例如边界=0.5<br><img src="http://latex.codecogs.com/gif.latex?%5Cbegin%7Balign*%7D%26%20h_%5Ctheta%28x%29%20%5Cgeq%200.5%20%5Crightarrow%20y%20%3D%201%20%5Cnewline%26%20h_%5Ctheta%28x%29%20%3C%200.5%20%5Crightarrow%20y%20%3D%200%20%5Cnewline%5Cend%7Balign*%7D" alt=""></p>
+<p>根据上面绘制出的 S 形函数图像，我们知道当<br>$$\begin{align<em>}z=0, e^{0}=1 \Rightarrow g(z)=1/2\newline z \to \infty, e^{-\infty} \to 0 \Rightarrow g(z)=1 \newline z \to -\infty, e^{\infty}\to \infty \Rightarrow g(z)=0 \end{align</em>}$$</p>
+<p>又因为 函数g的输入是 $\theta^T x$<br>$$\begin{align<em>}&amp; h_\theta(x) = g(\theta^T x) \geq 0.5 \newline&amp; when \; \theta^T x \geq 0\end{align</em>}$$</p>
+<p>所以 我们可以这样作出判断<br>$$\begin{align<em>}&amp; \theta^T x \geq 0 \Rightarrow y = 1 \newline&amp; \theta^T x &lt; 0 \Rightarrow y = 0 \newline\end{align</em>}$$</p>
+<p>例子：我们知道这个是以5为边界， 小于等于5的y=1， 大于5的y=0</p>
+<p>$$\begin{align<em>}&amp; \theta = \begin{bmatrix}5 \newline -1 \newline 0\end{bmatrix} \newline &amp; y = 1 \; if \; 5 + (-1) x_1 + 0 x_2 \geq 0 \newline &amp; 5 - x_1 \geq 0 \newline &amp; - x_1 \geq -5 \newline&amp; x_1 \leq 5 \newline \end{align</em>}$$<br>注意的是 $\theta^T X$不一定要线性，多元方程也一样<br><img src="/media/14995398930593.jpg" alt=""></p>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+<h1 id="逻辑回归模型"><a href="#逻辑回归模型" class="headerlink" title="逻辑回归模型"></a>逻辑回归模型</h1><h3 id="代价函数-（Cost-Function）"><a href="#代价函数-（Cost-Function）" class="headerlink" title="代价函数 （Cost Function）"></a>代价函数 （Cost Function）</h3><p>我们不能用线性回归的代价函数去解决逻辑回归的代价函数， 原因是我们会得到一个非凸函数（non-convex function） 这样的函数有许多局部最小值，却无法找到真正最小值。<br><img src="/media/14996399776898.jpg" alt=""></p>
+<p><strong>逻辑回归的代价函数</strong><br>$$\begin{align<em>}&amp; J(\theta) = \dfrac{1}{m} \sum<em>{i=1}^m \mathrm{Cost}(h</em>\theta(x^{(i)}),y^{(i)}) \newline &amp; \mathrm{Cost}(h<em>\theta(x),y) = -\log(h</em>\theta(x)) \; &amp; \text{if y = 1} \newline &amp; \mathrm{Cost}(h<em>\theta(x),y) = -\log(1-h</em>\theta(x)) \; &amp; \text{if y = 0}\end{align</em>}$$</p>
+<p><img src="/media/14996400719298.jpg" alt=""></p>
+<p>具体来说： 当y=1的时候，如果$h_\theta$也为1的时候，这样误差为0， 反之误差会趋向极限。</p>
+<h2 id="简化代价函数和梯度下降"><a href="#简化代价函数和梯度下降" class="headerlink" title="简化代价函数和梯度下降"></a>简化代价函数和梯度下降</h2><p>代价函数也可以在一行显示：<br>$$\mathrm{Cost}(h<em>\theta(x),y) = - y \; \log(h</em>\theta(x)) - (1 - y) \log(1 - h_\theta(x))$$<br><img src="/media/14996403311466.jpg" alt=""></p>
+<p>向量化：<br>$$\begin{align<em>} &amp; h = g(X\theta)\newline &amp; J(\theta) = \frac{1}{m} \cdot \left(-y^{T}\log(h)-(1-y)^{T}\log(1-h)\right) \end{align</em>}$$</p>
+<h3 id="梯度下降"><a href="#梯度下降" class="headerlink" title="梯度下降"></a>梯度下降</h3><p><img src="/media/14996421954042.jpg" alt=""></p>
+<p>求导之后：<br><img src="/media/14996422095036.jpg" alt=""><br>我们需要同时更新所有theta</p>
+<h2 id="高级优化"><a href="#高级优化" class="headerlink" title="高级优化"></a>高级优化</h2><p>除了梯度下降算法以外还有一些常被用来令代价函数最小的算法，这些算法更加复杂和优越，而且通常不需要人工选择学习率，通常比梯度下降算法要更加快速。</p>
+<p>这些算法有：<strong>共轭梯度</strong>（Conjugate Gradient）,<strong>局部优化法</strong>(Broyden fletcher goldfarb shann,BFGS)和<strong>有限内存局部优化法</strong>(LBFGS)</p>
+<p>fminunc 是 matlab 和 octave 中都带的一个最小值优化函数，使用时我们需要提供代价函数</p>
+<p>和每个参数的求导，下面是 octave 中使用 fminunc 函数的代码示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function [jVal, gradient] = costFunction(theta)</div><div class="line">  jVal = [...code to compute J(theta)...];</div><div class="line">  gradient = [...code to compute derivative of J(theta)...];</div><div class="line">end</div><div class="line"></div><div class="line">options = optimset(&apos;GradObj&apos;, &apos;on&apos;, &apos;MaxIter&apos;, 100);</div><div class="line">initialTheta = zeros(2,1);</div><div class="line">   [optTheta, functionVal, exitFlag] = fminunc(@costFunction, initialTheta, options);</div></pre></td></tr></table></figure>
+<p>#多类分类（Multiclass Classification）<br><strong>一对多</strong> （one-vs-all）<br>方法是将多类分类问题转化成二元分类问题。在我们需要做预测时，我们将所有的分类机都运行一遍，然后对每一个输入变量，都选择最高可能性的输出变量。<br>$\begin{align<em>}&amp; y \in \lbrace0, 1 … n\rbrace \newline&amp; h<em>\theta^{(0)}(x) = P(y = 0 | x ; \theta) \newline&amp; h</em>\theta^{(1)}(x) = P(y = 1 | x ; \theta) \newline&amp; \cdots \newline&amp; h_\theta^{(n)}(x) = P(y = n | x ; \theta) \newline&amp; \mathrm{prediction} = \max<em>i( h</em>\theta ^{(i)}(x) )\newline\end{align</em>}$</p>
+<p><img src="/media/14996430959512.jpg" alt=""></p>
 ]]></content>
     </entry>
     
