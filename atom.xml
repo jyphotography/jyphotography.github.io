@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jyphotography.github.io/"/>
-  <updated>2017-07-09T23:31:37.000Z</updated>
+  <updated>2017-07-13T18:50:07.000Z</updated>
   <id>https://jyphotography.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://jyphotography.github.io/2017/07/08/ml-3/"/>
     <id>https://jyphotography.github.io/2017/07/08/ml-3/</id>
     <published>2017-07-08T17:16:45.000Z</published>
-    <updated>2017-07-09T23:31:37.000Z</updated>
+    <updated>2017-07-13T18:50:07.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="逻辑回归-0-1-分类问题"><a href="#逻辑回归-0-1-分类问题" class="headerlink" title="逻辑回归 0/1 分类问题"></a>逻辑回归 0/1 分类问题</h1><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p>分类问题并不是一个简单的线性问题。<br><img src="/media/14995354468627.jpg" alt=""></p>
 <h2 id="分类问题建模"><a href="#分类问题建模" class="headerlink" title="分类问题建模"></a>分类问题建模</h2><p>人们定义了逻辑回归来完成 0/1 分类问题，逻辑一词也代表了<strong>是（1）</strong>和<strong>非（0）</strong>。</p>
@@ -58,6 +58,16 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function [jVal, gradient] = costFunction(theta)</div><div class="line">  jVal = [...code to compute J(theta)...];</div><div class="line">  gradient = [...code to compute derivative of J(theta)...];</div><div class="line">end</div><div class="line"></div><div class="line">options = optimset(&apos;GradObj&apos;, &apos;on&apos;, &apos;MaxIter&apos;, 100);</div><div class="line">initialTheta = zeros(2,1);</div><div class="line">   [optTheta, functionVal, exitFlag] = fminunc(@costFunction, initialTheta, options);</div></pre></td></tr></table></figure>
 <p>#多类分类（Multiclass Classification）<br><strong>一对多</strong> （one-vs-all）<br>方法是将多类分类问题转化成二元分类问题。在我们需要做预测时，我们将所有的分类机都运行一遍，然后对每一个输入变量，都选择最高可能性的输出变量。<br>$\begin{align<em>}&amp; y \in \lbrace0, 1 … n\rbrace \newline&amp; h<em>\theta^{(0)}(x) = P(y = 0 | x ; \theta) \newline&amp; h</em>\theta^{(1)}(x) = P(y = 1 | x ; \theta) \newline&amp; \cdots \newline&amp; h_\theta^{(n)}(x) = P(y = n | x ; \theta) \newline&amp; \mathrm{prediction} = \max<em>i( h</em>\theta ^{(i)}(x) )\newline\end{align</em>}$</p>
 <p><img src="/media/14996430959512.jpg" alt=""></p>
+<h1 id="归一化-（Regularization）"><a href="#归一化-（Regularization）" class="headerlink" title="归一化 （Regularization）"></a>归一化 （Regularization）</h1><h2 id="过拟合-Overfitting"><a href="#过拟合-Overfitting" class="headerlink" title="过拟合 Overfitting"></a>过拟合 Overfitting</h2><p>能非常好的拟合训练数据集， 但是不能推广到新的数据集（测试数据）</p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><ol>
+<li>丢弃一些特征</li>
+<li>保留所有特征，但是减少参数的大小 （magnitude）</li>
+</ol>
+<h2 id="归一化代价函数"><a href="#归一化代价函数" class="headerlink" title="归一化代价函数"></a>归一化代价函数</h2><p>如果要减少一些$\theta$, 就在前面乘一个系数来进行惩罚， 以减少这些变量对最终结果的影响。<br><img src="/media/14999705107402.jpg" alt=""><br>公式中的lamda呦成为归一化系数(Regularization Parameter)<br><img src="/media/14999706387609.jpg" alt=""><br>如果lamda太大， 会造成模型欠拟合</p>
+<h2 id="归一化线性回归-（Regularized-Linear-Regression）"><a href="#归一化线性回归-（Regularized-Linear-Regression）" class="headerlink" title="归一化线性回归 （Regularized Linear Regression）"></a>归一化线性回归 （Regularized Linear Regression）</h2><h3 id="梯度下降-1"><a href="#梯度下降-1" class="headerlink" title="梯度下降"></a>梯度下降</h3><p>我们把$\theta_0$分开，因为我们不想惩罚它。<br><img src="/media/14999712979043.jpg" alt=""><br>简化后：<br><img src="/media/14999713451825.jpg" alt=""><br>因为（1-$\alpha*lamda/m$)总是小于1， 所以每次更新都会减少$\theta_j$的值。</p>
+<h3 id="正规方程"><a href="#正规方程" class="headerlink" title="正规方程"></a>正规方程</h3><p>和之前的正规方程不同的是， 我们加入了lamda这一项<br><img src="/media/14999715332737.jpg" alt=""></p>
+<h2 id="归一化逻辑回归-Regularized-Logistic-Regression"><a href="#归一化逻辑回归-Regularized-Logistic-Regression" class="headerlink" title="归一化逻辑回归 (Regularized Logistic Regression)"></a>归一化逻辑回归 (Regularized Logistic Regression)</h2><p>给代价函数增加一个归一化表达式<br><img src="/media/14999717313128.jpg" alt=""></p>
+<h3 id="梯度下降-2"><a href="#梯度下降-2" class="headerlink" title="梯度下降"></a>梯度下降</h3><p><img src="/media/14999718067407.jpg" alt=""></p>
 ]]></content>
     
     <summary type="html">
