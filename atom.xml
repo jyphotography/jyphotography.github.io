@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jyphotography.github.io/"/>
-  <updated>2017-07-13T18:50:07.000Z</updated>
+  <updated>2017-07-16T18:41:39.000Z</updated>
   <id>https://jyphotography.github.io/</id>
   
   <author>
@@ -14,6 +14,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>机器学习 Week4 - Coursera Machine Learning</title>
+    <link href="https://jyphotography.github.io/2017/07/16/ml-4/"/>
+    <id>https://jyphotography.github.io/2017/07/16/ml-4/</id>
+    <published>2017-07-16T18:34:48.000Z</published>
+    <updated>2017-07-16T18:41:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="神经网络（Neural-Network）"><a href="#神经网络（Neural-Network）" class="headerlink" title="神经网络（Neural Network）"></a>神经网络（Neural Network）</h1><h2 id="动机（Motivation）"><a href="#动机（Motivation）" class="headerlink" title="动机（Motivation）"></a>动机（Motivation）</h2><h3 id="非线形假设（Non-linear-Hypothesis）"><a href="#非线形假设（Non-linear-Hypothesis）" class="headerlink" title="非线形假设（Non-linear Hypothesis）"></a>非线形假设（Non-linear Hypothesis）</h3><p>如果有非常多的特征来构建多项式方程，即使两两组合的特征就会非常大， 不便于计算</p>
+<p>例子： 通过图片像素判断汽车。 即使是50*50 像素的图片， 如果加入两两组合的特征， 就会多将近3百万个特征。</p>
+<h3 id="神经和大脑-Neurons-amp-Brain"><a href="#神经和大脑-Neurons-amp-Brain" class="headerlink" title="神经和大脑 (Neurons &amp; Brain)"></a>神经和大脑 (Neurons &amp; Brain)</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;神经网络（Neural-Network）&quot;&gt;&lt;a href=&quot;#神经网络（Neural-Network）&quot; class=&quot;headerlink&quot; title=&quot;神经网络（Neural Network）&quot;&gt;&lt;/a&gt;神经网络（Neural Network）&lt;/h1&gt;&lt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>机器学习 Week3 - Coursera Machine Learning</title>

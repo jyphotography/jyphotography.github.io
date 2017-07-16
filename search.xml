@@ -4,6 +4,14 @@
   
     
     <entry>
+      <title><![CDATA[机器学习 Week4 - Coursera Machine Learning]]></title>
+      <url>https://jyphotography.github.io/2017/07/16/ml-4/</url>
+      <content type="html"><![CDATA[<h1 id="神经网络（Neural-Network）"><a href="#神经网络（Neural-Network）" class="headerlink" title="神经网络（Neural Network）"></a>神经网络（Neural Network）</h1><h2 id="动机（Motivation）"><a href="#动机（Motivation）" class="headerlink" title="动机（Motivation）"></a>动机（Motivation）</h2><h3 id="非线形假设（Non-linear-Hypothesis）"><a href="#非线形假设（Non-linear-Hypothesis）" class="headerlink" title="非线形假设（Non-linear Hypothesis）"></a>非线形假设（Non-linear Hypothesis）</h3><p>如果有非常多的特征来构建多项式方程，即使两两组合的特征就会非常大， 不便于计算</p>
+<p>例子： 通过图片像素判断汽车。 即使是50*50 像素的图片， 如果加入两两组合的特征， 就会多将近3百万个特征。</p>
+<h3 id="神经和大脑-Neurons-amp-Brain"><a href="#神经和大脑-Neurons-amp-Brain" class="headerlink" title="神经和大脑 (Neurons &amp; Brain)"></a>神经和大脑 (Neurons &amp; Brain)</h3>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[机器学习 Week3 - Coursera Machine Learning]]></title>
       <url>https://jyphotography.github.io/2017/07/08/ml-3/</url>
       <content type="html"><![CDATA[<h1 id="逻辑回归-0-1-分类问题"><a href="#逻辑回归-0-1-分类问题" class="headerlink" title="逻辑回归 0/1 分类问题"></a>逻辑回归 0/1 分类问题</h1><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p>分类问题并不是一个简单的线性问题。<br><img src="/media/14995354468627.jpg" alt=""></p>
