@@ -4,6 +4,59 @@
   
     
     <entry>
+      <title><![CDATA[机器学习 Week6 - Coursera Machine Learning]]></title>
+      <url>https://jyphotography.github.io/2017/07/27/ml-6/</url>
+      <content type="html"><![CDATA[<h1 id="机器学习应用建议"><a href="#机器学习应用建议" class="headerlink" title="机器学习应用建议"></a>机器学习应用建议</h1><h2 id="评估学习算法"><a href="#评估学习算法" class="headerlink" title="评估学习算法"></a>评估学习算法</h2><h3 id="决定下一步做什么"><a href="#决定下一步做什么" class="headerlink" title="决定下一步做什么"></a>决定下一步做什么</h3><p>当我们遇到预测错误的情况时，我们可以：</p>
+<ol>
+<li>增加训练样本（代价较大）</li>
+<li>减少特征数量</li>
+<li>增加新的特征</li>
+<li>尝试用多项式特征</li>
+<li>增加或减少lamda</li>
+</ol>
+<h3 id="评估假设（Evaluating-a-Hypothesis"><a href="#评估假设（Evaluating-a-Hypothesis" class="headerlink" title="评估假设（Evaluating a Hypothesis)"></a>评估假设（Evaluating a Hypothesis)</h3><p>通常把数据分成两类(随机洗牌)：</p>
+<ol>
+<li>Training set - 70%</li>
+<li>Test set - 30%</li>
+</ol>
+<p>对于这两类数据集：</p>
+<ol>
+<li>计算$\theta$ 然后使 $J_{train}(\Theta)$最小</li>
+<li>计算test set的错误 $J_{test}(\Theta)$</li>
+</ol>
+<p>具体 Test Set 评估：</p>
+<ol>
+<li>线性回归-test set的代价函数J</li>
+<li>分类问题：<br> a.代价函数<br> b.错误分类比<br> <img src="/media/15011633470794.jpg" alt=""></li>
+</ol>
+<h3 id="模型选择-训练／验证／测试"><a href="#模型选择-训练／验证／测试" class="headerlink" title="模型选择 - 训练／验证／测试"></a>模型选择 - 训练／验证／测试</h3><p>多项式的模型用在train set的结果往往比较好， 但不一定好用在test set上。</p>
+<p>把数据集分成3类：</p>
+<ol>
+<li>60% 训练</li>
+<li>20% 交叉检验(cross validation)</li>
+<li>20%  测试</li>
+</ol>
+<p>方法如下：</p>
+<ol>
+<li>用train set找到每一个多项式最佳的$\theta$</li>
+<li>找到交叉检验中 test error最小的多项式</li>
+<li>最后用test set得出推广误差</li>
+</ol>
+<h2 id="Bias-amp-Variance"><a href="#Bias-amp-Variance" class="headerlink" title="Bias &amp; Variance"></a>Bias &amp; Variance</h2><h3 id="诊断-Bias-还是-Variance"><a href="#诊断-Bias-还是-Variance" class="headerlink" title="诊断 Bias 还是 Variance"></a>诊断 Bias 还是 Variance</h3><p><strong>高bias - 欠拟合</strong><br>Train和CV的cost function都很高并且相近<br><img src="/media/15014421524167.jpg" alt=""></p>
+<p><strong>高Variance- 过拟合</strong><br>Train的cost function偏低，但是cv的cost function远大于train的。</p>
+<p><img src="/media/15014422749257.jpg" alt=""></p>
+<p>对于训练集，当 d 较小时，模型拟合程度更低，误差较大；随着 d 的增长，拟合程度提高，误差减小。</p>
+<p>对于交叉验证集，当 d 较小时，模型拟合程度低，误差较大；但是随着 d 的增长，误差呈现先减小后增大的趋势，转折点是我们的模型开始过拟合训练数据集的时候。<br><img src="/media/15014420881976.jpg" alt=""></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[ml-5]]></title>
+      <url>https://jyphotography.github.io/2017/07/27/ml-5/</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[机器学习 Week4 - Coursera Machine Learning]]></title>
       <url>https://jyphotography.github.io/2017/07/16/ml-4/</url>
       <content type="html"><![CDATA[<h1 id="神经网络（Neural-Network）"><a href="#神经网络（Neural-Network）" class="headerlink" title="神经网络（Neural Network）"></a>神经网络（Neural Network）</h1><h2 id="动机（Motivation）"><a href="#动机（Motivation）" class="headerlink" title="动机（Motivation）"></a>动机（Motivation）</h2><h3 id="非线形假设（Non-linear-Hypothesis）"><a href="#非线形假设（Non-linear-Hypothesis）" class="headerlink" title="非线形假设（Non-linear Hypothesis）"></a>非线形假设（Non-linear Hypothesis）</h3><p>如果有非常多的特征来构建多项式方程，即使两两组合的特征就会非常大， 不便于计算</p>

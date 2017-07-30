@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jyphotography.github.io/"/>
-  <updated>2017-07-16T20:34:38.000Z</updated>
+  <updated>2017-07-30T19:20:13.000Z</updated>
   <id>https://jyphotography.github.io/</id>
   
   <author>
@@ -14,6 +14,79 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>机器学习 Week6 - Coursera Machine Learning</title>
+    <link href="https://jyphotography.github.io/2017/07/27/ml-6/"/>
+    <id>https://jyphotography.github.io/2017/07/27/ml-6/</id>
+    <published>2017-07-27T13:36:08.000Z</published>
+    <updated>2017-07-30T19:20:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="机器学习应用建议"><a href="#机器学习应用建议" class="headerlink" title="机器学习应用建议"></a>机器学习应用建议</h1><h2 id="评估学习算法"><a href="#评估学习算法" class="headerlink" title="评估学习算法"></a>评估学习算法</h2><h3 id="决定下一步做什么"><a href="#决定下一步做什么" class="headerlink" title="决定下一步做什么"></a>决定下一步做什么</h3><p>当我们遇到预测错误的情况时，我们可以：</p>
+<ol>
+<li>增加训练样本（代价较大）</li>
+<li>减少特征数量</li>
+<li>增加新的特征</li>
+<li>尝试用多项式特征</li>
+<li>增加或减少lamda</li>
+</ol>
+<h3 id="评估假设（Evaluating-a-Hypothesis"><a href="#评估假设（Evaluating-a-Hypothesis" class="headerlink" title="评估假设（Evaluating a Hypothesis)"></a>评估假设（Evaluating a Hypothesis)</h3><p>通常把数据分成两类(随机洗牌)：</p>
+<ol>
+<li>Training set - 70%</li>
+<li>Test set - 30%</li>
+</ol>
+<p>对于这两类数据集：</p>
+<ol>
+<li>计算$\theta$ 然后使 $J_{train}(\Theta)$最小</li>
+<li>计算test set的错误 $J_{test}(\Theta)$</li>
+</ol>
+<p>具体 Test Set 评估：</p>
+<ol>
+<li>线性回归-test set的代价函数J</li>
+<li>分类问题：<br> a.代价函数<br> b.错误分类比<br> <img src="/media/15011633470794.jpg" alt=""></li>
+</ol>
+<h3 id="模型选择-训练／验证／测试"><a href="#模型选择-训练／验证／测试" class="headerlink" title="模型选择 - 训练／验证／测试"></a>模型选择 - 训练／验证／测试</h3><p>多项式的模型用在train set的结果往往比较好， 但不一定好用在test set上。</p>
+<p>把数据集分成3类：</p>
+<ol>
+<li>60% 训练</li>
+<li>20% 交叉检验(cross validation)</li>
+<li>20%  测试</li>
+</ol>
+<p>方法如下：</p>
+<ol>
+<li>用train set找到每一个多项式最佳的$\theta$</li>
+<li>找到交叉检验中 test error最小的多项式</li>
+<li>最后用test set得出推广误差</li>
+</ol>
+<h2 id="Bias-amp-Variance"><a href="#Bias-amp-Variance" class="headerlink" title="Bias &amp; Variance"></a>Bias &amp; Variance</h2><h3 id="诊断-Bias-还是-Variance"><a href="#诊断-Bias-还是-Variance" class="headerlink" title="诊断 Bias 还是 Variance"></a>诊断 Bias 还是 Variance</h3><p><strong>高bias - 欠拟合</strong><br>Train和CV的cost function都很高并且相近<br><img src="/media/15014421524167.jpg" alt=""></p>
+<p><strong>高Variance- 过拟合</strong><br>Train的cost function偏低，但是cv的cost function远大于train的。</p>
+<p><img src="/media/15014422749257.jpg" alt=""></p>
+<p>对于训练集，当 d 较小时，模型拟合程度更低，误差较大；随着 d 的增长，拟合程度提高，误差减小。</p>
+<p>对于交叉验证集，当 d 较小时，模型拟合程度低，误差较大；但是随着 d 的增长，误差呈现先减小后增大的趋势，转折点是我们的模型开始过拟合训练数据集的时候。<br><img src="/media/15014420881976.jpg" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;机器学习应用建议&quot;&gt;&lt;a href=&quot;#机器学习应用建议&quot; class=&quot;headerlink&quot; title=&quot;机器学习应用建议&quot;&gt;&lt;/a&gt;机器学习应用建议&lt;/h1&gt;&lt;h2 id=&quot;评估学习算法&quot;&gt;&lt;a href=&quot;#评估学习算法&quot; class=&quot;headerli
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ml-5</title>
+    <link href="https://jyphotography.github.io/2017/07/27/ml-5/"/>
+    <id>https://jyphotography.github.io/2017/07/27/ml-5/</id>
+    <published>2017-07-27T13:36:03.000Z</published>
+    <updated>2017-07-27T13:36:03.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>机器学习 Week4 - Coursera Machine Learning</title>
@@ -841,160 +914,6 @@
     <summary type="html">
     
       &lt;h1 id=&quot;Chapter-1-Data-Mining-in-Context&quot;&gt;&lt;a href=&quot;#Chapter-1-Data-Mining-in-Context&quot; class=&quot;headerlink&quot; title=&quot;Chapter 1 Data Mining in Con
-    
-    </summary>
-    
-      <category term="Data Mining" scheme="https://jyphotography.github.io/categories/Data-Mining/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>第二章 如何找寻可靠的模型</title>
-    <link href="https://jyphotography.github.io/2016/10/26/Data-Mining-II/"/>
-    <id>https://jyphotography.github.io/2016/10/26/Data-Mining-II/</id>
-    <published>2016-10-26T04:19:26.000Z</published>
-    <updated>2016-10-26T16:17:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="第二章-如何找寻可靠的模型"><a href="#第二章-如何找寻可靠的模型" class="headerlink" title="第二章 如何找寻可靠的模型"></a>第二章 如何找寻可靠的模型</h1><h3 id="I-数据类型"><a href="#I-数据类型" class="headerlink" title="I. 数据类型"></a>I. 数据类型</h3><ol>
-<li>数字型</li>
-<li>类型</li>
-<li>顺序型</li>
-</ol>
-<hr>
-<h3 id="II-基本模型"><a href="#II-基本模型" class="headerlink" title="II. 基本模型"></a>II. 基本模型</h3><h4 id="预测分析模型"><a href="#预测分析模型" class="headerlink" title="预测分析模型"></a>预测分析模型</h4><h5 id="回归模型-Regression"><a href="#回归模型-Regression" class="headerlink" title="回归模型(Regression)"></a>回归模型(Regression)</h5><ol>
-<li>输入-数字型， 输出-数字型</li>
-<li>方法： 线性， 非线性， 多重， 无变量， 神经网络<br><img src="/media/14774559742028.jpg" alt="-c301"></li>
-</ol>
-<h5 id="分类模型-Classification"><a href="#分类模型-Classification" class="headerlink" title="分类模型(Classification)"></a>分类模型(Classification)</h5><ol>
-<li>输入-标记，数字，综合， 输出-标记<br><img src="/media/14774561356759.jpg" alt="-c281"></li>
-</ol>
-<h4 id="2-描述分析模型"><a href="#2-描述分析模型" class="headerlink" title="2. 描述分析模型"></a>2. 描述分析模型</h4><h5 id="聚类模型-Clustering"><a href="#聚类模型-Clustering" class="headerlink" title="聚类模型(Clustering)"></a>聚类模型(Clustering)</h5><ol>
-<li>输入-标记，数字，综合， 输出-无<pre><code>![-c311](/media/14774565022310.jpg)
-</code></pre><img src="/media/14774565177615.jpg" alt="-c300"></li>
-</ol>
-<h5 id="核密度估计-Density-Estimation"><a href="#核密度估计-Density-Estimation" class="headerlink" title="核密度估计(Density Estimation)"></a>核密度估计(Density Estimation)</h5><ol>
-<li>输入-标记，数字，综合， 输出-无<br><img src="/media/14774578391136.jpg" alt="-c262"></li>
-</ol>
-<h5 id="构造学习-Structural-Learning"><a href="#构造学习-Structural-Learning" class="headerlink" title="构造学习(Structural Learning)"></a>构造学习(Structural Learning)</h5><p><img src="/media/14774570120650.jpg" alt="-c300"></p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><img src="/media/14774570628957.jpg" alt="-c300"></p>
-<hr>
-<h3 id="III-学习的类型"><a href="#III-学习的类型" class="headerlink" title="III.学习的类型"></a>III.学习的类型</h3><h4 id="监督学习-Supervised-Learning"><a href="#监督学习-Supervised-Learning" class="headerlink" title="监督学习(Supervised Learning)"></a>监督学习(Supervised Learning)</h4><p>适用于回归， 分类<br><img src="/media/14774583074116.jpg" alt="-c300"></p>
-<h4 id="非监督学习-Unsupervised-Learning"><a href="#非监督学习-Unsupervised-Learning" class="headerlink" title="非监督学习(Unsupervised Learning)"></a>非监督学习(Unsupervised Learning)</h4><p>适用于聚类， 核密度估计<br><img src="/media/14774583249554.jpg" alt="-c300"></p>
-<h4 id="半监督学习-Semi-supervised-Learning"><a href="#半监督学习-Semi-supervised-Learning" class="headerlink" title="半监督学习(Semi-supervised Learning)"></a>半监督学习(Semi-supervised Learning)</h4><p>数据有些有输出值</p>
-<h4 id="增强学习-Reinforcement-Learning"><a href="#增强学习-Reinforcement-Learning" class="headerlink" title="增强学习(Reinforcement Learning)"></a>增强学习(Reinforcement Learning)</h4><p>适用于优化和控制问题<br><img src="/media/14774583410906.jpg" alt="-c300"></p>
-<h3 id="模型架构类型"><a href="#模型架构类型" class="headerlink" title="模型架构类型"></a>模型架构类型</h3><p>1.变量模型<br>    假定：模型符合一定的函数形式<br>2.非变量模型(memory-based)<br>    记住所有训练集</p>
-<h2 id="正规化（Generalization）"><a href="#正规化（Generalization）" class="headerlink" title="正规化（Generalization）"></a>正规化（Generalization）</h2><h4 id="如何数量化正规化结果？"><a href="#如何数量化正规化结果？" class="headerlink" title="如何数量化正规化结果？"></a>如何数量化正规化结果？</h4><p>留一些测试数据<br>根据测试数据预测模型拟合度</p>
-<h4 id="正规化曲线"><a href="#正规化曲线" class="headerlink" title="正规化曲线"></a>正规化曲线</h4><p><img src="/media/14774882944364.jpg" alt="-c300"><br>如果什么都没学到，这张图记住就好。<br>古话说：过犹不及。你模型训练的太好，在实际使用中效果会没有什么用</p>
-<h2 id="衡量模型正确性参数"><a href="#衡量模型正确性参数" class="headerlink" title="衡量模型正确性参数"></a>衡量模型正确性参数</h2><h4 id="预测误差（Prediction-Error"><a href="#预测误差（Prediction-Error" class="headerlink" title="预测误差（Prediction Error)"></a>预测误差（Prediction Error)</h4><p><img src="/media/14774887239335.jpg" alt="-c211"><br><img src="/media/14774887380989.jpg" alt="-c284"><br>SSE 最简单粗暴<br>MSE 可以或略outlier因为取得是平均<br>RMSE 可以了解不同模型的离散程度<br>MAE 因为取绝对值，可以衡量平均误差大小</p>
-<h4 id="如何找到合适的模型复杂度"><a href="#如何找到合适的模型复杂度" class="headerlink" title="如何找到合适的模型复杂度"></a>如何找到合适的模型复杂度</h4><ol>
-<li>最简单：常量 y = b</li>
-<li>线性回归(Linear Regression)</li>
-<li>二次回归(Quadratic Regression)</li>
-<li>多项回归(Polynomial Regression)</li>
-</ol>
-<p>并不是越复杂越好，因为会过拟合(over-fit)</p>
-<h2 id="如何避免过拟合"><a href="#如何避免过拟合" class="headerlink" title="如何避免过拟合"></a>如何避免过拟合</h2><h4 id="检查并设置-Test-amp-Set"><a href="#检查并设置-Test-amp-Set" class="headerlink" title="检查并设置(Test&amp;Set)"></a>检查并设置(Test&amp;Set)</h4><ol>
-<li>随机数据点</li>
-<li>把数据分成两块：训练， 验证</li>
-</ol>
-<p><em>需要考虑怎么分？</em></p>
-<ol>
-<li>training set中样本数量必须够多，一般至少大于总样本数的50%。</li>
-<li>两组子集必须从完整集合中均匀取样</li>
-</ol>
-<h4 id="交叉验证（Leave-One-Out-Cross-Validation"><a href="#交叉验证（Leave-One-Out-Cross-Validation" class="headerlink" title="交叉验证（Leave-One-Out Cross Validation)"></a>交叉验证（Leave-One-Out Cross Validation)</h4><ol>
-<li>每个样本单独作为验证集</li>
-<li>其余的N-1个样本作为训练集</li>
-<li>循环之前的过程</li>
-<li>选一个指标然后把所有模型结果放在一起比较  </li>
-</ol>
-<p><em>好处：</em></p>
-<ol>
-<li>每一回合中几乎所有的样本皆用于训练模型,因此最接近原始样本的分布</li>
-<li>实验过程中没有随机因素会影响实验数据,确保实验过程是可以被复制的</li>
-</ol>
-<h4 id="K组验证-K-fold-Cross-Validation"><a href="#K组验证-K-fold-Cross-Validation" class="headerlink" title="K组验证(K-fold Cross Validation)"></a>K组验证(K-fold Cross Validation)</h4><ol>
-<li>将原始数据随机分成K组（一般均分）</li>
-<li>将每个子集数据分别做一次验证集</li>
-<li>其余的K-1组子集数据作为训练集</li>
-<li>加总结果</li>
-</ol>
-<h4 id="现实使用"><a href="#现实使用" class="headerlink" title="现实使用"></a>现实使用</h4><ol>
-<li>M中模型和变量</li>
-<li>使用同样的交叉检验</li>
-<li>发现最好的模型</li>
-<li>使用所有数据完成最终模型</li>
-</ol>
-<h4 id="复习"><a href="#复习" class="headerlink" title="复习"></a>复习</h4><p><strong>True or False</strong></p>
-<ol>
-<li>In 10-fold Cross-Validation, we are splitting data into 10 disjoint subsets and use each of them for testing exactly once.</li>
-<li>In 10-fold Cross-Validation, we independently build 10 models using training subsets of data, and select for deployment the one that performs best on the testing subset of data.</li>
-<li>We use 10-fold Cross-Validation to empirically quantify the expected performance of different types of models and/or their alternative configurations.<br>As soon as we identify the most suitable model type and configuration, we can re-train it using all available data and then transition the result to practice.</li>
-</ol>
-<p>答案：</p>
-<ol>
-<li>True</li>
-<li>False</li>
-<li>True</li>
-</ol>
-<h2 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h2><ol>
-<li>用交叉检验发现好的模型</li>
-<li>模型选择（ROC）</li>
-<li>其他模型测试方法</li>
-</ol>
-<h4 id="你应该知道"><a href="#你应该知道" class="headerlink" title="你应该知道"></a>你应该知道</h4><ol>
-<li>数据类型</li>
-<li>模型类型和区别</li>
-<li>基本模型学习</li>
-<li>如何衡量预测准确性</li>
-<li>为什么偏好正规化的模型</li>
-<li>什么是过拟合，如何规避</li>
-<li>交叉检验如何使用</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;第二章-如何找寻可靠的模型&quot;&gt;&lt;a href=&quot;#第二章-如何找寻可靠的模型&quot; class=&quot;headerlink&quot; title=&quot;第二章 如何找寻可靠的模型&quot;&gt;&lt;/a&gt;第二章 如何找寻可靠的模型&lt;/h1&gt;&lt;h3 id=&quot;I-数据类型&quot;&gt;&lt;a href=&quot;#I-数
-    
-    </summary>
-    
-      <category term="Data Mining" scheme="https://jyphotography.github.io/categories/Data-Mining/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>第一章 数据挖掘</title>
-    <link href="https://jyphotography.github.io/2016/10/25/Data-Mining-I/"/>
-    <id>https://jyphotography.github.io/2016/10/25/Data-Mining-I/</id>
-    <published>2016-10-26T03:47:23.000Z</published>
-    <updated>2016-10-26T16:17:21.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="第一章-数据挖掘"><a href="#第一章-数据挖掘" class="headerlink" title="第一章 数据挖掘"></a>第一章 数据挖掘</h1><h3 id="I-什么是数据挖掘"><a href="#I-什么是数据挖掘" class="headerlink" title="I. 什么是数据挖掘"></a>I. 什么是数据挖掘</h3><ol>
-<li>数据中寻找规律</li>
-<li>数据中寻找关系</li>
-<li>数据中提取信息  </li>
-</ol>
-<hr>
-<h3 id="II-主要因数"><a href="#II-主要因数" class="headerlink" title="II. 主要因数"></a>II. 主要因数</h3><ol>
-<li>数据的可得到性</li>
-<li>运算能力</li>
-<li>统计学</li>
-<li>人工智能／机器学习</li>
-<li><strong>对信息的需求 （主要动机）</strong></li>
-<li>公司仪器</li>
-</ol>
-<hr>
-<h3 id="III-数据挖掘周期"><a href="#III-数据挖掘周期" class="headerlink" title="III. 数据挖掘周期"></a>III. 数据挖掘周期</h3><p><img src="/media/14774550278762.jpg" alt="-c300"></p>
-<hr>
-<h3 id="IV-分析周期"><a href="#IV-分析周期" class="headerlink" title="IV. 分析周期"></a>IV. 分析周期</h3><p><img src="/media/14774550921846.jpg" alt="-c300"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;第一章-数据挖掘&quot;&gt;&lt;a href=&quot;#第一章-数据挖掘&quot; class=&quot;headerlink&quot; title=&quot;第一章 数据挖掘&quot;&gt;&lt;/a&gt;第一章 数据挖掘&lt;/h1&gt;&lt;h3 id=&quot;I-什么是数据挖掘&quot;&gt;&lt;a href=&quot;#I-什么是数据挖掘&quot; class=&quot;he
     
     </summary>
     
