@@ -61,6 +61,27 @@
 <li>减少lamda -  high bias</li>
 </ol>
 <p>神经网络中- 参数越大-high variance过拟合。 通常使用大参数和归一化的模型。<br>通常从一层开始，增加hidden layer查看效果。</p>
+<h2 id="机器学习系统设计"><a href="#机器学习系统设计" class="headerlink" title="机器学习系统设计"></a>机器学习系统设计</h2><h3 id="首要工作"><a href="#首要工作" class="headerlink" title="首要工作"></a>首要工作</h3><p>例子： 垃圾邮件分类器</p>
+<p>我们首先要做的决定是如何选择并表达特征向量 x。我们可以选择一个由 100 个最常出现在垃圾邮件中的词所构成的列表，根据这些词是否有在邮件中出现，来获得我们的特征向量（出现为 1，不出现为 0），尺寸为 100×1。</p>
+<p><img src="/media/15014436873247.jpg" alt=""></p>
+<ol>
+<li>获取更多的数据</li>
+<li>开发更复杂的特征 （邮件的开头）</li>
+<li>开发算法（检查错别字）</li>
+</ol>
+<h3 id="误差分析-（Error-Analysis）"><a href="#误差分析-（Error-Analysis）" class="headerlink" title="误差分析 （Error Analysis）"></a>误差分析 （Error Analysis）</h3><ol>
+<li>简单的算法， 并用cross validaiton测试结果</li>
+<li>绘制学习曲线，判断是否需要更多的数据</li>
+<li>手动检查错误，是否有trend</li>
+</ol>
+<p>用单一标准量化错误能帮组你更好的改进模型的方法<img src="/media/15014440608589.jpg" alt=""></p>
+<h2 id="处理偏差数据"><a href="#处理偏差数据" class="headerlink" title="处理偏差数据"></a>处理偏差数据</h2><p>在这种偏差很大的数据集里， 我们不能直接用accuracy来衡量结果</p>
+<p>实际结果 ： True ／False<br>预测结果： Positive / Negative</p>
+<p>Precision = TP / (TP + FP)<br>在我们预测postive的结果中的正确率</p>
+<p>Recall = TP / (TP + FN)<br>在所有true的结果中，我们预测中了多少<br><img src="/media/15014441498607.jpg" alt=""></p>
+<h3 id="Precision-和-Recall-的权衡"><a href="#Precision-和-Recall-的权衡" class="headerlink" title="Precision 和 Recall 的权衡"></a>Precision 和 Recall 的权衡</h3><p>通常在判断结果中我们会计算一个概率然后用到阀值cut off来判断结果的取向。</p>
+<p>如果cut off越大， 我们的Precision正确率会高，但是Recall查全率会下降。</p>
+<p>这时候我们会引进一饿F1 score来衡量这两者的关系<img src="/media/15014446312069.jpg" alt=""><br>然后选择F1score最大的阀值</p>
 ]]></content>
     </entry>
     
