@@ -126,7 +126,10 @@ Test set - 30%
 <meta property="og:image" content="https://jyphotography.github.io/media/15014421524167.jpg">
 <meta property="og:image" content="https://jyphotography.github.io/media/15014422749257.jpg">
 <meta property="og:image" content="https://jyphotography.github.io/media/15014420881976.jpg">
-<meta property="og:updated_time" content="2017-07-30T19:20:13.000Z">
+<meta property="og:image" content="https://jyphotography.github.io/media/15014425582348.jpg">
+<meta property="og:image" content="https://jyphotography.github.io/media/15014427926107.jpg">
+<meta property="og:image" content="https://jyphotography.github.io/media/15014428036443.jpg">
+<meta property="og:updated_time" content="2017-07-30T19:35:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习 Week6 - Coursera Machine Learning">
 <meta name="twitter:description" content="机器学习应用建议评估学习算法决定下一步做什么当我们遇到预测错误的情况时，我们可以：
@@ -393,6 +396,20 @@ Test set - 30%
 <p><img src="/media/15014422749257.jpg" alt=""></p>
 <p>对于训练集，当 d 较小时，模型拟合程度更低，误差较大；随着 d 的增长，拟合程度提高，误差减小。</p>
 <p>对于交叉验证集，当 d 较小时，模型拟合程度低，误差较大；但是随着 d 的增长，误差呈现先减小后增大的趋势，转折点是我们的模型开始过拟合训练数据集的时候。<br><img src="/media/15014420881976.jpg" alt=""></p>
+<h3 id="归一化-和-bias／variance"><a href="#归一化-和-bias／variance" class="headerlink" title="归一化 和 bias／variance"></a>归一化 和 bias／variance</h3><p>lamda越大- 高bias<br>lamda越小 - 高variance<br><img src="/media/15014425582348.jpg" alt=""></p>
+<p>lamda通常是在0-10中测试呈现 2 倍关系的值（如：0,0.01,0.02,0.04,0.08,0.15,0.32,0.64,1.28,2.56,5.12,10 共 12 个）</p>
+<h3 id="学习曲线-Learning-Curve"><a href="#学习曲线-Learning-Curve" class="headerlink" title="学习曲线 (Learning Curve)"></a>学习曲线 (Learning Curve)</h3><p>学习曲线是学习算法的一个很好的合理检验（sanity check）。学习曲线是将训练集误差和交叉验证集误差作为训练集实例数量（m）的函数绘制的图表</p>
+<p>High Bias/ Underfit 提高数据量不会改变误差率<br><img src="/media/15014427926107.jpg" alt=""></p>
+<p>High Variance / Overfit 提高数据量能提高效果<br><img src="/media/15014428036443.jpg" alt=""></p>
+<h3 id="下一步做什么"><a href="#下一步做什么" class="headerlink" title="下一步做什么"></a>下一步做什么</h3><ol>
+<li>获得更多数据量 - high variance </li>
+<li>减少特征数量 - high variance</li>
+<li>增加特征数量 - high bias</li>
+<li>增加多项式 - high bias</li>
+<li>增加lamda - high variance</li>
+<li>减少lamda -  high bias</li>
+</ol>
+<p>神经网络中- 参数越大-high variance过拟合。 通常使用大参数和归一化的模型。<br>通常从一层开始，增加hidden layer查看效果。</p>
 
       
     </div>
@@ -545,7 +562,7 @@ Test set - 30%
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#机器学习应用建议"><span class="nav-number">1.</span> <span class="nav-text">机器学习应用建议</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#评估学习算法"><span class="nav-number">1.1.</span> <span class="nav-text">评估学习算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#决定下一步做什么"><span class="nav-number">1.1.1.</span> <span class="nav-text">决定下一步做什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#评估假设（Evaluating-a-Hypothesis"><span class="nav-number">1.1.2.</span> <span class="nav-text">评估假设（Evaluating a Hypothesis)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型选择-训练／验证／测试"><span class="nav-number">1.1.3.</span> <span class="nav-text">模型选择 - 训练／验证／测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bias-amp-Variance"><span class="nav-number">1.2.</span> <span class="nav-text">Bias & Variance</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#诊断-Bias-还是-Variance"><span class="nav-number">1.2.1.</span> <span class="nav-text">诊断 Bias 还是 Variance</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#机器学习应用建议"><span class="nav-number">1.</span> <span class="nav-text">机器学习应用建议</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#评估学习算法"><span class="nav-number">1.1.</span> <span class="nav-text">评估学习算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#决定下一步做什么"><span class="nav-number">1.1.1.</span> <span class="nav-text">决定下一步做什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#评估假设（Evaluating-a-Hypothesis"><span class="nav-number">1.1.2.</span> <span class="nav-text">评估假设（Evaluating a Hypothesis)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型选择-训练／验证／测试"><span class="nav-number">1.1.3.</span> <span class="nav-text">模型选择 - 训练／验证／测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bias-amp-Variance"><span class="nav-number">1.2.</span> <span class="nav-text">Bias & Variance</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#诊断-Bias-还是-Variance"><span class="nav-number">1.2.1.</span> <span class="nav-text">诊断 Bias 还是 Variance</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#归一化-和-bias／variance"><span class="nav-number">1.2.2.</span> <span class="nav-text">归一化 和 bias／variance</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习曲线-Learning-Curve"><span class="nav-number">1.2.3.</span> <span class="nav-text">学习曲线 (Learning Curve)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下一步做什么"><span class="nav-number">1.2.4.</span> <span class="nav-text">下一步做什么</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
