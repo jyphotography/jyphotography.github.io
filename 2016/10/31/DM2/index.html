@@ -86,16 +86,34 @@
 
 
 
-<meta name="description" content="分类（Classification）模型简介输出： symbolic输入： numeric, symbolic ,mixed适用范围： 医院诊断病情我们想知道 “？” 到底是红笑脸还是蓝星星
-方法一 贝叶斯分类（Bayes’ classifiers）从中心出发，多少sigma范围内属于一类
-方法二 Discriminative approachesLogistic Regression （下图黄线">
+<meta name="description" content="分类（Classification）
+模型简介
+输出： symbolic
+输入： numeric, symbolic ,mixed
+适用范围： 医院诊断病情
+我们想知道 “？” 到底是红笑脸还是蓝星星
+
+方法一 贝叶斯分类（Bayes&apos; classifiers）
+
+从中心出发，多少sigma范围内属于一类
+方法二 Discriminative approaches
+Logistic Regress">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第三章 预测分析（分类模型）">
 <meta property="og:url" content="https://jyphotography.github.io/2016/10/31/DM2/index.html">
 <meta property="og:site_name" content="JY">
-<meta property="og:description" content="分类（Classification）模型简介输出： symbolic输入： numeric, symbolic ,mixed适用范围： 医院诊断病情我们想知道 “？” 到底是红笑脸还是蓝星星
-方法一 贝叶斯分类（Bayes’ classifiers）从中心出发，多少sigma范围内属于一类
-方法二 Discriminative approachesLogistic Regression （下图黄线">
+<meta property="og:description" content="分类（Classification）
+模型简介
+输出： symbolic
+输入： numeric, symbolic ,mixed
+适用范围： 医院诊断病情
+我们想知道 “？” 到底是红笑脸还是蓝星星
+
+方法一 贝叶斯分类（Bayes&apos; classifiers）
+
+从中心出发，多少sigma范围内属于一类
+方法二 Discriminative approaches
+Logistic Regress">
 <meta property="og:image" content="https://jyphotography.github.io/media/14779521374423.jpg">
 <meta property="og:image" content="https://jyphotography.github.io/media/14779522929014.jpg">
 <meta property="og:image" content="https://jyphotography.github.io/media/14779525413726.jpg">
@@ -115,9 +133,18 @@
 <meta property="og:updated_time" content="2016-11-01T19:03:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第三章 预测分析（分类模型）">
-<meta name="twitter:description" content="分类（Classification）模型简介输出： symbolic输入： numeric, symbolic ,mixed适用范围： 医院诊断病情我们想知道 “？” 到底是红笑脸还是蓝星星
-方法一 贝叶斯分类（Bayes’ classifiers）从中心出发，多少sigma范围内属于一类
-方法二 Discriminative approachesLogistic Regression （下图黄线">
+<meta name="twitter:description" content="分类（Classification）
+模型简介
+输出： symbolic
+输入： numeric, symbolic ,mixed
+适用范围： 医院诊断病情
+我们想知道 “？” 到底是红笑脸还是蓝星星
+
+方法一 贝叶斯分类（Bayes&apos; classifiers）
+
+从中心出发，多少sigma范围内属于一类
+方法二 Discriminative approaches
+Logistic Regress">
 <meta name="twitter:image" content="https://jyphotography.github.io/media/14779521374423.jpg">
 
 
@@ -325,19 +352,40 @@
       
 
       
-        <h2 id="分类（Classification）"><a href="#分类（Classification）" class="headerlink" title="分类（Classification）"></a>分类（Classification）</h2><h4 id="模型简介"><a href="#模型简介" class="headerlink" title="模型简介"></a>模型简介</h4><p>输出： symbolic<br>输入： numeric, symbolic ,mixed<br>适用范围： 医院诊断病情<br>我们想知道 “？” 到底是红笑脸还是蓝星星<br><img src="/media/14779521374423.jpg" alt="-w405"></p>
-<h4 id="方法一-贝叶斯分类（Bayes’-classifiers）"><a href="#方法一-贝叶斯分类（Bayes’-classifiers）" class="headerlink" title="方法一 贝叶斯分类（Bayes’ classifiers）"></a>方法一 贝叶斯分类（Bayes’ classifiers）</h4><p><img src="/media/14779522929014.jpg" alt="-w367"><br>从中心出发，多少sigma范围内属于一类</p>
-<h4 id="方法二-Discriminative-approaches"><a href="#方法二-Discriminative-approaches" class="headerlink" title="方法二 Discriminative approaches"></a>方法二 Discriminative approaches</h4><p>Logistic Regression （下图黄线）</p>
-<p>Support Vector Machines<br><img src="/media/14779525413726.jpg" alt="-w358"></p>
-<h4 id="方法三-Instance-based-approaches"><a href="#方法三-Instance-based-approaches" class="headerlink" title="方法三 Instance-based approaches"></a>方法三 Instance-based approaches</h4><p><img src="/media/14779528342663.jpg" alt="-w347"></p>
-<h4 id="方法四-Symbolic-approaches"><a href="#方法四-Symbolic-approaches" class="headerlink" title="方法四 Symbolic approaches"></a>方法四 Symbolic approaches</h4><p>Decision Tree<br>Association Rules<br><img src="/media/14779531012120.jpg" alt="-w356"></p>
-<h4 id="方法五-Other-approaches"><a href="#方法五-Other-approaches" class="headerlink" title="方法五 Other approaches"></a>方法五 Other approaches</h4><p>neural network 准确度很高，但是过于复杂取解释，有很多过拟合的情况，除非数据量足够大</p>
-<h2 id="贝叶斯例子（Bayes’Classifier"><a href="#贝叶斯例子（Bayes’Classifier" class="headerlink" title="贝叶斯例子（Bayes’Classifier)"></a>贝叶斯例子（Bayes’Classifier)</h2><p>目的： 捡土豆<br>数据： 有三样东西 土豆， 石头， 粘土<br>方法： 有sensor知道直径<br>      土豆协会给我们数据<br><img src="/media/14779534272849.jpg" alt="-w208"></p>
+        <h2>分类（Classification）</h2>
+<h4>模型简介</h4>
+<p>输出： symbolic
+输入： numeric, symbolic ,mixed
+适用范围： 医院诊断病情
+我们想知道 “？” 到底是红笑脸还是蓝星星
+<img src="/media/14779521374423.jpg" alt="-w405"></p>
+<h4>方法一 贝叶斯分类（Bayes' classifiers）</h4>
+<p><img src="/media/14779522929014.jpg" alt="-w367">
+从中心出发，多少sigma范围内属于一类</p>
+<h4>方法二 Discriminative approaches</h4>
+<p>Logistic Regression （下图黄线）</p>
+<p>Support Vector Machines
+<img src="/media/14779525413726.jpg" alt="-w358"></p>
+<h4>方法三 Instance-based approaches</h4>
+<p><img src="/media/14779528342663.jpg" alt="-w347"></p>
+<h4>方法四 Symbolic approaches</h4>
+<p>Decision Tree
+Association Rules
+<img src="/media/14779531012120.jpg" alt="-w356"></p>
+<h4>方法五 Other approaches</h4>
+<p>neural network 准确度很高，但是过于复杂取解释，有很多过拟合的情况，除非数据量足够大</p>
+<h2>贝叶斯例子（Bayes'Classifier)</h2>
+<p>目的： 捡土豆
+数据： 有三样东西 土豆， 石头， 粘土
+方法： 有sensor知道直径
+土豆协会给我们数据
+<img src="/media/14779534272849.jpg" alt="-w208"></p>
 <p><img src="/media/14779538226832.jpg" alt="-w492"></p>
 <p><img src="/media/14779538644239.jpg" alt="-w489"></p>
 <p><img src="/media/14779542184633.jpg" alt="-w499"></p>
 <p><img src="/media/14779542423131.jpg" alt="-w492"></p>
-<h4 id="贝叶斯例子（Bayes’Classifier-有趣点"><a href="#贝叶斯例子（Bayes’Classifier-有趣点" class="headerlink" title="贝叶斯例子（Bayes’Classifier) 有趣点"></a>贝叶斯例子（Bayes’Classifier) 有趣点</h4><ol>
+<h4>贝叶斯例子（Bayes'Classifier) 有趣点</h4>
+<ol>
 <li>不同密度的预测可以用</li>
 <li>输入可以是数字或者分类信息</li>
 <li>输入信息相互独立， Naive Bayes忽略了输入信息的相互关系, 好处dimension可以变得相当大（容易建立）</li>
@@ -347,13 +395,19 @@
 <li>只能横向或者纵向分，</li>
 <li>没有很多evidence</li>
 </ol>
-<h2 id="Logistic-Regression"><a href="#Logistic-Regression" class="headerlink" title="Logistic Regression"></a>Logistic Regression</h2><p>用途： binary output<br><img src="/media/14779547890174.jpg" alt="-w359"></p>
+<h2>Logistic Regression</h2>
+<p>用途： binary output
+<img src="/media/14779547890174.jpg" alt="-w359"></p>
 <p><img src="/media/14779548191035.jpg" alt="-w405"></p>
 <p><img src="/media/14779549224818.jpg" alt="-w367"></p>
 <p><img src="/media/14779549460233.jpg" alt="-w377"></p>
-<p>Soft Classification<br><img src="/media/14779552220993.jpg" alt="-w372"></p>
-<p>b1 决定坡度， sharper is better, easy to classify<br>b0 shift,左边还是右边</p>
-<p>好消息：<br>efficient<br>容易增加dimension</p>
+<p>Soft Classification
+<img src="/media/14779552220993.jpg" alt="-w372"></p>
+<p>b1 决定坡度， sharper is better, easy to classify
+b0 shift,左边还是右边</p>
+<p>好消息：
+efficient
+容易增加dimension</p>
 <ol>
 <li>直线（分成两部分）</li>
 <li></li>
@@ -362,13 +416,19 @@
 <ol>
 <li>用所有的features</li>
 <li>用每个feature做独立的模型</li>
-<li>step -wise </li>
+<li>step -wise</li>
 </ol>
-<p>如果不是线性风格？<br>我们可以用kenerl多元风割</p>
-<h2 id="Support-Vector-Machines"><a href="#Support-Vector-Machines" class="headerlink" title="Support Vector Machines"></a>Support Vector Machines</h2><h2 id="Nearest-Neighbor-classifier"><a href="#Nearest-Neighbor-classifier" class="headerlink" title="Nearest Neighbor classifier"></a>Nearest Neighbor classifier</h2><p>检查它最近的邻居，分成和它邻居一样的类<br>如果数据很大，我们会检查所有的距离</p>
-<h2 id="K-nearest-Neighbors-K-NN"><a href="#K-nearest-Neighbors-K-NN" class="headerlink" title="K nearest Neighbors(K-NN)"></a>K nearest Neighbors(K-NN)</h2><p><img src="/media/14779582574504.jpg" alt="-w332"></p>
+<p>如果不是线性风格？
+我们可以用kenerl多元风割</p>
+<h2>Support Vector Machines</h2>
+<h2>Nearest Neighbor classifier</h2>
+<p>检查它最近的邻居，分成和它邻居一样的类
+如果数据很大，我们会检查所有的距离</p>
+<h2>K nearest Neighbors(K-NN)</h2>
+<p><img src="/media/14779582574504.jpg" alt="-w332"></p>
 <p>k farthest neighbors? find what is unlike us?</p>
-<p>K_NN to non-binary problems? nothing<br>NN to perform regression?  YES 1. find neighbor 2.what neighbor represent?(calculate avg of neighbor values)</p>
+<p>K_NN to non-binary problems? nothing
+NN to perform regression?  YES 1. find neighbor 2.what neighbor represent?(calculate avg of neighbor values)</p>
 
       
     </div>
@@ -472,7 +532,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -525,7 +585,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#分类（Classification）"><span class="nav-number">1.</span> <span class="nav-text">分类（Classification）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#模型简介"><span class="nav-number">1.0.1.</span> <span class="nav-text">模型简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法一-贝叶斯分类（Bayes’-classifiers）"><span class="nav-number">1.0.2.</span> <span class="nav-text">方法一 贝叶斯分类（Bayes’ classifiers）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法二-Discriminative-approaches"><span class="nav-number">1.0.3.</span> <span class="nav-text">方法二 Discriminative approaches</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法三-Instance-based-approaches"><span class="nav-number">1.0.4.</span> <span class="nav-text">方法三 Instance-based approaches</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法四-Symbolic-approaches"><span class="nav-number">1.0.5.</span> <span class="nav-text">方法四 Symbolic approaches</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法五-Other-approaches"><span class="nav-number">1.0.6.</span> <span class="nav-text">方法五 Other approaches</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#贝叶斯例子（Bayes’Classifier"><span class="nav-number">2.</span> <span class="nav-text">贝叶斯例子（Bayes’Classifier)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#贝叶斯例子（Bayes’Classifier-有趣点"><span class="nav-number">2.0.1.</span> <span class="nav-text">贝叶斯例子（Bayes’Classifier) 有趣点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Logistic-Regression"><span class="nav-number">3.</span> <span class="nav-text">Logistic Regression</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Support-Vector-Machines"><span class="nav-number">4.</span> <span class="nav-text">Support Vector Machines</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nearest-Neighbor-classifier"><span class="nav-number">5.</span> <span class="nav-text">Nearest Neighbor classifier</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#K-nearest-Neighbors-K-NN"><span class="nav-number">6.</span> <span class="nav-text">K nearest Neighbors(K-NN)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">分类（Classification）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.0.1.</span> <span class="nav-text">模型简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.0.2.</span> <span class="nav-text">方法一 贝叶斯分类（Bayes' classifiers）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.0.3.</span> <span class="nav-text">方法二 Discriminative approaches</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.0.4.</span> <span class="nav-text">方法三 Instance-based approaches</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.0.5.</span> <span class="nav-text">方法四 Symbolic approaches</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.0.6.</span> <span class="nav-text">方法五 Other approaches</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">贝叶斯例子（Bayes'Classifier)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.1.</span> <span class="nav-text">贝叶斯例子（Bayes'Classifier) 有趣点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">Logistic Regression</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">Support Vector Machines</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">Nearest Neighbor classifier</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">6.</span> <span class="nav-text">K nearest Neighbors(K-NN)</span></a></li></ol></div>
             
           </div>
         </section>

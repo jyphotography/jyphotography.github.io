@@ -86,43 +86,31 @@
 
 
 
-<meta name="description" content="Google Trends例子
-Metadata 给之后的人管理使用
-hardest part- how to design a database
-Retail Case Study
-如何设计促销？
-步骤：
+<meta name="description" content="支持向量机 （Support Vector Machine）SVM 是非常强大且流行的算法。 在一些情况下， 能面向一些复杂的非线性问题提供更加简洁的解决方案
+Large Margin Classification优化目标 (Optimization Objective)在logistic regression中
+分两种情况：
 
-Business process商业-》 Sales
-Grain of business process-&amp;gt; an line in receipt
-dimension: product">
+y = 1 时， 希望h θ (x)预测的值尽可能接近 1，即希望">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第二章 数据仓库">
-<meta property="og:url" content="https://jyphotography.github.io/2016/11/01/DW2/index.html">
+<meta property="og:title" content="机器学习 Week7 - Coursera Machine Learning">
+<meta property="og:url" content="https://jyphotography.github.io/2017/08/07/ml-7/index.html">
 <meta property="og:site_name" content="JY">
-<meta property="og:description" content="Google Trends例子
-Metadata 给之后的人管理使用
-hardest part- how to design a database
-Retail Case Study
-如何设计促销？
-步骤：
+<meta property="og:description" content="支持向量机 （Support Vector Machine）SVM 是非常强大且流行的算法。 在一些情况下， 能面向一些复杂的非线性问题提供更加简洁的解决方案
+Large Margin Classification优化目标 (Optimization Objective)在logistic regression中
+分两种情况：
 
-Business process商业-》 Sales
-Grain of business process-&amp;gt; an line in receipt
-dimension: product">
-<meta property="og:updated_time" content="2016-11-01T13:49:51.000Z">
+y = 1 时， 希望h θ (x)预测的值尽可能接近 1，即希望">
+<meta property="og:image" content="https://jyphotography.github.io/media/15021603313667.jpg">
+<meta property="og:image" content="https://jyphotography.github.io/media/15021606211374.jpg">
+<meta property="og:updated_time" content="2017-08-08T02:50:39.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第二章 数据仓库">
-<meta name="twitter:description" content="Google Trends例子
-Metadata 给之后的人管理使用
-hardest part- how to design a database
-Retail Case Study
-如何设计促销？
-步骤：
+<meta name="twitter:title" content="机器学习 Week7 - Coursera Machine Learning">
+<meta name="twitter:description" content="支持向量机 （Support Vector Machine）SVM 是非常强大且流行的算法。 在一些情况下， 能面向一些复杂的非线性问题提供更加简洁的解决方案
+Large Margin Classification优化目标 (Optimization Objective)在logistic regression中
+分两种情况：
 
-Business process商业-》 Sales
-Grain of business process-&amp;gt; an line in receipt
-dimension: product">
+y = 1 时， 希望h θ (x)预测的值尽可能接近 1，即希望">
+<meta name="twitter:image" content="https://jyphotography.github.io/media/15021603313667.jpg">
 
 
 
@@ -143,10 +131,10 @@ dimension: product">
 
 
 
-  <link rel="canonical" href="https://jyphotography.github.io/2016/11/01/DW2/"/>
+  <link rel="canonical" href="https://jyphotography.github.io/2017/08/07/ml-7/"/>
 
 
-  <title> 第二章 数据仓库 | JY </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> 机器学习 Week7 - Coursera Machine Learning | JY </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="en">
@@ -289,7 +277,7 @@ dimension: product">
             
             
               
-                第二章 数据仓库
+                机器学习 Week7 - Coursera Machine Learning
               
             
           </h1>
@@ -301,30 +289,11 @@ dimension: product">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-11-01T09:06:01-04:00" content="2016-11-01">
-              2016-11-01
+            <time itemprop="dateCreated" datetime="2017-08-07T22:24:11-04:00" content="2017-08-07">
+              2017-08-07
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Data-Warehouse/" itemprop="url" rel="index">
-                    <span itemprop="name">Data Warehouse</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
@@ -348,17 +317,17 @@ dimension: product">
       
 
       
-        <p>Google Trends例子</p>
-<p>Metadata 给之后的人管理使用</p>
-<p>hardest part- how to design a database</p>
-<p>Retail Case Study
-如何设计促销？
-步骤：</p>
+        <h1 id="支持向量机-（Support-Vector-Machine）"><a href="#支持向量机-（Support-Vector-Machine）" class="headerlink" title="支持向量机 （Support Vector Machine）"></a>支持向量机 （Support Vector Machine）</h1><p>SVM 是非常强大且流行的算法。 在一些情况下， 能面向一些复杂的非线性问题提供更加简洁的解决方案</p>
+<h1 id="Large-Margin-Classification"><a href="#Large-Margin-Classification" class="headerlink" title="Large Margin Classification"></a>Large Margin Classification</h1><h2 id="优化目标-Optimization-Objective"><a href="#优化目标-Optimization-Objective" class="headerlink" title="优化目标 (Optimization Objective)"></a>优化目标 (Optimization Objective)</h2><p>在logistic regression中<br><img src="/media/15021603313667.jpg" alt=""></p>
+<p>分两种情况：</p>
 <ol>
-<li>Business process商业-》 Sales</li>
-<li>Grain of business process-&gt; an line in receipt</li>
-<li>dimension: product, time, store, promotions</li>
-<li>facts: total sales, total cost, gross margin</li>
+<li>y = 1 时， 希望h θ (x)预测的值尽可能接近 1，即希望 z=θ T X 尽可能地大</li>
+<li>y= 0 时，希望假设 h θ (x)预测的值尽可能接近 0，即希望 z=θ T X 尽可能地小</li>
+</ol>
+<p>代价函数中， 把原来的曲线变成2段折线：<br><img src="/media/15021606211374.jpg" alt=""></p>
+<ol>
+<li>当 y=1 时， 我们希望构建新的代价函数如 cost 1 (z)所示，当 z&gt;=1 时，cost 1 (z)=0</li>
+<li>当 y=0 时，我们希望构建新的代价函数如 cost 0 (z)所示，当 z&lt;=-1 时，cost 0 (z)=0</li>
 </ol>
 
       
@@ -385,17 +354,13 @@ dimension: product">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/31/DM4/" rel="next" title="第四章 成本导向的分类">
-                <i class="fa fa-chevron-left"></i> 第四章 成本导向的分类
+              <a href="/2017/07/27/ml-6/" rel="next" title="机器学习 Week6 - Coursera Machine Learning">
+                <i class="fa fa-chevron-left"></i> 机器学习 Week6 - Coursera Machine Learning
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/11/01/SAS2/" rel="prev" title="Overview - SAS EM">
-                Overview - SAS EM <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -516,7 +481,7 @@ dimension: product">
               
             
             
-              <p class="post-toc-empty">This post does not have a Table of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#支持向量机-（Support-Vector-Machine）"><span class="nav-number">1.</span> <span class="nav-text">支持向量机 （Support Vector Machine）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Large-Margin-Classification"><span class="nav-number">2.</span> <span class="nav-text">Large Margin Classification</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#优化目标-Optimization-Objective"><span class="nav-number">2.1.</span> <span class="nav-text">优化目标 (Optimization Objective)</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

@@ -86,21 +86,24 @@
 
 
 
-<meta name="description" content="RC1改变Rstudio格局 Tools-&amp;gt;Global Options-&amp;gt;Pane Layout
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546#定义变量x &amp;lt;- 1 #old schoolx = 1  #new school#定义Vector(连续相同格式的">
+<meta name="description" content="RC1
+改变Rstudio格局 Tools-&amp;gt;Global Options-&amp;gt;Pane Layout
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546#定义变量x &amp;lt;- 1 #old schoolx = 1  #new school#定义Vector(连续相同格式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="R使用教程">
 <meta property="og:url" content="https://jyphotography.github.io/2016/10/28/postDM-HW/index.html">
 <meta property="og:site_name" content="JY">
-<meta property="og:description" content="RC1改变Rstudio格局 Tools-&amp;gt;Global Options-&amp;gt;Pane Layout
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546#定义变量x &amp;lt;- 1 #old schoolx = 1  #new school#定义Vector(连续相同格式的">
+<meta property="og:description" content="RC1
+改变Rstudio格局 Tools-&amp;gt;Global Options-&amp;gt;Pane Layout
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546#定义变量x &amp;lt;- 1 #old schoolx = 1  #new school#定义Vector(连续相同格式">
 <meta property="og:image" content="https://jyphotography.github.io/media/14779382675884.jpg">
 <meta property="og:image" content="https://jyphotography.github.io/media/14779403889876.jpg">
 <meta property="og:updated_time" content="2016-11-01T17:10:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="R使用教程">
-<meta name="twitter:description" content="RC1改变Rstudio格局 Tools-&amp;gt;Global Options-&amp;gt;Pane Layout
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546#定义变量x &amp;lt;- 1 #old schoolx = 1  #new school#定义Vector(连续相同格式的">
+<meta name="twitter:description" content="RC1
+改变Rstudio格局 Tools-&amp;gt;Global Options-&amp;gt;Pane Layout
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546#定义变量x &amp;lt;- 1 #old schoolx = 1  #new school#定义Vector(连续相同格式">
 <meta name="twitter:image" content="https://jyphotography.github.io/media/14779382675884.jpg">
 
 
@@ -327,44 +330,61 @@
       
 
       
-        <h1 id="RC1"><a href="#RC1" class="headerlink" title="RC1"></a>RC1</h1><p>改变Rstudio格局 Tools-&gt;Global Options-&gt;Pane Layout</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">#定义变量</div><div class="line">x &lt;- 1 #old school</div><div class="line">x = 1  #new school</div><div class="line"></div><div class="line">#定义Vector(连续相同格式的数据）</div><div class="line">x = 1:5</div><div class="line">y = rep(x, times) #重复x,times次</div><div class="line">x = c(3,4.2,0,4,8.7) #连接</div><div class="line">z = seq(start,end,by=step size)</div><div class="line"></div><div class="line">#判断变量</div><div class="line">is.na(z); </div><div class="line">is.finite(z); </div><div class="line">is.nan(z-z)</div><div class="line"></div><div class="line">#indices</div><div class="line">x[1]</div><div class="line">x[2:4]</div><div class="line">which(x &gt; 4) #返回所有x大于4的位置</div><div class="line">x[which(x &gt; 4)] ; x[x &gt; 4] #效果相同</div><div class="line"></div><div class="line">#随机</div><div class="line">x = runif(5,0,10) # 0到10随机5个数</div><div class="line"></div><div class="line">#排序</div><div class="line">order(x) # 返回每个变量的顺序</div><div class="line">x = x[order(x)] #生序</div><div class="line"></div><div class="line">#多维数组</div><div class="line">ma = array(c(1:30),dim=c(6,5)); ma # 2维</div><div class="line">ma[1:2,4]</div><div class="line"></div><div class="line">ma = array(c(1:30),dim=c(2,3,5)); ma # 3维</div><div class="line">ma[1,2,3]; ma[,1:2,4]</div><div class="line"></div><div class="line">#格式转换</div><div class="line">x = as.character(c(1,2,3));</div><div class="line">y = as.numeric(x)</div><div class="line"></div><div class="line">#factor内部是数字，外部是String，方便处理数据</div><div class="line">mynames &lt;- factor(c(&quot;Ted&quot;,&quot;Amy&quot;,&quot;Bill&quot;,&quot;Jill&quot;,&quot;Amy&quot;,&quot;Bill&quot;));</div><div class="line"></div><div class="line">#data frame 不同格式的数据</div><div class="line">people = data.frame(Name = mynames,</div><div class="line">                    Age = c(22,23,26,23,28,20),</div><div class="line">                    Student = c(TRUE,TRUE,FALSE,TRUE,FALSE,TRUE)); people</div></pre></td></tr></table></figure>
-<h1 id="HW1"><a href="#HW1" class="headerlink" title="HW1"></a>HW1</h1><p>这次作业的主要目的是我们为一家房地产中介提供数据挖掘咨询。 我们的产品是自动化房屋估值系统。</p>
-<h3 id="问题一"><a href="#问题一" class="headerlink" title="问题一"></a>问题一</h3><h4 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h4><p>用R写一个function能够自动简单分析当前的数据集</p>
+        <h1>RC1</h1>
+<p>改变Rstudio格局 Tools-&gt;Global Options-&gt;Pane Layout</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">#定义变量</div><div class="line">x &lt;- 1 #old school</div><div class="line">x = 1  #new school</div><div class="line"></div><div class="line">#定义Vector(连续相同格式的数据）</div><div class="line">x = 1:5</div><div class="line">y = rep(x, times) #重复x,times次</div><div class="line">x = c(3,4.2,0,4,8.7) #连接</div><div class="line">z = seq(start,end,by=step size)</div><div class="line"></div><div class="line">#判断变量</div><div class="line">is.na(z); </div><div class="line">is.finite(z); </div><div class="line">is.nan(z-z)</div><div class="line"></div><div class="line">#indices</div><div class="line">x[1]</div><div class="line">x[2:4]</div><div class="line">which(x &gt; 4) #返回所有x大于4的位置</div><div class="line">x[which(x &gt; 4)] ; x[x &gt; 4] #效果相同</div><div class="line"></div><div class="line">#随机</div><div class="line">x = runif(5,0,10) # 0到10随机5个数</div><div class="line"></div><div class="line">#排序</div><div class="line">order(x) # 返回每个变量的顺序</div><div class="line">x = x[order(x)] #生序</div><div class="line"></div><div class="line">#多维数组</div><div class="line">ma = array(c(1:30),dim=c(6,5)); ma # 2维</div><div class="line">ma[1:2,4]</div><div class="line"></div><div class="line">ma = array(c(1:30),dim=c(2,3,5)); ma # 3维</div><div class="line">ma[1,2,3]; ma[,1:2,4]</div><div class="line"></div><div class="line">#格式转换</div><div class="line">x = as.character(c(1,2,3));</div><div class="line">y = as.numeric(x)</div><div class="line"></div><div class="line">#factor内部是数字，外部是String，方便处理数据</div><div class="line">mynames &lt;- factor(c(&quot;Ted&quot;,&quot;Amy&quot;,&quot;Bill&quot;,&quot;Jill&quot;,&quot;Amy&quot;,&quot;Bill&quot;));</div><div class="line"></div><div class="line">#data frame 不同格式的数据</div><div class="line">people = data.frame(Name = mynames,</div><div class="line">                    Age = c(22,23,26,23,28,20),</div><div class="line">                    Student = c(TRUE,TRUE,FALSE,TRUE,FALSE,TRUE)); people</div></pre></td></tr></table></figure></p>
+<h1>HW1</h1>
+<p>这次作业的主要目的是我们为一家房地产中介提供数据挖掘咨询。 我们的产品是自动化房屋估值系统。</p>
+<h3>问题一</h3>
+<h4>要求：</h4>
+<p>用R写一个function能够自动简单分析当前的数据集</p>
 <ul>
 <li>输入：dataframe</li>
-<li>输出：text （模版如下）<br><img src="/media/14779382675884.jpg" alt="-w992"></li>
+<li>输出：text （模版如下）
+<img src="/media/14779382675884.jpg" alt="-w992"></li>
 </ul>
-<h4 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h4><ol>
-<li>根据模版，我们需要把数据分成real value和 symbolic两者分别分析。<br>区分数字还是分类信息：</li>
-</ol>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 假设我们的数据叫data，i 为我们要分析的列的index</span></div><div class="line">class(data[,i]) == <span class="string">"integer"</span> || class(data[,i]) == <span class="string">"numeric"</span> <span class="comment"># 得到数字列</span></div><div class="line">class(data[,i]) == <span class="string">"factor"</span> <span class="comment">#得到分类列</span></div></pre></td></tr></table></figure>
+<h4>分析：</h4>
 <ol>
+<li>根据模版，我们需要把数据分成real value和 symbolic两者分别分析。
+区分数字还是分类信息：</li>
+</ol>
+<p><figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 假设我们的数据叫data，i 为我们要分析的列的index</span></div><div class="line">class(data[,i]) == <span class="string">"integer"</span> || class(data[,i]) == <span class="string">"numeric"</span> <span class="comment"># 得到数字列</span></div><div class="line">class(data[,i]) == <span class="string">"factor"</span> <span class="comment">#得到分类列</span></div></pre></td></tr></table></figure></p>
+<ol start="2">
 <li>为了使格式整洁，我们可以用一个dataframe来存结果</li>
 </ol>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">data.frame(Attribute_ID = <span class="literal">NA</span>, <span class="keyword">...</span>) <span class="comment"># 最好一开始定义下列的类型，这里偷懒了</span></div><div class="line">na.rm = <span class="literal">TRUE</span> <span class="comment"># 注意要不考虑missing value</span></div></pre></td></tr></table></figure>
-<ol>
+<p><figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">data.frame(Attribute_ID = <span class="literal">NA</span>, <span class="keyword">...</span>) <span class="comment"># 最好一开始定义下列的类型，这里偷懒了</span></div><div class="line">na.rm = <span class="literal">TRUE</span> <span class="comment"># 注意要不考虑missing value</span></div></pre></td></tr></table></figure></p>
+<ol start="3">
 <li>分类信息的归纳； 唯一的难点如何对一个列的频率排序</li>
 </ol>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sorted_value = sort(table(non_miss_val),decreasing = <span class="literal">TRUE</span>) <span class="comment"># 对频率排序</span></div><div class="line">sorted_name = names(sort(table(non_miss_val), decreasing = <span class="literal">TRUE</span>)) <span class="comment"># 对名字排序</span></div></pre></td></tr></table></figure>
-<h3 id="问题一b"><a href="#问题一b" class="headerlink" title="问题一b"></a>问题一b</h3><h4 id="要求：-1"><a href="#要求：-1" class="headerlink" title="要求："></a>要求：</h4><p>给我们客户展示一下数据集的内容：</p>
+<p><figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sorted_value = sort(table(non_miss_val),decreasing = <span class="literal">TRUE</span>) <span class="comment"># 对频率排序</span></div><div class="line">sorted_name = names(sort(table(non_miss_val), decreasing = <span class="literal">TRUE</span>)) <span class="comment"># 对名字排序</span></div></pre></td></tr></table></figure></p>
+<h3>问题一b</h3>
+<h4>要求：</h4>
+<p>给我们客户展示一下数据集的内容：</p>
 <ol>
 <li>一个变量分布</li>
 <li>鉴于一个变量上的一个变量分布</li>
 <li>一对变量的关系</li>
 </ol>
-<h4 id="分析：-1"><a href="#分析：-1" class="headerlink" title="分析："></a>分析：</h4><p>考察我们作图能力，这里选用GGPLOT2，因为相比其他作图包，它是object oritended设计的，方便我们添加删除和改变</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ggplot(plot_data, aes(house_value)) </div><div class="line">+ geom_histogram(bins = <span class="number">50</span>) </div><div class="line">+ ggtitle(<span class="string">"Distribution of House Value"</span>) </div><div class="line">+ labs(x = <span class="string">"House Value $"</span>, y = <span class="string">"Frequency"</span>)</div></pre></td></tr></table></figure>
+<h4>分析：</h4>
+<p>考察我们作图能力，这里选用GGPLOT2，因为相比其他作图包，它是object oritended设计的，方便我们添加删除和改变</p>
+<p><figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ggplot(plot_data, aes(house_value)) </div><div class="line">+ geom_histogram(bins = <span class="number">50</span>) </div><div class="line">+ ggtitle(<span class="string">"Distribution of House Value"</span>) </div><div class="line">+ labs(x = <span class="string">"House Value $"</span>, y = <span class="string">"Frequency"</span>)</div></pre></td></tr></table></figure></p>
 <p><img src="/media/14779403889876.jpg" alt="-w570"></p>
-<h3 id="问题二"><a href="#问题二" class="headerlink" title="问题二"></a>问题二</h3><h4 id="要求：-2"><a href="#要求：-2" class="headerlink" title="要求："></a>要求：</h4><p>写一个function做k次交叉验证，模型有三种：</p>
+<h3>问题二</h3>
+<h4>要求：</h4>
+<p>写一个function做k次交叉验证，模型有三种：</p>
 <ol>
 <li>connect-the-dots</li>
 <li>default predictor</li>
-<li>linear<br>输入： dataframe， k, 目标变量<br>输出： 一个含k个MSE得分的向量</li>
+<li>linear
+输入： dataframe， k, 目标变量
+输出： 一个含k个MSE得分的向量</li>
 </ol>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>我们先要理解模型，</p>
+<h4>分析</h4>
+<p>我们先要理解模型，</p>
 <ol>
-<li>connect the dots:（KNN近邻算法）<br>KNN根据某些样本实例与其他实例之间的相似性进行分类。特征相似的实例互相靠近，特征不相似的实例互相远离。因而，可以将两个实例间的距离作为他们的“不相似度”的一种度量标准。<br>KNN算法不仅可以用于分类，还可以用于回归。通过找出一个样本的k个最近邻居，将这些邻居的属性的平均值赋给该样本，就可以得到该样本的属性。</li>
+<li>connect the dots:（KNN近邻算法）
+KNN根据某些样本实例与其他实例之间的相似性进行分类。特征相似的实例互相靠近，特征不相似的实例互相远离。因而，可以将两个实例间的距离作为他们的“不相似度”的一种度量标准。
+KNN算法不仅可以用于分类，还可以用于回归。通过找出一个样本的k个最近邻居，将这些邻居的属性的平均值赋给该样本，就可以得到该样本的属性。</li>
 <li>default predictor （0次多项式回归）</li>
 <li>linear (线性回归）</li>
 </ol>
@@ -376,12 +396,14 @@
 <li>分成k段</li>
 <li>每一段用作test，并计算出MSE，保存到结果</li>
 </ol>
-<h3 id="问题二b"><a href="#问题二b" class="headerlink" title="问题二b"></a>问题二b</h3><p>要求：</p>
+<h3>问题二b</h3>
+<p>要求：</p>
 <ol>
 <li>用 log（crime_rate）来预测房屋价格</li>
 <li>计算每一个模型的95%置信区间</li>
 </ol>
-<p>分析：<br>没什么太大难度，只需要会使用barplot2即可</p>
+<p>分析：
+没什么太大难度，只需要会使用barplot2即可</p>
 
       
     </div>
@@ -485,7 +507,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -538,7 +560,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#RC1"><span class="nav-number">1.</span> <span class="nav-text">RC1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HW1"><span class="nav-number">2.</span> <span class="nav-text">HW1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题一"><span class="nav-number">2.0.1.</span> <span class="nav-text">问题一</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#要求："><span class="nav-number">2.0.1.1.</span> <span class="nav-text">要求：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分析："><span class="nav-number">2.0.1.2.</span> <span class="nav-text">分析：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题一b"><span class="nav-number">2.0.2.</span> <span class="nav-text">问题一b</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#要求：-1"><span class="nav-number">2.0.2.1.</span> <span class="nav-text">要求：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分析：-1"><span class="nav-number">2.0.2.2.</span> <span class="nav-text">分析：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题二"><span class="nav-number">2.0.3.</span> <span class="nav-text">问题二</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#要求：-2"><span class="nav-number">2.0.3.1.</span> <span class="nav-text">要求：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分析"><span class="nav-number">2.0.3.2.</span> <span class="nav-text">分析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题二b"><span class="nav-number">2.0.4.</span> <span class="nav-text">问题二b</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">RC1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">HW1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.1.</span> <span class="nav-text">问题一</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.1.1.</span> <span class="nav-text">要求：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.1.2.</span> <span class="nav-text">分析：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.2.</span> <span class="nav-text">问题一b</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.2.1.</span> <span class="nav-text">要求：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.2.2.</span> <span class="nav-text">分析：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.3.</span> <span class="nav-text">问题二</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.3.1.</span> <span class="nav-text">要求：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.3.2.</span> <span class="nav-text">分析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.4.</span> <span class="nav-text">问题二b</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>

@@ -86,12 +86,16 @@
 
 
 
-<meta name="description" content="介绍什么是机器学习？“A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with expe">
+<meta name="description" content="介绍
+什么是机器学习？
+&amp;quot;A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves wi">
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器学习 Week1 - Coursera Machine Learning">
 <meta property="og:url" content="https://jyphotography.github.io/2017/07/01/ml-1/index.html">
 <meta property="og:site_name" content="JY">
-<meta property="og:description" content="介绍什么是机器学习？“A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with expe">
+<meta property="og:description" content="介绍
+什么是机器学习？
+&amp;quot;A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves wi">
 <meta property="og:image" content="https://jyphotography.github.io/media/14989691452519.jpg">
 <meta property="og:image" content="http://latex.codecogs.com/gif.latex?J%28%5Ctheta_0%2C%20%5Ctheta_1%29%20%3D%20%5Cdfrac%20%7B1%7D%7B2m%7D%20%5Cdisplaystyle%20%5Csum%20_%7Bi%3D1%7D%5Em%20%5Cleft%20%28%20%5Chat%7By%7D_%7Bi%7D-%20y_%7Bi%7D%20%5Cright%29%5E2%20%3D%20%5Cdfrac%20%7B1%7D%7B2m%7D%20%5Cdisplaystyle%20%5Csum%20_%7Bi%3D1%7D%5Em%20%5Cleft%20%28h_%5Ctheta%20%28x_%7Bi%7D%29%20-%20y_%7Bi%7D%20%5Cright%29%5E2">
 <meta property="og:image" content="https://jyphotography.github.io/media/14990106615775.jpg">
@@ -100,7 +104,9 @@
 <meta property="og:updated_time" content="2017-07-04T20:30:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习 Week1 - Coursera Machine Learning">
-<meta name="twitter:description" content="介绍什么是机器学习？“A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with expe">
+<meta name="twitter:description" content="介绍
+什么是机器学习？
+&amp;quot;A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves wi">
 <meta name="twitter:image" content="https://jyphotography.github.io/media/14989691452519.jpg">
 
 
@@ -308,37 +314,64 @@
       
 
       
-        <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><h2 id="什么是机器学习？"><a href="#什么是机器学习？" class="headerlink" title="什么是机器学习？"></a>什么是机器学习？</h2><p>“A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E.” – Tom Mitchell</p>
+        <h1>介绍</h1>
+<h2>什么是机器学习？</h2>
+<p>&quot;A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E.&quot; -- Tom Mitchell</p>
 <p>一个计算机程序从一些目标（T）和结果（P）学到的经历（E）。 如果这个程序能随着经历（E）的改进而改进目标（T）的结果（P），那这就是机器学习。</p>
-<p>举例来说： 玩跳棋<br>E = 多次游戏的经历<br>T = 玩象棋<br>P = 下局获胜的概率</p>
+<p>举例来说： 玩跳棋
+E = 多次游戏的经历
+T = 玩象棋
+P = 下局获胜的概率</p>
 <p>一般来说， 任何机器学习都可以分成两类： 监督学习（Supervised Learning）和非监督学习 （Unsupervised Learning)</p>
-<h2 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h2><p>我们知道正确的结果，找到输入和输出的关系</p>
-<p>监督学习有两类。<br><strong>Regression（回归问题）</strong> 主要用于预测连续变量<br>例子： 预测房价<br><strong>Classification（分类）</strong> 主要用于预测不连续的变量<br>例子： 预测房价是否大于报价</p>
-<h2 id="非监督学习"><a href="#非监督学习" class="headerlink" title="非监督学习"></a>非监督学习</h2><p>在不知道结果的情况下解决问题。<br>通过变量之间的关系进行费雷<br>在非监督学习，我们不能得到预测结果的反馈</p>
-<p>例子: <strong>Clustering (归类)</strong><br>在一百万个基因中根据它们之间的关系或相似程度找到自动分组。</p>
-<p>例子: <strong>Non-clustering (非归类)</strong><br><a href="https://en.wikipedia.org/wiki/Cocktail_party_effect" target="_blank" rel="external">鸡尾酒派对算法</a> - 在吵杂的环境中找到个人的声音</p>
-<h1 id="模型解释"><a href="#模型解释" class="headerlink" title="模型解释"></a>模型解释</h1><p>我们用\(x^i\)表示输入变量， 也叫Feature。 用\(y^i\)表示输出，也就是预测结果</p>
-<p>\((x^i,y^i)\) - 训练样本<br>\((x^i,y^i); i=1,…,m\)； - 训练集</p>
-<p>假设h(x)-<br><img src="/media/14989691452519.jpg" alt=""></p>
-<h2 id="成本函数-（Cost-Function）"><a href="#成本函数-（Cost-Function）" class="headerlink" title="成本函数 （Cost Function）"></a>成本函数 （Cost Function）</h2><p>也称作MSE(Mean Squared Error)<br>用来测量我们函数的正确性-最常用在回归问题上</p>
-<p><img src="http://latex.codecogs.com/gif.latex?J%28%5Ctheta_0%2C%20%5Ctheta_1%29%20%3D%20%5Cdfrac%20%7B1%7D%7B2m%7D%20%5Cdisplaystyle%20%5Csum%20_%7Bi%3D1%7D%5Em%20%5Cleft%20%28%20%5Chat%7By%7D_%7Bi%7D-%20y_%7Bi%7D%20%5Cright%29%5E2%20%3D%20%5Cdfrac%20%7B1%7D%7B2m%7D%20%5Cdisplaystyle%20%5Csum%20_%7Bi%3D1%7D%5Em%20%5Cleft%20%28h_%5Ctheta%20%28x_%7Bi%7D%29%20-%20y_%7Bi%7D%20%5Cright%29%5E2" alt=""><br>（预测值-真实值）的平方和／（样本个数*2）<br><img src="/media/14990106615775.jpg" alt=""></p>
+<h2>监督学习</h2>
+<p>我们知道正确的结果，找到输入和输出的关系</p>
+<p>监督学习有两类。
+<strong>Regression（回归问题）</strong> 主要用于预测连续变量
+例子： 预测房价
+<strong>Classification（分类）</strong> 主要用于预测不连续的变量
+例子： 预测房价是否大于报价</p>
+<h2>非监督学习</h2>
+<p>在不知道结果的情况下解决问题。
+通过变量之间的关系进行费雷
+在非监督学习，我们不能得到预测结果的反馈</p>
+<p>例子: <strong>Clustering (归类)</strong>
+在一百万个基因中根据它们之间的关系或相似程度找到自动分组。</p>
+<p>例子: <strong>Non-clustering (非归类)</strong>
+<a href="https://en.wikipedia.org/wiki/Cocktail_party_effect" target="_blank" rel="external">鸡尾酒派对算法</a> - 在吵杂的环境中找到个人的声音</p>
+<h1>模型解释</h1>
+<p>我们用\(x^i\)表示输入变量， 也叫Feature。 用\(y^i\)表示输出，也就是预测结果</p>
+<p>\((x^i,y^i)\) - 训练样本
+\((x^i,y^i); i=1,...,m\)； - 训练集</p>
+<p>假设h(x)-
+<img src="/media/14989691452519.jpg" alt=""></p>
+<h2>成本函数 （Cost Function）</h2>
+<p>也称作MSE(Mean Squared Error)
+用来测量我们函数的正确性-最常用在回归问题上</p>
+<p><img src="http://latex.codecogs.com/gif.latex?J%28%5Ctheta_0%2C%20%5Ctheta_1%29%20%3D%20%5Cdfrac%20%7B1%7D%7B2m%7D%20%5Cdisplaystyle%20%5Csum%20_%7Bi%3D1%7D%5Em%20%5Cleft%20%28%20%5Chat%7By%7D_%7Bi%7D-%20y_%7Bi%7D%20%5Cright%29%5E2%20%3D%20%5Cdfrac%20%7B1%7D%7B2m%7D%20%5Cdisplaystyle%20%5Csum%20_%7Bi%3D1%7D%5Em%20%5Cleft%20%28h_%5Ctheta%20%28x_%7Bi%7D%29%20-%20y_%7Bi%7D%20%5Cright%29%5E2" alt="">
+（预测值-真实值）的平方和／（样本个数*2）
+<img src="/media/14990106615775.jpg" alt=""></p>
 <p>PS: 公式中除2的原因只是保证这个函数不受样本个数的影响</p>
-<h1 id="参数学习"><a href="#参数学习" class="headerlink" title="参数学习"></a>参数学习</h1><h2 id="梯度下降法-（Gradient-Descent）"><a href="#梯度下降法-（Gradient-Descent）" class="headerlink" title="梯度下降法 （Gradient Descent）"></a>梯度下降法 （Gradient Descent）</h2><p>通过调整成本函数的参数来达到MSE最小</p>
+<h1>参数学习</h1>
+<h2>梯度下降法 （Gradient Descent）</h2>
+<p>通过调整成本函数的参数来达到MSE最小</p>
 <p><img src="/media/14990154186760.jpg" alt=""></p>
-<p>假设我们把$\theta_0$和$\theta_1$分别放在x,y轴， 然后用z轴表示我们的成本函数。<br>我们要做的事找到图中最低的点（红箭头）。方法是在成本函数求导数,切线的斜率提供方向，找到最陡的方向进行下降。<br>步子的大小叫做learning rate $\alpha$</p>
-<p><strong>梯度下降公式：</strong><br>$$\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1)$$</p>
-<p>有多个$\theta$的时候要同时更新<br><img src="/media/14991952094389.jpg" alt=""></p>
-<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ol>
+<p>假设我们把$\theta_0$和$\theta_1$分别放在x,y轴， 然后用z轴表示我们的成本函数。
+我们要做的事找到图中最低的点（红箭头）。方法是在成本函数求导数,切线的斜率提供方向，找到最陡的方向进行下降。
+步子的大小叫做learning rate $\alpha$</p>
+<p><strong>梯度下降公式：</strong>
+$$\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1)$$</p>
+<p>有多个$\theta$的时候要同时更新
+<img src="/media/14991952094389.jpg" alt=""></p>
+<h1>References</h1>
+<ol>
 <li><a href="http://www.forkosh.com/mathtextutorial.html" target="_blank" rel="external">Mathjax</a></li>
 <li><a href="http://latex.codecogs.com/eqneditor/editor.php" target="_blank" rel="external">在线数学公式生成器</a></li>
 </ol>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
-<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
-</script>
-
-
+<p>&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\(','\)']]}});
+&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; async src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML&quot;&gt;
+&lt;/script&gt;</p>
 
       
     </div>
@@ -448,7 +481,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -501,7 +534,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是机器学习？"><span class="nav-number">1.1.</span> <span class="nav-text">什么是机器学习？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#监督学习"><span class="nav-number">1.2.</span> <span class="nav-text">监督学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非监督学习"><span class="nav-number">1.3.</span> <span class="nav-text">非监督学习</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模型解释"><span class="nav-number">2.</span> <span class="nav-text">模型解释</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#成本函数-（Cost-Function）"><span class="nav-number">2.1.</span> <span class="nav-text">成本函数 （Cost Function）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参数学习"><span class="nav-number">3.</span> <span class="nav-text">参数学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#梯度下降法-（Gradient-Descent）"><span class="nav-number">3.1.</span> <span class="nav-text">梯度下降法 （Gradient Descent）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#References"><span class="nav-number">4.</span> <span class="nav-text">References</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">什么是机器学习？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">监督学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.3.</span> <span class="nav-text">非监督学习</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">模型解释</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.1.</span> <span class="nav-text">成本函数 （Cost Function）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">参数学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">3.1.</span> <span class="nav-text">梯度下降法 （Gradient Descent）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">References</span></a></li></ol></div>
             
           </div>
         </section>
