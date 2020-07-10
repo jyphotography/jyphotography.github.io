@@ -102,7 +102,10 @@ Large Margin Classification优化目标 (Optimization Objective)在logistic regr
 y = 1 时， 希望h θ (x)预测的值尽可能接近 1，即希望">
 <meta property="og:image" content="https://jyphotography.github.io/media/15021603313667.jpg">
 <meta property="og:image" content="https://jyphotography.github.io/media/15021606211374.jpg">
-<meta property="og:updated_time" content="2017-08-08T02:50:39.000Z">
+<meta property="og:image" content="https://jyphotography.github.io/media/15021611240699.jpg">
+<meta property="og:image" content="https://jyphotography.github.io/media/15021627741287.jpg">
+<meta property="og:image" content="https://jyphotography.github.io/media/15021627872695.jpg">
+<meta property="og:updated_time" content="2017-08-08T03:31:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习 Week7 - Coursera Machine Learning">
 <meta name="twitter:description" content="支持向量机 （Support Vector Machine）SVM 是非常强大且流行的算法。 在一些情况下， 能面向一些复杂的非线性问题提供更加简洁的解决方案
@@ -329,6 +332,12 @@ y = 1 时， 希望h θ (x)预测的值尽可能接近 1，即希望">
 <li>当 y=1 时， 我们希望构建新的代价函数如 cost 1 (z)所示，当 z&gt;=1 时，cost 1 (z)=0</li>
 <li>当 y=0 时，我们希望构建新的代价函数如 cost 0 (z)所示，当 z&lt;=-1 时，cost 0 (z)=0</li>
 </ol>
+<p>###SVM的代价函数<br><img src="/media/15021611240699.jpg" alt=""></p>
+<p>注意到，我们给出的支持向量机假设在预测时是以 z 与 0 的大小关系作为依据的，然而在训练函数时，我们是以正负 1 为依据的，这是支持向量机与逻辑回归的一个关键区别,且导致了下面要介绍的支持向量机的特性。</p>
+<h2 id="最大间隔分解"><a href="#最大间隔分解" class="headerlink" title="最大间隔分解"></a>最大间隔分解</h2><p>支持向量机有的时候也被称为最大间隔分类器（Large Margin Classifier），其原因是：支持向量机可以尝试发现一个与样本数据集之间有着最大间隔的判定边界。</p>
+<p><img src="/media/15021627741287.jpg" alt=""></p>
+<p>下图是一个可以用直线来区分的分类问题示例，图中绿色和洋红色的两条线代表着两条逻辑回归的判定边界，而黑色的线代表的则是支持向量机的判定边界，从图上看出黑色的线似乎是更合理的，蓝色的两条线代表的是支持向量机的判定边界与样本数据之间的间隔。</p>
+<p>判定边界与样本数据之间间隔最大并不总是好事。 C值越大，就会变成粉红色，对outlier敏感，overfittting，反之亦然。<br><img src="/media/15021627872695.jpg" alt=""></p>
 
       
     </div>
@@ -481,7 +490,7 @@ y = 1 时， 希望h θ (x)预测的值尽可能接近 1，即希望">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#支持向量机-（Support-Vector-Machine）"><span class="nav-number">1.</span> <span class="nav-text">支持向量机 （Support Vector Machine）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Large-Margin-Classification"><span class="nav-number">2.</span> <span class="nav-text">Large Margin Classification</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#优化目标-Optimization-Objective"><span class="nav-number">2.1.</span> <span class="nav-text">优化目标 (Optimization Objective)</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#支持向量机-（Support-Vector-Machine）"><span class="nav-number">1.</span> <span class="nav-text">支持向量机 （Support Vector Machine）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Large-Margin-Classification"><span class="nav-number">2.</span> <span class="nav-text">Large Margin Classification</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#优化目标-Optimization-Objective"><span class="nav-number">2.1.</span> <span class="nav-text">优化目标 (Optimization Objective)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最大间隔分解"><span class="nav-number">2.2.</span> <span class="nav-text">最大间隔分解</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
@@ -500,7 +509,7 @@ y = 1 时， 希望h θ (x)预测的值尽可能接近 1，即希望">
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
