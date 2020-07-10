@@ -339,11 +339,11 @@
 <li>根据模版，我们需要把数据分成real value和 symbolic两者分别分析。<br>区分数字还是分类信息：</li>
 </ol>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 假设我们的数据叫data，i 为我们要分析的列的index</span></div><div class="line">class(data[,i]) == <span class="string">"integer"</span> || class(data[,i]) == <span class="string">"numeric"</span> <span class="comment"># 得到数字列</span></div><div class="line">class(data[,i]) == <span class="string">"factor"</span> <span class="comment">#得到分类列</span></div></pre></td></tr></table></figure>
-<ol>
+<ol start="2">
 <li>为了使格式整洁，我们可以用一个dataframe来存结果</li>
 </ol>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">data.frame(Attribute_ID = <span class="literal">NA</span>, <span class="keyword">...</span>) <span class="comment"># 最好一开始定义下列的类型，这里偷懒了</span></div><div class="line">na.rm = <span class="literal">TRUE</span> <span class="comment"># 注意要不考虑missing value</span></div></pre></td></tr></table></figure>
-<ol>
+<ol start="3">
 <li>分类信息的归纳； 唯一的难点如何对一个列的频率排序</li>
 </ol>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sorted_value = sort(table(non_miss_val),decreasing = <span class="literal">TRUE</span>) <span class="comment"># 对频率排序</span></div><div class="line">sorted_name = names(sort(table(non_miss_val), decreasing = <span class="literal">TRUE</span>)) <span class="comment"># 对名字排序</span></div></pre></td></tr></table></figure>

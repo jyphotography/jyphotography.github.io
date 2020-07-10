@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
     <url>
         <loc>https://jyphotography.github.io</loc>
         <changefreq>daily</changefreq>
@@ -7,29 +8,8 @@
     </url>
 
     <url>
-        <loc>https://jyphotography.github.io/categories/Capstone/</loc>
-        <lastmod>2016-10-26T20:16:47.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jyphotography.github.io/categories/NoSQL/</loc>
-        <lastmod>2016-10-31T00:08:33.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jyphotography.github.io/categories/Data-Warehouse/</loc>
-        <lastmod>2016-11-01T13:49:51.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jyphotography.github.io/categories/Data-Minings/</loc>
-        <lastmod>2016-11-01T17:10:53.000Z</lastmod>
+        <loc>https://jyphotography.github.io/categories/Data-Mining/</loc>
+        <lastmod>2016-11-16T22:55:11.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -42,8 +22,29 @@
     </url>
 
     <url>
-        <loc>https://jyphotography.github.io/categories/Data-Mining/</loc>
-        <lastmod>2016-11-16T22:55:11.000Z</lastmod>
+        <loc>https://jyphotography.github.io/categories/Data-Minings/</loc>
+        <lastmod>2016-11-01T17:10:53.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jyphotography.github.io/categories/Data-Warehouse/</loc>
+        <lastmod>2016-11-01T13:49:51.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jyphotography.github.io/categories/NoSQL/</loc>
+        <lastmod>2016-10-31T00:08:33.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jyphotography.github.io/categories/Capstone/</loc>
+        <lastmod>2016-10-26T20:16:47.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
