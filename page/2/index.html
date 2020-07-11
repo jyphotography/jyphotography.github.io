@@ -295,6 +295,17 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/11/14/DM6/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/11/14/DM6/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -321,15 +332,19 @@
       
         
           
-            <p> <img src="/media/14791722133938.jpg" alt="-w476"></p>
-<p> model2 is better, cover more data</p>
-<p><img src="/media/14791723288182.jpg" alt="-w457"><br>binomial model p(1-p)<br>standard error<br>comuputing lower confidence level</p>
-<p>Example<br>entropy越低越好， 代表信息的集中性</p>
-<p>increase information gain, decrease entropy</p>
-<p>what if inputs are numeric?<br>variance</p>
-<p>gini</p>
-
-          
+           
+ model2 is better, cover more data
+binomial model p(1-p)standard errorcomuputing lower confidence level
+Exampleentropy越低越好， 代表信息的集中性
+increase inform
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/11/14/DM6/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -443,6 +458,17 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/11/07/DM5/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/11/07/DM5/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -469,76 +495,22 @@
       
         
           
-            <h1 id="第五章-预处理数据及减少范围"><a href="#第五章-预处理数据及减少范围" class="headerlink" title="第五章 预处理数据及减少范围"></a>第五章 预处理数据及减少范围</h1><h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><ol>
-<li>完美数据-让我们现实生活中的数据趋于完美（消化missing数据）</li>
-<li>基本特征选择算法</li>
-<li>用PCA减少特征（Principal Components Analysis)</li>
-<li>用MDS映射数据（Multi-Dimensional Scaling)</li>
-<li>简单看一下处理文字数据</li>
-</ol>
-<h2 id="从数据工程师角度看"><a href="#从数据工程师角度看" class="headerlink" title="从数据工程师角度看"></a>从数据工程师角度看</h2><p><strong>数据太少</strong></p>
-<ul>
-<li>难找到合理复杂度模型</li>
-<li>难获得可靠数据以及统计显著性</li>
-</ul>
-<p><strong>数据太多</strong></p>
-<ul>
-<li>成本增加（时间与资源）</li>
-<li>重复数据可能导致偏见</li>
-<li>冗余数据可能导致偏见</li>
-<li>多维度问题难解释和图像化</li>
-</ul>
-<h2 id="完美数据"><a href="#完美数据" class="headerlink" title="完美数据"></a>完美数据</h2><ul>
-<li>可以代表</li>
-<li>复杂性</li>
-<li>数量和dimension</li>
-<li>没有太多噪音</li>
-<li>没有太多missing value </li>
-</ul>
-<p>解决missing value的方法：</p>
-<ul>
-<li>用平均数</li>
-<li>用其他数据做模型</li>
-<li>直接删除</li>
-</ul>
-<h2 id="基本特征选择算法"><a href="#基本特征选择算法" class="headerlink" title="基本特征选择算法"></a>基本特征选择算法</h2><p>目的： 改善模型学习结果并减少学习成本<br>feature selection:找到最好的subset<br>feature reduction：找到最有效的数据组合<br>两者的目的都是减少原数据并保存游泳的信息</p>
-<h3 id="特征选择一"><a href="#特征选择一" class="headerlink" title="特征选择一"></a>特征选择一</h3><p>预测能力：</p>
-<ul>
-<li>模型准确度</li>
-<li>相关性数据</li>
-<li>entropy信息获得能力<h3 id="特征选择二"><a href="#特征选择二" class="headerlink" title="特征选择二"></a>特征选择二</h3><h4 id="贪心-（可能比较快，但不一定最好）"><a href="#贪心-（可能比较快，但不一定最好）" class="headerlink" title="贪心 （可能比较快，但不一定最好）"></a>贪心 （可能比较快，但不一定最好）</h4><strong>向前选择算法</strong></li>
-</ul>
-<ol>
-<li>计算每个输入并选择最好的</li>
-<li>是这把其他的输入和最好的配对，选择最好的配对</li>
-<li>继续上面步骤直到获得好的结果</li>
-</ol>
-<p>注意点： 要使用另外的数据做验证<br><img src="/media/14791653518556.jpg" alt="-w504"></p>
-<p><strong>穷尽法（最优，耗时）</strong></p>
-<h2 id="PCA"><a href="#PCA" class="headerlink" title="PCA"></a>PCA</h2><p>目的： 用不相关的数字变量替换相关的数字变量<br>其他目的：减少维度同时获得最大的variance<br>在仅仅使用有限的维度进行数据精确的翻译</p>
-<p>PCA的原理就是将原来的样本数据投影到一个新的空间中，相当于我们在矩阵分析里面学习的将一组矩阵映射到另外的坐标系下。通过一个转换坐标，也可以理解成把一组坐标转换到另外一组坐标系下，但是在新的坐标系下，表示原来的原本不需要那么多的变量，只需要原来样本的最大的一个线性无关组的特征值对应的空间的坐标即可。</p>
-<p>比如，原来的样本是30<em>1000000的维数，就是说我们有30个样本，每个样本有1000000个特征点，这个特征点太多了，我们需要对这些样本的特征点进行降维。那么在降维的时候会计算一个原来样本矩阵的协方差矩阵，这里就是1000000</em>1000000，当然，这个矩阵太大了，计算的时候有其他的方式进行处理，这里只是讲解基本的原理，然后通过这个1000000<em>1000000的协方差矩阵计算它的特征值和特征向量，最后获得具有最大特征值的特征向量构成转换矩阵。比如我们的前29个特征值已经能够占到所有特征值的99%以上，那么我们只需要提取前29个特征值对应的特征向量即可。这样就构成了一个1000000</em>29的转换矩阵，然后用原来的样本乘以这个转换矩阵，就可以得到原来的样本数据在新的特征空间的对应的坐标。30<em>1000000 </em> 1000000<em>29 = 30 </em>29， 这样原来的训练样本每个样本的特征值的个数就降到了29个。</p>
-<p><strong>迷惑</strong><br>另外一个迷惑，在最初刚开始做的时候，就是为什么这么大的数据，比如30<em>1000000直接就降到了30</em>29，这不是减少的数据有点太多了么，会不会对性能造成影响。之所以有这个迷惑，是因为最初并不了解pca的工作方式。 pca并不是直接对原来的数据进行删减，而是把原来的数据映射到新的一个特征空间中继续表示，所有新的特征空间如果有29维，那么这29维足以能够表示非常非常多的数据，并没有对原来的数据进行删减，只是把原来的数据映射到新的空间中进行表示，所以你的测试样本也要同样的映射到这个空间中进行表示，这样就要求你保存住这个空间坐标转换矩阵，把测试样本同样的转换到相同的坐标空间中。</p>
-<pre><code>有些同学在网上发帖子问对训练样本降维以后，怎么对测试样本降维，是不是还是使用princomp这个函数进行降维，这个是错误的。如果你要保证程序运行正常，就要保证训练样本和测试样本被映射到同一个特征空间，这样才能保证数据的一致性。
-</code></pre><p>variance = difference between data<br><img src="/media/14791304174472.jpg" alt="-w388"></p>
-<p>、<img src="/media/14791304390299.jpg" alt="-w381"></p>
-<p><img src="/media/14791304705936.jpg" alt="-w398"><br>失去了一些Z2的信息</p>
-<p><img src="/media/14791305000103.jpg" alt="-w393"><br><img src="/media/14791671019265.jpg" alt="-w483"><br><img src="/media/14791672451717.jpg" alt=""><br>total variance = 1 + 5 + 2 = 8<br>1-2 are correlated<br>3 are not correlated<br>combine 1 and 2<br><img src="/media/14791674765068.jpg" alt=""><br>we lose no variance</p>
-<p>we will lose 0.17</p>
-<p>we will lose 2.17 </p>
-<p><img src="/media/14791676326195.jpg" alt="-w535"></p>
-<h3 id="PCA总结"><a href="#PCA总结" class="headerlink" title="PCA总结"></a>PCA总结</h3><p>因为简单非常流行<br>通常作为数据预处理的方法<br>对多维度数据可视化有帮助<br>在图像处理和理解方面流行<br>本质：降低维度<br>不能处理qutratic value</p>
-<h2 id="MDS"><a href="#MDS" class="headerlink" title="MDS"></a>MDS</h2><p>PCA是把观察的数据用较少的维数来表达，这点上两种方法的相似的；两种方法的不太之处在于，MDS利用的是成对样本间相似性，目的是利用这个信息去构建合适的低维空间，是的样本在此空间的距离和在高维空间中的样本间的相似性尽可能的保持一致。PCA 主要是找到最能体现数据特点的特征，而 MDS 更看重的是原始数据之间的相对关系，通过可视化的方式将他们之间的相对关系尽可能准确的展现出来。</p>
-<p>MDS 的目的是将一组个体间的相异数据经过 MDS 转换成空间构图，且 保留原始数据的相对关系 。也就是说我们通过 MDS 可以直观的可视化的展现原始数据间的相对关系。</p>
-<p>输入： distance matrix<br>返回： k维度散点图保留各个对象见的距离<br>数学： 最小化“stress”</p>
-<h3 id="MDS应用范围"><a href="#MDS应用范围" class="headerlink" title="MDS应用范围"></a>MDS应用范围</h3><p>市场部<br>政治</p>
-<h2 id="Text-Mining"><a href="#Text-Mining" class="headerlink" title="Text Mining"></a>Text Mining</h2><p>动机：超多文字data<br>应用：文档分类， 信心获取，情感分析</p>
-<p>最简单的想法：文字包<br>存储文字和出现的次数</p>
-<h3 id="结构化与非结构化"><a href="#结构化与非结构化" class="headerlink" title="结构化与非结构化"></a>结构化与非结构化</h3><p>文档化矩阵， 每一列代表不同的：单词，一对词，词的顺序</p>
-<p>变量：<br>binary<br>counts<br>weighted frequencies</p>
-<p>TF-IDF<br>tf-idf模型的主要思想是：如果词w在一篇文档d中出现的频率高，并且在其他文档中很少出现，则认为词w具有很好的区分能力，适合用来把文章d和其他文章区分开来。该模型主要包含了两个因素：</p>
+          第五章 预处理数据及减少范围内容
+完美数据-让我们现实生活中的数据趋于完美（消化missing数据）
+基本特征选择算法
+用PCA减少特征（Principal Components Analysis)
+用MDS映射数据（Multi-Dimensional Scaling)
+简单看一下处理文字数据
 
-          
+从
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/11/07/DM5/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -652,6 +624,17 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/11/01/SAS2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/11/01/SAS2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -678,17 +661,22 @@
       
         
           
-            <p>Getting a job?<br>how to measure the strength of tie（quality of connection)?</p>
-<ol>
-<li>frequency</li>
-<li>amount of time</li>
-<li>emotional intensity</li>
-<li>intimacy(mutual confiding)</li>
-</ol>
-<p>who is more helpful? close friend vs. acquaintance<br>weak tie -&gt; give you new information<br>weak ties fill the structural hole</p>
-<p>Architecture of Current BI tools</p>
+          Getting a job?how to measure the strength of tie（quality of connection)?
 
-          
+frequency
+amount of time
+emotional intensity
+intimacy(mutual confiding)
+
+who
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/11/01/SAS2/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -802,6 +790,17 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/11/01/DW2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/11/01/DW2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -828,18 +827,21 @@
       
         
           
-            <p>Google Trends例子</p>
-<p>Metadata 给之后的人管理使用</p>
-<p>hardest part- how to design a database</p>
-<p>Retail Case Study<br>如何设计促销？<br>步骤：</p>
-<ol>
-<li>Business process商业-》 Sales</li>
-<li>Grain of business process-&gt; an line in receipt</li>
-<li>dimension: product, time, store, promotions</li>
-<li>facts: total sales, total cost, gross margin</li>
-</ol>
+          Google Trends例子
+Metadata 给之后的人管理使用
+hardest part- how to design a database
+Retail Case Study如何设计促销？步骤：
 
-          
+Business process商业-》 Sales
+Grain of business pr
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/11/01/DW2/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -953,6 +955,17 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/10/31/DM4/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/10/31/DM4/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -979,71 +992,23 @@
       
         
           
-            <h2 id="成本导向的分类-Cost-Aware-Analysis"><a href="#成本导向的分类-Cost-Aware-Analysis" class="headerlink" title="成本导向的分类(Cost Aware Analysis)"></a>成本导向的分类(Cost Aware Analysis)</h2><h3 id="模型选择的标准"><a href="#模型选择的标准" class="headerlink" title="模型选择的标准"></a>模型选择的标准</h3><ol>
-<li>普遍性 VS 准确性</li>
-<li>效用（这一章的重点）error and cost based method</li>
-<li>显著性</li>
-<li>复杂度 VS 准确性</li>
-</ol>
-<h3 id="混淆矩阵（Confusion-Matrix）"><a href="#混淆矩阵（Confusion-Matrix）" class="headerlink" title="混淆矩阵（Confusion Matrix）"></a>混淆矩阵（Confusion Matrix）</h3><p>适用于监督学习<br><img src="/media/14779594539713.jpg" alt="-w260"></p>
-<p>判断的标准<br><img src="/media/14785570149073.jpg" alt="-w468"></p>
-<h3 id="模型选择的艺术"><a href="#模型选择的艺术" class="headerlink" title="模型选择的艺术"></a>模型选择的艺术</h3><p>最大化预测准确性<br>vs<br>最小化错误预测的成本</p>
-<p>方法：</p>
-<ol>
-<li>ROC</li>
-<li>Lift Chart</li>
-</ol>
-<h3 id="二分分类的例子"><a href="#二分分类的例子" class="headerlink" title="二分分类的例子"></a>二分分类的例子</h3><p>血压与健康的关系： 权威机构给出的分布<br><img src="/media/14785581992432.jpg" alt="-w436"><br>问题： 应该把健康与非健康的边界设在那个血压上？<br><img src="/media/14785583837121.jpg" alt="-w451"><br>如果按上图这么分， ROC图会如下<br><img src="/media/14785584375463.jpg" alt="-w314"><br>如果我们沿整个x轴设置我们的标准<br><img src="/media/14785585202435.jpg" alt="-w355"><br><img src="/media/14785585544450.jpg" alt="-w481"><br>增加变量会导致模型变好<br><img src="/media/14785585802057.jpg" alt="-w347"></p>
-<p>Threshold depends on the cost of FP or FN</p>
-<p>ROC<br>history radar systems-&gt;sensitivity related to FP &amp;FN</p>
-<p>Blood pressue example<br><img src="/media/14779601255435.jpg" alt="-w434"><br>make a point on ROC</p>
-<p><img src="/media/14779601792393.jpg" alt="-w328"></p>
-<p><img src="/media/14779602207917.jpg" alt="-w345"></p>
-<p><img src="/media/14779602874287.jpg" alt="-w325"></p>
-<p>Not -so-trivial case</p>
-<ol>
-<li>算cost</li>
-<li>算slope<br><img src="/media/14779610235174.jpg" alt="-w476"></li>
-</ol>
-<p>增加input会改善ROC效果<br><img src="/media/14782665087338.jpg" alt="-w323"></p>
-<h3 id="如何选择一个不明显的模型？"><a href="#如何选择一个不明显的模型？" class="headerlink" title="如何选择一个不明显的模型？"></a>如何选择一个不明显的模型？</h3><p>我们要计算错误分类的成本<br><img src="/media/14785586860859.jpg" alt="-w460"><br>特殊情况：<br><img src="/media/14785590629094.jpg" alt=""></p>
-<p>分开的模型可能比一个模型要好<br> b<img src="/media/14782667565639.jpg" alt="-w437"><br>那中间断怎么选？ 两个模型都可以</p>
-<h2 id="Rating-Classifiers"><a href="#Rating-Classifiers" class="headerlink" title="Rating Classifiers"></a>Rating Classifiers</h2><p>KNN model 5个中3个positive，我们可以说60%可能positive</p>
-<p>connect the dots 不然roc会高会低是由于你的方法<br>interest in 预测的结果是否与原始结果相同</p>
-<p>AUC curve<br>the greater the better<br>compare different model</p>
-<p>AUC不是总是有用的</p>
-<p>辐射-例子 alerts是正确的，但是对实际效果不符合 True negative up 而不是整个都好- particular settings</p>
-<p>一些有趣的问题<br>如何用ROC做Kfold交叉检验？</p>
-<ol>
-<li>把所有结果加总做一个ROC</li>
-<li>预测TPR</li>
-<li>画2D矩阵<br>Manhattan distance-不能直达必须像在曼哈顿穿梭一样，90度才能转弯</li>
-</ol>
-<p>缺点：<br>计算量大， 数据量小增加K</p>
-<p>如果结果不是二分？</p>
-<ol>
-<li>each pair of class</li>
-<li>一个和其他结果</li>
-</ol>
-<p>不同错误分类的结果<br>信用卡<br>风险： 错误的同意交易<br>value transaction cost<br>cost： percentage fee<br>cost： transaction value<br>巴克莱： different level for differnt cutomers： frequent flyer or shopper</p>
-<p>总结<br>前提：</p>
-<ol>
-<li>数据输入月输出</li>
-<li>可结实性</li>
-<li>数量和范围</li>
-<li>计算资源</li>
-</ol>
-<p><img src="/media/14785632966226.jpg" alt="-w484"></p>
-<p><img src="/media/14785634377492.jpg" alt="-w407"></p>
-<pre><code>记录你做模型的原因
-</code></pre><p>wake up quiz:?<br>overfit risk</p>
-<p><img src="/media/14785637229958.jpg" alt=""><br>bias: add more levels<br>variance: add more data</p>
-<p>甜点：<br><img src="/media/14785638803339.jpg" alt=""><br><img src="/media/14785641597531.jpg" alt="-w485"><br>low amount / Dimension</p>
-<p><img src="/media/14785641227859.jpg" alt="-w473"></p>
-<p><img src="/media/14785642121569.jpg" alt="-w482"><br>D<br><img src="/media/14785642455971.jpg" alt="-w462"><br>C + D<br><img src="/media/14785643237784.jpg" alt="-w470"><br>True</p>
-<p>9</p>
+          成本导向的分类(Cost Aware Analysis)模型选择的标准
+普遍性 VS 准确性
+效用（这一章的重点）error and cost based method
+显著性
+复杂度 VS 准确性
 
-          
+混淆矩阵（Confusion Matrix）适用于监督学习
+判断的标准
+模型选择的艺术最大化预测准
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/10/31/DM4/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1135,6 +1100,17 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/10/31/DM2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/10/31/DM2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -1161,52 +1137,17 @@
       
         
           
-            <h2 id="分类（Classification）"><a href="#分类（Classification）" class="headerlink" title="分类（Classification）"></a>分类（Classification）</h2><h4 id="模型简介"><a href="#模型简介" class="headerlink" title="模型简介"></a>模型简介</h4><p>输出： symbolic<br>输入： numeric, symbolic ,mixed<br>适用范围： 医院诊断病情<br>我们想知道 “？” 到底是红笑脸还是蓝星星<br><img src="/media/14779521374423.jpg" alt="-w405"></p>
-<h4 id="方法一-贝叶斯分类（Bayes’-classifiers）"><a href="#方法一-贝叶斯分类（Bayes’-classifiers）" class="headerlink" title="方法一 贝叶斯分类（Bayes’ classifiers）"></a>方法一 贝叶斯分类（Bayes’ classifiers）</h4><p><img src="/media/14779522929014.jpg" alt="-w367"><br>从中心出发，多少sigma范围内属于一类</p>
-<h4 id="方法二-Discriminative-approaches"><a href="#方法二-Discriminative-approaches" class="headerlink" title="方法二 Discriminative approaches"></a>方法二 Discriminative approaches</h4><p>Logistic Regression （下图黄线）</p>
-<p>Support Vector Machines<br><img src="/media/14779525413726.jpg" alt="-w358"></p>
-<h4 id="方法三-Instance-based-approaches"><a href="#方法三-Instance-based-approaches" class="headerlink" title="方法三 Instance-based approaches"></a>方法三 Instance-based approaches</h4><p><img src="/media/14779528342663.jpg" alt="-w347"></p>
-<h4 id="方法四-Symbolic-approaches"><a href="#方法四-Symbolic-approaches" class="headerlink" title="方法四 Symbolic approaches"></a>方法四 Symbolic approaches</h4><p>Decision Tree<br>Association Rules<br><img src="/media/14779531012120.jpg" alt="-w356"></p>
-<h4 id="方法五-Other-approaches"><a href="#方法五-Other-approaches" class="headerlink" title="方法五 Other approaches"></a>方法五 Other approaches</h4><p>neural network 准确度很高，但是过于复杂取解释，有很多过拟合的情况，除非数据量足够大</p>
-<h2 id="贝叶斯例子（Bayes’Classifier"><a href="#贝叶斯例子（Bayes’Classifier" class="headerlink" title="贝叶斯例子（Bayes’Classifier)"></a>贝叶斯例子（Bayes’Classifier)</h2><p>目的： 捡土豆<br>数据： 有三样东西 土豆， 石头， 粘土<br>方法： 有sensor知道直径<br>      土豆协会给我们数据<br><img src="/media/14779534272849.jpg" alt="-w208"></p>
-<p><img src="/media/14779538226832.jpg" alt="-w492"></p>
-<p><img src="/media/14779538644239.jpg" alt="-w489"></p>
-<p><img src="/media/14779542184633.jpg" alt="-w499"></p>
-<p><img src="/media/14779542423131.jpg" alt="-w492"></p>
-<h4 id="贝叶斯例子（Bayes’Classifier-有趣点"><a href="#贝叶斯例子（Bayes’Classifier-有趣点" class="headerlink" title="贝叶斯例子（Bayes’Classifier) 有趣点"></a>贝叶斯例子（Bayes’Classifier) 有趣点</h4><ol>
-<li>不同密度的预测可以用</li>
-<li>输入可以是数字或者分类信息</li>
-<li>输入信息相互独立， Naive Bayes忽略了输入信息的相互关系, 好处dimension可以变得相当大（容易建立）</li>
-</ol>
-<p>坏处</p>
-<ol>
-<li>只能横向或者纵向分，</li>
-<li>没有很多evidence</li>
-</ol>
-<h2 id="Logistic-Regression"><a href="#Logistic-Regression" class="headerlink" title="Logistic Regression"></a>Logistic Regression</h2><p>用途： binary output<br><img src="/media/14779547890174.jpg" alt="-w359"></p>
-<p><img src="/media/14779548191035.jpg" alt="-w405"></p>
-<p><img src="/media/14779549224818.jpg" alt="-w367"></p>
-<p><img src="/media/14779549460233.jpg" alt="-w377"></p>
-<p>Soft Classification<br><img src="/media/14779552220993.jpg" alt="-w372"></p>
-<p>b1 决定坡度， sharper is better, easy to classify<br>b0 shift,左边还是右边</p>
-<p>好消息：<br>efficient<br>容易增加dimension</p>
-<ol>
-<li>直线（分成两部分）</li>
-<li></li>
-</ol>
-<p>用处：</p>
-<ol>
-<li>用所有的features</li>
-<li>用每个feature做独立的模型</li>
-<li>step -wise </li>
-</ol>
-<p>如果不是线性风格？<br>我们可以用kenerl多元风割</p>
-<h2 id="Support-Vector-Machines"><a href="#Support-Vector-Machines" class="headerlink" title="Support Vector Machines"></a>Support Vector Machines</h2><h2 id="Nearest-Neighbor-classifier"><a href="#Nearest-Neighbor-classifier" class="headerlink" title="Nearest Neighbor classifier"></a>Nearest Neighbor classifier</h2><p>检查它最近的邻居，分成和它邻居一样的类<br>如果数据很大，我们会检查所有的距离</p>
-<h2 id="K-nearest-Neighbors-K-NN"><a href="#K-nearest-Neighbors-K-NN" class="headerlink" title="K nearest Neighbors(K-NN)"></a>K nearest Neighbors(K-NN)</h2><p><img src="/media/14779582574504.jpg" alt="-w332"></p>
-<p>k farthest neighbors? find what is unlike us?</p>
-<p>K_NN to non-binary problems? nothing<br>NN to perform regression?  YES 1. find neighbor 2.what neighbor represent?(calculate avg of neighbor values)</p>
-
-          
+          分类（Classification）模型简介输出： symbolic输入： numeric, symbolic ,mixed适用范围： 医院诊断病情我们想知道 “？” 到底是红笑脸还是蓝星星
+方法一 贝叶斯分类（Bayes’ classifiers）从中心出发，多少sigma范围内属于一类
+方法二 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/10/31/DM2/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1320,6 +1261,17 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/10/28/postDM-HW/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/10/28/postDM-HW/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -1346,63 +1298,16 @@
       
         
           
-            <h1 id="RC1"><a href="#RC1" class="headerlink" title="RC1"></a>RC1</h1><p>改变Rstudio格局 Tools-&gt;Global Options-&gt;Pane Layout</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">#定义变量</div><div class="line">x &lt;- 1 #old school</div><div class="line">x = 1  #new school</div><div class="line"></div><div class="line">#定义Vector(连续相同格式的数据）</div><div class="line">x = 1:5</div><div class="line">y = rep(x, times) #重复x,times次</div><div class="line">x = c(3,4.2,0,4,8.7) #连接</div><div class="line">z = seq(start,end,by=step size)</div><div class="line"></div><div class="line">#判断变量</div><div class="line">is.na(z); </div><div class="line">is.finite(z); </div><div class="line">is.nan(z-z)</div><div class="line"></div><div class="line">#indices</div><div class="line">x[1]</div><div class="line">x[2:4]</div><div class="line">which(x &gt; 4) #返回所有x大于4的位置</div><div class="line">x[which(x &gt; 4)] ; x[x &gt; 4] #效果相同</div><div class="line"></div><div class="line">#随机</div><div class="line">x = runif(5,0,10) # 0到10随机5个数</div><div class="line"></div><div class="line">#排序</div><div class="line">order(x) # 返回每个变量的顺序</div><div class="line">x = x[order(x)] #生序</div><div class="line"></div><div class="line">#多维数组</div><div class="line">ma = array(c(1:30),dim=c(6,5)); ma # 2维</div><div class="line">ma[1:2,4]</div><div class="line"></div><div class="line">ma = array(c(1:30),dim=c(2,3,5)); ma # 3维</div><div class="line">ma[1,2,3]; ma[,1:2,4]</div><div class="line"></div><div class="line">#格式转换</div><div class="line">x = as.character(c(1,2,3));</div><div class="line">y = as.numeric(x)</div><div class="line"></div><div class="line">#factor内部是数字，外部是String，方便处理数据</div><div class="line">mynames &lt;- factor(c(&quot;Ted&quot;,&quot;Amy&quot;,&quot;Bill&quot;,&quot;Jill&quot;,&quot;Amy&quot;,&quot;Bill&quot;));</div><div class="line"></div><div class="line">#data frame 不同格式的数据</div><div class="line">people = data.frame(Name = mynames,</div><div class="line">                    Age = c(22,23,26,23,28,20),</div><div class="line">                    Student = c(TRUE,TRUE,FALSE,TRUE,FALSE,TRUE)); people</div></pre></td></tr></table></figure>
-<h1 id="HW1"><a href="#HW1" class="headerlink" title="HW1"></a>HW1</h1><p>这次作业的主要目的是我们为一家房地产中介提供数据挖掘咨询。 我们的产品是自动化房屋估值系统。</p>
-<h3 id="问题一"><a href="#问题一" class="headerlink" title="问题一"></a>问题一</h3><h4 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h4><p>用R写一个function能够自动简单分析当前的数据集</p>
-<ul>
-<li>输入：dataframe</li>
-<li>输出：text （模版如下）<br><img src="/media/14779382675884.jpg" alt="-w992"></li>
-</ul>
-<h4 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h4><ol>
-<li>根据模版，我们需要把数据分成real value和 symbolic两者分别分析。<br>区分数字还是分类信息：</li>
-</ol>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 假设我们的数据叫data，i 为我们要分析的列的index</span></div><div class="line">class(data[,i]) == <span class="string">"integer"</span> || class(data[,i]) == <span class="string">"numeric"</span> <span class="comment"># 得到数字列</span></div><div class="line">class(data[,i]) == <span class="string">"factor"</span> <span class="comment">#得到分类列</span></div></pre></td></tr></table></figure>
-<ol start="2">
-<li>为了使格式整洁，我们可以用一个dataframe来存结果</li>
-</ol>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">data.frame(Attribute_ID = <span class="literal">NA</span>, <span class="keyword">...</span>) <span class="comment"># 最好一开始定义下列的类型，这里偷懒了</span></div><div class="line">na.rm = <span class="literal">TRUE</span> <span class="comment"># 注意要不考虑missing value</span></div></pre></td></tr></table></figure>
-<ol start="3">
-<li>分类信息的归纳； 唯一的难点如何对一个列的频率排序</li>
-</ol>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sorted_value = sort(table(non_miss_val),decreasing = <span class="literal">TRUE</span>) <span class="comment"># 对频率排序</span></div><div class="line">sorted_name = names(sort(table(non_miss_val), decreasing = <span class="literal">TRUE</span>)) <span class="comment"># 对名字排序</span></div></pre></td></tr></table></figure>
-<h3 id="问题一b"><a href="#问题一b" class="headerlink" title="问题一b"></a>问题一b</h3><h4 id="要求：-1"><a href="#要求：-1" class="headerlink" title="要求："></a>要求：</h4><p>给我们客户展示一下数据集的内容：</p>
-<ol>
-<li>一个变量分布</li>
-<li>鉴于一个变量上的一个变量分布</li>
-<li>一对变量的关系</li>
-</ol>
-<h4 id="分析：-1"><a href="#分析：-1" class="headerlink" title="分析："></a>分析：</h4><p>考察我们作图能力，这里选用GGPLOT2，因为相比其他作图包，它是object oritended设计的，方便我们添加删除和改变</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ggplot(plot_data, aes(house_value)) </div><div class="line">+ geom_histogram(bins = <span class="number">50</span>) </div><div class="line">+ ggtitle(<span class="string">"Distribution of House Value"</span>) </div><div class="line">+ labs(x = <span class="string">"House Value $"</span>, y = <span class="string">"Frequency"</span>)</div></pre></td></tr></table></figure>
-<p><img src="/media/14779403889876.jpg" alt="-w570"></p>
-<h3 id="问题二"><a href="#问题二" class="headerlink" title="问题二"></a>问题二</h3><h4 id="要求：-2"><a href="#要求：-2" class="headerlink" title="要求："></a>要求：</h4><p>写一个function做k次交叉验证，模型有三种：</p>
-<ol>
-<li>connect-the-dots</li>
-<li>default predictor</li>
-<li>linear<br>输入： dataframe， k, 目标变量<br>输出： 一个含k个MSE得分的向量</li>
-</ol>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>我们先要理解模型，</p>
-<ol>
-<li>connect the dots:（KNN近邻算法）<br>KNN根据某些样本实例与其他实例之间的相似性进行分类。特征相似的实例互相靠近，特征不相似的实例互相远离。因而，可以将两个实例间的距离作为他们的“不相似度”的一种度量标准。<br>KNN算法不仅可以用于分类，还可以用于回归。通过找出一个样本的k个最近邻居，将这些邻居的属性的平均值赋给该样本，就可以得到该样本的属性。</li>
-<li>default predictor （0次多项式回归）</li>
-<li>linear (线性回归）</li>
-</ol>
-<p>交叉验证：</p>
-<ol>
-<li>把目标列移到最后</li>
-<li>KNN不接受category变量，所以要线剔除</li>
-<li>随机变化一下dataset</li>
-<li>分成k段</li>
-<li>每一段用作test，并计算出MSE，保存到结果</li>
-</ol>
-<h3 id="问题二b"><a href="#问题二b" class="headerlink" title="问题二b"></a>问题二b</h3><p>要求：</p>
-<ol>
-<li>用 log（crime_rate）来预测房屋价格</li>
-<li>计算每一个模型的95%置信区间</li>
-</ol>
-<p>分析：<br>没什么太大难度，只需要会使用barplot2即可</p>
-
-          
+          RC1改变Rstudio格局 Tools-&gt;Global Options-&gt;Pane Layout
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546#定义变量x &lt;
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/10/28/postDM-HW/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1516,6 +1421,17 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/10/27/nosql1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/10/27/nosql1/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -1542,9 +1458,16 @@
       
         
           
-            <p>未完待续</p>
+          未完待续
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/10/27/nosql1/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1658,6 +1581,17 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/10/27/sas1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/10/27/sas1/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -1684,13 +1618,20 @@
       
         
           
-            <h2 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h2><p>当今不用仍然不使用IT的行业-Dabbawalla印度盒饭行业</p>
-<h2 id="BI的因素"><a href="#BI的因素" class="headerlink" title="BI的因素"></a>BI的因素</h2><p><img src="/media/14776099723765.jpg" alt="-w764"></p>
-<h2 id="BI的问题"><a href="#BI的问题" class="headerlink" title="BI的问题"></a>BI的问题</h2><p>data requester 不懂怎么取数据<br>data provider 不懂商业流程</p>
-<h2 id="BI做什么？"><a href="#BI做什么？" class="headerlink" title="BI做什么？"></a>BI做什么？</h2><p><img src="/media/14776092516314.jpg" alt="-w851"><br>大部分人还是停留在绿色区域</p>
-<p><img src="/media/14776100600514.jpg" alt="-w763"><br>这些是能提高你竞争力的部分</p>
+          题外话当今不用仍然不使用IT的行业-Dabbawalla印度盒饭行业
+BI的因素
+BI的问题data requester 不懂怎么取数据data provider 不懂商业流程
+BI做什么？大部分人还是停留在绿色区域
+这些是能提高你竞争力的部分
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/10/27/sas1/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1804,6 +1745,17 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/10/27/DW-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/10/27/DW-1/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -1830,29 +1782,18 @@
       
         
           
-            <h2 id="数据仓库-Data-Warehouse-基础"><a href="#数据仓库-Data-Warehouse-基础" class="headerlink" title="数据仓库(Data Warehouse)基础"></a>数据仓库(Data Warehouse)基础</h2><h3 id="DW-历史"><a href="#DW-历史" class="headerlink" title="DW 历史"></a>DW 历史</h3><p>Inmon: Top-down: 公司只建一个数据仓库。数据集市从数据仓库取数据</p>
-<p>Kimball：Bottom-up: 先从数据集市开始，然后聚集成数据仓库。</p>
-<p>Enterprise Warehouse-收集所有信息，然后在整个组织循环</p>
-<p>Data Mart-数据仓库的一个子集，代表一个商业流程的数据</p>
-<h3 id="DW-定义"><a href="#DW-定义" class="headerlink" title="DW 定义"></a>DW 定义</h3><p>数据仓库是 subject-oriented, integrated, time-varying, non-volatile  的数据集合用于帮助决策（Inmon）</p>
-<p>交易数据的特殊结构拷贝，有利于查询（Kimball）</p>
-<pre><code>1. subject-oriented: 只记录与决策系统相关的信息
-2. Integrated: 一致性
-3. Time Varying：时间记录的准确性
-4. Non Volatile：不太会改变原始数据，更多的是增加数据
-</code></pre><p>Data Warehouse现实商业中的定义： 支持决策系统， 分析环境，与存储数据形式无关</p>
-<h3 id="为什么要把DW与数据库分开？"><a href="#为什么要把DW与数据库分开？" class="headerlink" title="为什么要把DW与数据库分开？"></a>为什么要把DW与数据库分开？</h3><p>1.性能<br>2.功能<br>3.目的-更容易分析数据</p>
-<h3 id="为什么要数据库？"><a href="#为什么要数据库？" class="headerlink" title="为什么要数据库？"></a>为什么要数据库？</h3><p>只有一部分信息需要改变<br>添加<br>删除<br>更新<br>Normalization</p>
-<h3 id="DW与数据库比较"><a href="#DW与数据库比较" class="headerlink" title="DW与数据库比较"></a>DW与数据库比较</h3><p><img src="/media/14776071330775.jpg" alt="-w749"></p>
-<h3 id="DW的构架"><a href="#DW的构架" class="headerlink" title="DW的构架"></a>DW的构架</h3><p><img src="/media/14776071607052.jpg" alt="-w806"></p>
-<h2 id="纬度模型-Dimensional-Model-or-Star-Schema"><a href="#纬度模型-Dimensional-Model-or-Star-Schema" class="headerlink" title="纬度模型(Dimensional Model or Star Schema)"></a>纬度模型(Dimensional Model or Star Schema)</h2><h3 id="组成-两部分"><a href="#组成-两部分" class="headerlink" title="组成-两部分"></a>组成-两部分</h3><h4 id="Fact-Table"><a href="#Fact-Table" class="headerlink" title="Fact Table"></a>Fact Table</h4><p>存储衡量变量<br>多对多<br><img src="/media/14776082294975.jpg" alt="-w221"></p>
-<h4 id="Dimension-Table"><a href="#Dimension-Table" class="headerlink" title="Dimension Table"></a>Dimension Table</h4><p>存储解释信息<br>通常非常长<br><img src="/media/14776082139821.jpg" alt="-w212"></p>
-<h3 id="好处"><a href="#好处" class="headerlink" title="好处"></a>好处</h3><ol>
-<li>简单</li>
-<li>性能</li>
-</ol>
-
-          
+          数据仓库(Data Warehouse)基础DW 历史Inmon: Top-down: 公司只建一个数据仓库。数据集市从数据仓库取数据
+Kimball：Bottom-up: 先从数据集市开始，然后聚集成数据仓库。
+Enterprise Warehouse-收集所有信息，然后在整个组织循环
+Data 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/10/27/DW-1/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -2006,7 +1947,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -2129,12 +2070,20 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
 
 
 
   
 
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+
+    
 
   
 
