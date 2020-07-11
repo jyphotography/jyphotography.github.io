@@ -1,15 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
   
 
 
-<html class="theme-next mist use-motion">
+<html class="theme-next muse use-motion" lang="en">
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
 
 
 
@@ -27,45 +34,38 @@
 
 
 
-  
-  
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
   
   
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
 
 
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
 
 
   <meta name="keywords" content="Hexo, NexT" />
@@ -75,11 +75,6 @@
 
 
   <link rel="alternate" href="/atom.xml" title="JY" type="application/atom+xml" />
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
 
 
 
@@ -95,31 +90,39 @@
 
 
 
-<script type="text/javascript" id="hexo.configuration">
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"post"},
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
-    motion: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
       author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
 
 
-
   <link rel="canonical" href="https://jyphotography.github.io/"/>
 
 
-  <title> JY </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-</head>
 
-<body itemscope itemtype="//schema.org/WebPage" lang="en">
 
+
+  <title>JY</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -129,38 +132,43 @@
 
 
 
+</head>
 
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
 
   
   
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">JY</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">JY</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
   </div>
-  <p class="site-subtitle"></p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -180,8 +188,18 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
+          <a href="/categories/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
@@ -190,45 +208,24 @@
         </li>
       
         
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            About
+            Archives
           </a>
         </li>
       
 
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            Search
-          </a>
-        </li>
       
     </ul>
   
 
   
-    <div class="site-search">
-      
-  <div class="popup">
- <span class="search-icon fa fa-search"></span>
- <input type="text" id="local-search-input">
- <div id="local-search-result"></div>
- <span class="popup-btn-close">close</span>
-</div>
-
-
-    </div>
-  
 </nav>
+
+
 
  </div>
     </header>
@@ -243,13 +240,27 @@
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jyphotography.github.io/2017/08/07/ml-7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jason Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JY">
+    </span>
 
     
       <header class="post-header">
@@ -257,27 +268,27 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2017/08/07/ml-7/" itemprop="url">
-                  机器学习 Week7 - Coursera Machine Learning
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2017/08/07/ml-7/" itemprop="url">机器学习 Week7 - Coursera Machine Learning</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2017-08-07T22:24:11-04:00" content="2017-08-07">
-              2017-08-07
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-07T22:24:11-04:00">
+                2017-08-07
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -287,16 +298,21 @@
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -305,28 +321,42 @@
       
         
           
-          支持向量机 （Support Vector Machine）SVM 是非常强大且流行的算法。 在一些情况下， 能面向一些复杂的非线性问题提供更加简洁的解决方案
-Large Margin Classification优化目标 (Optimization Objective)在logistic regr
-          ...
+            <h1 id="支持向量机-（Support-Vector-Machine）"><a href="#支持向量机-（Support-Vector-Machine）" class="headerlink" title="支持向量机 （Support Vector Machine）"></a>支持向量机 （Support Vector Machine）</h1><p>SVM 是非常强大且流行的算法。 在一些情况下， 能面向一些复杂的非线性问题提供更加简洁的解决方案</p>
+<h1 id="Large-Margin-Classification"><a href="#Large-Margin-Classification" class="headerlink" title="Large Margin Classification"></a>Large Margin Classification</h1><h2 id="优化目标-Optimization-Objective"><a href="#优化目标-Optimization-Objective" class="headerlink" title="优化目标 (Optimization Objective)"></a>优化目标 (Optimization Objective)</h2><p>在logistic regression中<br><img src="/media/15021603313667.jpg" alt=""></p>
+<p>分两种情况：</p>
+<ol>
+<li>y = 1 时， 希望h θ (x)预测的值尽可能接近 1，即希望 z=θ T X 尽可能地大</li>
+<li>y= 0 时，希望假设 h θ (x)预测的值尽可能接近 0，即希望 z=θ T X 尽可能地小</li>
+</ol>
+<p>代价函数中， 把原来的曲线变成2段折线：<br><img src="/media/15021606211374.jpg" alt=""></p>
+<ol>
+<li>当 y=1 时， 我们希望构建新的代价函数如 cost 1 (z)所示，当 z&gt;=1 时，cost 1 (z)=0</li>
+<li>当 y=0 时，我们希望构建新的代价函数如 cost 0 (z)所示，当 z&lt;=-1 时，cost 0 (z)=0</li>
+</ol>
+<p>###SVM的代价函数<br><img src="/media/15021611240699.jpg" alt=""></p>
+<p>注意到，我们给出的支持向量机假设在预测时是以 z 与 0 的大小关系作为依据的，然而在训练函数时，我们是以正负 1 为依据的，这是支持向量机与逻辑回归的一个关键区别,且导致了下面要介绍的支持向量机的特性。</p>
+<h2 id="最大间隔分解"><a href="#最大间隔分解" class="headerlink" title="最大间隔分解"></a>最大间隔分解</h2><p>支持向量机有的时候也被称为最大间隔分类器（Large Margin Classifier），其原因是：支持向量机可以尝试发现一个与样本数据集之间有着最大间隔的判定边界。</p>
+<p><img src="/media/15021627741287.jpg" alt=""></p>
+<p>下图是一个可以用直线来区分的分类问题示例，图中绿色和洋红色的两条线代表着两条逻辑回归的判定边界，而黑色的线代表的则是支持向量机的判定边界，从图上看出黑色的线似乎是更合理的，蓝色的两条线代表的是支持向量机的判定边界与样本数据之间的间隔。</p>
+<p>判定边界与样本数据之间间隔最大并不总是好事。 C值越大，就会变成粉红色，对outlier敏感，overfittting，反之亦然。<br><img src="/media/15021627872695.jpg" alt=""></p>
 
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/08/07/ml-7/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
+          
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -336,6 +366,10 @@ Large Margin Classification优化目标 (Optimization Objective)在logistic regr
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -343,13 +377,27 @@ Large Margin Classification优化目标 (Optimization Objective)在logistic regr
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jyphotography.github.io/2017/07/27/ml-6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jason Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JY">
+    </span>
 
     
       <header class="post-header">
@@ -357,27 +405,27 @@ Large Margin Classification优化目标 (Optimization Objective)在logistic regr
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2017/07/27/ml-6/" itemprop="url">
-                  机器学习 Week6 - Coursera Machine Learning
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2017/07/27/ml-6/" itemprop="url">机器学习 Week6 - Coursera Machine Learning</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2017-07-27T09:36:08-04:00" content="2017-07-27">
-              2017-07-27
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-27T09:36:08-04:00">
+                2017-07-27
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -387,16 +435,21 @@ Large Margin Classification优化目标 (Optimization Objective)在logistic regr
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -405,37 +458,100 @@ Large Margin Classification优化目标 (Optimization Objective)在logistic regr
       
         
           
-          机器学习应用建议评估学习算法决定下一步做什么当我们遇到预测错误的情况时，我们可以：
+            <h1 id="机器学习应用建议"><a href="#机器学习应用建议" class="headerlink" title="机器学习应用建议"></a>机器学习应用建议</h1><h2 id="评估学习算法"><a href="#评估学习算法" class="headerlink" title="评估学习算法"></a>评估学习算法</h2><h3 id="决定下一步做什么"><a href="#决定下一步做什么" class="headerlink" title="决定下一步做什么"></a>决定下一步做什么</h3><p>当我们遇到预测错误的情况时，我们可以：</p>
+<ol>
+<li>增加训练样本（代价较大）</li>
+<li>减少特征数量</li>
+<li>增加新的特征</li>
+<li>尝试用多项式特征</li>
+<li>增加或减少lamda</li>
+</ol>
+<h3 id="评估假设（Evaluating-a-Hypothesis"><a href="#评估假设（Evaluating-a-Hypothesis" class="headerlink" title="评估假设（Evaluating a Hypothesis)"></a>评估假设（Evaluating a Hypothesis)</h3><p>通常把数据分成两类(随机洗牌)：</p>
+<ol>
+<li>Training set - 70%</li>
+<li>Test set - 30%</li>
+</ol>
+<p>对于这两类数据集：</p>
+<ol>
+<li>计算$\theta$ 然后使 $J_{train}(\Theta)$最小</li>
+<li>计算test set的错误 $J_{test}(\Theta)$</li>
+</ol>
+<p>具体 Test Set 评估：</p>
+<ol>
+<li>线性回归-test set的代价函数J</li>
+<li>分类问题：<br> a.代价函数<br> b.错误分类比<br> <img src="/media/15011633470794.jpg" alt=""></li>
+</ol>
+<h3 id="模型选择-训练／验证／测试"><a href="#模型选择-训练／验证／测试" class="headerlink" title="模型选择 - 训练／验证／测试"></a>模型选择 - 训练／验证／测试</h3><p>多项式的模型用在train set的结果往往比较好， 但不一定好用在test set上。</p>
+<p>把数据集分成3类：</p>
+<ol>
+<li>60% 训练</li>
+<li>20% 交叉检验(cross validation)</li>
+<li>20%  测试</li>
+</ol>
+<p>方法如下：</p>
+<ol>
+<li>用train set找到每一个多项式最佳的$\theta$</li>
+<li>找到交叉检验中 test error最小的多项式</li>
+<li>最后用test set得出推广误差</li>
+</ol>
+<h2 id="Bias-amp-Variance"><a href="#Bias-amp-Variance" class="headerlink" title="Bias &amp; Variance"></a>Bias &amp; Variance</h2><h3 id="诊断-Bias-还是-Variance"><a href="#诊断-Bias-还是-Variance" class="headerlink" title="诊断 Bias 还是 Variance"></a>诊断 Bias 还是 Variance</h3><p><strong>高bias - 欠拟合</strong><br>Train和CV的cost function都很高并且相近<br><img src="/media/15014421524167.jpg" alt=""></p>
+<p><strong>高Variance- 过拟合</strong><br>Train的cost function偏低，但是cv的cost function远大于train的。</p>
+<p><img src="/media/15014422749257.jpg" alt=""></p>
+<p>对于训练集，当 d 较小时，模型拟合程度更低，误差较大；随着 d 的增长，拟合程度提高，误差减小。</p>
+<p>对于交叉验证集，当 d 较小时，模型拟合程度低，误差较大；但是随着 d 的增长，误差呈现先减小后增大的趋势，转折点是我们的模型开始过拟合训练数据集的时候。<br><img src="/media/15014420881976.jpg" alt=""></p>
+<h3 id="归一化-和-bias／variance"><a href="#归一化-和-bias／variance" class="headerlink" title="归一化 和 bias／variance"></a>归一化 和 bias／variance</h3><p>lamda越大- 高bias<br>lamda越小 - 高variance<br><img src="/media/15014425582348.jpg" alt=""></p>
+<p>lamda通常是在0-10中测试呈现 2 倍关系的值（如：0,0.01,0.02,0.04,0.08,0.15,0.32,0.64,1.28,2.56,5.12,10 共 12 个）</p>
+<h3 id="学习曲线-Learning-Curve"><a href="#学习曲线-Learning-Curve" class="headerlink" title="学习曲线 (Learning Curve)"></a>学习曲线 (Learning Curve)</h3><p>学习曲线是学习算法的一个很好的合理检验（sanity check）。学习曲线是将训练集误差和交叉验证集误差作为训练集实例数量（m）的函数绘制的图表</p>
+<p>High Bias/ Underfit 提高数据量不会改变误差率<br><img src="/media/15014427926107.jpg" alt=""></p>
+<p>High Variance / Overfit 提高数据量能提高效果<br><img src="/media/15014428036443.jpg" alt=""></p>
+<h3 id="下一步做什么"><a href="#下一步做什么" class="headerlink" title="下一步做什么"></a>下一步做什么</h3><ol>
+<li>获得更多数据量 - high variance </li>
+<li>减少特征数量 - high variance</li>
+<li>增加特征数量 - high bias</li>
+<li>增加多项式 - high bias</li>
+<li>增加lamda - high variance</li>
+<li>减少lamda -  high bias</li>
+</ol>
+<p>神经网络中- 参数越大-high variance过拟合。 通常使用大参数和归一化的模型。<br>通常从一层开始，增加hidden layer查看效果。</p>
+<h2 id="机器学习系统设计"><a href="#机器学习系统设计" class="headerlink" title="机器学习系统设计"></a>机器学习系统设计</h2><h3 id="首要工作"><a href="#首要工作" class="headerlink" title="首要工作"></a>首要工作</h3><p>例子： 垃圾邮件分类器</p>
+<p>我们首先要做的决定是如何选择并表达特征向量 x。我们可以选择一个由 100 个最常出现在垃圾邮件中的词所构成的列表，根据这些词是否有在邮件中出现，来获得我们的特征向量（出现为 1，不出现为 0），尺寸为 100×1。</p>
+<p><img src="/media/15014436873247.jpg" alt=""></p>
+<ol>
+<li>获取更多的数据</li>
+<li>开发更复杂的特征 （邮件的开头）</li>
+<li>开发算法（检查错别字）</li>
+</ol>
+<h3 id="误差分析-（Error-Analysis）"><a href="#误差分析-（Error-Analysis）" class="headerlink" title="误差分析 （Error Analysis）"></a>误差分析 （Error Analysis）</h3><ol>
+<li>简单的算法， 并用cross validaiton测试结果</li>
+<li>绘制学习曲线，判断是否需要更多的数据</li>
+<li>手动检查错误，是否有trend</li>
+</ol>
+<p>用单一标准量化错误能帮组你更好的改进模型的方法<img src="/media/15014440608589.jpg" alt=""></p>
+<h2 id="处理偏差数据"><a href="#处理偏差数据" class="headerlink" title="处理偏差数据"></a>处理偏差数据</h2><p>在这种偏差很大的数据集里， 我们不能直接用accuracy来衡量结果</p>
+<p>实际结果 ： True ／False<br>预测结果： Positive / Negative</p>
+<p>Precision = TP / (TP + FP)<br>在我们预测postive的结果中的正确率</p>
+<p>Recall = TP / (TP + FN)<br>在所有true的结果中，我们预测中了多少<br><img src="/media/15014441498607.jpg" alt=""></p>
+<h3 id="Precision-和-Recall-的权衡"><a href="#Precision-和-Recall-的权衡" class="headerlink" title="Precision 和 Recall 的权衡"></a>Precision 和 Recall 的权衡</h3><p>通常在判断结果中我们会计算一个概率然后用到阀值cut off来判断结果的取向。</p>
+<p>如果cut off越大， 我们的Precision正确率会高，但是Recall查全率会下降。</p>
+<p>这时候我们会引进一饿F1 score来衡量这两者的关系<img src="/media/15014446312069.jpg" alt=""><br>然后选择F1score最大的阀值</p>
 
-增加训练样本（代价较大）
-减少特征数量
-增加新的特征
-尝试用多项式特征
-增加或减少lamda
-
-评估假设（Evaluating a Hypothesis)通常把数据分成两类(随机洗牌)：
-
-Training set
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/07/27/ml-6/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
+          
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -445,6 +561,10 @@ Training set
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -452,13 +572,27 @@ Training set
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jyphotography.github.io/2017/07/27/ml-5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jason Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JY">
+    </span>
 
     
       <header class="post-header">
@@ -466,27 +600,27 @@ Training set
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2017/07/27/ml-5/" itemprop="url">
-                  ml-5
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2017/07/27/ml-5/" itemprop="url">ml-5</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2017-07-27T09:36:03-04:00" content="2017-07-27">
-              2017-07-27
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-27T09:36:03-04:00">
+                2017-07-27
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -496,16 +630,21 @@ Training set
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -514,27 +653,24 @@ Training set
       
         
           
+            
           
-          
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/07/27/ml-5/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -544,6 +680,10 @@ Training set
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -551,13 +691,27 @@ Training set
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jyphotography.github.io/2017/07/16/ml-4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jason Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JY">
+    </span>
 
     
       <header class="post-header">
@@ -565,27 +719,27 @@ Training set
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2017/07/16/ml-4/" itemprop="url">
-                  机器学习 Week4 - Coursera Machine Learning
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2017/07/16/ml-4/" itemprop="url">机器学习 Week4 - Coursera Machine Learning</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2017-07-16T14:34:48-04:00" content="2017-07-16">
-              2017-07-16
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-16T14:34:48-04:00">
+                2017-07-16
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -595,16 +749,21 @@ Training set
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -613,28 +772,44 @@ Training set
       
         
           
-          神经网络（Neural Network）动机（Motivation）非线形假设（Non-linear Hypothesis）如果有非常多的特征来构建多项式方程，即使两两组合的特征就会非常大， 不便于计算
-例子： 通过图片像素判断汽车。 即使是50*50 像素的图片， 如果加入两两组合的特征， 就会多
-          ...
+            <h1 id="神经网络（Neural-Network）"><a href="#神经网络（Neural-Network）" class="headerlink" title="神经网络（Neural Network）"></a>神经网络（Neural Network）</h1><h2 id="动机（Motivation）"><a href="#动机（Motivation）" class="headerlink" title="动机（Motivation）"></a>动机（Motivation）</h2><h3 id="非线形假设（Non-linear-Hypothesis）"><a href="#非线形假设（Non-linear-Hypothesis）" class="headerlink" title="非线形假设（Non-linear Hypothesis）"></a>非线形假设（Non-linear Hypothesis）</h3><p>如果有非常多的特征来构建多项式方程，即使两两组合的特征就会非常大， 不便于计算</p>
+<p>例子： 通过图片像素判断汽车。 即使是50*50 像素的图片， 如果加入两两组合的特征， 就会多将近3百万个特征。</p>
+<h3 id="神经和大脑-Neurons-amp-Brain"><a href="#神经和大脑-Neurons-amp-Brain" class="headerlink" title="神经和大脑 (Neurons &amp; Brain)"></a>神经和大脑 (Neurons &amp; Brain)</h3><p>神经网络的算法来自对大脑学习的模仿。<br><img src="/media/15002307389945.jpg" alt=""></p>
+<h2 id="神经网络（Neural-Network）-1"><a href="#神经网络（Neural-Network）-1" class="headerlink" title="神经网络（Neural Network）"></a>神经网络（Neural Network）</h2><h3 id="模型表达"><a href="#模型表达" class="headerlink" title="模型表达"></a>模型表达</h3><p>每一个神经元都可以被认为是一个处理单元/神经核（processing unit/ Nucleus），它含有许多输入/树突input/Dendrite），并且有一个输出／轴突（output/Axon）。神经网络是大量神经元相互链接并通过电脉冲来交流的一个网络。<br><img src="/media/15002312053088.jpg" alt=""></p>
+<h4 id="神经网络模型"><a href="#神经网络模型" class="headerlink" title="神经网络模型"></a>神经网络模型</h4><p>神经网络模型是许多逻辑单元按照不同层级组织起来的网络，每一层的输出变量都是下一层的输入变量。</p>
+<p>简单来说就3部分： 第一层成为输入层（Input Layer），最后一层称为输出层（Output Layer），中间一层成为隐藏层（Hidden Layers）<br><img src="/media/15002314558106.jpg" alt=""></p>
+<h4 id="模型参数"><a href="#模型参数" class="headerlink" title="模型参数"></a>模型参数</h4><p><img src="/media/15002315481678.jpg" alt=""></p>
+<p>$a_i^{(j)}$ 表示第j层的第i个激活单元(activation unit)</p>
+<p>$\Theta^{(j)}$ 代表从第 j 层映射到第 j+1 层时的权重的矩阵</p>
+<p><strong>例如</strong>: $\Theta^{(1)}$代表从第一层映射到第二层的权重的矩阵。其尺寸为：以第 j 层的激活单元数量为行数，以第 j+1 层的激活单元数为列数的矩阵。</p>
+<p>上图所示的神经网络中的$\Theta^{(1)}$尺寸为 4*3。</p>
+<p><img src="/media/15002319043451.jpg" alt=""></p>
+<h3 id="正向传播-FORWARD-PROPAGATION"><a href="#正向传播-FORWARD-PROPAGATION" class="headerlink" title="正向传播 (FORWARD PROPAGATION)"></a>正向传播 (FORWARD PROPAGATION)</h3><p>相对与使用循环来编码，利用向量化的方法会使得计算更为简便<br><img src="/media/15002328223012.jpg" alt=""></p>
+<p><img src="/media/15002328312803.jpg" alt=""><br><img src="/media/15002360115525.jpg" alt=""><br><img src="/media/15002360309117.jpg" alt=""></p>
+<h2 id="神经网络示例：二元逻辑运算符（BINARY-LOGICAL-OPERATORS）"><a href="#神经网络示例：二元逻辑运算符（BINARY-LOGICAL-OPERATORS）" class="headerlink" title="神经网络示例：二元逻辑运算符（BINARY LOGICAL OPERATORS）"></a>神经网络示例：二元逻辑运算符（BINARY LOGICAL OPERATORS）</h2><p><img src="/media/15002366564300.jpg" alt=""></p>
+<p>假设 $\theta$值如下：<br><img src="/media/15002366652054.jpg" alt=""></p>
+<p>可以被视为作用同于逻辑与（AND）<br><img src="/media/15002367156197.jpg" alt=""></p>
+<p><img src="/media/15002371046938.jpg" alt=""></p>
+<h3 id="多类分类-（Multiclass-Classification）"><a href="#多类分类-（Multiclass-Classification）" class="headerlink" title="多类分类 （Multiclass Classification）"></a>多类分类 （Multiclass Classification）</h3><p>如果我们要训练一个神经网络算法来识别路人、汽车、摩托车和卡车，在输出层我们应该有 4个值。例如，第一个值为 1 或 0 用于预测是否是行人，第二个值用于判断是否为汽车。</p>
+<p><img src="/media/15002372779052.jpg" alt=""></p>
 
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/07/16/ml-4/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
+          
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -644,6 +819,10 @@ Training set
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -651,13 +830,27 @@ Training set
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jyphotography.github.io/2017/07/08/ml-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jason Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JY">
+    </span>
 
     
       <header class="post-header">
@@ -665,27 +858,27 @@ Training set
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2017/07/08/ml-3/" itemprop="url">
-                  机器学习 Week3 - Coursera Machine Learning
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2017/07/08/ml-3/" itemprop="url">机器学习 Week3 - Coursera Machine Learning</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2017-07-08T13:16:45-04:00" content="2017-07-08">
-              2017-07-08
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-08T13:16:45-04:00">
+                2017-07-08
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -695,16 +888,21 @@ Training set
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -713,337 +911,70 @@ Training set
       
         
           
-          逻辑回归 0/1 分类问题分类分类问题并不是一个简单的线性问题。
-分类问题建模人们定义了逻辑回归来完成 0/1 分类问题，逻辑一词也代表了是（1）和非（0）。
-逻辑回归目的：把预测函数限制在一个范围  $0 \leq h_\theta (x) \leq 1$
-逻辑回归的假设：  $h_\theta 
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/07/08/ml-3/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/07/04/ml-2/" itemprop="url">
-                  机器学习 Week2 - Coursera Machine Learning
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2017-07-04T15:12:12-04:00" content="2017-07-04">
-              2017-07-04
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          多元线性回归多元特征公式： $$h_\theta (x) = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + \theta_3 x_3 + \cdots + \theta_n x_n $$
-向量化： 我们可以看成矩阵相乘：
-多元特征的梯度下降和week1二元类似，也
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/07/04/ml-2/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/07/01/ml-1/" itemprop="url">
-                  机器学习 Week1 - Coursera Machine Learning
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2017-07-01T18:09:09-04:00" content="2017-07-01">
-              2017-07-01
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          介绍什么是机器学习？“A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance a
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/07/01/ml-1/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/28/DM7-1/" itemprop="url">
-                  DM7
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-11-28T18:07:06-05:00" content="2016-11-28">
-              2016-11-28
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          
+            <h1 id="逻辑回归-0-1-分类问题"><a href="#逻辑回归-0-1-分类问题" class="headerlink" title="逻辑回归 0/1 分类问题"></a>逻辑回归 0/1 分类问题</h1><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p>分类问题并不是一个简单的线性问题。<br><img src="/media/14995354468627.jpg" alt=""></p>
+<h2 id="分类问题建模"><a href="#分类问题建模" class="headerlink" title="分类问题建模"></a>分类问题建模</h2><p>人们定义了逻辑回归来完成 0/1 分类问题，逻辑一词也代表了<strong>是（1）</strong>和<strong>非（0）</strong>。</p>
+<h3 id="逻辑回归"><a href="#逻辑回归" class="headerlink" title="逻辑回归"></a>逻辑回归</h3><p><strong>目的</strong>：把预测函数限制在一个范围  $0 \leq h_\theta (x) \leq 1$</p>
+<p>逻辑回归的假设：  $h_\theta (x) = g ( \theta^T x ) $<br>g就是逻辑函数（sigmoid函数）$g(z) = \dfrac{1}{1 + e^{-z}}$ 下图为这个函数的图像：</p>
+<p><img src="/media/14995356822096.png" alt=""></p>
+<p>$h_\theta(x)$ 会给我们输出变量=1的<strong>概率</strong></p>
+<p><img src="http://latex.codecogs.com/gif.latex?%5Cbegin%7Balign*%7D%26%20h_%5Ctheta%28x%29%20%3D%20P%28y%3D1%20%7C%20x%20%3B%20%5Ctheta%29%20%3D%201%20-%20P%28y%3D0%20%7C%20x%20%3B%20%5Ctheta%29%20%5Cnewline%26%20P%28y%20%3D%200%20%7C%20x%3B%5Ctheta%29%20&plus;%20P%28y%20%3D%201%20%7C%20x%20%3B%20%5Ctheta%29%20%3D%201%5Cend%7Balign*%7D" alt=""></p>
+<p>例子： 如果$h_\theta(x)$=0.7， 那么表示有70%的概率结果为1， 30%的概率结果为0</p>
+<h2 id="判定边界（DECISION-BOUNDARY）"><a href="#判定边界（DECISION-BOUNDARY）" class="headerlink" title="判定边界（DECISION BOUNDARY）"></a>判定边界（DECISION BOUNDARY）</h2><p>为了获得0和1，我们可以设置一个边界来判断，例如边界=0.5<br><img src="http://latex.codecogs.com/gif.latex?%5Cbegin%7Balign*%7D%26%20h_%5Ctheta%28x%29%20%5Cgeq%200.5%20%5Crightarrow%20y%20%3D%201%20%5Cnewline%26%20h_%5Ctheta%28x%29%20%3C%200.5%20%5Crightarrow%20y%20%3D%200%20%5Cnewline%5Cend%7Balign*%7D" alt=""></p>
+<p>根据上面绘制出的 S 形函数图像，我们知道当<br>$$\begin{align<em>}z=0, e^{0}=1 \Rightarrow g(z)=1/2\newline z \to \infty, e^{-\infty} \to 0 \Rightarrow g(z)=1 \newline z \to -\infty, e^{\infty}\to \infty \Rightarrow g(z)=0 \end{align</em>}$$</p>
+<p>又因为 函数g的输入是 $\theta^T x$<br>$$\begin{align<em>}&amp; h_\theta(x) = g(\theta^T x) \geq 0.5 \newline&amp; when \; \theta^T x \geq 0\end{align</em>}$$</p>
+<p>所以 我们可以这样作出判断<br>$$\begin{align<em>}&amp; \theta^T x \geq 0 \Rightarrow y = 1 \newline&amp; \theta^T x &lt; 0 \Rightarrow y = 0 \newline\end{align</em>}$$</p>
+<p>例子：我们知道这个是以5为边界， 小于等于5的y=1， 大于5的y=0</p>
+<p>$$\begin{align<em>}&amp; \theta = \begin{bmatrix}5 \newline -1 \newline 0\end{bmatrix} \newline &amp; y = 1 \; if \; 5 + (-1) x_1 + 0 x_2 \geq 0 \newline &amp; 5 - x_1 \geq 0 \newline &amp; - x_1 \geq -5 \newline&amp; x_1 \leq 5 \newline \end{align</em>}$$<br>注意的是 $\theta^T X$不一定要线性，多元方程也一样<br><img src="/media/14995398930593.jpg" alt=""></p>
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
 
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
 
+<h1 id="逻辑回归模型"><a href="#逻辑回归模型" class="headerlink" title="逻辑回归模型"></a>逻辑回归模型</h1><h3 id="代价函数-（Cost-Function）"><a href="#代价函数-（Cost-Function）" class="headerlink" title="代价函数 （Cost Function）"></a>代价函数 （Cost Function）</h3><p>我们不能用线性回归的代价函数去解决逻辑回归的代价函数， 原因是我们会得到一个非凸函数（non-convex function） 这样的函数有许多局部最小值，却无法找到真正最小值。<br><img src="/media/14996399776898.jpg" alt=""></p>
+<p><strong>逻辑回归的代价函数</strong><br>$$\begin{align<em>}&amp; J(\theta) = \dfrac{1}{m} \sum_{i=1}^m \mathrm{Cost}(h_\theta(x^{(i)}),y^{(i)}) \newline &amp; \mathrm{Cost}(h_\theta(x),y) = -\log(h_\theta(x)) \; &amp; \text{if y = 1} \newline &amp; \mathrm{Cost}(h_\theta(x),y) = -\log(1-h_\theta(x)) \; &amp; \text{if y = 0}\end{align</em>}$$</p>
+<p><img src="/media/14996400719298.jpg" alt=""></p>
+<p>具体来说： 当y=1的时候，如果$h_\theta$也为1的时候，这样误差为0， 反之误差会趋向极限。</p>
+<h2 id="简化代价函数和梯度下降"><a href="#简化代价函数和梯度下降" class="headerlink" title="简化代价函数和梯度下降"></a>简化代价函数和梯度下降</h2><p>代价函数也可以在一行显示：<br>$$\mathrm{Cost}(h_\theta(x),y) = - y \; \log(h_\theta(x)) - (1 - y) \log(1 - h_\theta(x))$$<br><img src="/media/14996403311466.jpg" alt=""></p>
+<p>向量化：<br>$$\begin{align<em>} &amp; h = g(X\theta)\newline &amp; J(\theta) = \frac{1}{m} \cdot \left(-y^{T}\log(h)-(1-y)^{T}\log(1-h)\right) \end{align</em>}$$</p>
+<h3 id="梯度下降"><a href="#梯度下降" class="headerlink" title="梯度下降"></a>梯度下降</h3><p><img src="/media/14996421954042.jpg" alt=""></p>
+<p>求导之后：<br><img src="/media/14996422095036.jpg" alt=""><br>我们需要同时更新所有theta</p>
+<h2 id="高级优化"><a href="#高级优化" class="headerlink" title="高级优化"></a>高级优化</h2><p>除了梯度下降算法以外还有一些常被用来令代价函数最小的算法，这些算法更加复杂和优越，而且通常不需要人工选择学习率，通常比梯度下降算法要更加快速。</p>
+<p>这些算法有：<strong>共轭梯度</strong>（Conjugate Gradient）,<strong>局部优化法</strong>(Broyden fletcher goldfarb shann,BFGS)和<strong>有限内存局部优化法</strong>(LBFGS)</p>
+<p>fminunc 是 matlab 和 octave 中都带的一个最小值优化函数，使用时我们需要提供代价函数</p>
+<p>和每个参数的求导，下面是 octave 中使用 fminunc 函数的代码示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function [jVal, gradient] = costFunction(theta)</div><div class="line">  jVal = [...code to compute J(theta)...];</div><div class="line">  gradient = [...code to compute derivative of J(theta)...];</div><div class="line">end</div><div class="line"></div><div class="line">options = optimset(&apos;GradObj&apos;, &apos;on&apos;, &apos;MaxIter&apos;, 100);</div><div class="line">initialTheta = zeros(2,1);</div><div class="line">   [optTheta, functionVal, exitFlag] = fminunc(@costFunction, initialTheta, options);</div></pre></td></tr></table></figure>
+<p>#多类分类（Multiclass Classification）<br><strong>一对多</strong> （one-vs-all）<br>方法是将多类分类问题转化成二元分类问题。在我们需要做预测时，我们将所有的分类机都运行一遍，然后对每一个输入变量，都选择最高可能性的输出变量。<br>$\begin{align<em>}&amp; y \in \lbrace0, 1 … n\rbrace \newline&amp; h_\theta^{(0)}(x) = P(y = 0 | x ; \theta) \newline&amp; h_\theta^{(1)}(x) = P(y = 1 | x ; \theta) \newline&amp; \cdots \newline&amp; h_\theta^{(n)}(x) = P(y = n | x ; \theta) \newline&amp; \mathrm{prediction} = \max_i( h_\theta ^{(i)}(x) )\newline\end{align</em>}$</p>
+<p><img src="/media/14996430959512.jpg" alt=""></p>
+<h1 id="归一化-（Regularization）"><a href="#归一化-（Regularization）" class="headerlink" title="归一化 （Regularization）"></a>归一化 （Regularization）</h1><h2 id="过拟合-Overfitting"><a href="#过拟合-Overfitting" class="headerlink" title="过拟合 Overfitting"></a>过拟合 Overfitting</h2><p>能非常好的拟合训练数据集， 但是不能推广到新的数据集（测试数据）</p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><ol>
+<li>丢弃一些特征</li>
+<li>保留所有特征，但是减少参数的大小 （magnitude）</li>
+</ol>
+<h2 id="归一化代价函数"><a href="#归一化代价函数" class="headerlink" title="归一化代价函数"></a>归一化代价函数</h2><p>如果要减少一些$\theta$, 就在前面乘一个系数来进行惩罚， 以减少这些变量对最终结果的影响。<br><img src="/media/14999705107402.jpg" alt=""><br>公式中的lamda呦成为归一化系数(Regularization Parameter)<br><img src="/media/14999706387609.jpg" alt=""><br>如果lamda太大， 会造成模型欠拟合</p>
+<h2 id="归一化线性回归-（Regularized-Linear-Regression）"><a href="#归一化线性回归-（Regularized-Linear-Regression）" class="headerlink" title="归一化线性回归 （Regularized Linear Regression）"></a>归一化线性回归 （Regularized Linear Regression）</h2><h3 id="梯度下降-1"><a href="#梯度下降-1" class="headerlink" title="梯度下降"></a>梯度下降</h3><p>我们把$\theta_0$分开，因为我们不想惩罚它。<br><img src="/media/14999712979043.jpg" alt=""><br>简化后：<br><img src="/media/14999713451825.jpg" alt=""><br>因为（1-$\alpha*lamda/m$)总是小于1， 所以每次更新都会减少$\theta_j$的值。</p>
+<h3 id="正规方程"><a href="#正规方程" class="headerlink" title="正规方程"></a>正规方程</h3><p>和之前的正规方程不同的是， 我们加入了lamda这一项<br><img src="/media/14999715332737.jpg" alt=""></p>
+<h2 id="归一化逻辑回归-Regularized-Logistic-Regression"><a href="#归一化逻辑回归-Regularized-Logistic-Regression" class="headerlink" title="归一化逻辑回归 (Regularized Logistic Regression)"></a>归一化逻辑回归 (Regularized Logistic Regression)</h2><p>给代价函数增加一个归一化表达式<br><img src="/media/14999717313128.jpg" alt=""></p>
+<h3 id="梯度下降-2"><a href="#梯度下降-2" class="headerlink" title="梯度下降"></a>梯度下降</h3><p><img src="/media/14999718067407.jpg" alt=""></p>
 
-
-underfit
-overfit
-KDE is non-parametric like KNNusually no equation(com
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/28/DM7-1/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
+          
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -1053,6 +984,10 @@ KDE is non-parametric like KNNusually no equation(com
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1060,13 +995,27 @@ KDE is non-parametric like KNNusually no equation(com
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jyphotography.github.io/2017/07/04/ml-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jason Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JY">
+    </span>
 
     
       <header class="post-header">
@@ -1074,27 +1023,27 @@ KDE is non-parametric like KNNusually no equation(com
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2016/11/18/DM7/" itemprop="url">
-                  DM7
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2017/07/04/ml-2/" itemprop="url">机器学习 Week2 - Coursera Machine Learning</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-11-18T09:09:57-05:00" content="2016-11-18">
-              2016-11-18
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-04T15:12:12-04:00">
+                2017-07-04
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -1104,16 +1053,21 @@ KDE is non-parametric like KNNusually no equation(com
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1122,29 +1076,55 @@ KDE is non-parametric like KNNusually no equation(com
       
         
           
-          Density estimation没有目标估计
-最简单的是： 直方图
-KDE 核密度分析来估计未知的密度函数，属於非参数检验方法之一直方图的最大的一个问题是，组距和组数的选择对最终可视化的结果可能会产生负面的效果。现在我们看一下上图右上角。图中可以看到对于相同的数据，当采用适当的组距和组数时，左右
-          ...
+            <h1 id="多元线性回归"><a href="#多元线性回归" class="headerlink" title="多元线性回归"></a>多元线性回归</h1><h2 id="多元特征"><a href="#多元特征" class="headerlink" title="多元特征"></a>多元特征</h2><p>公式： $$h_\theta (x) = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + \theta_3 x_3 + \cdots + \theta_n x_n $$</p>
+<p>向量化： 我们可以看成矩阵相乘：<br><img src="/media/14992003482081.jpg" alt=""></p>
+<h2 id="多元特征的梯度下降"><a href="#多元特征的梯度下降" class="headerlink" title="多元特征的梯度下降"></a>多元特征的梯度下降</h2><p>和week1二元类似，也是需要同时更新所有$\theta$知道收敛<br>$$\begin{align<em>}&amp; \text{repeat until convergence:} \; \lbrace \newline \; &amp; \theta_j := \theta_j - \alpha \frac{1}{m} \sum\limits_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_j^{(i)} \; &amp; \text{for j := 0…n}\newline \rbrace\end{align</em>}$$</p>
+<h2 id="梯度下降-特征缩放-（Feature-Scaling）"><a href="#梯度下降-特征缩放-（Feature-Scaling）" class="headerlink" title="梯度下降-特征缩放 （Feature Scaling）"></a>梯度下降-特征缩放 （Feature Scaling）</h2><p>确保所有特征在一个相近的范围内， 这样收敛的速度大大增加</p>
+<p><img src="/media/14991969758509.jpg" alt=""></p>
+<h3 id="均值归一化-（Mean-Normalization）"><a href="#均值归一化-（Mean-Normalization）" class="headerlink" title="均值归一化 （Mean Normalization）"></a>均值归一化 （Mean Normalization）</h3><p>$$x_i := \dfrac{x_i - \mu_i}{s_i}$$<br>$\mu_i$是这个特征的平均数<br>$s_i$是这个特征的范围（最大-最小）</p>
+<p>例子： $x_i$表示房价范围¥100-¥2000， 平均房价¥1000<br>$$x_i := \dfrac{price-1000}{1900}$$</p>
+<h2 id="梯度下降-学习速率（Learning-Rate）"><a href="#梯度下降-学习速率（Learning-Rate）" class="headerlink" title="梯度下降-学习速率（Learning Rate）"></a>梯度下降-学习速率（Learning Rate）</h2><h3 id="确保梯度下降正确"><a href="#确保梯度下降正确" class="headerlink" title="确保梯度下降正确"></a>确保梯度下降正确</h3><p>如果正确J(θ)应该一直减小</p>
+<p><img src="/media/14991986136032.jpg" alt=""></p>
+<p>总的来说：</p>
+<ol>
+<li>$\alpha$太小-&gt;收敛慢</li>
+<li>$\alpha$太大-&gt;可能无法收敛</li>
+</ol>
+<h2 id="特征和多项式回归"><a href="#特征和多项式回归" class="headerlink" title="特征和多项式回归"></a>特征和多项式回归</h2><p>我们可以把不同的特征组合起来<br><strong>组合</strong>： 例如把$x_1$和$x_2$乘起来组合成新特征$x_3$</p>
+<h3 id="多项式回归"><a href="#多项式回归" class="headerlink" title="多项式回归"></a>多项式回归</h3><p>成本函数不一定要线性，有时候二元活着三元函数更符合。<br>注意：多项式回归时特征缩放很关键</p>
+<p>#计算变量</p>
+<h2 id="正规方程（Normal-Equation）"><a href="#正规方程（Normal-Equation）" class="headerlink" title="正规方程（Normal Equation）"></a>正规方程（Normal Equation）</h2><p>一次性求接出最佳的$\theta$</p>
+<p>公式： $$\theta = (X^T X)^{-1}X^T y$$<br>不需要做特征缩放<br><img src="/media/14992213910911.jpg" alt=""></p>
+<p>与梯度下降的区别：<br><img src="/media/14991996330553.jpg" alt=""><br>梯度下降适合大数据，<br>正规方程适合小数据</p>
+<h2 id="正规方程不可逆（Normal-Equation-Noninvertibility）"><a href="#正规方程不可逆（Normal-Equation-Noninvertibility）" class="headerlink" title="正规方程不可逆（Normal Equation Noninvertibility）"></a>正规方程不可逆（Normal Equation Noninvertibility）</h2><p>可能的原因：</p>
+<ol>
+<li>多余的变量</li>
+<li>太多特征</li>
+</ol>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
 
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/18/DM7/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
+
+          
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -1154,6 +1134,10 @@ KDE 核密度分析来估计未知的密度函数，属於非参数检验方法�
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1161,13 +1145,27 @@ KDE 核密度分析来估计未知的密度函数，属於非参数检验方法�
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jyphotography.github.io/2017/07/01/ml-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jason Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JY">
+    </span>
 
     
       <header class="post-header">
@@ -1175,27 +1173,27 @@ KDE 核密度分析来估计未知的密度函数，属於非参数检验方法�
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2016/11/14/DM6/" itemprop="url">
-                  DM6
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2017/07/01/ml-1/" itemprop="url">机器学习 Week1 - Coursera Machine Learning</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-11-14T20:09:24-05:00" content="2016-11-14">
-              2016-11-14
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-01T18:09:09-04:00">
+                2017-07-01
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -1205,16 +1203,21 @@ KDE 核密度分析来估计未知的密度函数，属於非参数检验方法�
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1223,31 +1226,55 @@ KDE 核密度分析来估计未知的密度函数，属於非参数检验方法�
       
         
           
-           
- model2 is better, cover more data
-binomial model p(1-p)standard errorcomuputing lower confidence level
-Exampleentropy越低越好， 代表信息的集中性
-increase inform
-          ...
+            <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><h2 id="什么是机器学习？"><a href="#什么是机器学习？" class="headerlink" title="什么是机器学习？"></a>什么是机器学习？</h2><p>“A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E.” – Tom Mitchell</p>
+<p>一个计算机程序从一些目标（T）和结果（P）学到的经历（E）。 如果这个程序能随着经历（E）的改进而改进目标（T）的结果（P），那这就是机器学习。</p>
+<p>举例来说： 玩跳棋<br>E = 多次游戏的经历<br>T = 玩象棋<br>P = 下局获胜的概率</p>
+<p>一般来说， 任何机器学习都可以分成两类： 监督学习（Supervised Learning）和非监督学习 （Unsupervised Learning)</p>
+<h2 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h2><p>我们知道正确的结果，找到输入和输出的关系</p>
+<p>监督学习有两类。<br><strong>Regression（回归问题）</strong> 主要用于预测连续变量<br>例子： 预测房价<br><strong>Classification（分类）</strong> 主要用于预测不连续的变量<br>例子： 预测房价是否大于报价</p>
+<h2 id="非监督学习"><a href="#非监督学习" class="headerlink" title="非监督学习"></a>非监督学习</h2><p>在不知道结果的情况下解决问题。<br>通过变量之间的关系进行费雷<br>在非监督学习，我们不能得到预测结果的反馈</p>
+<p>例子: <strong>Clustering (归类)</strong><br>在一百万个基因中根据它们之间的关系或相似程度找到自动分组。</p>
+<p>例子: <strong>Non-clustering (非归类)</strong><br><a href="https://en.wikipedia.org/wiki/Cocktail_party_effect" target="_blank" rel="external">鸡尾酒派对算法</a> - 在吵杂的环境中找到个人的声音</p>
+<h1 id="模型解释"><a href="#模型解释" class="headerlink" title="模型解释"></a>模型解释</h1><p>我们用\(x^i\)表示输入变量， 也叫Feature。 用\(y^i\)表示输出，也就是预测结果</p>
+<p>\((x^i,y^i)\) - 训练样本<br>\((x^i,y^i); i=1,…,m\)； - 训练集</p>
+<p>假设h(x)-<br><img src="/media/14989691452519.jpg" alt=""></p>
+<h2 id="成本函数-（Cost-Function）"><a href="#成本函数-（Cost-Function）" class="headerlink" title="成本函数 （Cost Function）"></a>成本函数 （Cost Function）</h2><p>也称作MSE(Mean Squared Error)<br>用来测量我们函数的正确性-最常用在回归问题上</p>
+<p><img src="http://latex.codecogs.com/gif.latex?J%28%5Ctheta_0%2C%20%5Ctheta_1%29%20%3D%20%5Cdfrac%20%7B1%7D%7B2m%7D%20%5Cdisplaystyle%20%5Csum%20_%7Bi%3D1%7D%5Em%20%5Cleft%20%28%20%5Chat%7By%7D_%7Bi%7D-%20y_%7Bi%7D%20%5Cright%29%5E2%20%3D%20%5Cdfrac%20%7B1%7D%7B2m%7D%20%5Cdisplaystyle%20%5Csum%20_%7Bi%3D1%7D%5Em%20%5Cleft%20%28h_%5Ctheta%20%28x_%7Bi%7D%29%20-%20y_%7Bi%7D%20%5Cright%29%5E2" alt=""><br>（预测值-真实值）的平方和／（样本个数*2）<br><img src="/media/14990106615775.jpg" alt=""></p>
+<p>PS: 公式中除2的原因只是保证这个函数不受样本个数的影响</p>
+<h1 id="参数学习"><a href="#参数学习" class="headerlink" title="参数学习"></a>参数学习</h1><h2 id="梯度下降法-（Gradient-Descent）"><a href="#梯度下降法-（Gradient-Descent）" class="headerlink" title="梯度下降法 （Gradient Descent）"></a>梯度下降法 （Gradient Descent）</h2><p>通过调整成本函数的参数来达到MSE最小</p>
+<p><img src="/media/14990154186760.jpg" alt=""></p>
+<p>假设我们把$\theta_0$和$\theta_1$分别放在x,y轴， 然后用z轴表示我们的成本函数。<br>我们要做的事找到图中最低的点（红箭头）。方法是在成本函数求导数,切线的斜率提供方向，找到最陡的方向进行下降。<br>步子的大小叫做learning rate $\alpha$</p>
+<p><strong>梯度下降公式：</strong><br>$$\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1)$$</p>
+<p>有多个$\theta$的时候要同时更新<br><img src="/media/14991952094389.jpg" alt=""></p>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ol>
+<li><a href="http://www.forkosh.com/mathtextutorial.html" target="_blank" rel="external">Mathjax</a></li>
+<li><a href="http://latex.codecogs.com/eqneditor/editor.php" target="_blank" rel="external">在线数学公式生成器</a></li>
+</ol>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
 
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/14/DM6/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
+
+
+          
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -1257,6 +1284,389 @@ increase inform
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jyphotography.github.io/2016/11/28/DM7-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jason Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JY">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/11/28/DM7-1/" itemprop="url">DM7</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-28T18:07:06-05:00">
+                2016-11-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+<p><img src="/media/14803748563558.jpg" alt=""><br>underfit</p>
+<p><img src="/media/14803748688502.jpg" alt=""><br>overfit</p>
+<p>KDE is non-parametric like KNN<br>usually no equation(complexity)</p>
+<p>最性感的方法<br><img src="/media/14803783091836.jpg" alt=""></p>
+<p>if k= n , the system = 0, useless<br>higher k, higher complexity</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jyphotography.github.io/2016/11/18/DM7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jason Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JY">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/11/18/DM7/" itemprop="url">DM7</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-18T09:09:57-05:00">
+                2016-11-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Density estimation<br>没有目标估计</p>
+<p>最简单的是： 直方图</p>
+<p>KDE 核密度分析<br>来估计未知的密度函数，属於非参数检验方法之一<br><img src="/media/14797707551249.jpg" alt=""><br>直方图的最大的一个问题是，组距和组数的选择对最终可视化的结果可能会产生负面的效果。现在我们看一下上图右上角。图中可以看到对于相同的数据，当采用适当的组距和组数时，左右两个图将完全不同，这会导致数据的不同解释。</p>
+<p>high model complexity -&gt; high variance</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jyphotography.github.io/2016/11/14/DM6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jason Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JY">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/11/14/DM6/" itemprop="url">DM6</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-14T20:09:24-05:00">
+                2016-11-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p> <img src="/media/14791722133938.jpg" alt="-w476"></p>
+<p> model2 is better, cover more data</p>
+<p><img src="/media/14791723288182.jpg" alt="-w457"><br>binomial model p(1-p)<br>standard error<br>comuputing lower confidence level</p>
+<p>Example<br>entropy越低越好， 代表信息的集中性</p>
+<p>increase information gain, decrease entropy</p>
+<p>what if inputs are numeric?<br>variance</p>
+<p>gini</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1289,68 +1699,85 @@ increase inform
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
-               alt="Jason Yang" />
-          <p class="site-author-name" itemprop="name">Jason Yang</p>
-          <p class="site-description motion-element" itemprop="description"></p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/">
-              <span class="site-state-item-count">23</span>
-              <span class="site-state-item-name">posts</span>
-            </a>
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/head.jpg"
+                alt="Jason Yang" />
+            
+              <p class="site-author-name" itemprop="name">Jason Yang</p>
+              <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
           
-            <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">6</span>
-                <span class="site-state-item-name">categories</span>
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
               </a>
             </div>
           
 
           
-            <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">tags</span>
-              
-            </div>
+
+          
           
 
-        </nav>
-
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
-        
-
-        <div class="links-of-author motion-element">
           
+          
+
+          
+
         </div>
-
-        
-        
-
-        
-        
-
       </section>
+
+      
 
       
 
@@ -1364,41 +1791,50 @@ increase inform
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Jason Yang</span>
-</div>
 
-<div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
-</div>
-
-<div class="theme-info">
-  Theme -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
-  </a>
+  
 </div>
 
 
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<br>
-本站总访问量 <span id="busuanzi_value_site_pv"></span> &nbsp&nbsp&nbsp
-您是第<span id="busuanzi_value_site_uv"></span>个来到的小伙伴
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
         
+
+
+
+
+
+
 
         
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
   </div>
 
   
@@ -1421,182 +1857,104 @@ increase inform
 
 
 
-  
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
 
 
 
-  
-  
-
-  
-
-  
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
-
-
-
-  
-
-
-
-  
 
 
 
 
   
   
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length == 0) {
-       search_path = "search.xml";
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
 
-    function proceedsearch() {
-      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
-      $('.popup').toggle();
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
 
-    }
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-    'use strict';
-    $.ajax({
-        url: path,
-        dataType: "xml",
-        async: true,
-        success: function( xmlResponse ) {
-            // get the contents from search data
-            isfetched = true;
-            $('.popup').detach().appendTo('.header-inner');
-            var datas = $( "entry", xmlResponse ).map(function() {
-                return {
-                    title: $( "title", this ).text(),
-                    content: $("content",this).text(),
-                    url: $( "url" , this).text()
-                };
-            }).get();
-            var $input = document.getElementById(search_id);
-            var $resultContent = document.getElementById(content_id);
-            $input.addEventListener('input', function(){
-                var matchcounts = 0;
-                var str='<ul class=\"search-result-list\">';
-                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-                $resultContent.innerHTML = "";
-                if (this.value.trim().length > 1) {
-                // perform local searching
-                datas.forEach(function(data) {
-                    var isMatch = false;
-                    var content_index = [];
-                    var data_title = data.title.trim().toLowerCase();
-                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
-                    var data_url = data.url;
-                    var index_title = -1;
-                    var index_content = -1;
-                    var first_occur = -1;
-                    // only match artiles with not empty titles and contents
-                    if(data_title != '') {
-                        keywords.forEach(function(keyword, i) {
-                            index_title = data_title.indexOf(keyword);
-                            index_content = data_content.indexOf(keyword);
-                            if( index_title >= 0 || index_content >= 0 ){
-                                isMatch = true;
-								if (i == 0) {
-                                    first_occur = index_content;
-                                }
-                            } 
-							
-                        });
-                    }
-                    // show search results
-                    if (isMatch) {
-                        matchcounts += 1;
-                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
-                        var content = data.content.trim().replace(/<[^>]+>/g,"");
-                        if (first_occur >= 0) {
-                            // cut out 100 characters
-                            var start = first_occur - 20;
-                            var end = first_occur + 80;
-                            if(start < 0){
-                                start = 0;
-                            }
-                            if(start == 0){
-                                end = 50;
-                            }
-                            if(end > content.length){
-                                end = content.length;
-                            }
-                            var match_content = content.substring(start, end);
-                            // highlight all keywords
-                            keywords.forEach(function(keyword){
-                                var regS = new RegExp(keyword, "gi");
-                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
-                            });
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
 
-                            str += "<p class=\"search-result\">" + match_content +"...</p>"
-                        }
-                        str += "</li>";
-                    }
-                })};
-                str += "</ul>";
-                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
-                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
-                $resultContent.innerHTML = str;
-            });
-            proceedsearch();
-        }
-    });}
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
 
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched == false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
 
-    });
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
 
-    $('.popup-btn-close').click(function(e){
-      $('.popup').hide();
-      $(".popoverlay").remove();
-      $('body').css('overflow', '');
-    });
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
 
 
   
@@ -1606,7 +1964,13 @@ increase inform
   
 
   
+  
 
+  
+
+  
+
+  
 
 </body>
 </html>
