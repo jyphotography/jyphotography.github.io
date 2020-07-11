@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jyphotography.github.io/"/>
-  <updated>2020-07-11T03:12:09.136Z</updated>
+  <updated>2020-07-11T03:47:41.742Z</updated>
   <id>https://jyphotography.github.io/</id>
   
   <author>
@@ -16,59 +16,74 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>用Github和Hexo写Blog</title>
+    <link href="https://jyphotography.github.io/2020/07/10/blog/"/>
+    <id>https://jyphotography.github.io/2020/07/10/blog/</id>
+    <published>2020-07-11T03:34:44.000Z</published>
+    <updated>2020-07-11T03:47:41.742Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h1><ol>
+<li>首先你要申请一个github账号</li>
+<li>然后新建一个public key </li>
+<li>把key上传到Github账户</li>
+</ol>
+<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><ol>
+<li>安装npm，git</li>
+<li>下载hexo</li>
+<li>设置git 用户email</li>
+<li><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">下载next主题 </a></li>
+<li>创建文章</li>
+<li>上传到github</li>
+<li>可以通过更改主题yml文件改变格局和设置</li>
+</ol>
+<h1 id="Markdown-Cheat-sheet"><a href="#Markdown-Cheat-sheet" class="headerlink" title="Markdown Cheat sheet"></a>Markdown Cheat sheet</h1><p><a href="https://wastemobile.gitbooks.io/gitbook-chinese/content/format/markdown.html" target="_blank" rel="external">cheatsheet</a></p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>[Hexo+GitHub，新手也可以快速建立部落格] (<a href="https://blackmaple.me/hexo-tutorial/" target="_blank" rel="external">https://blackmaple.me/hexo-tutorial/</a>)</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Github&quot;&gt;&lt;a href=&quot;#Github&quot; class=&quot;headerlink&quot; title=&quot;Github&quot;&gt;&lt;/a&gt;Github&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;首先你要申请一个github账号&lt;/li&gt;
+&lt;li&gt;然后新建一个public key &lt;/li&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>2020小目标</title>
     <link href="https://jyphotography.github.io/2020/07/10/2020-goal/"/>
     <id>https://jyphotography.github.io/2020/07/10/2020-goal/</id>
     <published>2020-07-11T00:13:25.000Z</published>
     <updated>2020-07-11T03:12:09.136Z</updated>
     
-    <content type="html"><![CDATA[<h1>2020小目标</h1>
-<hr>
+    <content type="html"><![CDATA[<h1 id="2020小目标"><a href="#2020小目标" class="headerlink" title="2020小目标"></a>2020小目标</h1><hr>
 <p>天灾人祸的2020也已经过了一大半了，自己身体健康也没丢饭碗，但是随着31岁生日的到来，觉得自己的生活缺少憧憬以及动力，仿佛能看到自己40岁的样子，这是有点可怕的。 说实话我还挺怀念25岁那年一个人在纽约拼搏奋斗的自己，30还不晚，是时候给自己制定一点目标让自己的30+重新启航。</p>
-<h2>健身</h2>
-<p>2020年随着健身房关闭，自己锻炼的时间也从两天一次锐减到了两周一次，腹肌也从原来的隐约可见成为了自己的遐想。</p>
+<h2 id="健身"><a href="#健身" class="headerlink" title="健身"></a>健身</h2><p>2020年随着健身房关闭，自己锻炼的时间也从两天一次锐减到了两周一次，腹肌也从原来的隐约可见成为了自己的遐想。</p>
 <ul>
 <li>有氧 - 一周三次，每次消耗200卡</li>
 <li>无氧 - 胸，肩，腹部 一周各一次</li>
 </ul>
-<h2>专业</h2>
-<p>数据科学方面感觉自己越来越偏向Fraud Detection，还是要做些A/B testing的项目来丰富自己的简历，同时工作了三年，也想看看自己还有没有市场。</p>
+<h2 id="专业"><a href="#专业" class="headerlink" title="专业"></a>专业</h2><p>数据科学方面感觉自己越来越偏向Fraud Detection，还是要做些A/B testing的项目来丰富自己的简历，同时工作了三年，也想看看自己还有没有市场。</p>
 <ul>
 <li>投简历拿到面试和offer</li>
-<li>Python
-<ul>
+<li>Python<ul>
 <li>总结归纳自己的EDA，套模型template</li>
 <li>进化自己的Algorithm Trading-增加15%的收益</li>
 </ul>
 </li>
 <li>Stats 巩固复习，并能用人话讲出来</li>
-<li>学习一些职场技能以及leadership principle
-<ul>
-<li>
-<pre><code>  ownerhship
-</code></pre>
-</li>
-<li>
-<pre><code>  learn and be curious
-</code></pre>
-</li>
-<li>
-<pre><code>  insist on the highest standards
-</code></pre>
-</li>
-<li>
-<pre><code>  dive deep
-</code></pre>
-</li>
-<li>
-<pre><code>  earn trust
-</code></pre>
-</li>
+<li>学习一些职场技能以及leadership principle<ul>
+<li>ownerhship</li>
+<li>learn and be curious</li>
+<li>insist on the highest standards</li>
+<li>dive deep</li>
+<li>earn trust</li>
 </ul>
 </li>
 </ul>
-<h2>爱好</h2>
-<p>自己上半年开始做了b站up主，也收获了500粉丝，几乎都是用爱发电，得提高自己的视频点阅率。同时大部分夜晚都奉献给了2k20，虽然写了写代码作弊，但是对于一个年货游戏没啥太大的长期意义，以后还是不玩了吧。</p>
+<h2 id="爱好"><a href="#爱好" class="headerlink" title="爱好"></a>爱好</h2><p>自己上半年开始做了b站up主，也收获了500粉丝，几乎都是用爱发电，得提高自己的视频点阅率。同时大部分夜晚都奉献给了2k20，虽然写了写代码作弊，但是对于一个年货游戏没啥太大的长期意义，以后还是不玩了吧。</p>
 <ul>
 <li>删除2k20</li>
 <li>争取年末b站粉丝达到1000人</li>
@@ -81,9 +96,8 @@
     
     <summary type="html">
     
-      &lt;h1&gt;2020小目标&lt;/h1&gt;
-&lt;hr&gt;
-&lt;p&gt;天灾人祸的2020也已经过了一大半了，自己身体健康也没丢饭碗，但是随着31岁生日的到来，觉得自己的生活缺少憧憬以及动力，仿佛能看到自己40岁的样子，这是有点可怕的。 说实话我还挺怀念25岁那年一个人在纽约拼搏奋斗的自己，30还不晚
+      &lt;h1 id=&quot;2020小目标&quot;&gt;&lt;a href=&quot;#2020小目标&quot; class=&quot;headerlink&quot; title=&quot;2020小目标&quot;&gt;&lt;/a&gt;2020小目标&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;天灾人祸的2020也已经过了一大半了，自己身体健康也没丢饭碗，但是随着31岁生日的到来，觉
     
     </summary>
     
@@ -943,47 +957,6 @@
     </summary>
     
       <category term="SAS&amp;BI" scheme="https://jyphotography.github.io/categories/SAS-BI/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>第一章 数据仓库</title>
-    <link href="https://jyphotography.github.io/2016/10/27/DW-1/"/>
-    <id>https://jyphotography.github.io/2016/10/27/DW-1/</id>
-    <published>2016-10-27T13:38:39.000Z</published>
-    <updated>2016-10-27T22:43:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="数据仓库-Data-Warehouse-基础"><a href="#数据仓库-Data-Warehouse-基础" class="headerlink" title="数据仓库(Data Warehouse)基础"></a>数据仓库(Data Warehouse)基础</h2><h3 id="DW-历史"><a href="#DW-历史" class="headerlink" title="DW 历史"></a>DW 历史</h3><p>Inmon: Top-down: 公司只建一个数据仓库。数据集市从数据仓库取数据</p>
-<p>Kimball：Bottom-up: 先从数据集市开始，然后聚集成数据仓库。</p>
-<p>Enterprise Warehouse-收集所有信息，然后在整个组织循环</p>
-<p>Data Mart-数据仓库的一个子集，代表一个商业流程的数据</p>
-<h3 id="DW-定义"><a href="#DW-定义" class="headerlink" title="DW 定义"></a>DW 定义</h3><p>数据仓库是 subject-oriented, integrated, time-varying, non-volatile  的数据集合用于帮助决策（Inmon）</p>
-<p>交易数据的特殊结构拷贝，有利于查询（Kimball）</p>
-<pre><code>1. subject-oriented: 只记录与决策系统相关的信息
-2. Integrated: 一致性
-3. Time Varying：时间记录的准确性
-4. Non Volatile：不太会改变原始数据，更多的是增加数据
-</code></pre><p>Data Warehouse现实商业中的定义： 支持决策系统， 分析环境，与存储数据形式无关</p>
-<h3 id="为什么要把DW与数据库分开？"><a href="#为什么要把DW与数据库分开？" class="headerlink" title="为什么要把DW与数据库分开？"></a>为什么要把DW与数据库分开？</h3><p>1.性能<br>2.功能<br>3.目的-更容易分析数据</p>
-<h3 id="为什么要数据库？"><a href="#为什么要数据库？" class="headerlink" title="为什么要数据库？"></a>为什么要数据库？</h3><p>只有一部分信息需要改变<br>添加<br>删除<br>更新<br>Normalization</p>
-<h3 id="DW与数据库比较"><a href="#DW与数据库比较" class="headerlink" title="DW与数据库比较"></a>DW与数据库比较</h3><p><img src="/media/14776071330775.jpg" alt="-w749"></p>
-<h3 id="DW的构架"><a href="#DW的构架" class="headerlink" title="DW的构架"></a>DW的构架</h3><p><img src="/media/14776071607052.jpg" alt="-w806"></p>
-<h2 id="纬度模型-Dimensional-Model-or-Star-Schema"><a href="#纬度模型-Dimensional-Model-or-Star-Schema" class="headerlink" title="纬度模型(Dimensional Model or Star Schema)"></a>纬度模型(Dimensional Model or Star Schema)</h2><h3 id="组成-两部分"><a href="#组成-两部分" class="headerlink" title="组成-两部分"></a>组成-两部分</h3><h4 id="Fact-Table"><a href="#Fact-Table" class="headerlink" title="Fact Table"></a>Fact Table</h4><p>存储衡量变量<br>多对多<br><img src="/media/14776082294975.jpg" alt="-w221"></p>
-<h4 id="Dimension-Table"><a href="#Dimension-Table" class="headerlink" title="Dimension Table"></a>Dimension Table</h4><p>存储解释信息<br>通常非常长<br><img src="/media/14776082139821.jpg" alt="-w212"></p>
-<h3 id="好处"><a href="#好处" class="headerlink" title="好处"></a>好处</h3><ol>
-<li>简单</li>
-<li>性能</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;数据仓库-Data-Warehouse-基础&quot;&gt;&lt;a href=&quot;#数据仓库-Data-Warehouse-基础&quot; class=&quot;headerlink&quot; title=&quot;数据仓库(Data Warehouse)基础&quot;&gt;&lt;/a&gt;数据仓库(Data Warehouse)
-    
-    </summary>
-    
-      <category term="Data Warehouse" scheme="https://jyphotography.github.io/categories/Data-Warehouse/"/>
     
     
   </entry>
