@@ -4,6 +4,17 @@
   
     
     <entry>
+      <title><![CDATA[python-trade]]></title>
+      <url>https://jyphotography.github.io/2020/07/11/python-trade/</url>
+      <content type="html"><![CDATA[<h1 id="用Python买卖股票"><a href="#用Python买卖股票" class="headerlink" title="用Python买卖股票"></a>用Python买卖股票</h1><p>上班无聊的时候研究了下公司的401k，然后通过简单的分析各个选项的correlation，找到负相关最大的bond和大盘股进行交易。</p>
+<p>简单来说，就是看跌的时候提高bond的持有率，看涨的时候提高stock的持有率，这样暂时到达了16%左右的收益率。</p>
+<p>这篇文章主要是总结一下如何</p>
+<h1 id="S-amp-P500-均线买卖分析"><a href="#S-amp-P500-均线买卖分析" class="headerlink" title="S&amp;P500 均线买卖分析"></a>S&amp;P500 均线买卖分析</h1><p>这里会和大家分享下如何通过简单的均线进行大盘指数ETF的投资策略</p>
+<h2 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"><span class="keyword">import</span> matplotlib.dates <span class="keyword">as</span> mdates</div><div class="line"><span class="keyword">import</span> yfinance <span class="keyword">as</span> yf</div><div class="line"><span class="keyword">import</span> mpl_finance <span class="keyword">as</span> mpf</div><div class="line">plt.style.use(<span class="string">"fivethirtyeight"</span>)</div><div class="line"></div><div class="line"><span class="comment"># 通过yahoo finance获取每日SPY500 ETF 信息</span></div><div class="line">data = yf.download(<span class="string">"SPY"</span>, period = <span class="string">"2y"</span>)</div><div class="line"></div><div class="line">data.head()</div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[用Github和Hexo写Blog]]></title>
       <url>https://jyphotography.github.io/2020/07/10/blog/</url>
       <content type="html"><![CDATA[<h1 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h1><ol>
@@ -332,12 +343,7 @@
     <entry>
       <title><![CDATA[DM7]]></title>
       <url>https://jyphotography.github.io/2016/11/28/DM7-1/</url>
-      <content type="html"><![CDATA[<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
-<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
-</script>
-
+      <content type="html"><![CDATA[<p>-</p>
 <p><img src="/media/14803748563558.jpg" alt=""><br>underfit</p>
 <p><img src="/media/14803748688502.jpg" alt=""><br>overfit</p>
 <p>KDE is non-parametric like KNN<br>usually no equation(complexity)</p>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jyphotography.github.io/"/>
-  <updated>2020-07-11T03:49:34.974Z</updated>
+  <updated>2020-07-27T02:53:02.537Z</updated>
   <id>https://jyphotography.github.io/</id>
   
   <author>
@@ -16,11 +16,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>python-trade</title>
+    <link href="https://jyphotography.github.io/2020/07/11/python-trade/"/>
+    <id>https://jyphotography.github.io/2020/07/11/python-trade/</id>
+    <published>2020-07-11T15:32:40.000Z</published>
+    <updated>2020-07-27T02:53:02.537Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="用Python买卖股票"><a href="#用Python买卖股票" class="headerlink" title="用Python买卖股票"></a>用Python买卖股票</h1><p>上班无聊的时候研究了下公司的401k，然后通过简单的分析各个选项的correlation，找到负相关最大的bond和大盘股进行交易。</p>
+<p>简单来说，就是看跌的时候提高bond的持有率，看涨的时候提高stock的持有率，这样暂时到达了16%左右的收益率。</p>
+<p>这篇文章主要是总结一下如何</p>
+<h1 id="S-amp-P500-均线买卖分析"><a href="#S-amp-P500-均线买卖分析" class="headerlink" title="S&amp;P500 均线买卖分析"></a>S&amp;P500 均线买卖分析</h1><p>这里会和大家分享下如何通过简单的均线进行大盘指数ETF的投资策略</p>
+<h2 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"><span class="keyword">import</span> matplotlib.dates <span class="keyword">as</span> mdates</div><div class="line"><span class="keyword">import</span> yfinance <span class="keyword">as</span> yf</div><div class="line"><span class="keyword">import</span> mpl_finance <span class="keyword">as</span> mpf</div><div class="line">plt.style.use(<span class="string">"fivethirtyeight"</span>)</div><div class="line"></div><div class="line"><span class="comment"># 通过yahoo finance获取每日SPY500 ETF 信息</span></div><div class="line">data = yf.download(<span class="string">"SPY"</span>, period = <span class="string">"2y"</span>)</div><div class="line"></div><div class="line">data.head()</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;用Python买卖股票&quot;&gt;&lt;a href=&quot;#用Python买卖股票&quot; class=&quot;headerlink&quot; title=&quot;用Python买卖股票&quot;&gt;&lt;/a&gt;用Python买卖股票&lt;/h1&gt;&lt;p&gt;上班无聊的时候研究了下公司的401k，然后通过简单的分析各个选项的c
+    
+    </summary>
+    
+      <category term="技术" scheme="https://jyphotography.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>用Github和Hexo写Blog</title>
     <link href="https://jyphotography.github.io/2020/07/10/blog/"/>
     <id>https://jyphotography.github.io/2020/07/10/blog/</id>
     <published>2020-07-11T03:34:44.000Z</published>
-    <updated>2020-07-11T03:49:34.974Z</updated>
+    <updated>2020-07-11T15:34:27.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h1><ol>
 <li>首先你要申请一个github账号</li>
@@ -58,7 +83,7 @@
     <link href="https://jyphotography.github.io/2020/07/10/2020-goal/"/>
     <id>https://jyphotography.github.io/2020/07/10/2020-goal/</id>
     <published>2020-07-11T00:13:25.000Z</published>
-    <updated>2020-07-11T03:12:09.136Z</updated>
+    <updated>2020-07-11T03:49:13.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="2020小目标"><a href="#2020小目标" class="headerlink" title="2020小目标"></a>2020小目标</h1><hr>
 <p>天灾人祸的2020也已经过了一大半了，自己身体健康也没丢饭碗，但是随着31岁生日的到来，觉得自己的生活缺少憧憬以及动力，仿佛能看到自己40岁的样子，这是有点可怕的。 说实话我还挺怀念25岁那年一个人在纽约拼搏奋斗的自己，30还不晚，是时候给自己制定一点目标让自己的30+重新启航。</p>
@@ -461,14 +486,9 @@
     <link href="https://jyphotography.github.io/2016/11/28/DM7-1/"/>
     <id>https://jyphotography.github.io/2016/11/28/DM7-1/</id>
     <published>2016-11-28T23:07:06.000Z</published>
-    <updated>2017-07-04T20:27:21.000Z</updated>
+    <updated>2020-07-11T19:21:08.000Z</updated>
     
-    <content type="html"><![CDATA[<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
-<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
-</script>
-
+    <content type="html"><![CDATA[<p>-</p>
 <p><img src="/media/14803748563558.jpg" alt=""><br>underfit</p>
 <p><img src="/media/14803748688502.jpg" alt=""><br>overfit</p>
 <p>KDE is non-parametric like KNN<br>usually no equation(complexity)</p>
@@ -478,10 +498,10 @@
     
     <summary type="html">
     
-      &lt;script type=&quot;text/x-mathjax-config&quot;&gt;
-  MathJax.Hub.Config({tex2jax: {inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]]}});
-&lt;/script&gt;
-&lt;script type=&quot;tex
+      &lt;p&gt;-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/media/14803748563558.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;underfit&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/media/14803748688502.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;overfit&lt;/p&gt;
+&lt;p&gt;K
     
     </summary>
     
@@ -933,32 +953,6 @@
     </summary>
     
       <category term="NoSQL" scheme="https://jyphotography.github.io/categories/NoSQL/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>第一章 什么是BI</title>
-    <link href="https://jyphotography.github.io/2016/10/27/sas1/"/>
-    <id>https://jyphotography.github.io/2016/10/27/sas1/</id>
-    <published>2016-10-27T19:21:26.000Z</published>
-    <updated>2016-10-27T23:19:13.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h2><p>当今不用仍然不使用IT的行业-Dabbawalla印度盒饭行业</p>
-<h2 id="BI的因素"><a href="#BI的因素" class="headerlink" title="BI的因素"></a>BI的因素</h2><p><img src="/media/14776099723765.jpg" alt="-w764"></p>
-<h2 id="BI的问题"><a href="#BI的问题" class="headerlink" title="BI的问题"></a>BI的问题</h2><p>data requester 不懂怎么取数据<br>data provider 不懂商业流程</p>
-<h2 id="BI做什么？"><a href="#BI做什么？" class="headerlink" title="BI做什么？"></a>BI做什么？</h2><p><img src="/media/14776092516314.jpg" alt="-w851"><br>大部分人还是停留在绿色区域</p>
-<p><img src="/media/14776100600514.jpg" alt="-w763"><br>这些是能提高你竞争力的部分</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;题外话&quot;&gt;&lt;a href=&quot;#题外话&quot; class=&quot;headerlink&quot; title=&quot;题外话&quot;&gt;&lt;/a&gt;题外话&lt;/h2&gt;&lt;p&gt;当今不用仍然不使用IT的行业-Dabbawalla印度盒饭行业&lt;/p&gt;
-&lt;h2 id=&quot;BI的因素&quot;&gt;&lt;a href=&quot;#BI的因素
-    
-    </summary>
-    
-      <category term="SAS&amp;BI" scheme="https://jyphotography.github.io/categories/SAS-BI/"/>
     
     
   </entry>
