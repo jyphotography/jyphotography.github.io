@@ -47,8 +47,8 @@
 <li>下载hexo</li>
 <li>设置git 用户email</li>
 <li><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">下载next主题 </a></li>
-<li>创建文章</li>
-<li>上传到github</li>
+<li>创建文章 (hexo new [post])</li>
+<li>上传到github (hexo d -g)</li>
 <li>可以通过更改主题yml文件改变格局和设置</li>
 </ol>
 <h1 id="Markdown-Cheat-sheet"><a href="#Markdown-Cheat-sheet" class="headerlink" title="Markdown Cheat sheet"></a>Markdown Cheat sheet</h1><p><a href="https://wastemobile.gitbooks.io/gitbook-chinese/content/format/markdown.html" target="_blank" rel="external">cheatsheet</a></p>
