@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jyphotography.github.io/"/>
-  <updated>2020-07-27T03:01:27.222Z</updated>
+  <updated>2020-07-27T03:10:58.197Z</updated>
   <id>https://jyphotography.github.io/</id>
   
   <author>
@@ -16,19 +16,19 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>python-trade</title>
+    <title>用Python做股票进场分析</title>
     <link href="https://jyphotography.github.io/2020/07/11/python-trade/"/>
     <id>https://jyphotography.github.io/2020/07/11/python-trade/</id>
     <published>2020-07-11T15:32:40.000Z</published>
-    <updated>2020-07-27T03:01:27.222Z</updated>
+    <updated>2020-07-27T03:10:58.197Z</updated>
     
     <content type="html"><![CDATA[<h1 id="用Python买卖股票"><a href="#用Python买卖股票" class="headerlink" title="用Python买卖股票"></a>用Python买卖股票</h1><p>上班无聊的时候研究了下公司的401k，然后通过简单的分析各个选项的correlation，找到负相关最大的bond和大盘股进行交易。</p>
 <p>简单来说，就是看跌的时候提高bond的持有率，看涨的时候提高stock的持有率，这样暂时到达了16%左右的收益率。</p>
-<p>这篇文章主要是总结一下如何</p>
+<p>这篇文章主要是总结一下我平时的操作策略。</p>
 <h1 id="S-amp-P500-均线买卖分析"><a href="#S-amp-P500-均线买卖分析" class="headerlink" title="S&amp;P500 均线买卖分析"></a>S&amp;P500 均线买卖分析</h1><p>这里会和大家分享下如何通过简单的均线进行大盘指数ETF的投资策略</p>
 <h2 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"><span class="keyword">import</span> matplotlib.dates <span class="keyword">as</span> mdates</div><div class="line"><span class="keyword">import</span> yfinance <span class="keyword">as</span> yf</div><div class="line"><span class="keyword">import</span> mpl_finance <span class="keyword">as</span> mpf</div><div class="line">plt.style.use(<span class="string">"fivethirtyeight"</span>)</div><div class="line"></div><div class="line"><span class="comment"># 通过yahoo finance获取每日SPY500 ETF 信息</span></div><div class="line">data = yf.download(<span class="string">"SPY"</span>, period = <span class="string">"2y"</span>)</div><div class="line"></div><div class="line">data.head()</div></pre></td></tr></table></figure>
 <h2 id="绘制曲线"><a href="#绘制曲线" class="headerlink" title="绘制曲线"></a>绘制曲线</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 我们需要通过OHLC者四个指标进行分析</span></div><div class="line"><span class="comment"># 第一步获取这四个metric并转化成list</span></div><div class="line">dvalues = data[[<span class="string">'Open'</span>, <span class="string">'High'</span>, <span class="string">"Low"</span>, <span class="string">"Close"</span>]].values.tolist()</div><div class="line"></div><div class="line"><span class="comment"># 给dvalues添加日期</span></div><div class="line">pdates = mdates.date2num(data.index)</div><div class="line">ohlc = [[pdates[i]] +dvalues[i] <span class="keyword">for</span> i <span class="keyword">in</span> range(len(pdates)) ]</div><div class="line"></div><div class="line"><span class="comment"># 计算均线，我们用的是40天最高，40天最低， 和15天收盘价指数移动平均线</span></div><div class="line"><span class="comment"># 用指数移动平均的原因是我们能更好地加权当前股价，从而发现趋势</span></div><div class="line">hsma40 = data[<span class="string">'High'</span>].rolling(<span class="number">40</span>).mean()</div><div class="line">lsma40 = data[<span class="string">'Low'</span>].rolling(<span class="number">40</span>).mean()</div><div class="line">ema15 = data[<span class="string">'Close'</span>].ewm(<span class="number">15</span>).mean()</div><div class="line"></div><div class="line">fig, ax = plt.subplots(figsize = (<span class="number">15</span>, <span class="number">6</span>))</div><div class="line"></div><div class="line">mpf.plot_day_summary_ohlc(ax, ohlc[<span class="number">-100</span>:], ticksize=<span class="number">4</span>, colorup=<span class="string">'#77d879'</span>, colordown=<span class="string">'#db3f3f'</span>)</div><div class="line">ax.plot(hsma40[<span class="number">-100</span>:], color=<span class="string">'blue'</span>, linewidth=<span class="number">2</span>, label=<span class="string">'High, 40-Day SMA'</span>)</div><div class="line">ax.plot(lsma40[<span class="number">-100</span>:], color=<span class="string">'black'</span>, linewidth=<span class="number">2</span>, label=<span class="string">"Low, 40-Day SMA"</span>)</div><div class="line">ax.plot(ema15[<span class="number">-100</span>:], color=<span class="string">'red'</span>, linestyle=<span class="string">'--'</span>, linewidth=<span class="number">2</span>, label=<span class="string">'Close, 15-Day EMA'</span>)</div><div class="line"></div><div class="line">ax.set_xlabel(<span class="string">'Date'</span>)</div><div class="line">ax.set_ylabel(<span class="string">'Price'</span>)</div><div class="line">ax.set_title(<span class="string">'SPDR S&amp;P 500 ETF Bar Chart with Moving Averages'</span>)</div><div class="line">ax.legend()</div><div class="line">ax.xaxis.set_major_formatter(mdates.DateFormatter(<span class="string">'%b %d'</span>))</div><div class="line">fig.autofmt_xdate()</div></pre></td></tr></table></figure>
-<p><img src="/media/15958188685612.jpg" alt=""></p>
+<p><img src="/media/15958188685612.png" alt=""></p>
 <h3 id="投资策略"><a href="#投资策略" class="headerlink" title="投资策略"></a>投资策略</h3><ol>
 <li><p>何时买？</p>
 <ul>
@@ -46,7 +46,7 @@
 </li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 蜡烛图</span></div><div class="line"><span class="comment"># 可以通过蜡烛的形态，决定购买和离场的机会</span></div><div class="line"><span class="comment"># 蜡烛图比较敏感，可以作为观察信号，买入和卖出还需要配合其他指标</span></div><div class="line">fig, ax = plt.subplots(figsize =(<span class="number">15</span>,<span class="number">6</span>))</div><div class="line"></div><div class="line">mpf.candlestick_ohlc(ax, ohlc[<span class="number">-100</span>:], width=<span class="number">0.4</span>)</div><div class="line">ax.set_xlabel(<span class="string">'Date'</span>)</div><div class="line">ax.set_ylabel(<span class="string">'Price'</span>)</div><div class="line">ax.set_title(<span class="string">'SPDR S&amp;P 500 ETF Candlestick Chart'</span>)</div><div class="line">ax.xaxis.set_major_formatter(mdates.DateFormatter(<span class="string">'%b %d'</span>))</div><div class="line">fig.autofmt_xdate()</div></pre></td></tr></table></figure>
-<p><img src="/media/15958188819311.jpg" alt=""></p>
+<p><img src="/media/15958188819311.png" alt=""></p>
 ]]></content>
     
     <summary type="html">
