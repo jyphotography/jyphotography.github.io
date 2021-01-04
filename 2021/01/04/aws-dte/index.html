@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="ML, 机器学习， 介绍， 梯度下降," />
+  <meta name="keywords" content="机器学习," />
 
 
 
@@ -81,22 +81,39 @@
 
 
 
-<meta name="description" content="介绍什么是机器学习？“A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with expe">
+<meta name="description" content="通过6讲详细学习决策树模型
+课程介绍
+Tree based methods
+Ensembling techniques
+Resource
+
+决策树模型A decision tree is a series of yes/no questions about your input that you ask in sequence
+models are learned greedily; they r">
 <meta property="og:type" content="article">
-<meta property="og:title" content="机器学习 Week1 - Coursera Machine Learning">
-<meta property="og:url" content="https://jyphotography.github.io/2017/07/01/ml-1/index.html">
+<meta property="og:title" content="AWS-Decision Tree Lecture 1">
+<meta property="og:url" content="https://jyphotography.github.io/2021/01/04/aws-dte/index.html">
 <meta property="og:site_name" content="JY">
-<meta property="og:description" content="介绍什么是机器学习？“A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with expe">
-<meta property="og:image" content="https://jyphotography.github.io/media/14989691452519.jpg">
-<meta property="og:image" content="http://latex.codecogs.com/gif.latex?J%28%5Ctheta_0%2C%20%5Ctheta_1%29%20%3D%20%5Cdfrac%20%7B1%7D%7B2m%7D%20%5Cdisplaystyle%20%5Csum%20_%7Bi%3D1%7D%5Em%20%5Cleft%20%28%20%5Chat%7By%7D_%7Bi%7D-%20y_%7Bi%7D%20%5Cright%29%5E2%20%3D%20%5Cdfrac%20%7B1%7D%7B2m%7D%20%5Cdisplaystyle%20%5Csum%20_%7Bi%3D1%7D%5Em%20%5Cleft%20%28h_%5Ctheta%20%28x_%7Bi%7D%29%20-%20y_%7Bi%7D%20%5Cright%29%5E2">
-<meta property="og:image" content="https://jyphotography.github.io/media/14990106615775.jpg">
-<meta property="og:image" content="https://jyphotography.github.io/media/14990154186760.jpg">
-<meta property="og:image" content="https://jyphotography.github.io/media/14991952094389.jpg">
-<meta property="og:updated_time" content="2017-07-04T20:30:36.000Z">
+<meta property="og:description" content="通过6讲详细学习决策树模型
+课程介绍
+Tree based methods
+Ensembling techniques
+Resource
+
+决策树模型A decision tree is a series of yes/no questions about your input that you ask in sequence
+models are learned greedily; they r">
+<meta property="og:image" content="https://jyphotography.github.io/media/AWS_DTE1_gini.png">
+<meta property="og:updated_time" content="2021-01-04T16:43:19.700Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="机器学习 Week1 - Coursera Machine Learning">
-<meta name="twitter:description" content="介绍什么是机器学习？“A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with expe">
-<meta name="twitter:image" content="https://jyphotography.github.io/media/14989691452519.jpg">
+<meta name="twitter:title" content="AWS-Decision Tree Lecture 1">
+<meta name="twitter:description" content="通过6讲详细学习决策树模型
+课程介绍
+Tree based methods
+Ensembling techniques
+Resource
+
+决策树模型A decision tree is a series of yes/no questions about your input that you ask in sequence
+models are learned greedily; they r">
+<meta name="twitter:image" content="https://jyphotography.github.io/media/AWS_DTE1_gini.png">
 
 
 
@@ -126,13 +143,13 @@
 
 
 
-  <link rel="canonical" href="https://jyphotography.github.io/2017/07/01/ml-1/"/>
+  <link rel="canonical" href="https://jyphotography.github.io/2021/01/04/aws-dte/"/>
 
 
 
 
 
-  <title>机器学习 Week1 - Coursera Machine Learning | JY</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>AWS-Decision Tree Lecture 1 | JY</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -259,7 +276,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jyphotography.github.io/2017/07/01/ml-1/">
+    <link itemprop="mainEntityOfPage" href="https://jyphotography.github.io/2021/01/04/aws-dte/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jason Yang">
@@ -276,7 +293,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">机器学习 Week1 - Coursera Machine Learning</h1>
+          <h1 class="post-title" itemprop="name headline">AWS-Decision Tree Lecture 1</h1>
         
 
         <div class="post-meta">
@@ -288,8 +305,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-01T18:09:09-04:00">
-                2017-07-01
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-01-04T11:17:16-05:00">
+                2021-01-04
               </time>
             
 
@@ -307,9 +324,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/07/01/ml-1/#comments" itemprop="discussionUrl">
+                <a href="/2021/01/04/aws-dte/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/07/01/ml-1/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2021/01/04/aws-dte/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -337,37 +354,28 @@
       
 
       
-        <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><h2 id="什么是机器学习？"><a href="#什么是机器学习？" class="headerlink" title="什么是机器学习？"></a>什么是机器学习？</h2><p>“A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E.” – Tom Mitchell</p>
-<p>一个计算机程序从一些目标（T）和结果（P）学到的经历（E）。 如果这个程序能随着经历（E）的改进而改进目标（T）的结果（P），那这就是机器学习。</p>
-<p>举例来说： 玩跳棋<br>E = 多次游戏的经历<br>T = 玩象棋<br>P = 下局获胜的概率</p>
-<p>一般来说， 任何机器学习都可以分成两类： 监督学习（Supervised Learning）和非监督学习 （Unsupervised Learning)</p>
-<h2 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h2><p>我们知道正确的结果，找到输入和输出的关系</p>
-<p>监督学习有两类。<br><strong>Regression（回归问题）</strong> 主要用于预测连续变量<br>例子： 预测房价<br><strong>Classification（分类）</strong> 主要用于预测不连续的变量<br>例子： 预测房价是否大于报价</p>
-<h2 id="非监督学习"><a href="#非监督学习" class="headerlink" title="非监督学习"></a>非监督学习</h2><p>在不知道结果的情况下解决问题。<br>通过变量之间的关系进行费雷<br>在非监督学习，我们不能得到预测结果的反馈</p>
-<p>例子: <strong>Clustering (归类)</strong><br>在一百万个基因中根据它们之间的关系或相似程度找到自动分组。</p>
-<p>例子: <strong>Non-clustering (非归类)</strong><br><a href="https://en.wikipedia.org/wiki/Cocktail_party_effect" target="_blank" rel="external">鸡尾酒派对算法</a> - 在吵杂的环境中找到个人的声音</p>
-<h1 id="模型解释"><a href="#模型解释" class="headerlink" title="模型解释"></a>模型解释</h1><p>我们用\(x^i\)表示输入变量， 也叫Feature。 用\(y^i\)表示输出，也就是预测结果</p>
-<p>\((x^i,y^i)\) - 训练样本<br>\((x^i,y^i); i=1,…,m\)； - 训练集</p>
-<p>假设h(x)-<br><img src="/media/14989691452519.jpg" alt=""></p>
-<h2 id="成本函数-（Cost-Function）"><a href="#成本函数-（Cost-Function）" class="headerlink" title="成本函数 （Cost Function）"></a>成本函数 （Cost Function）</h2><p>也称作MSE(Mean Squared Error)<br>用来测量我们函数的正确性-最常用在回归问题上</p>
-<p><img src="http://latex.codecogs.com/gif.latex?J%28%5Ctheta_0%2C%20%5Ctheta_1%29%20%3D%20%5Cdfrac%20%7B1%7D%7B2m%7D%20%5Cdisplaystyle%20%5Csum%20_%7Bi%3D1%7D%5Em%20%5Cleft%20%28%20%5Chat%7By%7D_%7Bi%7D-%20y_%7Bi%7D%20%5Cright%29%5E2%20%3D%20%5Cdfrac%20%7B1%7D%7B2m%7D%20%5Cdisplaystyle%20%5Csum%20_%7Bi%3D1%7D%5Em%20%5Cleft%20%28h_%5Ctheta%20%28x_%7Bi%7D%29%20-%20y_%7Bi%7D%20%5Cright%29%5E2" alt=""><br>（预测值-真实值）的平方和／（样本个数*2）<br><img src="/media/14990106615775.jpg" alt=""></p>
-<p>PS: 公式中除2的原因只是保证这个函数不受样本个数的影响</p>
-<h1 id="参数学习"><a href="#参数学习" class="headerlink" title="参数学习"></a>参数学习</h1><h2 id="梯度下降法-（Gradient-Descent）"><a href="#梯度下降法-（Gradient-Descent）" class="headerlink" title="梯度下降法 （Gradient Descent）"></a>梯度下降法 （Gradient Descent）</h2><p>通过调整成本函数的参数来达到MSE最小</p>
-<p><img src="/media/14990154186760.jpg" alt=""></p>
-<p>假设我们把$\theta_0$和$\theta_1$分别放在x,y轴， 然后用z轴表示我们的成本函数。<br>我们要做的事找到图中最低的点（红箭头）。方法是在成本函数求导数,切线的斜率提供方向，找到最陡的方向进行下降。<br>步子的大小叫做learning rate $\alpha$</p>
-<p><strong>梯度下降公式：</strong><br>$$\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1)$$</p>
-<p>有多个$\theta$的时候要同时更新<br><img src="/media/14991952094389.jpg" alt=""></p>
-<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ol>
-<li><a href="http://www.forkosh.com/mathtextutorial.html" target="_blank" rel="external">Mathjax</a></li>
-<li><a href="http://latex.codecogs.com/eqneditor/editor.php" target="_blank" rel="external">在线数学公式生成器</a></li>
+        <p>通过6讲详细学习决策树模型</p>
+<h1 id="课程介绍"><a href="#课程介绍" class="headerlink" title="课程介绍"></a>课程介绍</h1><ol>
+<li>Tree based methods</li>
+<li>Ensembling techniques</li>
+<li>Resource</li>
 </ol>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
-<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
-</script>
-
-
+<h1 id="决策树模型"><a href="#决策树模型" class="headerlink" title="决策树模型"></a>决策树模型</h1><p>A decision tree is a series of yes/no questions about your input that you ask in sequence</p>
+<p>models are learned greedily; they recursively pick a spilt in each node that maximizes the increase in “purity”</p>
+<p>When to End:</p>
+<ol>
+<li>maximum depth</li>
+<li>maximum leaves</li>
+<li>few data point in a particular leaf</li>
+<li>reach purity</li>
+</ol>
+<h1 id="Impurity"><a href="#Impurity" class="headerlink" title="Impurity"></a>Impurity</h1><p>key of decision tree process is to check the impurity in its child nodes after question. we want high purity = one kind after the split node</p>
+<h2 id="Two-choices-for-impurity"><a href="#Two-choices-for-impurity" class="headerlink" title="Two choices for impurity"></a>Two choices for impurity</h2><p>Entropy and Gini are extremely similiar, but logarithm is complex to compute, gini index is most commonly recommended</p>
+<ol>
+<li>Entropy        </li>
+<li>Gini</li>
+</ol>
+<p><img src="/media/AWS_DTE1_gini.png" alt="AWS_DTE1_gini"></p>
 
       
     </div>
@@ -385,7 +393,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/ML-机器学习，-介绍，-梯度下降/" rel="tag"># ML, 机器学习， 介绍， 梯度下降</a>
+            <a href="/tags/机器学习/" rel="tag"># 机器学习</a>
           
         </div>
       
@@ -398,8 +406,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/28/DM7-1/" rel="next" title="DM7">
-                <i class="fa fa-chevron-left"></i> DM7
+              <a href="/2020/07/11/python-trade/" rel="next" title="用Python做股票进场分析">
+                <i class="fa fa-chevron-left"></i> 用Python做股票进场分析
               </a>
             
           </div>
@@ -407,10 +415,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/04/ml-2/" rel="prev" title="机器学习 Week2 - Coursera Machine Learning">
-                机器学习 Week2 - Coursera Machine Learning <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -563,7 +567,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是机器学习？"><span class="nav-number">1.1.</span> <span class="nav-text">什么是机器学习？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#监督学习"><span class="nav-number">1.2.</span> <span class="nav-text">监督学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非监督学习"><span class="nav-number">1.3.</span> <span class="nav-text">非监督学习</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模型解释"><span class="nav-number">2.</span> <span class="nav-text">模型解释</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#成本函数-（Cost-Function）"><span class="nav-number">2.1.</span> <span class="nav-text">成本函数 （Cost Function）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参数学习"><span class="nav-number">3.</span> <span class="nav-text">参数学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#梯度下降法-（Gradient-Descent）"><span class="nav-number">3.1.</span> <span class="nav-text">梯度下降法 （Gradient Descent）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#References"><span class="nav-number">4.</span> <span class="nav-text">References</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#课程介绍"><span class="nav-number">1.</span> <span class="nav-text">课程介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#决策树模型"><span class="nav-number">2.</span> <span class="nav-text">决策树模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Impurity"><span class="nav-number">3.</span> <span class="nav-text">Impurity</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Two-choices-for-impurity"><span class="nav-number">3.1.</span> <span class="nav-text">Two choices for impurity</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -726,9 +730,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://jyphotography.github.io/2017/07/01/ml-1/';
-          this.page.identifier = '2017/07/01/ml-1/';
-          this.page.title = '机器学习 Week1 - Coursera Machine Learning';
+          this.page.url = 'https://jyphotography.github.io/2021/01/04/aws-dte/';
+          this.page.identifier = '2021/01/04/aws-dte/';
+          this.page.title = 'AWS-Decision Tree Lecture 1';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://.disqus.com/embed.js';

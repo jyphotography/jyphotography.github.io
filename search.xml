@@ -4,6 +4,34 @@
   
     
     <entry>
+      <title><![CDATA[AWS-Decision Tree Lecture 1]]></title>
+      <url>https://jyphotography.github.io/2021/01/04/aws-dte/</url>
+      <content type="html"><![CDATA[<p>通过6讲详细学习决策树模型</p>
+<h1 id="课程介绍"><a href="#课程介绍" class="headerlink" title="课程介绍"></a>课程介绍</h1><ol>
+<li>Tree based methods</li>
+<li>Ensembling techniques</li>
+<li>Resource</li>
+</ol>
+<h1 id="决策树模型"><a href="#决策树模型" class="headerlink" title="决策树模型"></a>决策树模型</h1><p>A decision tree is a series of yes/no questions about your input that you ask in sequence</p>
+<p>models are learned greedily; they recursively pick a spilt in each node that maximizes the increase in “purity”</p>
+<p>When to End:</p>
+<ol>
+<li>maximum depth</li>
+<li>maximum leaves</li>
+<li>few data point in a particular leaf</li>
+<li>reach purity</li>
+</ol>
+<h1 id="Impurity"><a href="#Impurity" class="headerlink" title="Impurity"></a>Impurity</h1><p>key of decision tree process is to check the impurity in its child nodes after question. we want high purity = one kind after the split node</p>
+<h2 id="Two-choices-for-impurity"><a href="#Two-choices-for-impurity" class="headerlink" title="Two choices for impurity"></a>Two choices for impurity</h2><p>Entropy and Gini are extremely similiar, but logarithm is complex to compute, gini index is most commonly recommended</p>
+<ol>
+<li>Entropy        </li>
+<li>Gini</li>
+</ol>
+<p><img src="/media/AWS_DTE1_gini.png" alt="AWS_DTE1_gini"></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[用Python做股票进场分析]]></title>
       <url>https://jyphotography.github.io/2020/07/11/python-trade/</url>
       <content type="html"><![CDATA[<h1 id="用Python买卖股票"><a href="#用Python买卖股票" class="headerlink" title="用Python买卖股票"></a>用Python买卖股票</h1><p>上班无聊的时候研究了下公司的401k，然后通过简单的分析各个选项的correlation，找到负相关最大的bond和大盘股进行交易。</p>

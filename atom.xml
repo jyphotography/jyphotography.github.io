@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jyphotography.github.io/"/>
-  <updated>2020-07-27T03:10:58.197Z</updated>
+  <updated>2021-01-04T16:43:19.700Z</updated>
   <id>https://jyphotography.github.io/</id>
   
   <author>
@@ -14,6 +14,51 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AWS-Decision Tree Lecture 1</title>
+    <link href="https://jyphotography.github.io/2021/01/04/aws-dte/"/>
+    <id>https://jyphotography.github.io/2021/01/04/aws-dte/</id>
+    <published>2021-01-04T16:17:16.000Z</published>
+    <updated>2021-01-04T16:43:19.700Z</updated>
+    
+    <content type="html"><![CDATA[<p>通过6讲详细学习决策树模型</p>
+<h1 id="课程介绍"><a href="#课程介绍" class="headerlink" title="课程介绍"></a>课程介绍</h1><ol>
+<li>Tree based methods</li>
+<li>Ensembling techniques</li>
+<li>Resource</li>
+</ol>
+<h1 id="决策树模型"><a href="#决策树模型" class="headerlink" title="决策树模型"></a>决策树模型</h1><p>A decision tree is a series of yes/no questions about your input that you ask in sequence</p>
+<p>models are learned greedily; they recursively pick a spilt in each node that maximizes the increase in “purity”</p>
+<p>When to End:</p>
+<ol>
+<li>maximum depth</li>
+<li>maximum leaves</li>
+<li>few data point in a particular leaf</li>
+<li>reach purity</li>
+</ol>
+<h1 id="Impurity"><a href="#Impurity" class="headerlink" title="Impurity"></a>Impurity</h1><p>key of decision tree process is to check the impurity in its child nodes after question. we want high purity = one kind after the split node</p>
+<h2 id="Two-choices-for-impurity"><a href="#Two-choices-for-impurity" class="headerlink" title="Two choices for impurity"></a>Two choices for impurity</h2><p>Entropy and Gini are extremely similiar, but logarithm is complex to compute, gini index is most commonly recommended</p>
+<ol>
+<li>Entropy        </li>
+<li>Gini</li>
+</ol>
+<p><img src="/media/AWS_DTE1_gini.png" alt="AWS_DTE1_gini"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;通过6讲详细学习决策树模型&lt;/p&gt;
+&lt;h1 id=&quot;课程介绍&quot;&gt;&lt;a href=&quot;#课程介绍&quot; class=&quot;headerlink&quot; title=&quot;课程介绍&quot;&gt;&lt;/a&gt;课程介绍&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;Tree based methods&lt;/li&gt;
+&lt;li&gt;Ensembl
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="https://jyphotography.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>用Python做股票进场分析</title>
@@ -951,28 +996,6 @@
     </summary>
     
       <category term="Data Minings" scheme="https://jyphotography.github.io/categories/Data-Minings/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>NoSQL数据库I</title>
-    <link href="https://jyphotography.github.io/2016/10/27/nosql1/"/>
-    <id>https://jyphotography.github.io/2016/10/27/nosql1/</id>
-    <published>2016-10-27T22:07:22.000Z</published>
-    <updated>2016-10-31T00:08:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>未完待续</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;未完待续&lt;/p&gt;
-
-    
-    </summary>
-    
-      <category term="NoSQL" scheme="https://jyphotography.github.io/categories/NoSQL/"/>
     
     
   </entry>
